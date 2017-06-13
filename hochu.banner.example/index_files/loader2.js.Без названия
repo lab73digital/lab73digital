@@ -1,0 +1,22 @@
+(function () {
+    if (!admixerML.load && !admixerML.v) {
+        var vc = document.createElement("script");
+        vc.async = true;
+        vc.src = admixerML.cdnPath + 'scripts3/r/require.js';
+        vc.setAttribute('data-main', admixerML.cdnPath + 'scripts3/r/apsm2');
+        vc.setAttribute('data-r', 'admixer');
+        vc.onerror = function () {
+            if (window.repablerTracker) {
+                 var img = document.createElement('img');
+                 img.style.width = "1px";
+                 img.style.height = "1px";
+                 img.style.position = "absolute";
+                 img.style.top = "-10000px";
+                 img.src = window.repablerTracker;
+                 document.body.appendChild(img);
+            }
+        };
+        var node = document.getElementsByTagName('script')[0];
+        node.parentNode.insertBefore(vc, node);
+    }
+})();

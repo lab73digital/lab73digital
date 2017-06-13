@@ -1,0 +1,170 @@
+/**
+ * Created by ruslan on 08.08.14.
+ * Async load social widgets and buttons
+ */
+var vk_width = 214, canonical_url = document.querySelector("link[rel='canonical']");
+if(canonical_url){canonical_url = canonical_url.getAttribute("href");}else{canonical_url = document.URL;}
+
+var social = {
+    vk : {key : 2479367},//4590652},//
+    fb : {key : 258866100799562},
+    fb_lang:"ru_RU",
+    // get Likes or share count
+    getVkLikes:function (){
+        $.ajax({
+            type: "GET",
+            url: 'http://api.vk.com/method/likes.getList?type=sitepage&owner_id='+social.vk.key+'&page_url=' + document.URL,
+            dataType: "jsonp",
+            success: function(data){
+                if(data.response)
+                    $('.vk-icon').prev('span').html(data.response.count)
+            }
+        })
+    },
+    getFbLikes:function(){
+        $.getJSON( 'http://graph.facebook.com/?id=' + document.URL, function( data ) {
+            if(data.shares){
+                $('.fb-icon').prev('span').html(data.shares)
+            }
+
+        });
+    },
+    getTwLikes:function(){
+        $.ajax({
+            type: "GET",
+            url:'http://cdn.api.twitter.com/1/urls/count.json?url=' + canonical_url + '&callback=?',
+            dataType: "jsonp",
+            success: function(data){
+                if(data.count)
+                    $('.tw-icon').prev('span').html( data.count)
+            }
+        })
+    },
+    getOdShares:function(){
+        $.ajax({
+            type: "GET",
+            url:  'http://appsmail.ru/share/count/' + document.URL,
+            dataType: "jsonp",
+            success: function(data){
+                if(data.share_ok)
+                    $('.od-icon span').prev('span').html( data.share_ok)
+            }
+        })
+    },
+    reLike:function(){
+          $(".like_bar").mouseleave(function(){
+              social._timeOutRefreshLike();
+          })
+    },
+    _timeOutRefreshLike:function(){
+        clearTimeout(social.timeOut)
+        social.timeOut = setTimeout(function(){
+           // console.log("Set time likes count");
+            social.getVkLikes();
+            social.getFbLikes();
+            social.getTwLikes();
+//            social.getOdShares();
+        },5000)
+    },
+    init:function(){
+        //set likes
+        this.getVkLikes();
+        this.getFbLikes();
+        this.getTwLikes();
+//        this.getOdShares();
+        this.reLike()
+    }
+}
+// load VK widget
+window.vkAsyncInit = function () {
+    VK.init({apiId: social.vk.key, onlyWidgets: true});
+	if ($('body').length) {
+		VkWidgetsInit();
+	} else {
+		$(document).ready(function() {
+			VkWidgetsInit();
+		});
+	}
+	function VkWidgetsInit() {
+		// Далее можно перечислять нужные виджеты ВКонтакте
+		if ($('#vk_like_1').length) VK.Widgets.Like("vk_like_1", {type: "mini", height: 20});
+		if ($('#vk_like_2').length) VK.Widgets.Like("vk_like_2", {type: "mini", height: 20});
+		if ($('#vk-like-valentin').length) VK.Widgets.Like("vk-like-valentin", {type: "vertical"});
+		if ($('#vk_groups').length) {
+			VK.Widgets.Group("vk_groups", 
+				{mode: 0, width: "237", height: "250", color1: 'FFFFFF', color2: '2B587A', color3: '5B7FA6'}, 
+				22275376);
+		}
+	}
+
+//    if ($('#vk_comments').length) VK.Widgets.Comments("vk_comments", {limit: 10, width: "300", attach: "*"});
+//    if ($('#vk_groups_2').length) VK.Widgets.Group("vk_groups_2", {mode: 0, width: "296", height: "282"}, 22275376);
+//    if ($('#vk_groups').length) VK.Widgets.Group("vk_groups", {mode: 0, wide: 1, width: "260", height: "281"}, 22275376);
+};
+// load FB widget
+window.fbAsyncInit = function() {
+    FB.init({ appId : social.fb.key, status : true, cookie : true, xfbml : true, oauth: true });
+};
+// async function
+(function(a, c, f) { function g() {
+    var d, a = c.getElementsByTagName(f)[0],
+    b = function(b, e) {
+        c.getElementById(e) ||
+        (d = c.createElement(f), d.src = b, d.async = !0, e && (d.id = e), a.parentNode.insertBefore(d, a))
+    };
+    // init social urls
+    b("//connect.facebook.net/"+social.fb_lang+"/all.js", "facebook-jssdk");
+    b("//vk.com/js/api/openapi.js?75");
+    b("https://platform.twitter.com/widgets.js", "twitter-wjs");
+    b("https://apis.google.com/js/plusone.js");
+//    b("//cdn.connect.mail.ru/js/loader.js");
+//    b("//surfingbird.ru/share/share.min.js");
+//    b("//assets.pinterest.com/js/pinit.js");
+//    b(("https:" == c.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js")
+   }
+    a.addEventListener ? a.addEventListener("load", g, !1) : a.attachEvent && a.attachEvent("onload", g)
+
+})(window, document, "script");
+
+// пока ещё используется старый дизайн и в некоторых баннерах там есть Яндекс.RTB
+if(country == 1 || country_kz == 1){
+//    <!-- R-140625-1 Яндекс.RTB-блок  -->
+    (function(w, d, n, s, t) {
+            w[n] = w[n] || [];
+            w[n].push(function() {
+                Ya.Context.AdvManager.render({
+                    blockId: "R-140625-1",
+                    renderTo: "yandex_ad_R-140625-1",
+                    async: true
+                });
+    });
+    t = d.getElementsByTagName("script")[0];
+    s = d.createElement("script");
+    s.type = "text/javascript";
+    s.src = "//an.yandex.ru/system/context.js";
+    s.async = true;
+    t.parentNode.insertBefore(s, t);
+    })(this, this.document, "yandexContextAsyncCallbacks");
+//    <!-- R-140625-1 Яндекс.RTB-блок  -->
+
+//    <!-- R-140625-2 Яндекс.RTB-блок  -->
+    (function(w, d, n, s, t) {
+        w[n] = w[n] || [];
+        w[n].push(function() {
+            Ya.Context.AdvManager.render({
+                blockId: "R-140625-2",
+                renderTo: "yandex_ad_R-140625-2",
+                async: true
+            });
+        });
+//        t = d.getElementsByTagName("script")[0];
+//        s = d.createElement("script");
+//        s.type = "text/javascript";
+//        s.src = "//an.yandex.ru/system/context.js";
+//        s.async = true;
+//        t.parentNode.insertBefore(s, t);
+    })(this, this.document, "yandexContextAsyncCallbacks");
+//    <!-- R-140625-2 Яндекс.RTB-блок  -->
+}
+
+

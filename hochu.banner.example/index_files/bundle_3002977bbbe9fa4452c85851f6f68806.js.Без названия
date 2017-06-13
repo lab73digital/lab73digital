@@ -1,0 +1,1255 @@
+(function(m){if("function"===typeof define&&define.amd){if("undefined"!==typeof requirejs){var w="[history"+(new Date).getTime()+"]",j=requirejs.onError;m.toString=function(){return w};requirejs.onError=function(m){-1===m.message.indexOf(w)&&j.call(requirejs,m)}}define([],m)}if("object"===typeof exports&&"undefined"!==typeof module)module.exports=m();else return m()})(function(){var h=!0,i=null,p=!1;function m(a,b){var c=e.history!==q;c&&(e.history=q);a.apply(q,b);c&&(e.history=k)}function w(){}function j(a,b,c){if(a!=i&&""!==a&&!b){var b=j(),d=g.getElementsByTagName("base")[0];
+!c&&(d&&d.getAttribute("href"))&&(d.href=d.href,b=j(d.href,i,h));c=b.d;d=b.h;a=""+a;a=/^(?:\w+\:)?\/\//.test(a)?0===a.indexOf("/")?d+a:a:d+"//"+b.g+(0===a.indexOf("/")?a:0===a.indexOf("?")?c+a:0===a.indexOf("#")?c+b.e+a:c.replace(/[^\/]+$/g,"")+a)}else if(a=b?a:f.href,!o||c)a=a.replace(/^[^#]*/,"")||"#",a=f.protocol.replace(/:.*$|$/,":")+"//"+f.host+l.basepath+a.replace(RegExp("^#[/]?(?:"+l.type+")?"),"");N.href=a;var a=/(?:([a-zA-Z0-9\-]+\:))?(?:\/\/(?:[^@]*@)?([^\/:\?#]+)(?::([0-9]+))?)?([^\?#]*)(?:(\?[^#]+)|\?)?(?:(#.*))?/.exec(N.href),
+b=a[2]+(a[3]?":"+a[3]:""),c=a[4]||"/",d=a[5]||"",e="#"===a[6]?"":a[6]||"",k=c+d+e,m=c.replace(RegExp("^"+l.basepath,"i"),l.type)+d;return{b:a[1]+"//"+b+k,h:a[1],g:b,i:a[2],k:a[3]||"",d:c,e:d,a:e,c:k,j:m,f:m+e}}function Z(){var a;try{a=e.sessionStorage,a.setItem(B+"t","1"),a.removeItem(B+"t")}catch(b){a={getItem:function(a){a=g.cookie.split(a+"=");return 1<a.length&&a.pop().split(";").shift()||"null"},setItem:function(a){var b={};if(b[f.href]=k.state)g.cookie=a+"="+s.stringify(b)}}}try{r=s.parse(a.getItem(B))||
+{}}catch(c){r={}}t(u+"unload",function(){a.setItem(B,s.stringify(r))},p)}function C(a,b,c,d){var f=0;c||(c={set:w},f=1);var g=!c.set,j=!c.get,k={configurable:h,set:function(){g=1},get:function(){j=1}};try{y(a,b,k),a[b]=a[b],y(a,b,c)}catch(l){}if(!g||!j)if(a.__defineGetter__&&(a.__defineGetter__(b,k.get),a.__defineSetter__(b,k.set),a[b]=a[b],c.get&&a.__defineGetter__(b,c.get),c.set&&a.__defineSetter__(b,c.set)),!g||!j){if(f)return p;if(a===e){try{var m=a[b];a[b]=i}catch(o){}if("execScript"in e)e.execScript("Public "+
+b,"VBScript"),e.execScript("var "+b+";","JavaScript");else try{y(a,b,{value:w})}catch(r){"onpopstate"===b&&(t("popstate",c=function(){H("popstate",c,p);var b=a.onpopstate;a.onpopstate=i;setTimeout(function(){a.onpopstate=b},1)},p),O=0)}a[b]=m}else try{try{var n=I.create(a);y(I.getPrototypeOf(n)===a?n:a,b,c);for(var q in a)"function"===typeof a[q]&&(n[q]=a[q].bind(a));try{d.call(n,n,a)}catch(s){}a=n}catch(u){y(a.constructor.prototype,b,c)}}catch(v){return p}}return a}function $(a,b,c){c=c||{};a=a===
+P?f:a;c.set=c.set||function(c){a[b]=c};c.get=c.get||function(){return a[b]};return c}function aa(a,b,c){a in v?v[a].push(b):3<arguments.length?t(a,b,c,arguments[3]):t(a,b,c)}function ba(a,b,c){var d=v[a];if(d)for(a=d.length;a--;){if(d[a]===b){d.splice(a,1);break}}else H(a,b,c)}function D(a,b){var c=(""+("string"===typeof a?a:a.type)).replace(/^on/,""),d=v[c];if(d){b="string"===typeof a?b:a;if(b.target==i)for(var f=["target","currentTarget","srcElement","type"];a=f.pop();)b=C(b,a,{get:"type"===a?function(){return c}:
+function(){return e}});O&&(("popstate"===c?e.onpopstate:e.onhashchange)||w).call(e,b);for(var f=0,g=d.length;f<g;f++)d[f].call(e,b);return h}return ca(a,b)}function Q(){var a=g.createEvent?g.createEvent("Event"):g.createEventObject();a.initEvent?a.initEvent("popstate",p,p):a.type="popstate";a.state=k.state;D(a)}function z(a,b,c,d){o?A=f.href:(0===n&&(n=2),b=j(b,2===n&&-1!==(""+b).indexOf("#")),b.c!==j().c&&(A=d,c?f.replace("#"+b.f):f.hash=b.f));!E&&a&&(r[f.href]=a);F=p}function R(a){var b=A;A=f.href;
+if(b){S!==f.href&&Q();var a=a||e.event,b=j(b,h),c=j();a.oldURL||(a.oldURL=b.b,a.newURL=c.b);b.a!==c.a&&D(a)}}function T(a){setTimeout(function(){t("popstate",function(a){S=f.href;E||(a=C(a,"state",{get:function(){return k.state}}));D(a)},p)},0);!o&&(a!==h&&"location"in k)&&(U(G.hash),F&&(F=p,Q()))}function da(a){var a=a||e.event,b;a:{for(b=a.target||a.srcElement;b;){if("A"===b.nodeName)break a;b=b.parentNode}b=void 0}var c="defaultPrevented"in a?a.defaultPrevented:a.returnValue===p;b&&("A"===b.nodeName&&
+!c)&&(c=j(),b=j(b.getAttribute("href",2)),c.b.split("#").shift()===b.b.split("#").shift()&&b.a&&(c.a!==b.a&&(G.hash=b.a),U(b.a),a.preventDefault?a.preventDefault():a.returnValue=p))}function U(a){var b=g.getElementById(a=(a||"").replace(/^#/,""));b&&(b.id===a&&"A"===b.nodeName)&&(a=b.getBoundingClientRect(),e.scrollTo(J.scrollLeft||0,a.top+(J.scrollTop||0)-(J.clientTop||0)))}var e=("object"===typeof window?window:this)||{};if(!e.history||"emulate"in e.history)return e.history;var g=e.document,J=g.documentElement,
+I=e.Object,s=e.JSON,f=e.location,q=e.history,k=q,K=q.pushState,V=q.replaceState,o=function(){var a=e.navigator.userAgent;return(-1!==a.indexOf("Android 2.")||-1!==a.indexOf("Android 4.0"))&&-1!==a.indexOf("Mobile Safari")&&-1===a.indexOf("Chrome")&&-1===a.indexOf("Windows Phone")?p:!!K}(),E="state"in q,y=I.defineProperty,G=C({},"t")?{}:g.createElement("a"),u="",L=e.addEventListener?"addEventListener":(u="on")&&"attachEvent",W=e.removeEventListener?"removeEventListener":"detachEvent",X=e.dispatchEvent?
+"dispatchEvent":"fireEvent",t=e[L],H=e[W],ca=e[X],l={basepath:"/",redirect:0,type:"/",init:0},B="__historyAPI__",N=g.createElement("a"),A=f.href,S="",O=1,F=p,n=0,r={},v={},x=g.title,M,ea={onhashchange:i,onpopstate:i},Y={setup:function(a,b,c){l.basepath=(""+(a==i?l.basepath:a)).replace(/(?:^|\/)[^\/]*$/,"/");l.type=b==i?l.type:b;l.redirect=c==i?l.redirect:!!c},redirect:function(a,b){k.setup(b,a);b=l.basepath;if(e.top==e.self){var c=j(i,p,h).c,d=f.pathname+f.search;o?(d=d.replace(/([^\/])$/,"$1/"),
+c!=b&&RegExp("^"+b+"$","i").test(d)&&f.replace(c)):d!=b&&(d=d.replace(/([^\/])\?/,"$1/?"),RegExp("^"+b,"i").test(d)&&f.replace(b+"#"+d.replace(RegExp("^"+b,"i"),l.type)+f.hash))}},pushState:function(a,b,c){var d=g.title;x!=i&&(g.title=x);K&&m(K,arguments);z(a,c);g.title=d;x=b},replaceState:function(a,b,c){var d=g.title;x!=i&&(g.title=x);delete r[f.href];V&&m(V,arguments);z(a,c,h);g.title=d;x=b},location:{set:function(a){0===n&&(n=1);e.location=a},get:function(){0===n&&(n=1);return G}},state:{get:function(){return"object"===
+typeof r[f.href]?s.parse(s.stringify(r[f.href])):"undefined"!==typeof r[f.href]?r[f.href]:i}}},P={assign:function(a){!o&&0===(""+a).indexOf("#")?z(i,a):f.assign(a)},reload:function(a){f.reload(a)},replace:function(a){!o&&0===(""+a).indexOf("#")?z(i,a,h):f.replace(a)},toString:function(){return this.href},origin:{get:function(){return void 0!==M?M:!f.origin?f.protocol+"//"+f.hostname+(f.port?":"+f.port:""):f.origin},set:function(a){M=a}},href:o?i:{get:function(){return j().b}},protocol:i,host:i,hostname:i,
+port:i,pathname:o?i:{get:function(){return j().d}},search:o?i:{get:function(){return j().e}},hash:o?i:{set:function(a){z(i,(""+a).replace(/^(#|)/,"#"),p,A)},get:function(){return j().a}}};if(function(){var a=g.getElementsByTagName("script"),a=(a[a.length-1]||{}).src||"";(-1!==a.indexOf("?")?a.split("?").pop():"").replace(/(\w+)(?:=([^&]*))?/g,function(a,b,c){l[b]=(c||"").replace(/^(0|false)$/,"")});t(u+"hashchange",R,p);var b=[P,G,ea,e,Y,k];E&&delete Y.state;for(var c=0;c<b.length;c+=2)for(var d in b[c])if(b[c].hasOwnProperty(d))if("object"!==
+typeof b[c][d])b[c+1][d]=b[c][d];else{a=$(b[c],d,b[c][d]);if(!C(b[c+1],d,a,function(a,d){if(d===k)e.history=k=b[c+1]=a}))return H(u+"hashchange",R,p),p;b[c+1]===e&&(v[d]=v[d.substr(2)]=[])}k.setup();l.redirect&&k.redirect();l.init&&(n=1);!E&&s&&Z();if(!o)g[L](u+"click",da,p);"complete"===g.readyState?T(h):(!o&&j().c!==l.basepath&&(F=h),t(u+"load",T,p));return h}())return k.emulate=!o,e[L]=aa,e[W]=ba,e[X]=D,k});
+(function(a){function d(d,e){var f=this,g=d.add(f),h=a(window),i,j,k,l=a.tools.expose&&(e.mask||e.expose),m=Math.random().toString().slice(10);l&&(typeof l=="string"&&(l={color:l}),l.closeOnClick=l.closeOnEsc=!1);var n=e.target||d.attr("rel");j=n?a(n):null||d;if(!j.length)throw"Could not find Overlay: "+n;d&&d.index(j)==-1&&d.click(function(a){return f.load(a),a.preventDefault()}),a.extend(f,{load:function(d){if(f.isOpened())return f;var i=c[e.effect];if(!i)throw'Overlay: cannot find effect : "'+e.effect+'"';e.oneInstance&&a.each(b,function(){this.close(d)}),d=d||a.Event(),d.type="onBeforeLoad",g.trigger(d);if(d.isDefaultPrevented())return f;k=!0,l&&a(j).expose(l);var n=e.top,o=e.left,p=j.outerWidth({margin:!0}),q=j.outerHeight({margin:!0});return typeof n=="string"&&(n=n=="center"?Math.max((h.height()-q)/2,0):parseInt(n,10)/100*h.height()),o=="center"&&(o=Math.max((h.width()-p)/2,0)),i[0].call(f,{top:n,left:o},function(){k&&(d.type="onLoad",g.trigger(d))}),l&&e.closeOnClick&&a.mask.getMask().one("click",f.close),e.closeOnClick&&a(document).bind("click."+m,function(b){a(b.target).parents(j).length||f.close(b)}),e.closeOnEsc&&a(document).bind("keydown."+m,function(a){a.keyCode==27&&f.close(a)}),f},close:function(b){if(!f.isOpened())return f;b=b||a.Event(),b.type="onBeforeClose",g.trigger(b);if(b.isDefaultPrevented())return;return k=!1,c[e.effect][1].call(f,function(){b.type="onClose",g.trigger(b)}),a(document).unbind("click."+m).unbind("keydown."+m),l&&a.mask.close(),f},getOverlay:function(){return j},getTrigger:function(){return d},getClosers:function(){return i},isOpened:function(){return k},getConf:function(){return e}}),a.each("onBeforeLoad,onStart,onLoad,onBeforeClose,onClose".split(","),function(b,c){a.isFunction(e[c])&&a(f).bind(c,e[c]),f[c]=function(b){return b&&a(f).bind(c,b),f}}),i=j.find(e.close||".close"),!i.length&&!e.close&&(i=a('<a class="close"></a>'),j.prepend(i)),i.click(function(a){f.close(a)}),e.load&&f.load()}a.tools=a.tools||{version:"1.2.6"},a.tools.overlay={addEffect:function(a,b,d){c[a]=[b,d]},conf:{close:null,closeOnClick:!0,closeOnEsc:!0,closeSpeed:"fast",effect:"default",fixed:!a.browser.msie||a.browser.version>6,left:"center",load:!1,mask:null,oneInstance:!0,speed:"normal",target:null,top:"10%"}};var b=[],c={};a.tools.overlay.addEffect("default",function(b,c){var d=this.getConf(),e=a(window);d.fixed||(b.top+=e.scrollTop(),b.left+=e.scrollLeft()),b.position=d.fixed?"fixed":"absolute",this.getOverlay().css(b).fadeIn(d.speed,c)},function(a){this.getOverlay().fadeOut(this.getConf().closeSpeed,a)}),a.fn.overlay=function(c){var e=this.data("overlay");return e?e:(a.isFunction(c)&&(c={onBeforeLoad:c}),c=a.extend(!0,{},a.tools.overlay.conf,c),this.each(function(){e=new d(a(this),c),b.push(e),a(this).data("overlay",e)}),c.api?e:this)}})(jQuery),function(a){function b(a,b){var c=parseInt(a.css(b),10);if(c)return c;var d=a[0].currentStyle;return d&&d.width&&parseInt(d.width,10)}function c(b,c){var d=a(c);return d.length<2?d:b.parent().find(c)}function e(b,e){var f=this,g=b.add(f),h=b.children(),i=0,j=e.vertical;d||(d=f),h.length>1&&(h=a(e.items,b)),e.size>1&&(e.circular=!1),a.extend(f,{getConf:function(){return e},getIndex:function(){return i},getSize:function(){return f.getItems().size()},getNaviButtons:function(){return n.add(o)},getRoot:function(){return b},getItemWrap:function(){return h},getItems:function(){return h.find(e.item).not("."+e.clonedClass)},move:function(a,b){return f.seekTo(i+a,b)},next:function(a){return f.move(e.size,a)},prev:function(a){return f.move(-e.size,a)},begin:function(a){return f.seekTo(0,a)},end:function(a){return f.seekTo(f.getSize()-1,a)},focus:function(){return d=f,f},addItem:function(b){return b=a(b),e.circular?(h.children().last().before(b),h.children().first().replaceWith(b.clone().addClass(e.clonedClass))):(h.append(b),o.removeClass("disabled")),g.trigger("onAddItem",[b]),f},seekTo:function(b,c,k){b.jquery||(b*=1);if(e.circular&&b===0&&i==-1&&c!==0)return f;if(!e.circular&&b<0||b>f.getSize()||b<-1)return f;var l=b;b.jquery?b=f.getItems().index(b):l=f.getItems().eq(b);var m=a.Event("onBeforeSeek");if(!k){g.trigger(m,[b,c]);if(m.isDefaultPrevented()||!l.length)return f}var n=j?{top:-l.position().top}:{left:-l.position().left};return i=b,d=f,c===undefined&&(c=e.speed),h.animate(n,c,e.easing,k||function(){g.trigger("onSeek",[b])}),f}}),a.each(["onBeforeSeek","onSeek","onAddItem"],function(b,c){a.isFunction(e[c])&&a(f).bind(c,e[c]),f[c]=function(b){return b&&a(f).bind(c,b),f}});if(e.circular){var k=f.getItems().slice(-1).clone().prependTo(h),l=f.getItems().eq(1).clone().appendTo(h);k.add(l).addClass(e.clonedClass),f.onBeforeSeek(function(a,b,c){if(a.isDefaultPrevented())return;if(b==-1)return f.seekTo(k,c,function(){f.end(0)}),a.preventDefault();b==f.getSize()&&f.seekTo(l,c,function(){f.begin(0)})});var m=b.parents().add(b).filter(function(){if(a(this).css("display")==="none")return!0});m.length?(m.show(),f.seekTo(0,0,function(){}),m.hide()):f.seekTo(0,0,function(){})}var n=c(b,e.prev).click(function(a){a.stopPropagation(),f.prev()}),o=c(b,e.next).click(function(a){a.stopPropagation(),f.next()});e.circular||(f.onBeforeSeek(function(a,b){setTimeout(function(){a.isDefaultPrevented()||(n.toggleClass(e.disabledClass,b<=0),o.toggleClass(e.disabledClass,b>=f.getSize()-1))},1)}),e.initialIndex||n.addClass(e.disabledClass)),f.getSize()<2&&n.add(o).addClass(e.disabledClass),e.mousewheel&&a.fn.mousewheel&&b.mousewheel(function(a,b){if(e.mousewheel)return f.move(b<0?1:-1,e.wheelSpeed||50),!1});if(e.touch){var p={};h[0].ontouchstart=function(a){var b=a.touches[0];p.x=b.clientX,p.y=b.clientY},h[0].ontouchmove=function(a){if(a.touches.length==1&&!h.is(":animated")){var b=a.touches[0],c=p.x-b.clientX,d=p.y-b.clientY;f[j&&d>0||!j&&c>0?"next":"prev"](),a.preventDefault()}}}e.keyboard&&a(document).bind("keydown.scrollable",function(b){if(!e.keyboard||b.altKey||b.ctrlKey||b.metaKey||a(b.target).is(":input"))return;if(e.keyboard!="static"&&d!=f)return;var c=b.keyCode;if(!(!j||c!=38&&c!=40))return f.move(c==38?-1:1),b.preventDefault();if(!j&&(c==37||c==39))return f.move(c==37?-1:1),b.preventDefault()}),e.initialIndex&&f.seekTo(e.initialIndex,0,function(){})}a.tools=a.tools||{version:"1.2.6"},a.tools.scrollable={conf:{activeClass:"active",circular:!1,clonedClass:"cloned",disabledClass:"disabled",easing:"swing",initialIndex:0,item:"> *",items:".items",keyboard:!0,mousewheel:!1,next:".next",prev:".prev",size:1,speed:400,vertical:!1,touch:!0,wheelSpeed:0}};var d;a.fn.scrollable=function(b){var c=this.data("scrollable");return c?c:(b=a.extend({},a.tools.scrollable.conf,b),this.each(function(){c=new e(a(this),b),a(this).data("scrollable",c)}),b.api?c:this)}}(jQuery),function(a){function e(c,d,e){var f=this,g=c.add(this),h=c.find(e.tabs),i=d.jquery?d:c.children(d),j;h.length||(h=c.children()),i.length||(i=c.parent().find(d)),i.length||(i=a(d)),a.extend(this,{click:function(c,d){var i=h.eq(c);typeof c=="string"&&c.replace("#","")&&(i=h.filter("[href*="+c.replace("#","")+"]"),c=Math.max(h.index(i),0));if(e.rotate){var k=h.length-1;if(c<0)return f.click(k,d);if(c>k)return f.click(0,d)}if(!i.length){if(j>=0)return f;c=e.initialIndex,i=h.eq(c)}if(c===j)return f;d=d||a.Event(),d.type="onBeforeClick",g.trigger(d,[c]);if(d.isDefaultPrevented())return;return b[e.effect].call(f,c,function(){j=c,d.type="onClick",g.trigger(d,[c])}),h.removeClass(e.current),i.addClass(e.current),f},getConf:function(){return e},getTabs:function(){return h},getPanes:function(){return i},getCurrentPane:function(){return i.eq(j)},getCurrentTab:function(){return h.eq(j)},getIndex:function(){return j},next:function(){return f.click(j+1)},prev:function(){return f.click(j-1)},destroy:function(){return h.unbind(e.event).removeClass(e.current),i.find("a[href^=#]").unbind("click.T"),f}}),a.each("onBeforeClick,onClick".split(","),function(b,c){a.isFunction(e[c])&&a(f).bind(c,e[c]),f[c]=function(b){return b&&a(f).bind(c,b),f}}),e.history&&a.fn.history&&(a.tools.history.init(h),e.event="history"),h.each(function(b){a(this).bind(e.event,function(a){return f.click(b,a),a.preventDefault()})}),i.find("a[href^=#]").bind("click.T",function(b){f.click(a(this).attr("href"),b)}),location.hash&&e.tabs=="a"&&c.find("[href="+location.hash+"]").length?f.click(location.hash):(e.initialIndex===0||e.initialIndex>0)&&f.click(e.initialIndex)}a.tools=a.tools||{version:"1.2.6"},a.tools.tabs={conf:{tabs:"a",current:"current",onBeforeClick:null,onClick:null,effect:"default",initialIndex:0,event:"click",rotate:!1,slideUpSpeed:400,slideDownSpeed:400,history:!1},addEffect:function(a,c){b[a]=c}};var b={"default":function(a,b){this.getPanes().hide().eq(a).show(),b.call()},fade:function(a,b){var c=this.getConf(),d=c.fadeOutSpeed,e=this.getPanes();d?e.fadeOut(d):e.hide(),e.eq(a).fadeIn(c.fadeInSpeed,b)},slide:function(a,b){var c=this.getConf();this.getPanes().slideUp(c.slideUpSpeed),this.getPanes().eq(a).slideDown(c.slideDownSpeed,b)},ajax:function(a,b){this.getPanes().eq(0).load(this.getTabs().eq(a).attr("href"),b)}},c,d;a.tools.tabs.addEffect("horizontal",function(b,e){if(c)return;var f=this.getPanes().eq(b),g=this.getCurrentPane();d||(d=this.getPanes().eq(0).width()),c=!0,f.show(),g.animate({width:0},{step:function(a){f.css("width",d-a)},complete:function(){a(this).hide(),e.call(),c=!1}}),g.length||(e.call(),c=!1)}),a.fn.tabs=function(b,c){var d=this.data("tabs");return d&&(d.destroy(),this.removeData("tabs")),a.isFunction(c)&&(c={onBeforeClick:c}),c=a.extend({},a.tools.tabs.conf,c),this.each(function(){d=new e(a(this),b,c),a(this).data("tabs",d)}),c.api?d:this}}(jQuery),function(a){function c(b,c,d){var e=d.relative?b.position().top:b.offset().top,f=d.relative?b.position().left:b.offset().left,g=d.position[0];e-=c.outerHeight()-d.offset[0],f+=b.outerWidth()+d.offset[1],/iPad/i.test(navigator.userAgent)&&(e-=a(window).scrollTop());var h=c.outerHeight()+b.outerHeight();g=="center"&&(e+=h/2),g=="bottom"&&(e+=h),g=d.position[1];var i=c.outerWidth()+b.outerWidth();return g=="center"&&(f-=i/2),g=="left"&&(f-=i),{top:e,left:f}}function d(d,e){var f=this,g=d.add(f),h,i=0,j=0,k=d.attr("title"),l=d.attr("data-tooltip"),m=b[e.effect],n,o=d.is(":input"),p=o&&d.is(":checkbox, :radio, select, :button, :submit"),q=d.attr("type"),r=e.events[q]||e.events[o?p?"widget":"input":"def"];if(!m)throw'Nonexistent effect "'+e.effect+'"';r=r.split(/,\s*/);if(r.length!=2)throw"Tooltip: bad events configuration for "+q;d.bind(r[0],function(a){clearTimeout(i),e.predelay?j=setTimeout(function(){f.show(a)},e.predelay):f.show(a)}).bind(r[1],function(a){clearTimeout(j),e.delay?i=setTimeout(function(){f.hide(a)},e.delay):f.hide(a)}),k&&e.cancelDefault&&(d.removeAttr("title"),d.data("title",k)),a.extend(f,{show:function(b){if(!h){l?h=a(l):e.tip?h=a(e.tip).eq(0):k?h=a(e.layout).addClass(e.tipClass).appendTo(document.body).hide().append(k):(h=d.next(),h.length||(h=d.parent().next()));if(!h.length)throw"Cannot find tooltip for "+d}if(f.isShown())return f;h.stop(!0,!0);var o=c(d,h,e);e.tip&&h.html(d.data("title")),b=a.Event(),b.type="onBeforeShow",g.trigger(b,[o]);if(b.isDefaultPrevented())return f;o=c(d,h,e),h.css({position:"absolute",top:o.top,left:o.left}),n=!0,m[0].call(f,function(){b.type="onShow",n="full",g.trigger(b)});var p=e.events.tooltip.split(/,\s*/);return h.data("__set")||(h.unbind(p[0]).bind(p[0],function(){clearTimeout(i),clearTimeout(j)}),p[1]&&!d.is("input:not(:checkbox, :radio), textarea")&&h.unbind(p[1]).bind(p[1],function(a){a.relatedTarget!=d[0]&&d.trigger(r[1].split(" ")[0])}),e.tip||h.data("__set",!0)),f},hide:function(c){if(!h||!f.isShown())return f;c=a.Event(),c.type="onBeforeHide",g.trigger(c);if(c.isDefaultPrevented())return;return n=!1,b[e.effect][1].call(f,function(){c.type="onHide",g.trigger(c)}),f},isShown:function(a){return a?n=="full":n},getConf:function(){return e},getTip:function(){return h},getTrigger:function(){return d}}),a.each("onHide,onBeforeShow,onShow,onBeforeHide".split(","),function(b,c){a.isFunction(e[c])&&a(f).bind(c,e[c]),f[c]=function(b){return b&&a(f).bind(c,b),f}})}a.tools=a.tools||{version:"1.2.6"},a.tools.tooltip={conf:{effect:"toggle",fadeOutSpeed:"fast",predelay:0,delay:30,opacity:1,tip:0,fadeIE:!1,position:["top","center"],offset:[0,0],relative:!1,cancelDefault:!0,events:{def:"mouseenter,mouseleave",input:"focus,blur",widget:"focus mouseenter,blur mouseleave",tooltip:"mouseenter,mouseleave"},layout:"<div/>",tipClass:"tooltip"},addEffect:function(a,c,d){b[a]=[c,d]}};var b={toggle:[function(a){var b=this.getConf(),c=this.getTip(),d=b.opacity;d<1&&c.css({opacity:d}),c.show(),a.call()},function(a){this.getTip().hide(),a.call()}],fade:[function(b){var c=this.getConf();!a.browser.msie||c.fadeIE?this.getTip().fadeTo(c.fadeInSpeed,c.opacity,b):(this.getTip().show(),b())},function(b){var c=this.getConf();!a.browser.msie||c.fadeIE?this.getTip().fadeOut(c.fadeOutSpeed,b):(this.getTip().hide(),b())}]};a.fn.tooltip=function(b){var c=this.data("tooltip");return c?c:(b=a.extend(!0,{},a.tools.tooltip.conf,b),typeof b.position=="string"&&(b.position=b.position.split(/,?\s/)),this.each(function(){c=new d(a(this),b),a(this).data("tooltip",c)}),b.api?c:this)}}(jQuery)
+!function (t) {
+var e = {}, s = {
+mode: "horizontal",
+slideSelector: "",
+infiniteLoop: !0,
+hideControlOnEnd: !1,
+speed: 500,
+easing: null,
+slideMargin: 0,
+startSlide: 0,
+randomStart: !1,
+captions: !1,
+ticker: !1,
+tickerHover: !1,
+adaptiveHeight: !1,
+adaptiveHeightSpeed: 500,
+video: !1,
+useCSS: !0,
+preloadImages: "visible",
+responsive: !0,
+slideZIndex: 50,
+touchEnabled: !0,
+swipeThreshold: 50,
+oneToOneTouch: !0,
+preventDefaultSwipeX: !0,
+preventDefaultSwipeY: !1,
+pager: !0,
+pagerType: "full",
+pagerShortSeparator: " / ",
+pagerSelector: null,
+buildPager: null,
+pagerCustom: null,
+controls: !0,
+nextText: "Next",
+prevText: "Prev",
+nextSelector: null,
+prevSelector: null,
+autoControls: !1,
+startText: "Start",
+stopText: "Stop",
+autoControlsCombine: !1,
+autoControlsSelector: null,
+auto: !1,
+pause: 4e3,
+autoStart: !0,
+autoDirection: "next",
+autoHover: !1,
+autoDelay: 0,
+minSlides: 1,
+maxSlides: 1,
+moveSlides: 0,
+slideWidth: 0,
+onSliderLoad: function () {
+},
+onSlideBefore: function () {
+},
+onSlideAfter: function () {
+},
+onSlideNext: function () {
+},
+onSlidePrev: function () {
+},
+onSliderResize: function () {
+}
+};
+t.fn.bxSlider = function (n) {
+if (0 == this.length)return this;
+if (this.length > 1)return this.each(function () {
+t(this).bxSlider(n)
+}), this;
+var o = {}, r = this;
+e.el = this;
+var a = t(window).width(), l = t(window).height(), d = function () {
+o.settings = t.extend({}, s, n), o.settings.slideWidth = parseInt(o.settings.slideWidth), o.children = r.children(o.settings.slideSelector), o.children.length < o.settings.minSlides && (o.settings.minSlides = o.children.length), o.children.length < o.settings.maxSlides && (o.settings.maxSlides = o.children.length), o.settings.randomStart && (o.settings.startSlide = Math.floor(Math.random() * o.children.length)), o.active = {index: o.settings.startSlide}, o.carousel = o.settings.minSlides > 1 || o.settings.maxSlides > 1, o.carousel && (o.settings.preloadImages = "all"), o.minThreshold = o.settings.minSlides * o.settings.slideWidth + (o.settings.minSlides - 1) * o.settings.slideMargin, o.maxThreshold = o.settings.maxSlides * o.settings.slideWidth + (o.settings.maxSlides - 1) * o.settings.slideMargin, o.working = !1, o.controls = {}, o.interval = null, o.animProp = "vertical" == o.settings.mode ? "top" : "left", o.usingCSS = o.settings.useCSS && "fade" != o.settings.mode && function () {
+var t = document.createElement("div"), e = ["WebkitPerspective", "MozPerspective", "OPerspective", "msPerspective"];
+for (var i in e)if (void 0 !== t.style[e[i]])return o.cssPrefix = e[i].replace("Perspective", "").toLowerCase(), o.animProp = "-" + o.cssPrefix + "-transform", !0;
+return !1
+}(), "vertical" == o.settings.mode && (o.settings.maxSlides = o.settings.minSlides), r.data("origStyle", r.attr("style")), r.children(o.settings.slideSelector).each(function () {
+t(this).data("origStyle", t(this).attr("style"))
+}), c()
+}, c = function () {
+r.wrap('<div class="bx-wrapper"><div class="bx-viewport"></div></div>'), o.viewport = r.parent(), o.loader = t('<div class="bx-loading" />'), o.viewport.prepend(o.loader), r.css({
+width: "horizontal" == o.settings.mode ? 100 * o.children.length + 215 + "%" : "auto",
+position: "relative"
+}), o.usingCSS && o.settings.easing ? r.css("-" + o.cssPrefix + "-transition-timing-function", o.settings.easing) : o.settings.easing || (o.settings.easing = "swing"), f(), o.viewport.css({
+width: "100%",
+overflow: "hidden",
+position: "relative"
+}), o.viewport.parent().css({maxWidth: p()}), o.settings.pager || o.viewport.parent().css({margin: "0 auto 0px"}), o.children.css({
+"float": "horizontal" == o.settings.mode ? "left" : "none",
+listStyle: "none",
+position: "relative"
+}), o.children.css("width", u()), "horizontal" == o.settings.mode && o.settings.slideMargin > 0 && o.children.css("marginRight", o.settings.slideMargin), "vertical" == o.settings.mode && o.settings.slideMargin > 0 && o.children.css("marginBottom", o.settings.slideMargin), "fade" == o.settings.mode && (o.children.css({
+position: "absolute",
+zIndex: 0,
+display: "none"
+}), o.children.eq(o.settings.startSlide).css({
+zIndex: o.settings.slideZIndex,
+display: "block"
+})), o.controls.el = t('<div class="bx-controls" />'), o.settings.captions && P(), o.active.last = o.settings.startSlide == x() - 1, o.settings.video && r.fitVids();
+var e = o.children.eq(o.settings.startSlide);
+"all" == o.settings.preloadImages && (e = o.children), o.settings.ticker ? o.settings.pager = !1 : (o.settings.pager && T(), o.settings.controls && C(), o.settings.auto && o.settings.autoControls && E(), (o.settings.controls || o.settings.autoControls || o.settings.pager) && o.viewport.after(o.controls.el)), g(e, h)
+}, g = function (e, i) {
+var s = e.find("img, iframe").length;
+if (0 == s)return i(), void 0;
+var n = 0;
+e.find("img, iframe").each(function () {
+t(this).one("load", function () {
+++n == s && i()
+}).each(function () {
+this.complete && t(this).load()
+})
+})
+}, h = function () {
+if (o.settings.infiniteLoop && "fade" != o.settings.mode && !o.settings.ticker) {
+var e = "vertical" == o.settings.mode ? o.settings.minSlides : o.settings.maxSlides, i = o.children.slice(0, e).clone().addClass("bx-clone"), s = o.children.slice(-e).clone().addClass("bx-clone");
+r.append(i).prepend(s)
+}
+o.loader.remove(), S(), "vertical" == o.settings.mode && (o.settings.adaptiveHeight = !0), o.viewport.height(v()), r.redrawSlider(), o.settings.onSliderLoad(o.active.index), o.initialized = !0, o.settings.responsive && t(window).bind("resize", Z), o.settings.auto && o.settings.autoStart && H(), o.settings.ticker && L(), o.settings.pager && q(o.settings.startSlide), o.settings.controls && W(), o.settings.touchEnabled && !o.settings.ticker && O()
+}, v = function () {
+var e = 0, s = t();
+if ("vertical" == o.settings.mode || o.settings.adaptiveHeight)if (o.carousel) {
+var n = 1 == o.settings.moveSlides ? o.active.index : o.active.index * m();
+for (s = o.children.eq(n), i = 1; i <= o.settings.maxSlides - 1; i++)s = n + i >= o.children.length ? s.add(o.children.eq(i - 1)) : s.add(o.children.eq(n + i))
+} else s = o.children.eq(o.active.index); else s = o.children;
+return "vertical" == o.settings.mode ? (s.each(function () {
+e += t(this).outerHeight()
+}), o.settings.slideMargin > 0 && (e += o.settings.slideMargin * (o.settings.minSlides - 1))) : e = Math.max.apply(Math, s.map(function () {
+return t(this).outerHeight(!1)
+}).get()), e
+}, p = function () {
+var t = "100%";
+return o.settings.slideWidth > 0 && (t = "horizontal" == o.settings.mode ? o.settings.maxSlides * o.settings.slideWidth + (o.settings.maxSlides - 1) * o.settings.slideMargin : o.settings.slideWidth), t
+}, u = function () {
+var t = o.settings.slideWidth, e = o.viewport.width();
+return 0 == o.settings.slideWidth || o.settings.slideWidth > e && !o.carousel || "vertical" == o.settings.mode ? t = e : o.settings.maxSlides > 1 && "horizontal" == o.settings.mode && (e > o.maxThreshold || e < o.minThreshold && (t = (e - o.settings.slideMargin * (o.settings.minSlides - 1)) / o.settings.minSlides)), t
+}, f = function () {
+var t = 1;
+if ("horizontal" == o.settings.mode && o.settings.slideWidth > 0)if (o.viewport.width() < o.minThreshold)t = o.settings.minSlides; else if (o.viewport.width() > o.maxThreshold)t = o.settings.maxSlides; else {
+var e = o.children.first().width();
+t = Math.floor(o.viewport.width() / e)
+} else"vertical" == o.settings.mode && (t = o.settings.minSlides);
+return t
+}, x = function () {
+var t = 0;
+if (o.settings.moveSlides > 0)if (o.settings.infiniteLoop)t = o.children.length / m(); else for (var e = 0, i = 0; e < o.children.length;)++t, e = i + f(), i += o.settings.moveSlides <= f() ? o.settings.moveSlides : f(); else t = Math.ceil(o.children.length / f());
+return t
+}, m = function () {
+return o.settings.moveSlides > 0 && o.settings.moveSlides <= f() ? o.settings.moveSlides : f()
+}, S = function () {
+if (o.children.length > o.settings.maxSlides && o.active.last && !o.settings.infiniteLoop) {
+if ("horizontal" == o.settings.mode) {
+var t = o.children.last(), e = t.position();
+b(-(e.left - (o.viewport.width() - t.width())), "reset", 0)
+} else if ("vertical" == o.settings.mode) {
+var i = o.children.length - o.settings.minSlides, e = o.children.eq(i).position();
+b(-e.top, "reset", 0)
+}
+} else {
+var e = o.children.eq(o.active.index * m()).position();
+o.active.index == x() - 1 && (o.active.last = !0), void 0 != e && ("horizontal" == o.settings.mode ? b(-e.left, "reset", 0) : "vertical" == o.settings.mode && b(-e.top, "reset", 0))
+}
+}, b = function (t, e, i, s) {
+if (o.usingCSS) {
+var n = "vertical" == o.settings.mode ? "translate3d(0, " + t + "px, 0)" : "translate3d(" + t + "px, 0, 0)";
+r.css("-" + o.cssPrefix + "-transition-duration", i / 1e3 + "s"), "slide" == e ? (r.css(o.animProp, n), r.bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function () {
+r.unbind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd"), D()
+})) : "reset" == e ? r.css(o.animProp, n) : "ticker" == e && (r.css("-" + o.cssPrefix + "-transition-timing-function", "linear"), r.css(o.animProp, n), r.bind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", function () {
+r.unbind("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd"), b(s.resetValue, "reset", 0), N()
+}))
+} else {
+var a = {};
+a[o.animProp] = t, "slide" == e ? r.animate(a, i, o.settings.easing, function () {
+D()
+}) : "reset" == e ? r.css(o.animProp, t) : "ticker" == e && r.animate(a, speed, "linear", function () {
+b(s.resetValue, "reset", 0), N()
+})
+}
+}, w = function () {
+for (var e = "", i = x(), s = 0; i > s; s++) {
+var n = "";
+o.settings.buildPager && t.isFunction(o.settings.buildPager) ? (n = o.settings.buildPager(s), o.pagerEl.addClass("bx-custom-pager")) : (n = s + 1, o.pagerEl.addClass("bx-default-pager")), e += '<div class="bx-pager-item"><a href="" data-slide-index="' + s + '" class="bx-pager-link">' + n + "</a></div>"
+}
+o.pagerEl.html(e)
+}, T = function () {
+o.settings.pagerCustom ? o.pagerEl = t(o.settings.pagerCustom) : (o.pagerEl = t('<div class="bx-pager" />'), o.settings.pagerSelector ? t(o.settings.pagerSelector).html(o.pagerEl) : o.controls.el.addClass("bx-has-pager").append(o.pagerEl), w()), o.pagerEl.on("click", "a", I)
+}, C = function () {
+o.controls.next = t('<a class="bx-next" href="">' + o.settings.nextText + "</a>"), o.controls.prev = t('<a class="bx-prev" href="">' + o.settings.prevText + "</a>"), o.controls.next.bind("click", y), o.controls.prev.bind("click", z), o.settings.nextSelector && t(o.settings.nextSelector).append(o.controls.next), o.settings.prevSelector && t(o.settings.prevSelector).append(o.controls.prev), o.settings.nextSelector || o.settings.prevSelector || (o.controls.directionEl = t('<div class="bx-controls-direction" />'), o.controls.directionEl.append(o.controls.prev).append(o.controls.next), o.controls.el.addClass("bx-has-controls-direction").append(o.controls.directionEl))
+}, E = function () {
+o.controls.start = t('<div class="bx-controls-auto-item"><a class="bx-start" href="">' + o.settings.startText + "</a></div>"), o.controls.stop = t('<div class="bx-controls-auto-item"><a class="bx-stop" href="">' + o.settings.stopText + "</a></div>"), o.controls.autoEl = t('<div class="bx-controls-auto" />'), o.controls.autoEl.on("click", ".bx-start", k), o.controls.autoEl.on("click", ".bx-stop", M), o.settings.autoControlsCombine ? o.controls.autoEl.append(o.controls.start) : o.controls.autoEl.append(o.controls.start).append(o.controls.stop), o.settings.autoControlsSelector ? t(o.settings.autoControlsSelector).html(o.controls.autoEl) : o.controls.el.addClass("bx-has-controls-auto").append(o.controls.autoEl), A(o.settings.autoStart ? "stop" : "start")
+}, P = function () {
+o.children.each(function () {
+var e = t(this).find("img:first").attr("title");
+void 0 != e && ("" + e).length && t(this).append('<div class="bx-caption"><span>' + e + "</span></div>")
+})
+}, y = function (t) {
+o.settings.auto && r.stopAuto(), r.goToNextSlide(), t.preventDefault()
+}, z = function (t) {
+o.settings.auto && r.stopAuto(), r.goToPrevSlide(), t.preventDefault()
+}, k = function (t) {
+r.startAuto(), t.preventDefault()
+}, M = function (t) {
+r.stopAuto(), t.preventDefault()
+}, I = function (e) {
+o.settings.auto && r.stopAuto();
+var i = t(e.currentTarget), s = parseInt(i.attr("data-slide-index"));
+s != o.active.index && r.goToSlide(s), e.preventDefault()
+}, q = function (e) {
+var i = o.children.length;
+return "short" == o.settings.pagerType ? (o.settings.maxSlides > 1 && (i = Math.ceil(o.children.length / o.settings.maxSlides)), o.pagerEl.html(e + 1 + o.settings.pagerShortSeparator + i), void 0) : (o.pagerEl.find("a").removeClass("active"), o.pagerEl.each(function (i, s) {
+t(s).find("a").eq(e).addClass("active")
+}), void 0)
+}, D = function () {
+if (o.settings.infiniteLoop) {
+var t = "";
+0 == o.active.index ? t = o.children.eq(0).position() : o.active.index == x() - 1 && o.carousel ? t = o.children.eq((x() - 1) * m()).position() : o.active.index == o.children.length - 1 && (t = o.children.eq(o.children.length - 1).position()), t && ("horizontal" == o.settings.mode ? b(-t.left, "reset", 0) : "vertical" == o.settings.mode && b(-t.top, "reset", 0))
+}
+o.working = !1, o.settings.onSlideAfter(o.children.eq(o.active.index), o.oldIndex, o.active.index)
+}, A = function (t) {
+o.settings.autoControlsCombine ? o.controls.autoEl.html(o.controls[t]) : (o.controls.autoEl.find("a").removeClass("active"), o.controls.autoEl.find("a:not(.bx-" + t + ")").addClass("active"))
+}, W = function () {
+1 == x() ? (o.controls.prev.addClass("disabled"), o.controls.next.addClass("disabled")) : !o.settings.infiniteLoop && o.settings.hideControlOnEnd && (0 == o.active.index ? (o.controls.prev.addClass("disabled"), o.controls.next.removeClass("disabled")) : o.active.index == x() - 1 ? (o.controls.next.addClass("disabled"), o.controls.prev.removeClass("disabled")) : (o.controls.prev.removeClass("disabled"), o.controls.next.removeClass("disabled")))
+}, H = function () {
+o.settings.autoDelay > 0 ? setTimeout(r.startAuto, o.settings.autoDelay) : r.startAuto(), o.settings.autoHover && r.hover(function () {
+o.interval && (r.stopAuto(!0), o.autoPaused = !0)
+}, function () {
+o.autoPaused && (r.startAuto(!0), o.autoPaused = null)
+})
+}, L = function () {
+var e = 0;
+if ("next" == o.settings.autoDirection)r.append(o.children.clone().addClass("bx-clone")); else {
+r.prepend(o.children.clone().addClass("bx-clone"));
+var i = o.children.first().position();
+e = "horizontal" == o.settings.mode ? -i.left : -i.top
+}
+b(e, "reset", 0), o.settings.pager = !1, o.settings.controls = !1, o.settings.autoControls = !1, o.settings.tickerHover && !o.usingCSS && o.viewport.hover(function () {
+r.stop()
+}, function () {
+var e = 0;
+o.children.each(function () {
+e += "horizontal" == o.settings.mode ? t(this).outerWidth(!0) : t(this).outerHeight(!0)
+});
+var i = o.settings.speed / e, s = "horizontal" == o.settings.mode ? "left" : "top", n = i * (e - Math.abs(parseInt(r.css(s))));
+N(n)
+}), N()
+}, N = function (t) {
+speed = t ? t : o.settings.speed;
+var e = {left: 0, top: 0}, i = {left: 0, top: 0};
+"next" == o.settings.autoDirection ? e = r.find(".bx-clone").first().position() : i = o.children.first().position();
+var s = "horizontal" == o.settings.mode ? -e.left : -e.top, n = "horizontal" == o.settings.mode ? -i.left : -i.top, a = {resetValue: n};
+b(s, "ticker", speed, a)
+}, O = function () {
+o.touch = {start: {x: 0, y: 0}, end: {x: 0, y: 0}}, o.viewport.bind("touchstart", X)
+}, X = function (t) {
+if (o.working)t.preventDefault(); else {
+o.touch.originalPos = r.position();
+var e = t.originalEvent;
+o.touch.start.x = e.changedTouches[0].pageX, o.touch.start.y = e.changedTouches[0].pageY, o.viewport.bind("touchmove", Y), o.viewport.bind("touchend", V)
+}
+}, Y = function (t) {
+var e = t.originalEvent, i = Math.abs(e.changedTouches[0].pageX - o.touch.start.x), s = Math.abs(e.changedTouches[0].pageY - o.touch.start.y);
+if (3 * i > s && o.settings.preventDefaultSwipeX ? t.preventDefault() : 3 * s > i && o.settings.preventDefaultSwipeY && t.preventDefault(), "fade" != o.settings.mode && o.settings.oneToOneTouch) {
+var n = 0;
+if ("horizontal" == o.settings.mode) {
+var r = e.changedTouches[0].pageX - o.touch.start.x;
+n = o.touch.originalPos.left + r
+} else {
+var r = e.changedTouches[0].pageY - o.touch.start.y;
+n = o.touch.originalPos.top + r
+}
+b(n, "reset", 0)
+}
+}, V = function (t) {
+o.viewport.unbind("touchmove", Y);
+var e = t.originalEvent, i = 0;
+if (o.touch.end.x = e.changedTouches[0].pageX, o.touch.end.y = e.changedTouches[0].pageY, "fade" == o.settings.mode) {
+var s = Math.abs(o.touch.start.x - o.touch.end.x);
+s >= o.settings.swipeThreshold && (o.touch.start.x > o.touch.end.x ? r.goToNextSlide() : r.goToPrevSlide(), r.stopAuto())
+} else {
+var s = 0;
+"horizontal" == o.settings.mode ? (s = o.touch.end.x - o.touch.start.x, i = o.touch.originalPos.left) : (s = o.touch.end.y - o.touch.start.y, i = o.touch.originalPos.top), !o.settings.infiniteLoop && (0 == o.active.index && s > 0 || o.active.last && 0 > s) ? b(i, "reset", 200) : Math.abs(s) >= o.settings.swipeThreshold ? (0 > s ? r.goToNextSlide() : r.goToPrevSlide(), r.stopAuto()) : b(i, "reset", 200)
+}
+o.viewport.unbind("touchend", V)
+}, Z = function () {
+var e = t(window).width(), i = t(window).height();
+(a != e || l != i) && (a = e, l = i, r.redrawSlider(), o.settings.onSliderResize.call(r, o.active.index))
+};
+return r.goToSlide = function (e, i) {
+if (!o.working && o.active.index != e)if (o.working = !0, o.oldIndex = o.active.index, o.active.index = 0 > e ? x() - 1 : e >= x() ? 0 : e, o.settings.onSlideBefore(o.children.eq(o.active.index), o.oldIndex, o.active.index), "next" == i ? o.settings.onSlideNext(o.children.eq(o.active.index), o.oldIndex, o.active.index) : "prev" == i && o.settings.onSlidePrev(o.children.eq(o.active.index), o.oldIndex, o.active.index), o.active.last = o.active.index >= x() - 1, o.settings.pager && q(o.active.index), o.settings.controls && W(), "fade" == o.settings.mode)o.settings.adaptiveHeight && o.viewport.height() != v() && o.viewport.animate({height: v()}, o.settings.adaptiveHeightSpeed), o.children.filter(":visible").fadeOut(o.settings.speed).css({zIndex: 0}), o.children.eq(o.active.index).css("zIndex", o.settings.slideZIndex + 1).fadeIn(o.settings.speed, function () {
+t(this).css("zIndex", o.settings.slideZIndex), D()
+}); else {
+o.settings.adaptiveHeight && o.viewport.height() != v() && o.viewport.animate({height: v()}, o.settings.adaptiveHeightSpeed);
+var s = 0, n = {left: 0, top: 0};
+if (!o.settings.infiniteLoop && o.carousel && o.active.last)if ("horizontal" == o.settings.mode) {
+var a = o.children.eq(o.children.length - 1);
+n = a.position(), s = o.viewport.width() - a.outerWidth()
+} else {
+var l = o.children.length - o.settings.minSlides;
+n = o.children.eq(l).position()
+} else if (o.carousel && o.active.last && "prev" == i) {
+var d = 1 == o.settings.moveSlides ? o.settings.maxSlides - m() : (x() - 1) * m() - (o.children.length - o.settings.maxSlides), a = r.children(".bx-clone").eq(d);
+n = a.position()
+} else if ("next" == i && 0 == o.active.index)n = r.find("> .bx-clone").eq(o.settings.maxSlides).position(), o.active.last = !1; else if (e >= 0) {
+var c = e * m();
+n = o.children.eq(c).position()
+}
+if ("undefined" != typeof n) {
+var g = "horizontal" == o.settings.mode ? -(n.left - s) : -n.top;
+b(g, "slide", o.settings.speed)
+}
+}
+}, r.goToNextSlide = function () {
+if (o.settings.infiniteLoop || !o.active.last) {
+var t = parseInt(o.active.index) + 1;
+r.goToSlide(t, "next")
+}
+}, r.goToPrevSlide = function () {
+if (o.settings.infiniteLoop || 0 != o.active.index) {
+var t = parseInt(o.active.index) - 1;
+r.goToSlide(t, "prev")
+}
+}, r.startAuto = function (t) {
+o.interval || (o.interval = setInterval(function () {
+"next" == o.settings.autoDirection ? r.goToNextSlide() : r.goToPrevSlide()
+}, o.settings.pause), o.settings.autoControls && 1 != t && A("stop"))
+}, r.stopAuto = function (t) {
+o.interval && (clearInterval(o.interval), o.interval = null, o.settings.autoControls && 1 != t && A("start"))
+}, r.getCurrentSlide = function () {
+return o.active.index
+}, r.getCurrentSlideElement = function () {
+return o.children.eq(o.active.index)
+}, r.getSlideCount = function () {
+return o.children.length
+}, r.redrawSlider = function () {
+o.children.add(r.find(".bx-clone")).outerWidth(u()), o.viewport.css("height", v()), o.settings.ticker || S(), o.active.last && (o.active.index = x() - 1), o.active.index >= x() && (o.active.last = !0), o.settings.pager && !o.settings.pagerCustom && (w(), q(o.active.index))
+}, r.destroySlider = function () {
+o.initialized && (o.initialized = !1, t(".bx-clone", this).remove(), o.children.each(function () {
+void 0 != t(this).data("origStyle") ? t(this).attr("style", t(this).data("origStyle")) : t(this).removeAttr("style")
+}), void 0 != t(this).data("origStyle") ? this.attr("style", t(this).data("origStyle")) : t(this).removeAttr("style"), t(this).unwrap().unwrap(), o.controls.el && o.controls.el.remove(), o.controls.next && o.controls.next.remove(), o.controls.prev && o.controls.prev.remove(), o.pagerEl && o.settings.controls && o.pagerEl.remove(), t(".bx-caption", this).remove(), o.controls.autoEl && o.controls.autoEl.remove(), clearInterval(o.interval), o.settings.responsive && t(window).unbind("resize", Z))
+}, r.reloadSlider = function (t) {
+void 0 != t && (n = t), r.destroySlider(), d()
+}, d(), this
+}
+}(jQuery);
+;(function($) {
+
+$.fn.ajaxSubmit = function(options) {
+// fast fail if nothing selected (http://dev.jquery.com/ticket/2752)
+if (!this.length) {
+log('ajaxSubmit: skipping submit process - no element selected');
+return this;
+}
+if (typeof options == 'function') {
+options = { success: options };
+}
+var url = $.trim(this.attr('action'));
+if (url) {
+// clean url (don't include hash vaue)
+url = (url.match(/^([^#]+)/)||[])[1];
+}
+url = url || window.location.href || '';
+options = $.extend(true, {
+url:  url,
+type: this.attr('method') || 'GET',
+iframeSrc: /^https/i.test(window.location.href || '') ? 'javascript:false' : 'about:blank'
+}, options);
+// hook for manipulating the form data before it is extracted;
+// convenient for use with rich editors like tinyMCE or FCKEditor
+var veto = {};
+this.trigger('form-pre-serialize', [this, options, veto]);
+if (veto.veto) {
+log('ajaxSubmit: submit vetoed via form-pre-serialize trigger');
+return this;
+}
+// provide opportunity to alter form data before it is serialized
+if (options.beforeSerialize && options.beforeSerialize(this, options) === false) {
+log('ajaxSubmit: submit aborted via beforeSerialize callback');
+return this;
+}
+var n,v,a = this.formToArray(options.semantic);
+if (options.data) {
+options.extraData = options.data;
+for (n in options.data) {
+if(options.data[n] instanceof Array) {
+for (var k in options.data[n]) {
+a.push( { name: n, value: options.data[n][k] } );
+}
+}
+else {
+v = options.data[n];
+v = $.isFunction(v) ? v() : v; // if value is fn, invoke it
+a.push( { name: n, value: v } );
+}
+}
+}
+// give pre-submit callback an opportunity to abort the submit
+if (options.beforeSubmit && options.beforeSubmit(a, this, options) === false) {
+log('ajaxSubmit: submit aborted via beforeSubmit callback');
+return this;
+}
+// fire vetoable 'validate' event
+this.trigger('form-submit-validate', [a, this, options, veto]);
+if (veto.veto) {
+log('ajaxSubmit: submit vetoed via form-submit-validate trigger');
+return this;
+}
+var q = $.param(a);
+if (options.type.toUpperCase() == 'GET') {
+options.url += (options.url.indexOf('?') >= 0 ? '&' : '?') + q;
+options.data = null;  // data is null for 'get'
+}
+else {
+options.data = q; // data is the query string for 'post'
+}
+var $form = this, callbacks = [];
+if (options.resetForm) {
+callbacks.push(function() { $form.resetForm(); });
+}
+if (options.clearForm) {
+callbacks.push(function() { $form.clearForm(); });
+}
+// perform a load on the target only if dataType is not provided
+if (!options.dataType && options.target) {
+var oldSuccess = options.success || function(){};
+callbacks.push(function(data) {
+var fn = options.replaceTarget ? 'replaceWith' : 'html';
+$(options.target)[fn](data).each(oldSuccess, arguments);
+});
+}
+else if (options.success) {
+callbacks.push(options.success);
+}
+options.success = function(data, status, xhr) { // jQuery 1.4+ passes xhr as 3rd arg
+var context = options.context || options;   // jQuery 1.4+ supports scope context
+for (var i=0, max=callbacks.length; i < max; i++) {
+callbacks[i].apply(context, [data, status, xhr || $form, $form]);
+}
+};
+// are there files to upload?
+var fileInputs = $('input:file', this).length > 0;
+var mp = 'multipart/form-data';
+var multipart = ($form.attr('enctype') == mp || $form.attr('encoding') == mp);
+// options.iframe allows user to force iframe mode
+// 06-NOV-09: now defaulting to iframe mode if file input is detected
+if (options.iframe !== false && (fileInputs || options.iframe || multipart)) {
+// hack to fix Safari hang (thanks to Tim Molendijk for this)
+// see:  http://groups.google.com/group/jquery-dev/browse_thread/thread/36395b7ab510dd5d
+if (options.closeKeepAlive) {
+$.get(options.closeKeepAlive, fileUpload);
+}
+else {
+fileUpload();
+}
+}
+else {
+$.ajax(options);
+}
+// fire 'notify' event
+this.trigger('form-submit-notify', [this, options]);
+return this;
+// private function for handling file uploads (hat tip to YAHOO!)
+function fileUpload() {
+var form = $form[0];
+if ($(':input[name=submit],:input[id=submit]', form).length) {
+// if there is an input with a name or id of 'submit' then we won't be
+// able to invoke the submit fn on the form (at least not x-browser)
+alert('Error: Form elements must not have name or id of "submit".');
+return;
+}
+var s = $.extend(true, {}, $.ajaxSettings, options);
+s.context = s.context || s;
+var id = 'jqFormIO' + (new Date().getTime());
+var $io = $('<iframe id="' + id + '" name="' + id + '" src="'+ s.iframeSrc +'" onload="var f=jQuery(this).data(\'form-plugin-onload\');if(f)f();" />');
+var io = $io[0];
+$io.css({ position: 'absolute', top: '-1000px', left: '-1000px' });
+var xhr = { // mock object
+aborted: 0,
+responseText: null,
+responseXML: null,
+status: 0,
+statusText: 'n/a',
+getAllResponseHeaders: function() {},
+getResponseHeader: function() {},
+setRequestHeader: function() {},
+abort: function() {
+this.aborted = 1;
+$io.attr('src', s.iframeSrc); // abort op in progress
+}
+};
+var g = s.global;
+// trigger ajax global events so that activity/block indicators work like normal
+if (g && ! $.active++) {
+$.event.trigger("ajaxStart");
+}
+if (g) {
+$.event.trigger("ajaxSend", [xhr, s]);
+}
+if (s.beforeSend && s.beforeSend.call(s.context, xhr, s) === false) {
+if (s.global) {
+$.active--;
+}
+return;
+}
+if (xhr.aborted) {
+return;
+}
+var cbInvoked = false;
+var timedOut = 0;
+// add submitting element to data if we know it
+var sub = form.clk;
+if (sub) {
+var n = sub.name;
+if (n && !sub.disabled) {
+s.extraData = s.extraData || {};
+s.extraData[n] = sub.value;
+if (sub.type == "image") {
+s.extraData[n+'.x'] = form.clk_x;
+s.extraData[n+'.y'] = form.clk_y;
+}
+}
+}
+// take a breath so that pending repaints get some cpu time before the upload starts
+function doSubmit() {
+// make sure form attrs are set
+var t = $form.attr('target'), a = $form.attr('action');
+// update form attrs in IE friendly way
+form.setAttribute('target',id);
+if (form.getAttribute('method') != 'POST') {
+form.setAttribute('method', 'POST');
+}
+if (form.getAttribute('action') != s.url) {
+form.setAttribute('action', s.url);
+}
+// ie borks in some cases when setting encoding
+if (! s.skipEncodingOverride) {
+$form.attr({
+encoding: 'multipart/form-data',
+enctype:  'multipart/form-data'
+});
+}
+// support timout
+if (s.timeout) {
+setTimeout(function() { timedOut = true; cb(); }, s.timeout);
+}
+// add "extra" data to form if provided in options
+var extraInputs = [];
+try {
+if (s.extraData) {
+for (var n in s.extraData) {
+extraInputs.push(
+$('<input type="hidden" name="'+n+'" value="'+s.extraData[n]+'" />')
+.appendTo(form)[0]);
+}
+}
+// add iframe to doc and submit the form
+$io.appendTo('body');
+$io.data('form-plugin-onload', cb);
+form.submit();
+}
+finally {
+// reset attrs and remove "extra" input elements
+form.setAttribute('action',a);
+if(t) {
+form.setAttribute('target', t);
+} else {
+$form.removeAttr('target');
+}
+$(extraInputs).remove();
+}
+}
+if (s.forceSync) {
+doSubmit();
+}
+else {
+setTimeout(doSubmit, 10); // this lets dom updates render
+}
+var data, doc, domCheckCount = 100;
+function cb() {
+if (cbInvoked) {
+return;
+}
+$io.removeData('form-plugin-onload');
+var ok = true;
+try {
+if (timedOut) {
+throw 'timeout';
+}
+// extract the server response from the iframe
+doc = io.contentWindow ? io.contentWindow.document : io.contentDocument ? io.contentDocument : io.document;
+var isXml = s.dataType == 'xml' || doc.XMLDocument || $.isXMLDoc(doc);
+log('isXml='+isXml);
+if (!isXml && (doc.body == null || doc.body.innerHTML == '')) {
+if (--domCheckCount) {
+// in some browsers (Opera) the iframe DOM is not always traversable when
+// the onload callback fires, so we loop a bit to accommodate
+log('requeing onLoad callback, DOM not available');
+setTimeout(cb, 250);
+return;
+}
+log('Could not access iframe DOM after 100 tries.');
+throw 'DOMException: not available';
+}
+log('response detected');
+cbInvoked = true;
+xhr.responseText = doc.documentElement ? doc.documentElement.innerHTML : null;
+xhr.responseXML = doc.XMLDocument ? doc.XMLDocument : doc;
+xhr.getResponseHeader = function(header){
+var headers = {'content-type': s.dataType};
+return headers[header];
+};
+var scr = /(json|script)/.test(s.dataType);
+if (scr || s.textarea) {
+// see if user embedded response in textarea
+var ta = doc.getElementsByTagName('textarea')[0];
+if (ta) {
+xhr.responseText = ta.value;
+}
+else if (scr) {
+// account for browsers injecting pre around json response
+var pre = doc.getElementsByTagName('pre')[0];
+if (pre) {
+xhr.responseText = pre.innerHTML;
+}
+}
+}
+else if (s.dataType == 'xml' && !xhr.responseXML && xhr.responseText != null) {
+xhr.responseXML = toXml(xhr.responseText);
+}
+data = $.httpData(xhr, s.dataType);
+}
+catch(e){
+log('error caught:',e);
+ok = false;
+xhr.error = e;
+$.handleError(s, xhr, 'error', e);
+}
+// ordering of these callbacks/triggers is odd, but that's how $.ajax does it
+if (ok) {
+s.success.call(s.context, data, 'success');
+if (g) {
+$.event.trigger("ajaxSuccess", [xhr, s]);
+}
+}
+if (g) {
+$.event.trigger("ajaxComplete", [xhr, s]);
+}
+if (g && ! --$.active) {
+$.event.trigger("ajaxStop");
+}
+if (s.complete) {
+s.complete.call(s.context, xhr, ok ? 'success' : 'error');
+}
+// clean up
+setTimeout(function() {
+$io.removeData('form-plugin-onload');
+$io.remove();
+xhr.responseXML = null;
+}, 100);
+}
+function toXml(s, doc) {
+if (window.ActiveXObject) {
+doc = new ActiveXObject('Microsoft.XMLDOM');
+doc.async = 'false';
+doc.loadXML(s);
+}
+else {
+doc = (new DOMParser()).parseFromString(s, 'text/xml');
+}
+return (doc && doc.documentElement && doc.documentElement.tagName != 'parsererror') ? doc : null;
+}
+}
+};
+$.fn.ajaxForm = function(options) {
+// in jQuery 1.3+ we can fix mistakes with the ready state
+if (this.length === 0) {
+var o = { s: this.selector, c: this.context };
+if (!$.isReady && o.s) {
+log('DOM not ready, queuing ajaxForm');
+$(function() {
+$(o.s,o.c).ajaxForm(options);
+});
+return this;
+}
+// is your DOM ready?  http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+log('terminating; zero elements found by selector' + ($.isReady ? '' : ' (DOM not ready)'));
+return this;
+}
+return this.ajaxFormUnbind().bind('submit.form-plugin', function(e) {
+if (!e.isDefaultPrevented()) { // if event has been canceled, don't proceed
+e.preventDefault();
+$(this).ajaxSubmit(options);
+}
+}).bind('click.form-plugin', function(e) {
+var target = e.target;
+var $el = $(target);
+if (!($el.is(":submit,input:image"))) {
+// is this a child element of the submit el?  (ex: a span within a button)
+var t = $el.closest(':submit');
+if (t.length == 0) {
+return;
+}
+target = t[0];
+}
+var form = this;
+form.clk = target;
+if (target.type == 'image') {
+if (e.offsetX != undefined) {
+form.clk_x = e.offsetX;
+form.clk_y = e.offsetY;
+} else if (typeof $.fn.offset == 'function') { // try to use dimensions plugin
+var offset = $el.offset();
+form.clk_x = e.pageX - offset.left;
+form.clk_y = e.pageY - offset.top;
+} else {
+form.clk_x = e.pageX - target.offsetLeft;
+form.clk_y = e.pageY - target.offsetTop;
+}
+}
+// clear form vars
+setTimeout(function() { form.clk = form.clk_x = form.clk_y = null; }, 100);
+});
+};
+// ajaxFormUnbind unbinds the event handlers that were bound by ajaxForm
+$.fn.ajaxFormUnbind = function() {
+return this.unbind('submit.form-plugin click.form-plugin');
+};
+$.fn.formToArray = function(semantic) {
+var a = [];
+if (this.length === 0) {
+return a;
+}
+var form = this[0];
+var els = semantic ? form.getElementsByTagName('*') : form.elements;
+if (!els) {
+return a;
+}
+var i,j,n,v,el;
+for(i=0, max=els.length; i < max; i++) {
+el = els[i];
+n = el.name;
+if (!n) {
+continue;
+}
+if (semantic && form.clk && el.type == "image") {
+// handle image inputs on the fly when semantic == true
+if(!el.disabled && form.clk == el) {
+a.push({name: n, value: $(el).val()});
+a.push({name: n+'.x', value: form.clk_x}, {name: n+'.y', value: form.clk_y});
+}
+continue;
+}
+v = $.fieldValue(el, true);
+if (v && v.constructor == Array) {
+for(j=0, jmax=v.length; j < jmax; j++) {
+a.push({name: n, value: v[j]});
+}
+}
+else if (v !== null && typeof v != 'undefined') {
+a.push({name: n, value: v});
+}
+}
+if (!semantic && form.clk) {
+// input type=='image' are not found in elements array! handle it here
+var $input = $(form.clk), input = $input[0];
+n = input.name;
+if (n && !input.disabled && input.type == 'image') {
+a.push({name: n, value: $input.val()});
+a.push({name: n+'.x', value: form.clk_x}, {name: n+'.y', value: form.clk_y});
+}
+}
+return a;
+};
+$.fn.formSerialize = function(semantic) {
+//hand off to jQuery.param for proper encoding
+return $.param(this.formToArray(semantic));
+};
+$.fn.fieldSerialize = function(successful) {
+var a = [];
+this.each(function() {
+var n = this.name;
+if (!n) {
+return;
+}
+var v = $.fieldValue(this, successful);
+if (v && v.constructor == Array) {
+for (var i=0,max=v.length; i < max; i++) {
+a.push({name: n, value: v[i]});
+}
+}
+else if (v !== null && typeof v != 'undefined') {
+a.push({name: this.name, value: v});
+}
+});
+//hand off to jQuery.param for proper encoding
+return $.param(a);
+};
+$.fn.fieldValue = function(successful) {
+for (var val=[], i=0, max=this.length; i < max; i++) {
+var el = this[i];
+var v = $.fieldValue(el, successful);
+if (v === null || typeof v == 'undefined' || (v.constructor == Array && !v.length)) {
+continue;
+}
+v.constructor == Array ? $.merge(val, v) : val.push(v);
+}
+return val;
+};
+$.fieldValue = function(el, successful) {
+var n = el.name, t = el.type, tag = el.tagName.toLowerCase();
+if (successful === undefined) {
+successful = true;
+}
+if (successful && (!n || el.disabled || t == 'reset' || t == 'button' ||
+(t == 'checkbox' || t == 'radio') && !el.checked ||
+(t == 'submit' || t == 'image') && el.form && el.form.clk != el ||
+tag == 'select' && el.selectedIndex == -1)) {
+return null;
+}
+if (tag == 'select') {
+var index = el.selectedIndex;
+if (index < 0) {
+return null;
+}
+var a = [], ops = el.options;
+var one = (t == 'select-one');
+var max = (one ? index+1 : ops.length);
+for(var i=(one ? index : 0); i < max; i++) {
+var op = ops[i];
+if (op.selected) {
+var v = op.value;
+if (!v) { // extra pain for IE...
+v = (op.attributes && op.attributes['value'] && !(op.attributes['value'].specified)) ? op.text : op.value;
+}
+if (one) {
+return v;
+}
+a.push(v);
+}
+}
+return a;
+}
+return $(el).val();
+};
+$.fn.clearForm = function() {
+return this.each(function() {
+$('input,select,textarea', this).clearFields();
+});
+};
+$.fn.clearFields = $.fn.clearInputs = function() {
+return this.each(function() {
+var t = this.type, tag = this.tagName.toLowerCase();
+if (t == 'text' || t == 'password' || tag == 'textarea') {
+this.value = '';
+}
+else if (t == 'checkbox' || t == 'radio') {
+this.checked = false;
+}
+else if (tag == 'select') {
+this.selectedIndex = -1;
+}
+});
+};
+$.fn.resetForm = function() {
+return this.each(function() {
+// guard against an input with the name of 'reset'
+// note that IE reports the reset function as an 'object'
+if (typeof this.reset == 'function' || (typeof this.reset == 'object' && !this.reset.nodeType)) {
+this.reset();
+}
+});
+};
+$.fn.enable = function(b) {
+if (b === undefined) {
+b = true;
+}
+return this.each(function() {
+this.disabled = !b;
+});
+};
+$.fn.selected = function(select) {
+if (select === undefined) {
+select = true;
+}
+return this.each(function() {
+var t = this.type;
+if (t == 'checkbox' || t == 'radio') {
+this.checked = select;
+}
+else if (this.tagName.toLowerCase() == 'option') {
+var $sel = $(this).parent('select');
+if (select && $sel[0] && $sel[0].type == 'select-one') {
+// deselect all other options
+$sel.find('option').selected(false);
+}
+this.selected = select;
+}
+});
+};
+// helper fn for console logging
+// set $.fn.ajaxSubmit.debug to true to enable debug logging
+function log() {
+if ($.fn.ajaxSubmit.debug) {
+var msg = '[jquery.form] ' + Array.prototype.join.call(arguments,'');
+if (window.console && window.console.log) {
+window.console.log(msg);
+}
+else if (window.opera && window.opera.postError) {
+window.opera.postError(msg);
+}
+}
+};
+})(jQuery);
+(function(c){c.extend(c.fn,{validate:function(a){if(this.length){var b=c.data(this[0],"validator");if(b)return b;b=new c.validator(a,this[0]);c.data(this[0],"validator",b);if(b.settings.onsubmit){this.find("input, button").filter(".cancel").click(function(){b.cancelSubmit=true});b.settings.submitHandler&&this.find("input, button").filter(":submit").click(function(){b.submitButton=this});this.submit(function(d){function e(){if(b.settings.submitHandler){if(b.submitButton)var f=c("<input type='hidden'/>").attr("name",
+b.submitButton.name).val(b.submitButton.value).appendTo(b.currentForm);b.settings.submitHandler.call(b,b.currentForm);b.submitButton&&f.remove();return false}return true}b.settings.debug&&d.preventDefault();if(b.cancelSubmit){b.cancelSubmit=false;return e()}if(b.form()){if(b.pendingRequest){b.formSubmitted=true;return false}return e()}else{b.focusInvalid();return false}})}return b}else a&&a.debug&&window.console&&console.warn("nothing selected, can't validate, returning nothing")},valid:function(){if(c(this[0]).is("form"))return this.validate().form();
+else{var a=true,b=c(this[0].form).validate();this.each(function(){a&=b.element(this)});return a}},removeAttrs:function(a){var b={},d=this;c.each(a.split(/\s/),function(e,f){b[f]=d.attr(f);d.removeAttr(f)});return b},rules:function(a,b){var d=this[0];if(a){var e=c.data(d.form,"validator").settings,f=e.rules,g=c.validator.staticRules(d);switch(a){case "add":c.extend(g,c.validator.normalizeRule(b));f[d.name]=g;if(b.messages)e.messages[d.name]=c.extend(e.messages[d.name],b.messages);break;case "remove":if(!b){delete f[d.name];
+return g}var h={};c.each(b.split(/\s/),function(j,i){h[i]=g[i];delete g[i]});return h}}d=c.validator.normalizeRules(c.extend({},c.validator.metadataRules(d),c.validator.classRules(d),c.validator.attributeRules(d),c.validator.staticRules(d)),d);if(d.required){e=d.required;delete d.required;d=c.extend({required:e},d)}return d}});c.extend(c.expr[":"],{blank:function(a){return!c.trim(""+a.value)},filled:function(a){return!!c.trim(""+a.value)},unchecked:function(a){return!a.checked}});c.validator=function(a,
+b){this.settings=c.extend(true,{},c.validator.defaults,a);this.currentForm=b;this.init()};c.validator.format=function(a,b){if(arguments.length==1)return function(){var d=c.makeArray(arguments);d.unshift(a);return c.validator.format.apply(this,d)};if(arguments.length>2&&b.constructor!=Array)b=c.makeArray(arguments).slice(1);if(b.constructor!=Array)b=[b];c.each(b,function(d,e){a=a.replace(RegExp("\\{"+d+"\\}","g"),e)});return a};c.extend(c.validator,{defaults:{messages:{},groups:{},rules:{},errorClass:"error",
+validClass:"valid",errorElement:"label",focusInvalid:true,errorContainer:c([]),errorLabelContainer:c([]),onsubmit:true,ignore:[],ignoreTitle:false,onfocusin:function(a){this.lastActive=a;if(this.settings.focusCleanup&&!this.blockFocusCleanup){this.settings.unhighlight&&this.settings.unhighlight.call(this,a,this.settings.errorClass,this.settings.validClass);this.addWrapper(this.errorsFor(a)).hide()}},onfocusout:function(a){if(!this.checkable(a)&&(a.name in this.submitted||!this.optional(a)))this.element(a)},
+onkeyup:function(a){if(a.name in this.submitted||a==this.lastElement)this.element(a)},onclick:function(a){if(a.name in this.submitted)this.element(a);else a.parentNode.name in this.submitted&&this.element(a.parentNode)},highlight:function(a,b,d){a.type==="radio"?this.findByName(a.name).addClass(b).removeClass(d):c(a).addClass(b).removeClass(d)},unhighlight:function(a,b,d){a.type==="radio"?this.findByName(a.name).removeClass(b).addClass(d):c(a).removeClass(b).addClass(d)}},setDefaults:function(a){c.extend(c.validator.defaults,
+a)},messages:{required:"This field is required.",remote:"Please fix this field.",email:"Please enter a valid email address.",url:"Please enter a valid URL.",date:"Please enter a valid date.",dateISO:"Please enter a valid date (ISO).",number:"Please enter a valid number.",digits:"Please enter only digits.",creditcard:"Please enter a valid credit card number.",equalTo:"Please enter the same value again.",accept:"Please enter a value with a valid extension.",maxlength:c.validator.format("Please enter no more than {0} characters."),
+minlength:c.validator.format("Please enter at least {0} characters."),rangelength:c.validator.format("Please enter a value between {0} and {1} characters long."),range:c.validator.format("Please enter a value between {0} and {1}."),max:c.validator.format("Please enter a value less than or equal to {0}."),min:c.validator.format("Please enter a value greater than or equal to {0}.")},autoCreateRanges:false,prototype:{init:function(){function a(e){var f=c.data(this[0].form,"validator");e="on"+e.type.replace(/^validate/,
+"");f.settings[e]&&f.settings[e].call(f,this[0])}this.labelContainer=c(this.settings.errorLabelContainer);this.errorContext=this.labelContainer.length&&this.labelContainer||c(this.currentForm);this.containers=c(this.settings.errorContainer).add(this.settings.errorLabelContainer);this.submitted={};this.valueCache={};this.pendingRequest=0;this.pending={};this.invalid={};this.reset();var b=this.groups={};c.each(this.settings.groups,function(e,f){c.each(f.split(/\s/),function(g,h){b[h]=e})});var d=this.settings.rules;
+c.each(d,function(e,f){d[e]=c.validator.normalizeRule(f)});c(this.currentForm).validateDelegate(":text, :password, :file, select, textarea","focusin focusout keyup",a).validateDelegate(":radio, :checkbox, select, option","click",a);this.settings.invalidHandler&&c(this.currentForm).bind("invalid-form.validate",this.settings.invalidHandler)},form:function(){this.checkForm();c.extend(this.submitted,this.errorMap);this.invalid=c.extend({},this.errorMap);this.valid()||c(this.currentForm).triggerHandler("invalid-form",
+[this]);this.showErrors();return this.valid()},checkForm:function(){this.prepareForm();for(var a=0,b=this.currentElements=this.elements();b[a];a++)this.check(b[a]);return this.valid()},element:function(a){this.lastElement=a=this.clean(a);this.prepareElement(a);this.currentElements=c(a);var b=this.check(a);if(b)delete this.invalid[a.name];else this.invalid[a.name]=true;if(!this.numberOfInvalids())this.toHide=this.toHide.add(this.containers);this.showErrors();return b},showErrors:function(a){if(a){c.extend(this.errorMap,
+a);this.errorList=[];for(var b in a)this.errorList.push({message:a[b],element:this.findByName(b)[0]});this.successList=c.grep(this.successList,function(d){return!(d.name in a)})}this.settings.showErrors?this.settings.showErrors.call(this,this.errorMap,this.errorList):this.defaultShowErrors()},resetForm:function(){c.fn.resetForm&&c(this.currentForm).resetForm();this.submitted={};this.prepareForm();this.hideErrors();this.elements().removeClass(this.settings.errorClass)},numberOfInvalids:function(){return this.objectLength(this.invalid)},
+objectLength:function(a){var b=0,d;for(d in a)b++;return b},hideErrors:function(){this.addWrapper(this.toHide).hide()},valid:function(){return this.size()==0},size:function(){return this.errorList.length},focusInvalid:function(){if(this.settings.focusInvalid)try{c(this.findLastActive()||this.errorList.length&&this.errorList[0].element||[]).filter(":visible").focus().trigger("focusin")}catch(a){}},findLastActive:function(){var a=this.lastActive;return a&&c.grep(this.errorList,function(b){return b.element.name==
+a.name}).length==1&&a},elements:function(){var a=this,b={};return c(this.currentForm).find("input, select, textarea").not(":submit, :reset, :image, [disabled]").not(this.settings.ignore).filter(function(){!this.name&&a.settings.debug&&window.console&&console.error("%o has no name assigned",this);if(this.name in b||!a.objectLength(c(this).rules()))return false;return b[this.name]=true})},clean:function(a){return c(a)[0]},errors:function(){return c(this.settings.errorElement+"."+this.settings.errorClass,
+this.errorContext)},reset:function(){this.successList=[];this.errorList=[];this.errorMap={};this.toShow=c([]);this.toHide=c([]);this.currentElements=c([])},prepareForm:function(){this.reset();this.toHide=this.errors().add(this.containers)},prepareElement:function(a){this.reset();this.toHide=this.errorsFor(a)},check:function(a){a=this.clean(a);if(this.checkable(a))a=this.findByName(a.name).not(this.settings.ignore)[0];var b=c(a).rules(),d=false,e;for(e in b){var f={method:e,parameters:b[e]};try{var g=
+c.validator.methods[e].call(this,a.value.replace(/\r/g,""),a,f.parameters);if(g=="dependency-mismatch")d=true;else{d=false;if(g=="pending"){this.toHide=this.toHide.not(this.errorsFor(a));return}if(!g){this.formatAndAdd(a,f);return false}}}catch(h){this.settings.debug&&window.console&&console.log("exception occured when checking element "+a.id+", check the '"+f.method+"' method",h);throw h;}}if(!d){this.objectLength(b)&&this.successList.push(a);return true}},customMetaMessage:function(a,b){if(c.metadata){var d=
+this.settings.meta?c(a).metadata()[this.settings.meta]:c(a).metadata();return d&&d.messages&&d.messages[b]}},customMessage:function(a,b){var d=this.settings.messages[a];return d&&(d.constructor==String?d:d[b])},findDefined:function(){for(var a=0;a<arguments.length;a++)if(arguments[a]!==undefined)return arguments[a]},defaultMessage:function(a,b){return this.findDefined(this.customMessage(a.name,b),this.customMetaMessage(a,b),!this.settings.ignoreTitle&&a.title||undefined,c.validator.messages[b],"<strong>Warning: No message defined for "+
+a.name+"</strong>")},formatAndAdd:function(a,b){var d=this.defaultMessage(a,b.method),e=/\$?\{(\d+)\}/g;if(typeof d=="function")d=d.call(this,b.parameters,a);else if(e.test(d))d=jQuery.format(d.replace(e,"{$1}"),b.parameters);this.errorList.push({message:d,element:a});this.errorMap[a.name]=d;this.submitted[a.name]=d},addWrapper:function(a){if(this.settings.wrapper)a=a.add(a.parent(this.settings.wrapper));return a},defaultShowErrors:function(){for(var a=0;this.errorList[a];a++){var b=this.errorList[a];
+this.settings.highlight&&this.settings.highlight.call(this,b.element,this.settings.errorClass,this.settings.validClass);this.showLabel(b.element,b.message)}if(this.errorList.length)this.toShow=this.toShow.add(this.containers);if(this.settings.success)for(a=0;this.successList[a];a++)this.showLabel(this.successList[a]);if(this.settings.unhighlight){a=0;for(b=this.validElements();b[a];a++)this.settings.unhighlight.call(this,b[a],this.settings.errorClass,this.settings.validClass)}this.toHide=this.toHide.not(this.toShow);
+this.hideErrors();this.addWrapper(this.toShow).show()},validElements:function(){return this.currentElements.not(this.invalidElements())},invalidElements:function(){return c(this.errorList).map(function(){return this.element})},showLabel:function(a,b){var d=this.errorsFor(a);if(d.length){d.removeClass().addClass(this.settings.errorClass);d.attr("generated")&&d.html(b)}else{d=c("<"+this.settings.errorElement+"/>").attr({"for":this.idOrName(a),generated:true}).addClass(this.settings.errorClass).html(b||
+"");if(this.settings.wrapper)d=d.hide().show().wrap("<"+this.settings.wrapper+"/>").parent();this.labelContainer.append(d).length||(this.settings.errorPlacement?this.settings.errorPlacement(d,c(a)):d.insertAfter(a))}if(!b&&this.settings.success){d.text("");typeof this.settings.success=="string"?d.addClass(this.settings.success):this.settings.success(d)}this.toShow=this.toShow.add(d)},errorsFor:function(a){var b=this.idOrName(a);return this.errors().filter(function(){return c(this).attr("for")==b})},
+idOrName:function(a){return this.groups[a.name]||(this.checkable(a)?a.name:a.id||a.name)},checkable:function(a){return/radio|checkbox/i.test(a.type)},findByName:function(a){var b=this.currentForm;return c(document.getElementsByName(a)).map(function(d,e){return e.form==b&&e.name==a&&e||null})},getLength:function(a,b){switch(b.nodeName.toLowerCase()){case "select":return c("option:selected",b).length;case "input":if(this.checkable(b))return this.findByName(b.name).filter(":checked").length}return a.length},
+depend:function(a,b){return this.dependTypes[typeof a]?this.dependTypes[typeof a](a,b):true},dependTypes:{"boolean":function(a){return a},string:function(a,b){return!!c(a,b.form).length},"function":function(a,b){return a(b)}},optional:function(a){return!c.validator.methods.required.call(this,c.trim(a.value),a)&&"dependency-mismatch"},startRequest:function(a){if(!this.pending[a.name]){this.pendingRequest++;this.pending[a.name]=true}},stopRequest:function(a,b){this.pendingRequest--;if(this.pendingRequest<
+0)this.pendingRequest=0;delete this.pending[a.name];if(b&&this.pendingRequest==0&&this.formSubmitted&&this.form()){c(this.currentForm).submit();this.formSubmitted=false}else if(!b&&this.pendingRequest==0&&this.formSubmitted){c(this.currentForm).triggerHandler("invalid-form",[this]);this.formSubmitted=false}},previousValue:function(a){return c.data(a,"previousValue")||c.data(a,"previousValue",{old:null,valid:true,message:this.defaultMessage(a,"remote")})}},classRuleSettings:{required:{required:true},
+email:{email:true},url:{url:true},date:{date:true},dateISO:{dateISO:true},dateDE:{dateDE:true},number:{number:true},numberDE:{numberDE:true},digits:{digits:true},creditcard:{creditcard:true}},addClassRules:function(a,b){a.constructor==String?this.classRuleSettings[a]=b:c.extend(this.classRuleSettings,a)},classRules:function(a){var b={};(a=c(a).attr("class"))&&c.each(a.split(" "),function(){this in c.validator.classRuleSettings&&c.extend(b,c.validator.classRuleSettings[this])});return b},attributeRules:function(a){var b=
+{};a=c(a);for(var d in c.validator.methods){var e=a.attr(d);if(e)b[d]=e}b.maxlength&&/-1|2147483647|524288/.test(b.maxlength)&&delete b.maxlength;return b},metadataRules:function(a){if(!c.metadata)return{};var b=c.data(a.form,"validator").settings.meta;return b?c(a).metadata()[b]:c(a).metadata()},staticRules:function(a){var b={},d=c.data(a.form,"validator");if(d.settings.rules)b=c.validator.normalizeRule(d.settings.rules[a.name])||{};return b},normalizeRules:function(a,b){c.each(a,function(d,e){if(e===
+false)delete a[d];else if(e.param||e.depends){var f=true;switch(typeof e.depends){case "string":f=!!c(e.depends,b.form).length;break;case "function":f=e.depends.call(b,b)}if(f)a[d]=e.param!==undefined?e.param:true;else delete a[d]}});c.each(a,function(d,e){a[d]=c.isFunction(e)?e(b):e});c.each(["minlength","maxlength","min","max"],function(){if(a[this])a[this]=Number(a[this])});c.each(["rangelength","range"],function(){if(a[this])a[this]=[Number(a[this][0]),Number(a[this][1])]});if(c.validator.autoCreateRanges){if(a.min&&
+a.max){a.range=[a.min,a.max];delete a.min;delete a.max}if(a.minlength&&a.maxlength){a.rangelength=[a.minlength,a.maxlength];delete a.minlength;delete a.maxlength}}a.messages&&delete a.messages;return a},normalizeRule:function(a){if(typeof a=="string"){var b={};c.each(a.split(/\s/),function(){b[this]=true});a=b}return a},addMethod:function(a,b,d){c.validator.methods[a]=b;c.validator.messages[a]=d!=undefined?d:c.validator.messages[a];b.length<3&&c.validator.addClassRules(a,c.validator.normalizeRule(a))},
+methods:{required:function(a,b,d){if(!this.depend(d,b))return"dependency-mismatch";switch(b.nodeName.toLowerCase()){case "select":return(a=c(b).val())&&a.length>0;case "input":if(this.checkable(b))return this.getLength(a,b)>0;default:return c.trim(a).length>0}},remote:function(a,b,d){if(this.optional(b))return"dependency-mismatch";var e=this.previousValue(b);this.settings.messages[b.name]||(this.settings.messages[b.name]={});e.originalMessage=this.settings.messages[b.name].remote;this.settings.messages[b.name].remote=
+e.message;d=typeof d=="string"&&{url:d}||d;if(this.pending[b.name])return"pending";if(e.old===a)return e.valid;e.old=a;var f=this;this.startRequest(b);var g={};g[b.name]=a;c.ajax(c.extend(true,{url:d,mode:"abort",port:"validate"+b.name,dataType:"json",data:g,success:function(h){f.settings.messages[b.name].remote=e.originalMessage;var j=h===true;if(j){var i=f.formSubmitted;f.prepareElement(b);f.formSubmitted=i;f.successList.push(b);f.showErrors()}else{i={};h=h||f.defaultMessage(b,"remote");i[b.name]=
+e.message=c.isFunction(h)?h(a):h;f.showErrors(i)}e.valid=j;f.stopRequest(b,j)}},d));return"pending"},minlength:function(a,b,d){return this.optional(b)||this.getLength(c.trim(a),b)>=d},maxlength:function(a,b,d){return this.optional(b)||this.getLength(c.trim(a),b)<=d},rangelength:function(a,b,d){a=this.getLength(c.trim(a),b);return this.optional(b)||a>=d[0]&&a<=d[1]},min:function(a,b,d){return this.optional(b)||a>=d},max:function(a,b,d){return this.optional(b)||a<=d},range:function(a,b,d){return this.optional(b)||
+a>=d[0]&&a<=d[1]},email:function(a,b){return this.optional(b)||/^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?$/i.test(a)},
+url:function(a,b){return this.optional(b)||/^(https?|ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(\#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$/i.test(a)},
+date:function(a,b){return this.optional(b)||!/Invalid|NaN/.test(new Date(a))},dateISO:function(a,b){return this.optional(b)||/^\d{4}[\/-]\d{1,2}[\/-]\d{1,2}$/.test(a)},number:function(a,b){return this.optional(b)||/^-?(?:\d+|\d{1,3}(?:,\d{3})+)(?:\.\d+)?$/.test(a)},digits:function(a,b){return this.optional(b)||/^\d+$/.test(a)},creditcard:function(a,b){if(this.optional(b))return"dependency-mismatch";if(/[^0-9-]+/.test(a))return false;var d=0,e=0,f=false;a=a.replace(/\D/g,"");for(var g=a.length-1;g>=
+0;g--){e=a.charAt(g);e=parseInt(e,10);if(f)if((e*=2)>9)e-=9;d+=e;f=!f}return d%10==0},accept:function(a,b,d){d=typeof d=="string"?d.replace(/,/g,"|"):"png|jpe?g|gif";return this.optional(b)||a.match(RegExp(".("+d+")$","i"))},equalTo:function(a,b,d){d=c(d).unbind(".validate-equalTo").bind("blur.validate-equalTo",function(){c(b).valid()});return a==d.val()}}});c.format=c.validator.format})(jQuery);
+(function(c){var a={};if(c.ajaxPrefilter)c.ajaxPrefilter(function(d,e,f){e=d.port;if(d.mode=="abort"){a[e]&&a[e].abort();a[e]=f}});else{var b=c.ajax;c.ajax=function(d){var e=("port"in d?d:c.ajaxSettings).port;if(("mode"in d?d:c.ajaxSettings).mode=="abort"){a[e]&&a[e].abort();return a[e]=b.apply(this,arguments)}return b.apply(this,arguments)}}})(jQuery);
+(function(c){!jQuery.event.special.focusin&&!jQuery.event.special.focusout&&document.addEventListener&&c.each({focus:"focusin",blur:"focusout"},function(a,b){function d(e){e=c.event.fix(e);e.type=b;return c.event.handle.call(this,e)}c.event.special[b]={setup:function(){this.addEventListener(a,d,true)},teardown:function(){this.removeEventListener(a,d,true)},handler:function(e){arguments[0]=c.event.fix(e);arguments[0].type=b;return c.event.handle.apply(this,arguments)}}});c.extend(c.fn,{validateDelegate:function(a,
+b,d){return this.bind(b,function(e){var f=c(e.target);if(f.is(a))return d.apply(f,arguments)})}})})(jQuery);
+jQuery(document).ready(function ($) {
+$('#auth-button, .login, .b-quest-a-auth a, #maybelline_auth').overlay({
+mask: '#000',
+fixed: true,
+left: "center",
+top: '20%',
+onBeforeLoad: function () {
+var wrap = this.getOverlay().find(".contentWrap");
+wrap.load(this.getTrigger().attr("href") + "?overlay");
+}
+});
+if ($('.vote__block').length) {
+$('.vote__block').each(function () {
+var el = $(this),
+voteCounter = el.find('.vote--counter'),
+total = 0;
+for (i = 0; i < voteCounter.length; i++) {
+var numb = voteCounter.eq(i).html() * 1;
+total = total + numb;
+}
+var totalVotes = total;
+for (m = 0; m < voteCounter.length; m++) {
+var numb = voteCounter.eq(m).html() * 1;
+var line = el.find('.vote--results__number').eq(m);
+var lineWidth = (numb * 100) / totalVotes;
+line.css('width', lineWidth + '%');
+}
+var radioClick = el.find('.radio-click').find('label');
+var voteSubmit = el.find('.vote--submit');
+radioClick.on('click', function () {
+var inputID = $(this).parents('.radio-click').find('input').attr('data-id');
+var oldVal = $(this).parents('.vote__block').find('.vote--counter[data-id="' + inputID + '"]').html() * 1;
+radioClick.parents('.vote__block').find('.vote--counter[data-id="' + inputID + '"]').html(oldVal + 1);
+radioClick.parents('.vote__block').find('.vote--submit').trigger('click');
+$.ajax({
+url: "/votes/" + $.trim(voteSubmit.text()) + "/", // $.trim(voteSubmit.text()) = twoimg или checkbox
+type: "POST",
+dataType: "HTML",
+data: {'vote_id': voteSubmit.data('id'), 'counter': inputID},
+success: function (uns) {
+console.log(uns);
+}
+});
+return false;
+});
+voteSubmit.on('click', function (e) {
+e.preventDefault();
+voteSubmit.parents('.widget--vote').toggleClass('rotate');
+return false;
+});
+$('td img').click(function(){
+$('td img').hide('slow');
+$('.column--left .ress').show('slow');
+return false;
+});
+});
+}
+// клик на звёздочки с рейтингом статьи (страница досье, статья)
+$('.jo-star').click(function(){
+voteRating(this.getAttribute('data-value'));
+sendVote(this.getAttribute('data-value'));
+});
+});
+function voteRating(rate){
+var holder = $('.jo-stars-vote');
+if (!holder.hasClass('voted')){
+holder.children().each(function(){
+if((this.getAttribute('data-value') > rate) && (this.classList.contains('active'))){
+this.classList.remove('active');
+}
+if ((this.getAttribute('data-value') <= rate) && !(this.classList.contains('active'))){
+this.classList.add('active');
+}
+});
+holder.addClass('voted');
+}
+}
+function sendVote(rate){
+var id = getArticleIdFromUrl();
+$.ajax({
+async: true,
+type: "POST",
+dataType: "JSON",
+url: "/articles/vote/",
+data: {'page_id': id, 'rate': rate},
+success: function (data) {
+if(data.success == 'true'){
+if(typeof(Storage) !== "undefined") {
+localStorage.setItem(id, rate);
+}
+}
+}
+});
+}
+function getArticleIdFromUrl(){
+var url = window.location.href, buff, id;
+buff = url.match(/article-[0-9]+/);
+buff = buff[0].match(/[0-9]+/);
+id = buff[0];
+return id;
+}
+function loadMoreNews(view_type, category_id, category_offset) {
+$.ajax({
+url: '/article-add-more-news/',
+type: 'POST',
+async: true,
+data: {
+view_type: view_type,
+offset: category_offset,
+category_id: category_id
+},
+beforeSend: function() {$('#loader-more-news').show();},
+success: function(resp) {
+$('#content-more-news').append(resp);
+$('#loader-more-news').hide();
+},
+error: function(xhr) {
+console.dir(xhr);
+$('#loader-more-news').hide();
+}
+});
+}
+function loadMoreNewsByTag(view_type, tag, tag_offset) {
+$.ajax({
+url: '/article-add-more-news-for-tag/',
+type: 'POST',
+async: true,
+data: {
+view_type: view_type,
+offset: tag_offset,
+tag: tag
+},
+beforeSend: function() {$('#loader-more-news').show();},
+success: function(resp) {
+$('#content-more-news').append(resp);
+$('#loader-more-news').hide();
+},
+error: function(xhr) {
+console.dir(xhr);
+$('#loader-more-news').hide();
+}
+});
+}
+function loadMoreTests() {
+if (typeof window.tests_offset == 'undefined' || typeof window.tests_total == 'undefined' || typeof window.load_limit == 'undefined') {
+alert('Приносим извинения. Ошибка.');
+return;
+}
+$.ajax({
+type: "POST",
+url: "/test/add_newdesign2016/",
+data: {
+offset: window.tests_offset,
+limit: window.load_limit
+},
+cache: false,
+dataType: "html",
+success: function(data){
+$('#hochu-grid-tests').append(data);
+window.tests_offset = window.tests_offset + window.load_limit;
+if (window.tests_total < window.tests_offset) {
+$("#hochu-grid-more-tests").hide();
+$(".download--more").hide();
+}
+}
+});
+}
+!function(t){"function"==typeof define&&define.amd?define(["jquery"],t):"object"==typeof module&&module.exports?module.exports=t(require("jquery")):t(jQuery)}(function(t){var e=Array.prototype.slice,i=Array.prototype.splice,r={topSpacing:0,bottomSpacing:0,className:"is-sticky",wrapperClassName:"sticky-wrapper",center:!1,getWidthFrom:"",widthFromWrapper:!0,responsiveWidth:!1},n=t(window),s=t(document),o=[],c=n.height(),a=function(){for(var e=n.scrollTop(),i=s.height(),r=i-c,a=e>r?r-e:0,p=0,l=o.length;l>p;p++){var d=o[p],u=d.stickyWrapper.offset().top,h=u-d.topSpacing-a;if(d.stickyWrapper.css("height",d.stickyElement.outerHeight()),h>=e)null!==d.currentTop&&(d.stickyElement.css({width:"",position:"",top:""}),d.stickyElement.parent().removeClass(d.className),d.stickyElement.trigger("sticky-end",[d]),d.currentTop=null);else{var g=i-d.stickyElement.outerHeight()-d.topSpacing-d.bottomSpacing-e-a;if(0>g?g+=d.topSpacing:g=d.topSpacing,d.currentTop!==g){var m;d.getWidthFrom?m=t(d.getWidthFrom).width()||null:d.widthFromWrapper&&(m=d.stickyWrapper.width()),null==m&&(m=d.stickyElement.width()),d.stickyElement.css("width",m).css("position","fixed").css("top",g),d.stickyElement.parent().addClass(d.className),null===d.currentTop?d.stickyElement.trigger("sticky-start",[d]):d.stickyElement.trigger("sticky-update",[d]),d.currentTop===d.topSpacing&&d.currentTop>g||null===d.currentTop&&g<d.topSpacing?d.stickyElement.trigger("sticky-bottom-reached",[d]):null!==d.currentTop&&g===d.topSpacing&&d.currentTop<g&&d.stickyElement.trigger("sticky-bottom-unreached",[d]),d.currentTop=g}var y=d.stickyWrapper.parent(),f=d.stickyElement.offset().top+d.stickyElement.outerHeight()>=y.offset().top+y.outerHeight()&&d.stickyElement.offset().top<=d.topSpacing;f?d.stickyElement.css("position","absolute").css("top","").css("bottom",0):d.stickyElement.css("position","fixed").css("top",g).css("bottom","")}}},p=function(){c=n.height();for(var e=0,i=o.length;i>e;e++){var r=o[e],s=null;r.getWidthFrom?r.responsiveWidth&&(s=t(r.getWidthFrom).width()):r.widthFromWrapper&&(s=r.stickyWrapper.width()),null!=s&&r.stickyElement.css("width",s)}},l={init:function(e){var i=t.extend({},r,e);return this.each(function(){var e=t(this),n=e.attr("id"),s=n?n+"-"+r.wrapperClassName:r.wrapperClassName,c=t("<div></div>").attr("id",s).addClass(i.wrapperClassName);e.wrapAll(c);var a=e.parent();i.center&&a.css({width:e.outerWidth(),marginLeft:"auto",marginRight:"auto"}),"right"===e.css("float")&&e.css({"float":"none"}).parent().css({"float":"right"}),i.stickyElement=e,i.stickyWrapper=a,i.currentTop=null,o.push(i),l.setWrapperHeight(this),l.setupChangeListeners(this)})},setWrapperHeight:function(e){var i=t(e),r=i.parent();r&&r.css("height",i.outerHeight())},setupChangeListeners:function(t){if(window.MutationObserver){var e=new window.MutationObserver(function(e){(e[0].addedNodes.length||e[0].removedNodes.length)&&l.setWrapperHeight(t)});e.observe(t,{subtree:!0,childList:!0})}else t.addEventListener("DOMNodeInserted",function(){l.setWrapperHeight(t)},!1),t.addEventListener("DOMNodeRemoved",function(){l.setWrapperHeight(t)},!1)},update:a,unstick:function(e){return this.each(function(){for(var e=this,r=t(e),n=-1,s=o.length;s-->0;)o[s].stickyElement.get(0)===e&&(i.call(o,s,1),n=s);-1!==n&&(r.unwrap(),r.css({width:"",position:"",top:"","float":""}))})}};window.addEventListener?(window.addEventListener("scroll",a,!1),window.addEventListener("resize",p,!1)):window.attachEvent&&(window.attachEvent("onscroll",a),window.attachEvent("onresize",p)),t.fn.sticky=function(i){return l[i]?l[i].apply(this,e.call(arguments,1)):"object"!=typeof i&&i?void t.error("Method "+i+" does not exist on jQuery.sticky"):l.init.apply(this,arguments)},t.fn.unstick=function(i){return l[i]?l[i].apply(this,e.call(arguments,1)):"object"!=typeof i&&i?void t.error("Method "+i+" does not exist on jQuery.sticky"):l.unstick.apply(this,arguments)},t(function(){setTimeout(a,0)})});
+ 
+// TODO JsDoc
+
+jQuery.cookie = function (key, value, options) {
+// key and value given, set cookie...
+if (arguments.length > 1 && (value === null || typeof value !== "object")) {
+options = jQuery.extend({}, options);
+if (value === null) {
+options.expires = -1;
+}
+if (typeof options.expires === 'number') {
+var days = options.expires, t = options.expires = new Date();
+t.setDate(t.getDate() + days);
+}
+return (document.cookie = [
+encodeURIComponent(key), '=',
+options.raw ? String(value) : encodeURIComponent(String(value)),
+options.expires ? '; expires=' + options.expires.toUTCString() : '', // use expires attribute, max-age is not supported by IE
+options.path ? '; path=' + options.path : '',
+options.domain ? '; domain=' + options.domain : '',
+options.secure ? '; secure' : ''
+].join(''));
+}
+// key and possibly options given, get cookie...
+options = value || {};
+var result, decode = options.raw ? function (s) { return s; } : decodeURIComponent;
+return (result = new RegExp('(?:^|; )' + encodeURIComponent(key) + '=([^;]*)').exec(document.cookie)) ? decode(result[1]) : null;
+};
+function setCookie(sName, sValue) { //для всего домена: path=/
+document.cookie = sName + "=" + escape(sValue) + "; expires=Thu, 1 Jan 2050 20:47:11 UTC; path=/";
+}
+function getCookie(name) {
+var cookie = " " + document.cookie;
+var search = " " + name + "=";
+var setStr = null;
+var offset = 0;
+var end = 0;
+if (cookie.length > 0) {
+offset = cookie.indexOf(search);
+if (offset != -1) {
+offset += search.length;
+end = cookie.indexOf(";", offset)
+if (end == -1) {
+end = cookie.length;
+}
+setStr = unescape(cookie.substring(offset, end));
+}
+}
+return(setStr);
+}
+// центрируем окно опроса в видимой части окна страницы
+function moveAsk() {
+var posLeft = ($(window).width()-$('#ask_subscript').width())/2;
+var posTop = ($(window).height()- $('#ask_subscript').height())/2 + $(window).scrollTop();
+$('#ask_subscript').css('left', posLeft);
+$('#ask_subscript').css('top', posTop);
+}
+var ask = {
+pattern:/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+html:"<div style=' text-transform: uppercase'>Спасибо!</div>"+
+"<div style=' text-transform: uppercase'>Вы подписались на еженедельную рассылку hochu.ua</div>",
+describeMe:function(){
+$("form.crazy_spamer .give_me_spam").click(function(e){
+e.preventDefault();
+var email = $(".cs_email",$(this).closest('form')).val();
+if(ask.pattern.test(email)){
+$.ajax({
+url:"/ask/setemail/",
+type:"POST",
+dataType:"JSON",
+data:{'mail':email},
+success:function(uns){
+if(uns.status == 1){
+$("form.crazy_spamer").html(ask.html);
+$.cookie("_dscrb",1,{expires:365,path:"/"});
+}
+}
+})
+}
+})
+},
+describeMeInSocial:function(){
+$("#invise_submit").click(function(e){
+e.preventDefault();
+var email = $(this).prev("input[name=email]").val();
+if(ask.pattern.test(email)){
+$.ajax({
+url:"/ask/setemail/",
+type:"POST",
+dataType:"JSON",
+data:{'mail':email},
+success:function(uns){
+if(uns.status == 1){
+ask.__clearFormInSocial();
+$.cookie("_dscrb",1,{expires:365,path:"/"});
+}
+}
+})
+}
+})
+},
+__clearFormInSocial:function(){
+$("#left_spam").trigger('mouseleave');
+$("#left_spam").off('click');
+$(".spam_ico").addClass("chk");
+$("#spam_input").remove();
+},
+init:function(){
+if(!$.cookie("_dscrb")){
+this.describeMe();
+this.describeMeInSocial();
+}else{
+this.__clearFormInSocial();
+$("form.crazy_spamer").html(ask.html)
+}
+}
+}
+$(document).ready(function(){
+ask.init();
+})

