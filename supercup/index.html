@@ -31,12 +31,21 @@
 </head>
 
 <body>
+<!--<div class="loader-container">-->
+<!--<div class="loader">-->
+<!--<svg class="circular" viewBox="25 25 50 50">-->
+<!--<circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"></circle>-->
+<!--</svg>-->
+<!--</div>-->
+<!--</div>-->
 <section class="s-1 scroll-screen hidden vh100" id="s1">
-    <div class="s-1__bg">
+    <div class="s-1__bg"></div>
+    <div class="sand"><img src="img/sand-bottom.png" alt=""></div>
+    <div class="s-1__block">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
-                    <img src="img/project-logo.png" alt="">
+                    <img class="s-1__project-logo m-top-10" src="img/project-logo.png" alt="">
                 </div>
                 <div class="col-xs-12">
                     <h4 class="f-20px regular m-top-20 m-bottom-30">Отдыхают они — выигрываете Вы! <span
@@ -53,7 +62,7 @@
                         <div class="col-xs-7 text-left m-top-50">
                             <p class="medium f-21px uppercase"><span class="light f-18px c-light-white uppercase-none">Соберите свою команду на Суперкубок и</span>
                                 <br>Выиграйте мяч или футболку с автографами игроков “Динамо” или “Шахтер”</p>
-                            <a href="" class="s-1__button"><span>Подробнее про розыгрыш</span>
+                            <a href="pdf/supercup-rules.pdf" target="_blank" class="s-1__button"><span>Подробнее про розыгрыш</span>
                                 <svg version="1.1" id="Layer_1" width="34px" height="34px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 34 34" style="enable-background:new 0 0 34 34;" xml:space="preserve">
                                 <g>
@@ -102,7 +111,6 @@
             </div>
         </a>
     </div>
-    <div class="sand"><img src="img/sand-bottom.png" alt=""></div>
 </section>
 <section class="s-2 scroll-screen hidden vh100" id="s2">
     <div class="s-2__bg">
@@ -147,7 +155,12 @@
                 <div class="timer-2">
                     <div class="item is">
                         <div class="s"></div>
-                        <svg width="84" height="84" xmlns="http://www.w3.org/2000/svg"> <g><circle class="circle" r="2.0833333333333335vw" cy="2.1875vw" cx="2.1875vw" stroke-width="3" fill="none"/></g></svg>
+                        <svg width="84" height="84" xmlns="http://www.w3.org/2000/svg">
+                            <g>
+                                <circle class="circle" r="2.0833333333333335vw" cy="2.1875vw" cx="2.1875vw"
+                                        stroke-width="3" fill="none"/>
+                            </g>
+                        </svg>
                     </div>
                 </div>
             </div>
@@ -168,7 +181,8 @@
 </section>
 <section class="s-3 scroll-screen hidden vh100" id="s3">
     <div class="s-3__bg">
-        <img class="s-3__choose-img" src="img/map-shakhtar-cropped.jpg" data-zoom-image="img/large-map/map-shakhtar-cropped.jpg"
+        <img class="s-3__choose-img" src="img/map-shakhtar-cropped.jpg"
+             data-zoom-image="img/large-map/map-shakhtar-cropped.jpg"
              alt="" usemap="#s-3__choose-img">
         <div class="s-3__list-container">
             <div class="s-3__results text-left">
@@ -182,21 +196,27 @@
                 <li class="s-3__list-item ordec"><img src="img/shakhtar-images-players/s-2.png"
                                                       alt=""><span>Ордец</span></li>
                 <li class="s-3__list-item rakyckiy"><img src="img/shakhtar-images-players/s-3.png"
-                                                      alt=""><span>Ракицкий</span></li>
+                                                         alt=""><span>Ракицкий</span></li>
                 <li class="s-3__list-item stepanenko"><img src="img/shakhtar-images-players/s-4.png" alt=""><span>Степаненко</span>
                 </li>
                 <li class="s-3__list-item kovalenko"><img src="img/shakhtar-images-players/s-5.png" alt=""><span>Коваленко</span>
                 </li>
-                <li class="s-3__list-item tayson"><img src="img/shakhtar-images-players/s-6.png" alt=""><span>Тайсон</span>
+                <li class="s-3__list-item tayson"><img src="img/shakhtar-images-players/s-6.png"
+                                                       alt=""><span>Тайсон</span>
                 </li>
-                <li class="s-3__list-item bernard"><img src="img/shakhtar-images-players/s-7.png" alt=""><span>Бернард</span>
+                <li class="s-3__list-item bernard"><img src="img/shakhtar-images-players/s-7.png"
+                                                        alt=""><span>Бернард</span>
                 </li>
-                <li class="s-3__list-item ferreira"><img src="img/shakhtar-images-players/s-8.png" alt=""><span>Феррейра</span>
+                <li class="s-3__list-item ferreira"><img src="img/shakhtar-images-players/s-8.png"
+                                                         alt=""><span>Феррейра</span>
                 </li>
-                <li class="s-3__list-item pyatov"><img src="img/shakhtar-images-players/s-9.png" alt=""><span>Пятов</span></li>
-                <li class="s-3__list-item ismaili"><img src="img/shakhtar-images-players/s-10.png" alt=""><span>Исмаили</span>
+                <li class="s-3__list-item pyatov"><img src="img/shakhtar-images-players/s-9.png"
+                                                       alt=""><span>Пятов</span></li>
+                <li class="s-3__list-item ismaili"><img src="img/shakhtar-images-players/s-10.png"
+                                                        alt=""><span>Исмаили</span>
                 </li>
-                <li class="s-3__list-item marlos"><img src="img/shakhtar-images-players/s-11.png" alt=""><span>Марлос</span>
+                <li class="s-3__list-item marlos"><img src="img/shakhtar-images-players/s-11.png"
+                                                       alt=""><span>Марлос</span>
                 </li>
             </ul>
         </div>
@@ -205,7 +225,12 @@
                 <div class="timer-2">
                     <div class="item is">
                         <div class="s"></div>
-                        <svg width="84" height="84" xmlns="http://www.w3.org/2000/svg"> <g><circle class="circle" r="2.0833333333333335vw" cy="2.1875vw" cx="2.1875vw" stroke-width="3" fill="none"/></g></svg>
+                        <svg width="84" height="84" xmlns="http://www.w3.org/2000/svg">
+                            <g>
+                                <circle class="circle" r="2.0833333333333335vw" cy="2.1875vw" cx="2.1875vw"
+                                        stroke-width="3" fill="none"/>
+                            </g>
+                        </svg>
                     </div>
                 </div>
             </div>
@@ -230,7 +255,8 @@
             <div class="row">
                 <div class="col-xs-12">
                     <h5 class="medium f-32px uppercase m-0 m-top-30 m-bottom-10">Вы нашли:</h5>
-                    <p class="medium f-42px c-yellow uppercase m-0 m-bottom-30"><span class="share-found">0</span> из 11</p>
+                    <p class="medium f-42px c-yellow uppercase m-0 m-bottom-30"><span class="share-found">0</span> из 11
+                    </p>
                 </div>
                 <div class="col-xs-12">
                     <div class="share-block">
@@ -242,7 +268,8 @@
                                         class="c-yellow share-block__level">Ринат Ахметов</span></p>
                             </div>
                             <div class="share-block__text">
-                                <p class="f-18px m-0 share-block__result-text">Вы сделали невозможное! Знать всех своих игроков в лицо и быстро
+                                <p class="f-18px m-0 share-block__result-text">Вы сделали невозможное! Знать всех своих
+                                    игроков в лицо и быстро
                                     <br>находить
                                     в толпе может только владелец команды.</p>
                             </div>
@@ -251,21 +278,23 @@
                         <div class="share-bottom">
                             <div class="row">
                                 <div class="col-xs-9 text-right">
-                                    <h5 class="medium f-21px uppercase m-0 m-top-50">Поделитесь своим результатом в
-                                        facebook с хештегом</h5>
-                                    <h2 class="share-block__hashtag"><i>#СуперкубокПариматч</i></h2>
+                                    <p class="f-21px m-0 m-top-30 m-bottom-20"><span class="c-yellow">1.</span> Поделитесь
+                                        своим результатом в
+                                        facebook с хештегом <br><span class="c-yellow"><i>#СуперкубокПариматч</i></span> в Facebook</p>
+                                    <p class="f-21px m-0 m-bottom-20"><span class="c-yellow">2.</span> Подпишитесь на сообщество <br><a
+                                            class="s-4__link"
+                                            href="https://www.facebook.com/uafootball/?ref=aymt_homepage_panel"
+                                            target="_blank">Футбольный портал UA-Футбол</a> в Facebook</p>
+                                    <p class="f-21px m-0"><span class="c-yellow">3.</span> Выиграйте мяч или футболку с автографами
+                                        <br>игроков «<span
+                                            class="share-block__team">Динамо</span>»
+                                        <a class="c-yellow" href="pdf/supercup-rules.pdf" target="_blank">(Правила
+                                            конкурса)</a></p>
                                 </div>
                                 <div class="col-xs-3">
-                                    <img class="m-top-10 share-block__tshirt" src="img/result-prize-shakhtar.png" alt="">
+                                    <img class="m-top-70 share-block__tshirt" src="img/result-prize-shakhtar.png"
+                                         alt="">
                                 </div>
-                                <div class="col-xs-12">
-                                    <p class="f-21px m-0">подпишитесь на сообщество <a class="s-4__link" href="https://www.facebook.com/uafootball/?ref=aymt_homepage_panel" target="_blank">Футбольный портал
-                                        UA-Футбол</a> на Facebook
-                                        <br>и выиграйте мяч и футболку с автографами игроков «<span
-                                            class="share-block__team"></span>»</p>
-                                    <a class="f-21px c-yellow" href="">(Правила конкурса)</a>
-                                </div>
-                                <div class="col-xs-12">
                                     <a href="" target="_blank" class="share-button"><span>Поделиться</span><img
                                             src="icons/facebook-button-ic-34x34.svg" alt=""></a>
                                 </div>
