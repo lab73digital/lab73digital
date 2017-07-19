@@ -1,0 +1,568 @@
+
+<!-- saved from url=(0143)https://www.meteoprog.ua/ru/informers/weather-now.html?cities%5B%5D=Kyiv&background=ffffff&textcolor=000000&linkcolor=2b85ca&width=100&avatar=0 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>
+    .informers-1 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby, section, summary, time, mark, audio, video 
+    {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font: inherit;
+        font-size: 100%;
+        vertical-align: baseline;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }        
+        .main-weather__item-meta {
+          text-align: left;
+          font-family: Roboto;font-weight:300;
+          font-size: 0.875em;
+          color: #626262;
+        }
+        
+        .main-weather__item-meta .wet,
+        .main-weather__item-meta .fallout,
+        .main-weather__item-meta .wind,
+        .main-weather__item-meta .pressure,
+        .main-weather__item-meta .uv {
+          display: block;
+          position: relative;
+          margin-left: 28px;
+          margin-bottom: 6px;
+        }
+        .main-weather__item-meta .wet:before,
+        .main-weather__item-meta .fallout:before,
+        .main-weather__item-meta .wind:before,        
+        .main-weather__item-meta .uv:before,
+        .main-weather__item-meta .wet:after,
+        .main-weather__item-meta .fallout:after,
+        .main-weather__item-meta .wind:after,        
+        .main-weather__item-meta .uv:after {
+          display: none;
+          opacity: 0;
+        }
+        .main-weather__item-meta .wet:after,
+        .main-weather__item-meta .fallout:after,
+        .main-weather__item-meta .wind:after,        
+        .main-weather__item-meta .uv:after {
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 8px 8px 0 8px;
+          border-color: #fff transparent transparent transparent;
+          top: -13px;
+          left: -28px;
+          z-index: 2;
+        }
+        .main-weather__item-meta .wet:before,
+        .main-weather__item-meta .fallout:before,
+        .main-weather__item-meta .wind:before,        
+        .main-weather__item-meta .uv:before {
+          content: attr(data-name);
+          top: -50px;
+          left: -22px;
+          padding: 11px 5px;
+          -webkit-transform: translateX(-50%);
+          -moz-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+          -o-transform: translateX(-50%);
+          transform: translateX(-50%);
+          min-width: 88px;
+          -webkit-transition: opacity 0.3s;
+          -moz-transition: opacity 0.3s;
+          transition: opacity 0.3s;
+          -moz-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.5);
+          -webkit-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.5);
+          box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.5);
+          border: solid 1px #c6c6cb;
+          font-family: Roboto;font-weight:300;
+          font-size: 14px;
+          text-align: center;
+          background: #fff;
+          background-clip: border-box;
+          z-index: 1;
+        }
+        .main-weather__item-meta .wet:hover:before,
+        .main-weather__item-meta .fallout:hover:before,
+        .main-weather__item-meta .wind:hover:before,        
+        .main-weather__item-meta .uv:hover:before,
+        .main-weather__item-meta .wet:hover:after,
+        .main-weather__item-meta .fallout:hover:after,
+        .main-weather__item-meta .wind:hover:after,        
+        .main-weather__item-meta .uv:hover:after {
+          display: block;
+          opacity: 1;
+        }
+        .main-weather__item-meta .wet svg,
+        .main-weather__item-meta .fallout svg,
+        .main-weather__item-meta .wind svg,        
+        .main-weather__item-meta .uv svg {
+          position: absolute;
+          left: -26px;
+        }
+        .main-weather__item-meta .wet > *,
+        .main-weather__item-meta .fallout > *,
+        .main-weather__item-meta .wind > *,        
+        .main-weather__item-meta .uv > * {
+          display: inline-block;
+        }
+        .main-weather__item-meta .wet svg {
+          width: 12px;
+        }
+        .main-weather__item-meta .fallout svg {
+          width: 14px;
+        }
+        .main-weather__item-meta .wind svg {
+          width: 13px;
+          left: -25px;
+        }
+                .main-weather__item-meta .uv svg {
+          width: 17px;
+          height: 1em;
+          left: -28px;
+        }
+
+.wind .direction:before {
+    background: url("/images/new_design/sprite.png") 0 0 no-repeat;
+    content: ' ';
+    display: block;
+    position: absolute;
+}        
+        
+.wind .direction {
+  padding-left: 18px;
+}
+.wind .direction:before {
+    left: -3px;
+}
+
+.wind .direction.north:before {
+  background-position: -80px -8px;
+  width: 11px;
+  height: 19px;
+}
+.wind .direction.north-east:before {
+  background-position: -95px -9px;
+  width: 17px;
+  height: 17px;
+}
+.wind .direction.east:before {
+  background-position: -95px -32px;
+  width: 19px;
+  height: 13px;
+}
+.wind .direction.south-east:before {
+  background-position: -95px -47px;
+  width: 17px;
+  height: 17px;
+}
+.wind .direction.south:before {
+  background-position: -80px -46px;
+  width: 11px;
+  height: 19px;
+}
+.wind .direction.south-west:before {
+  background-position: -58px -47px;
+  width: 17px;
+  height: 17px;
+}
+.wind .direction.west:before {
+  background-position: -56px -29px;
+  width: 19px;
+  height: 13px;
+}
+.wind .direction.north-west:before {
+  background-position: -58px -9px;
+  width: 17px;
+  height: 17px;
+}  
+ 
+.icons22x19 {
+  background: url("/images/new_design/icons22x19.png") no-repeat;
+}
+.icons22x19.sun {
+  background-position: -3px -1px;
+  width: 17px;
+  height: 17px;
+}
+.icons22x19.sun-cloud {
+  background-position: -27px 0;
+  width: 20px;
+  height: 16px;
+}
+.icons22x19.sun-cloud_2 {
+  background-position: -51px 0;
+  width: 23px;
+  height: 16px;
+}
+.icons22x19.sun-cloud_2-snow {
+  background-position: -153px 0;
+  width: 23px;
+  height: 18px;
+}
+.icons22x19.sun-cloud_2-snow_2 {
+  background-position: -255px 0;
+  width: 23px;
+  height: 18px;
+}
+.icons22x19.sun-cloud_2-snow_3 {
+  background-position: -357px 0;
+  width: 23px;
+  height: 19px;
+}
+.icons22x19.sun-cloud_2-rain {
+  background-position: -560px 0;
+  width: 23px;
+  height: 18px;
+}
+.icons22x19.sun-cloud_2-rain_2 {
+  background-position: -662px 0;
+  width: 23px;
+  height: 20px;
+}
+.icons22x19.sun-cloud_2-rain_strong {
+  background-position: -764px 0;
+  width: 23px;
+  height: 19px;
+}
+.icons22x19.sun-cloud_2-rain-snow {
+  background-position: -458px 0;
+  width: 23px;
+  height: 18px;
+}
+.icons22x19.sun-cloud-snow {
+  background-position: -129px 0;
+  width: 20px;
+  height: 18px;
+}
+.icons22x19.sun-cloud-snow_2 {
+  background-position: -231px 0;
+  width: 20px;
+  height: 18px;
+}
+.icons22x19.sun-cloud-snow_3 {
+  background-position: -332px 0;
+  width: 22px;
+  height: 18px;
+}
+.icons22x19.sun-cloud-rain {
+  background-position: -536px 0;
+  width: 20px;
+  height: 18px;
+}
+.icons22x19.sun-cloud-rain_2 {
+  background-position: -638px 0;
+  width: 20px;
+  height: 20px;
+}
+.icons22x19.sun-cloud-rain_strong {
+  background-position: -740px 0;
+  width: 20px;
+  height: 19px;
+}
+.icons22x19.sun-cloud-rain-snow {
+  background-position: -434px 0;
+  width: 20px;
+  height: 18px;
+}
+.icons22x19.cloud {
+  background-position: -79px -3px;
+  width: 18px;
+  height: 13px;
+}
+.icons22x19.cloud_2 {
+  background-position: -103px -3px;
+  width: 21px;
+  height: 13px;
+}
+.icons22x19.cloud_2-snow {
+  background-position: -204px -3px;
+  width: 22px;
+  height: 16px;
+}
+.icons22x19.cloud_2-snow-grad {
+  background-position: -306px -3px;
+  width: 22px;
+  height: 17px;
+}
+.icons22x19.cloud_2-snow-grad_strong {
+  background-position: -408px -3px;
+  width: 22px;
+  height: 17px;
+}
+.icons22x19.cloud_2-rain {
+  background-position: -612px -3px;
+  width: 21px;
+  height: 15px;
+}
+.icons22x19.cloud_2-rain_2 {
+  background-position: -714px -3px;
+  width: 21px;
+  height: 16px;
+}
+.icons22x19.cloud_2-rain_strong {
+  background-position: -816px -3px;
+  width: 21px;
+  height: 16px;
+}
+.icons22x19.cloud_2-rain-snow {
+  background-position: -510px -3px;
+  width: 22px;
+  height: 17px;
+}
+.icons22x19.cloud_2-lightning {
+  background-position: -1299px -3px;
+  width: 22px;
+  height: 17px;
+}
+.icons22x19.cloud_2-lightning-snow {
+  background-position: -1350px -3px;
+  width: 22px;
+  height: 17px;
+}
+.icons22x19.cloud_2-lightning-rain {
+  background-position: -1401px -3px;
+  width: 22px;
+  height: 17px;
+}
+.icons22x19.cloud_2-lightning-rain_strong {
+  background-position: -1452px -3px;
+  width: 22px;
+  height: 17px;
+}
+.icons22x19.cloud-snow {
+  background-position: -180px -3px;
+  width: 19px;
+  height: 16px;
+}
+.icons22x19.cloud-snow-grad {
+  background-position: -282px -3px;
+  width: 19px;
+  height: 17px;
+}
+.icons22x19.cloud-snow-grad_strong {
+  background-position: -384px -3px;
+  width: 19px;
+  height: 17px;
+}
+.icons22x19.cloud-rain {
+  background-position: -588px -3px;
+  width: 19px;
+  height: 15px;
+}
+.icons22x19.cloud-rain_2 {
+  background-position: -690px -3px;
+  width: 18px;
+  height: 16px;
+}
+.icons22x19.cloud-rain_strong {
+  background-position: -792px -3px;
+  width: 18px;
+  height: 16px;
+}
+.icons22x19.cloud-rain-snow {
+  background-position: -486px -3px;
+  width: 19px;
+  height: 17px;
+}
+.icons22x19.cloud-rain-danger {
+  background-position: -1478px -3px;
+  width: 21px;
+  height: 17px;
+}
+.icons22x19.cloud-lightning {
+  background-position: -1275px -3px;
+  width: 19px;
+  height: 17px;
+}
+.icons22x19.cloud-lightning-snow {
+  background-position: -1326px -3px;
+  width: 19px;
+  height: 17px;
+}
+.icons22x19.cloud-lightning-rain {
+  background-position: -1377px -3px;
+  width: 19px;
+  height: 17px;
+}
+.icons22x19.cloud-lightning-rain_strong {
+  background-position: -1428px -3px;
+  width: 19px;
+  height: 17px;
+}
+.icons22x19.night.moon {
+  background-position: -844px -2px;
+  width: 16px;
+  height: 16px;
+}
+.icons22x19.night.moon-cloud {
+  background-position: -868px -1px;
+  width: 19px;
+  height: 15px;
+}
+.icons22x19.night.moon-cloud_2 {
+  background-position: -892px -1px;
+  width: 22px;
+  height: 15px;
+}
+.icons22x19.night.moon-cloud_2-rain_2 {
+  background-position: -1198px -1px;
+  width: 21px;
+  height: 19px;
+}
+.icons22x19.night.moon-cloud_2-rain_strong {
+  background-position: -1248px -1px;
+  width: 22px;
+  height: 18px;
+}
+.icons22x19.night.moon-cloud-rain {
+  background-position: -1147px -3px;
+  width: 21px;
+  height: 16px;
+}
+.icons22x19.night.moon-cloud-rain_2 {
+  background-position: -1173px -1px;
+  width: 19px;
+  height: 19px;
+}
+.icons22x19.night.moon-cloud-rain_strong {
+  background-position: -1224px -1px;
+  width: 20px;
+  height: 18px;
+}
+.icons22x19.night.moon-rain {
+  background-position: -1124px -3px;
+  width: 16px;
+  height: 16px;
+}
+.icons22x19.night.cloud {
+  background-position: -1734px -3px;
+  width: 18px;
+  height: 13px;
+}
+.icons22x19.night.cloud_2 {
+  background-position: -1758px -3px;
+  width: 21px;
+  height: 13px;
+}
+.icons22x19.night.cloud_2-snow {
+  background-position: -943px -3px;
+  width: 22px;
+  height: 16px;
+}
+.icons22x19.night.cloud_2-snow-grad {
+  background-position: -994px -3px;
+  width: 21px;
+  height: 17px;
+}
+.icons22x19.night.cloud_2-snow-grad_strong {
+  background-position: -1045px -3px;
+  width: 21px;
+  height: 17px;
+}
+.icons22x19.night.cloud_2-snow-rain {
+  background-position: -1096px -3px;
+  width: 21px;
+  height: 17px;
+}
+.icons22x19.night.cloud_2-rain {
+  background-position: -2012px -3px;
+  width: 22px;
+  height: 15px;
+}
+.icons22x19.night.cloud_2-rain_2 {
+  background-position: -2063px -3px;
+  width: 22px;
+  height: 16px;
+}
+.icons22x19.night.cloud_2-rain_strong {
+  background-position: -2114px -3px;
+  width: 22px;
+  height: 16px;
+}
+.icons22x19.night.cloud_2-lightning {
+  background-position: -1529px -3px;
+  width: 21px;
+  height: 17px;
+}
+.icons22x19.night.cloud_2-lightning-snow {
+  background-position: -1580px -3px;
+  width: 21px;
+  height: 17px;
+}
+.icons22x19.night.cloud_2-lightning-rain {
+  background-position: -1630px -3px;
+  width: 22px;
+  height: 17px;
+}
+.icons22x19.night.cloud_2-lightning-rain_strong {
+  background-position: -1681px -3px;
+  width: 22px;
+  height: 17px;
+}
+.icons22x19.night.cloud-snow {
+  background-position: -919px -3px;
+  width: 19px;
+  height: 19px;
+}
+.icons22x19.night.cloud-snow-grad {
+  background-position: -970px -3px;
+  width: 19px;
+  height: 17px;
+}
+.icons22x19.night.cloud-snow-grad_strong {
+  background-position: -1021px -3px;
+  width: 19px;
+  height: 17px;
+}
+.icons22x19.night.cloud-snow-rain {
+  background-position: -1072px -3px;
+  width: 18px;
+  height: 17px;
+}
+.icons22x19.night.cloud-rain {
+  background-position: -1988px -3px;
+  width: 19px;
+  height: 15px;
+}
+.icons22x19.night.cloud-rain_2 {
+  background-position: -2039px -3px;
+  width: 19px;
+  height: 16px;
+}
+.icons22x19.night.cloud-rain-danger {
+  background-position: -1707px -3px;
+  width: 21px;
+  height: 17px;
+}
+.icons22x19.night.cloud-lightning {
+  background-position: -1504px -3px;
+  width: 19px;
+  height: 17px;
+}
+.icons22x19.night.cloud-lightning-snow {
+  background-position: -1555px -3px;
+  width: 19px;
+  height: 17px;
+}
+.icons22x19.night.cloud-lightning-rain {
+  background-position: -1606px -3px;
+  width: 19px;
+  height: 17px;
+}
+.icons22x19.night.cloud-lightning-rain_strong {
+  background-position: -1657px -3px;
+  width: 19px;
+  height: 17px;
+}
+
+</style>    
+<link href="./css(2)" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="./jo-informer.css">
+</head><body marginwidth="0" marginheight="0"><div class="jo-changingBlock__container cf informers-1" style="width:auto;">
+   
+  <a target="_blank" href="http://www.meteoprog.ua/ru/weather/Kyiv/" data-main-url="Kyiv" class="extra__block" style="display:block;"><span>Киев</span><div class="icon icons22x19 
+
+sun-cloud"></div><span class="temperature">+24°</span></a>      
+</div>
+</body></html>

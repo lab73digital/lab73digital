@@ -1,0 +1,37 @@
+$(function () {
+    // on post comment click
+    $('.bt-add-com').click(function (e) {
+        e.preventDefault();
+        var theCom = $('#comment');
+        //var theName = $('#name');
+        //var theMail = $('#email');
+        var theObjectId = $('#object_id');
+        var theObjectType = $('#object_type');
+
+        if (!theCom.val()) {
+            alert('You need to write a comment!');
+        } else {
+            $.ajax({
+                    type: "POST",
+                    url: "/comments/addcomment/",
+                    data: 'act=add-com&object_id=' + theObjectId.val() + '&comment=' + theCom.val() + '&object_type=' + theObjectType.val(),
+                    success: function (html) {
+                        theCom.val('');
+                        //theMail.val('');
+                        //theName.val('');
+                        $('.js-comemnts-block').before(html);
+                    },
+                    error: function(data) {
+                        if(data.error) {
+                            $('.comment-item__textarea .error').empty();
+                            var error = JSON.parse(data.responseText)
+                            $('.comment-item__textarea .error').append(error.msg.comment[0]);
+                        }
+                    }
+                }
+            )
+            ;
+        }
+    });
+});
+//# sourceMappingURL=comments.js.map
