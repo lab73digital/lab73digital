@@ -29,6 +29,217 @@
 
     <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
 
+    <style>
+        .disklamer .container {
+            margin-right: auto;
+            margin-left: auto;
+            padding-left: 15px;
+            padding-right: 15px
+        }
+
+        .disklamer-container {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            transform: translate3d(0px, 0px, 0.1px)
+        }
+
+        .disklamer-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.2)
+        }
+
+        .disklamer {
+            background-color: #fff;
+            position: absolute;
+            width: calc(100vw - 4.947916666666667vw * 2);
+            left: 4.9479166666667vw;
+            bottom: 0;
+            text-align: center;
+            padding-top: 30px
+        }
+
+        .disklamer__text1 {
+            font-size: 18px;
+            color: #444;
+            margin: 0
+        }
+
+        .disklamer__text2 {
+            font-size: 21px;
+            color: #69c6f3;
+            margin: 0 0 20px;
+            font-weight: 700
+        }
+
+        .disklamer__buttons-container {
+            display: flex
+        }
+
+        .disklamer__btn-yes--click, .disklamer__btn-no--click {
+            display: inline-block;
+            width: 220px;
+            height: 59px;
+            padding: 16px 40px;
+            font-size: 21px;
+            font-weight: 500;
+            background-color: #6cc82a;
+            border-radius: 50px;
+            color: #fff;
+            position: relative;
+            top: 0;
+            transition: top 300ms ease-in-out
+        }
+
+        .disklamer__btn-yes--click:hover, .disklamer__btn-no--click:hover {
+            top: -7px
+        }
+
+        .disklamer__btn-yes--click {
+            box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.2)
+        }
+
+        .disklamer__btn-no--click {
+            background-color: #d3d3d3
+        }
+
+        .disklamer__little-text {
+            font-size: 12px;
+            color: #cecece;
+            margin: 15px 0 20px
+        }
+
+        .disklamer__rools {
+            background-color: #f2f2f2
+        }
+
+        .disklamer__rools-click {
+            font-size: 14px;
+            font-weight: 500;
+            color: #a8a8a8;
+            cursor: pointer;
+            padding: 10px 0;
+            margin: 0;
+            opacity: 1;
+            transition: all 400ms ease-in-out
+        }
+
+        .disklamer__rools-click:after {
+            content: '';
+            display: inline-block;
+            margin-left: 10px;
+            width: 10px;
+            height: 10px;
+            transition: transform 200ms ease-in-out;
+            background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMTQgMTQiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDE0IDE0OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4uc3Qwe29wYWNpdHk6MC4yO2NsaXAtcGF0aDp1cmwoI1NWR0lEXzJfKTt9LnN0MXtvcGFjaXR5OjAuMjtjbGlwLXBhdGg6dXJsKCNTVkdJRF80Xyk7fS5zdDJ7ZmlsbDojRjlGOUY5O30uc3Qze2ZpbGw6I0YyRjJGMjt9LnN0NHtmaWxsOiM2Q0M4MkE7fS5zdDV7ZmlsbDojRDNEM0QzO30uc3Q2e2ZpbGw6bm9uZTtzdHJva2U6I0E4QThBODtzdHJva2Utd2lkdGg6MjtzdHJva2UtbWl0ZXJsaW1pdDoxMDt9LnN0N3tmaWxsOiNDRUNFQ0U7fS5zdDh7ZmlsbDojQUFBQUFBO30uc3Q5e2ZpbGw6I0E4QThBODt9PC9zdHlsZT48Zz48Zz48ZGVmcz48cmVjdCBpZD0iU1ZHSURfMV8iIHg9Ii0xMTM0IiB5PSItMTAwOCIgd2lkdGg9IjE5MTkiIGhlaWdodD0iOTc0Ii8+PC9kZWZzPjxjbGlwUGF0aCBpZD0iU1ZHSURfMl8iPjx1c2UgeGxpbms6aHJlZj0iI1NWR0lEXzFfIiAgc3R5bGU9Im92ZXJmbG93OnZpc2libGU7Ii8+PC9jbGlwUGF0aD48ZyBzdHlsZT0iY2xpcC1wYXRoOnVybCgjU1ZHSURfMl8pOyI+PGltYWdlIHN0eWxlPSJvdmVyZmxvdzp2aXNpYmxlOyIgd2lkdGg9IjE5MTkiIGhlaWdodD0iMTA3OSIgeGxpbms6aHJlZj0iM0I2NjM0QkIuanBnIiAgdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgMSAtMTEzNCAtMTA3NCkiPjwvaW1hZ2U+PC9nPjwvZz48L2c+PHBvbHlnb24gY2xhc3M9InN0OSIgcG9pbnRzPSI3LDEwLjYgMS4zLDQuOSAyLjcsMy40IDcsNy43IDExLjMsMy40IDEyLjcsNC45ICIvPjwvc3ZnPg==)
+        }
+
+        .disklamer__rools-click:hover:after {
+            transform: rotate(180deg)
+        }
+
+        .disklamer__rools-click.hide {
+            padding: 5px 0;
+            opacity: 0;
+            visibility: hidden
+        }
+
+        .disklamer__rools--show {
+            display: none
+        }
+
+        .disklamer__rools-title {
+            font-size: 16px;
+            font-weight: 500;
+            color: #333;
+            margin: 0 0 22px
+        }
+
+        .disklamer__rools-list {
+            padding: 0 0 6px;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            text-align: left
+        }
+
+        .disklamer__rools-item {
+            font-size: 12px;
+            color: #666;
+            padding-left: 16px;
+            width: 50%;
+            margin-bottom: 14px
+        }
+
+        .disklamer__rools-item:before {
+            content: "•";
+            margin-left: -10px;
+            padding-right: 6px;
+            color: #6cc82a
+        }
+
+        @media (min-width: 768px) {
+            .disklamer .container {
+                width: 750px
+            }
+        }
+
+        @media (min-width: 992px) {
+            .disklamer .container {
+                width: 970px
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .disklamer .container {
+                width: 1170px
+            }
+        }
+
+        @media (max-width: 480px) {
+            .disklamer {
+                width: 100%;
+                height: 69.014084507042vh;
+                left: 0;
+                overflow-y: scroll
+            }
+
+            .disklamer .container {
+                width: 100%
+            }
+
+            .disklamer__buttons-container {
+                display: block
+            }
+
+            .disklamer__text1, .disklamer__text2, .disklamer__btn-no--click, .disklamer__btn-yes--click, .disklamer__rools-title {
+                font-size: 14px
+            }
+
+            .disklamer__btn-no--click, .disklamer__btn-yes--click {
+                width: 190px;
+                height: 39px;
+                padding: 11px 40px
+            }
+
+            .disklamer__little-text {
+                font-size: 10px
+            }
+
+            .disklamer__rools-item {
+                font-size: 10px
+            }
+        }
+    </style>
     <link rel="stylesheet" href="css/main.min.css">
     <!-- Chrome, Firefox OS and Opera -->
     <meta name="theme-color" content="#235298">
@@ -39,17 +250,86 @@
 </head>
 
 <body>
+<div class="disklamer-container">
+    <div class="disklamer-overlay"></div>
+    <div class="disklamer">
+        <div class="container">
+            <p class="disklamer__text1">Данный раздел предназначен исключительно для специалистов в области охраны
+                здоровья.</p>
+            <p class="disklamer__text2">Для просмотра содержимого подтвердите, являетесь ли вы медицинским
+                работником.</p>
+            <div class="disklamer__buttons-container">
+                <div class="disklamer__btn-yes">
+                    <a href="" class="disklamer__btn-yes--click">Подтверждаю</a>
+                    <p class="disklamer__little-text">Подтверждая, что вы являетесь специалистом в области охраны
+                        здоровья,
+                        вы
+                        соглашаетесь со всеми изложенными условиями пользования данным разделом.</p>
+                </div>
+                <div class="disklamer__btn-no">
+                    <a href="/" class="disklamer__btn-no--click">Нет</a>
+                    <p class="disklamer__little-text">Если вы не являетесь специалистом в области охраны здоровья
+                        (врачем
+                        или
+                        медицинским работником), вам не рекомендуется посещать данный раздел.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="disklamer__rools">
+            <div class="container">
+                <div class="disklamer__rools-click">Условия пользования данным разделом</div>
+                <div class="disklamer__rools--show">
+                    <h5 class="disklamer__rools-title">
+                        Условиями пользования данным разделом:
+                    </h5>
+                    <ul class="disklamer__rools-list">
+                        <li class="disklamer__rools-item">Данный раздел также предназначен для общения и обмена
+                            специалистами в области охраны здоровья
+                            профессиональным опытом и знаниями;
+                        </li>
+                        <li class="disklamer__rools-item">Данный раздел объединяет в себе разного рода информацию
+                            научного и
+                            прочего характера в области
+                            медицины и охраны здоровья;
+                        </li>
+                        <li class="disklamer__rools-item">Информация, изложенная в данном разделе, представлена
+                            исключительно с ознакомительной целью, не
+                            носит рекламного характера, и не может рассматриваться как инструкция по применению и/или
+                            использованию лекарственных препаратов, медицинской техники или методик лечения;
+                        </li>
+                        <li class="disklamer__rools-item">Данный раздел предназначен для ознакомления специалистами в
+                            области охраны здоровья с новыми
+                            научными исследованиями и разработками в области медицины и охраны здоровья, а также с
+                            исследованиями и рекомендациями производителей лекарственных препаратов и медицинской
+                            техники по
+                            применению лекарственных препаратов и использованию медицинской техники.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="nav-menu-container animation1">
     <nav class="nav-menu">
         <ul class="nav">
-            <li class="active"><a href="#s1"><span class="nav-text">Главная</span><span class="nav-circle"></span></a></li>
-            <li class=""><a href="#s2"><span class="nav-text">Что такое диарея</span><span class="nav-circle"></span></a></li>
-            <li class=""><a href="#s3"><span class="nav-text">Пути заражения</span><span class="nav-circle"></span></a></li>
-            <li class=""><a href="#s4"><span class="nav-text">Последствия диареи</span><span class="nav-circle"></span></a></li>
-            <li class=""><a href="#s7"><span class="nav-text">Лечение диареи</span><span class="nav-circle"></span></a></li>
-            <li class=""><a href="#s8"><span class="nav-text">Принцип действия препарата</span><span class="nav-circle"></span></a></li>
-            <li class=""><a href="#s5"><span class="nav-text">Преимущества</span><span class="nav-circle"></span></a></li>
-            <li class=""><a href="#s6"><span class="nav-text">Маме на зметку</span><span class="nav-circle"></span></a></li>
+            <li class="active"><a href="#s1"><span class="nav-text">Главная</span><span class="nav-circle"></span></a>
+            </li>
+            <li class=""><a href="#s2"><span class="nav-text">Что такое диарея</span><span
+                    class="nav-circle"></span></a></li>
+            <li class=""><a href="#s3"><span class="nav-text">Пути заражения</span><span class="nav-circle"></span></a>
+            </li>
+            <li class=""><a href="#s4"><span class="nav-text">Последствия диареи</span><span class="nav-circle"></span></a>
+            </li>
+            <li class=""><a href="#s7"><span class="nav-text">Лечение диареи</span><span class="nav-circle"></span></a>
+            </li>
+            <li class=""><a href="#s8"><span class="nav-text">Принцип действия препарата</span><span
+                    class="nav-circle"></span></a></li>
+            <li class=""><a href="#s5"><span class="nav-text">Преимущества</span><span class="nav-circle"></span></a>
+            </li>
+            <li class=""><a href="#s6"><span class="nav-text">Маме на зметку</span><span class="nav-circle"></span></a>
+            </li>
         </ul>
     </nav>
 </div>
@@ -62,10 +342,12 @@
             <img src="img/section-1/logo-m.png" alt="">
         </div>
         <ul class="menu-likar__menu-list">
-            <li class="menu-likar__menu-item"><a href="http://www.likar.info/" target="_blank"><img src="img/section-1/logo-big.png" alt=""></a></li>
+            <li class="menu-likar__menu-item"><a href="http://www.likar.info/" target="_blank"><img
+                    src="img/section-1/logo-big.png" alt=""></a></li>
             <li class="menu-likar__menu-item"><a href="http://www.likar.info/bolezni/" target="_blank">Болезни и
                 лечение</a></li>
-            <li class="menu-likar__menu-item"><a href="http://www.likar.info/symptoms/" target="_blank">Симптомы</a></li>
+            <li class="menu-likar__menu-item"><a href="http://www.likar.info/symptoms/" target="_blank">Симптомы</a>
+            </li>
             <li class="menu-likar__menu-item"><a href="http://www.likar.info/lekarstva/" target="_blank">Лекарства</a>
             </li>
             <li class="menu-likar__menu-item"><a href="http://www.likar.info/coolhealth/" target="_blank">ЗОЖ</a></li>
@@ -92,7 +374,8 @@
             <a href="#s2" class="btn c-white">Узнать больше</a>
         </div>
     </div>
-    <div class="s-1__sup-text"> 1. World Gastroenterology Organisation practice guideline: Acute diarrhea; March 2008</div>
+    <div class="s-1__sup-text"> 1. World Gastroenterology Organisation practice guideline: Acute diarrhea; March 2008
+    </div>
 </header>
 <section id="s2" class="s-2 inner-border-top inner-border-bottom">
     <hr class="big gray-light m-bottom-100">
@@ -125,7 +408,7 @@
             </div>
         </div>
         <div class="col-xs-12 col-sm-8 animation11">
-            <p class="f-21px c-black-light m-0 m-bottom-40 lh30"><span class="bold c-black">Чаще всего возбудителем диареи является кишечная палочка и сальмонелла.</span>
+            <p class="f-21px c-black-light m-0 m-bottom-40 lh30"><span class="bold c-black"><a href="" class="s-2__btn"><span>Чаще всего возбудителем диареи является кишечная палочка и сальмонелла.</span></a></span>
                 Бактерий семейства
                 Staphylococcus и некоторых видов грамотрицательных бактерий семейства Enterobacteriaceae видов: Yersinia
                 spр., Escherichia spр., Citobacter spр., Enterobacter spр., Klebsiella spр., Salmonella spр.</p>
@@ -1783,8 +2066,8 @@
 <section id="s5" class="s-5 c-white">
     <div class="container">
         <div class="col-xs-12 text-center animation16">
-            <h3 class="black f-42px uppercase"><span class="semiBold f-28px uppercase-none">Преимущества</span>
-                <br>Нифуроксазид Рихтер</h3>
+            <h3 class="black f-42px uppercase m-0 m-top-80">Нифуроксазид Рихтер</h3>
+            <h3 class="semiBold f-28px m-0 m-bottom-100">Быстро и безопасно устраняет причину диареи</h3>
         </div>
         <div class="col-xs-12 col-sm-5 text-center">
             <img class="m-0 m-bottom-70 animation17" src="img/section-7/prod-rihter-img.png"/>
@@ -1924,7 +2207,7 @@
                     <img src="img/section-7/prod-rihter-img.png" alt="">
                 </div>
                 <div class="col-xs-9">
-                    <h4 class="c-black bold f-38px m-0 m-top-55">Не дайте диареи испортить ваши планы</h4>
+                    <h4 class="c-black bold f-38px m-0 m-top-55">Не дайте диарее испортить ваши планы</h4>
                     <h3 class="c-pnsk bold f-38px uppercase m-0">пополните свою аптечку!</h3>
                 </div>
             </div>
@@ -1945,5 +2228,19 @@
     </div>
 </footer>
 <script src="js/scripts.min.js"></script>
+<script type="text/javascript">
+    $('.disklamer__rools-click').on('click', function () {
+        $('.disklamer__rools-click').addClass('hide');
+        $('.disklamer__rools--show').slideDown();
+    });
+    $('.disklamer__btn-yes--click, .disklamer-overlay').on('click', function (e) {
+        e.preventDefault();
+        $('.disklamer').slideUp(400);
+        $('.disklamer-overlay').animate({
+            'opacity': 0
+        }, 400, function () {
+            $('.disklamer-container').hide();
+        });
+    });</script>
 </body>
 </html>
