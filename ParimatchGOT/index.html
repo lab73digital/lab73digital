@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: 0;
+            font-size: 100%;
+            vertical-align: top;
+            background: transparent;
+            -webkit-tap-highlight-color: rgba(255,255,255,0);
+            -webkit-tap-highlight-color: transparent
+        }
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            min-width: 100vw;
+            min-height: 100vh;
+            position: relative;
+            background-color: ivory;
+        }
+
+        canvas {
+            border: 1px solid red;
+            margin: 50px 50px 5px 50px;
+        }
+
+        .uploader {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            overflow: hidden;
+            width: 802px;
+            height: 802px;
+            background: transparent;
+            border: 1px dashed #e8e8e8;
+        }
+
+        #filePhoto {
+            position: absolute;
+            width: 802px;
+            height: 802px;
+            top: 50px;
+            left: 50px;
+            z-index: 2;
+            opacity: 0;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<canvas id="canvas" width="800" height="800"></canvas>
+<div class="uploader" onclick="app.inputClick">
+    <input type="file" name="userprofile_picture" id="filePhoto"/>
+</div>
+<br>
+<div style="margin-left: 50px">
+    <button id="clockwise">Rotate right</button>
+    <button id="counterclockwise">Rotate left</button>
+    <br>
+    <button id="scalePlus">Scale +</button>
+    <button id="scaleMinus">Scale -</button>
+    <br>
+    <button id="flip">flip</button>
+    <br>
+    <button id="drag">drag</button>
+</div>
+
+<script src="jquery-3.2.1.min.js"></script>
+<script src="common.js"></script>
+</body>
+</html>
