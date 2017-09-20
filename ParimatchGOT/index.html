@@ -138,6 +138,18 @@
         });
     }
 </script>
+<!--
+  Below we include the Login Button social plugin. This button uses
+  the JavaScript SDK to present a graphical Login button that triggers
+  the FB.login() function when clicked.
+-->
+
+<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+</fb:login-button>
+
+<div id="status">
+</div>
+<button id="fblogin"></button>
 <div id="imgContainer">
     <canvas id="canvas" width="800" height="800"></canvas>
     <div class="uploader" onclick="app.inputClick">
@@ -157,17 +169,6 @@
     <button id="getImg">getImg</button>
 </div>
 <br>
-<!--
-  Below we include the Login Button social plugin. This button uses
-  the JavaScript SDK to present a graphical Login button that triggers
-  the FB.login() function when clicked.
--->
-
-<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-</fb:login-button>
-
-<div id="status">
-</div>
 <script src="jquery-3.2.1.min.js"></script>
 <script src="common.js"></script>
 </body>
