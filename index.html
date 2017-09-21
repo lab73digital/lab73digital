@@ -2,43 +2,237 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
-    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
-    <title>lab73.digital</title>
+    <title>Using vue-head</title>
+    <meta name="description" id="desc" content="My initial description">
+    <link rel="canonical" id="canonical" href="http://myblog.com/">
 
-    <link rel="stylesheet" href="css/libs.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .item {
+            display: inline;
+            margin-right: 8px;
+        }
+    </style>
 </head>
 <body>
-<ul id="scene">
-    <li class="layer" data-depth="0.2"><img src="img/lines-1-n.png"></li>
-    <li class="layer" data-depth="0.10"><img src="img/lines-2-n.png"></li>
-    <li class="layer" data-depth="0.05"><img src="img/lines-3-n.png"></li>
-</ul>
-<div class="section-shadow"></div>
-<section>
-    
-    <div class="shine shine-1"></div>
-    <div class="shine shine-2"></div>
-    <div class="shine shine-3"></div>
-    <img src="img/logo.svg" alt="" class="logo">
-    <div class="contacts">
-        <div class="contacts__title">
-            <img src="img/contacts-title.svg" alt="">
-            <hr>
-        </div>
-        <div class="clr"></div>
-        <div class="phone contacts__block"><img src="img/icons/icon-1.svg" alt=""><span>Номер телефона —</span><a
-                href="tel:+380444985195">+38 (044) 498-51-95</a></div>
-        <div class="email contacts__block"><img src="img/icons/icon-2.svg" alt=""><span>E-mail —</span><a
-                href="mailto:hi@lab73.digital">hi@lab73.digital</a></div>
-    </div>
-</section>
 
-<script src="js/libs.min.js"></script>
-<script src="js/common.js"></script>
+<div id="app">
+    <header>
+        <router-link :to="{name: 'vue-example'}">HOME</router-link>
+        <nav>
+            <ul>
+                <li class="item">
+                    <router-link :to="{name: 'vue-example.about'}">ABOUT</router-link>
+                </li>
+                <li class="item">
+                    <router-link :to="{name: 'vue-example.blog'}">BLOG</router-link>
+                </li>
+                <li class="item">
+                    <router-link :to="{name: 'vue-example.contact'}">CONTACT</router-link>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <hr>
+    <main class="content">
+        <router-view></router-view>
+    </main>
 
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/2.0.1/vue-router.min.js"></script>
+<script src="vue-head.js"></script>
+
+<script>
+
+    // Component HOME
+    var home = Vue.extend({
+        'template': '<router-view></router-view> '
+    })
+
+    // Component ABOUT
+    var about = Vue.extend({
+        'template': '<h1>ABOUT</h1>',
+        data: function () {
+            return {
+                infoPage: {
+                    title: 'About me'
+                }
+            }
+        },
+        head: {
+            // To use "this" in the component, it is necessary to return the object through a function
+            title: function () {
+                return {
+                    inner: this.infoPage.title,
+                    separator: ':)'
+                }
+            },
+            meta: function () {
+                return [
+                    {name: 'description', c: 'About me', id: 'desc'},
+                    {property: 'fb:app_id', content: '150081828882748' },
+                    {p: 'og:title', c: 'website name about'},
+                    {p: 'og:description', c: 'website description about'}
+                ]
+            },
+            style: [
+                {type: 'text/css', inner: 'body { background-color: #000; color: #fff}'}
+            ],
+            link: [
+                {rel: 'canonical', h: 'https://lab73digital.github.io/vue-example/#!/about/', id: 'canonical'},
+                {rel: 'icon', href: '/static/assets/favicon-16.png', sizes: '16x16', type: 'image/png'},
+                /* shorthand property */
+                {r: 'icon', h: '/static/assets/favicon-32.png', sz: '32x32', t: 'image/png'}
+            ]
+        }
+    })
+
+    // Component BLOG
+    var blog = Vue.extend({
+        data: function () {
+            return {
+                params: {
+                    title: 'website name blog',
+                    description: 'website description blog',
+                    image: false,
+                    app: 'app name',
+                }
+            }
+        },
+        mounted: function () {
+            var self = this
+            window.setTimeout(function () {
+                self.params.title = 'new website name'
+                self.$emit('updateHead')
+            }, 3000)
+        },
+        'template': '<h1>BLOG</h1>',
+        head: {
+            title: function () {
+                return {
+                    inner: this.params.title,
+                    separator: ' ',
+                    complement: ' '
+                }
+            },
+            meta: function () {
+                return [
+                    {name: 'application-name', content: this.params.app},
+                    {name: 'description', content: this.params.description},
+                    {name: 'twitter:title', content: this.params.title},
+                    {n: 'twitter:description', c: this.params.description},
+                    {property: 'fb:app_id', content: '150081828882748' },
+                    {p: 'og:title', c: this.params.title},
+                    {p: 'og:description', c: this.params.description},
+                    {p: 'og:image', c: this.params.image},
+                ]
+            }
+        }
+    })
+
+    // Component CONTACT
+    var contact = Vue.extend({
+        'template': '<h1>CONTACT</h1>',
+        head: {
+            title: {
+                inner: 'It will be a pleasure',
+                separator: ' ', // Leave empty separator
+                complement: ' ' // Leave empty complement
+            },
+            meta: [
+                {name: 'description', c: 'Happy for your contact', id: 'desc'}
+            ],
+            link: [
+                {rel: 'canonical', h: 'https://lab73digital.github.io/vue-example/#!/contact/', id: 'canonical'}
+            ]
+        }
+    })
+
+    // CONFIGURATION
+    Vue.use(VueHead)
+    Vue.use(VueRouter)
+
+    var router = new VueRouter({
+        mode: 'history',
+        routes: [
+            {
+                path: '/vue-example',
+                name: 'vue-example',
+                component: home,
+                children: [
+                    {
+                        path: 'about',
+                        name: 'vue-example.about',
+                        component: about
+                    },
+                    {
+                        path: 'blog',
+                        name: 'vue-example.blog',
+                        component: blog
+                    },
+                    {
+                        path: 'contact',
+                        name: 'vue-example.contact',
+                        component: contact
+                    }
+                ]
+            },
+            {
+                path: '*',
+                component: home
+            }
+        ]
+    })
+
+    var App = new Vue({
+        router: router
+    }).$mount('#app')
+
+</script>
+<script>
+    //Check if facebook_refresh query string is present
+    //Feature check browsers for support
+    if (document.addEventListener && window.XMLHttpRequest && document.querySelector) {
+        //DOM is ready
+        document.addEventListener("DOMContentLoaded", function () {
+            var httpRequest = new XMLHttpRequest();
+            httpRequest.open("POST", "https://graph.facebook.com", true);
+
+            httpRequest.onreadystatechange = function () {
+                if (httpRequest.readyState == 4) {
+                    console.log("httpRequest.responseText", httpRequest.responseText);
+                }
+            };
+
+            //Default URL to send to Facebook
+            var url = window.location;
+
+            //og:url element
+            var og_url = document.querySelector("meta[property='og:url']");
+
+            //Check if og:url element is present on page
+            if (og_url != null) {
+                //Get the content attribute value of og:url
+                var og_url_value = og_url.getAttribute("content");
+
+                //If og:url content attribute isn't empty
+                if (og_url_value != "") {
+                    url = og_url_value;
+                } else {
+                    console.warn('<meta property="og:url" content=""> is empty. Falling back to window.location');
+                }
+            } else {
+                console.warn('<meta property="og:url" content=""> is missing. Falling back to window.location');
+            }
+
+            //Send AJAX
+            httpRequest.send("scrape=true&id=" + encodeURIComponent(url));
+
+        });
+    } else {
+        console.warn("Your browser doesn't support one of the following: document.addEventListener && window.XMLHttpRequest && document.querySelector");
+    }
+</script>
 </body>
-
 </html>
