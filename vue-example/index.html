@@ -17,17 +17,17 @@
 
 <div id="app">
     <header>
-        <router-link :to="{name: 'example'}">HOME</router-link>
+        <router-link :to="{name: 'vue-example'}">HOME</router-link>
         <nav>
             <ul>
                 <li class="item">
-                    <router-link :to="{name: 'example.about'}">ABOUT</router-link>
+                    <router-link :to="{name: 'vue-example.about'}">ABOUT</router-link>
                 </li>
                 <li class="item">
-                    <router-link :to="{name: 'example.blog'}">BLOG</router-link>
+                    <router-link :to="{name: 'vue-example.blog'}">BLOG</router-link>
                 </li>
                 <li class="item">
-                    <router-link :to="{name: 'example.contact'}">CONTACT</router-link>
+                    <router-link :to="{name: 'vue-example.contact'}">CONTACT</router-link>
                 </li>
             </ul>
         </nav>
@@ -79,7 +79,7 @@
                 {type: 'text/css', inner: 'body { background-color: #000; color: #fff}'}
             ],
             link: [
-                {rel: 'canonical', h: 'http://example.com/#!/about/', id: 'canonical'},
+                {rel: 'canonical', h: 'http://vue-example.com/#!/about/', id: 'canonical'},
                 {rel: 'icon', href: '/static/assets/favicon-16.png', sizes: '16x16', type: 'image/png'},
                 /* shorthand property */
                 {r: 'icon', h: '/static/assets/favicon-32.png', sz: '32x32', t: 'image/png'}
@@ -142,7 +142,7 @@
                 {name: 'description', c: 'Happy for your contact', id: 'desc'}
             ],
             link: [
-                {rel: 'canonical', h: 'http://example.com/#!/contact/', id: 'canonical'}
+                {rel: 'canonical', h: 'http://vue-example.com/#!/contact/', id: 'canonical'}
             ]
         }
     })
@@ -155,23 +155,23 @@
         mode: 'history',
         routes: [
             {
-                path: '/example',
-                name: 'example',
+                path: '/vue-example',
+                name: 'vue-example',
                 component: home,
                 children: [
                     {
                         path: 'about',
-                        name: 'example.about',
+                        name: 'vue-example.about',
                         component: about
                     },
                     {
                         path: 'blog',
-                        name: 'example.blog',
+                        name: 'vue-example.blog',
                         component: blog
                     },
                     {
                         path: 'contact',
-                        name: 'example.contact',
+                        name: 'vue-example.contact',
                         component: contact
                     }
                 ]
