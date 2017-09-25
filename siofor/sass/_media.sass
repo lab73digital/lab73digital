@@ -1,0 +1,333 @@
+@import "bourbon"
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1366px)
+    /**/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 647px)
+  .siofor-instruction
+    @import "resetcss"
+
+    background-image: url("../img/BG_1.png")
+    background-size: cover
+    //width: 100%
+    //height: 100vh
+    margin: 0 auto
+    padding: 50px 15px
+    max-width: 1000px
+    position: relative
+    font-family: $f-regular
+    font-size: $size-20px
+    color: $color-black
+    text-align: center
+    line-height: 0
+
+    h1
+      font-family: $f-bold
+      font-size: 5vw
+    h3
+      font-family: $f-medium
+      font-size: $size-20px
+      color: $color-dark-brown
+    p
+      margin: 15px 0
+      font-size: $size-18px
+      font-family: $f-regular
+    .center-aligning
+      margin: 0 auto
+
+    .siofor-instruction__first-block
+      height: 280vw
+      p
+        font-size: 3vw
+        font-family: $f-medium
+        margin-bottom: 25px
+      span
+        font-family: $f-light
+        font-size: 3vw
+      h1
+        sup
+          font-size: 3vw
+        span
+          font-size: 5vw
+      h3
+        margin-bottom: 30px
+        font-size: 3.5vw
+      .rounded-rect
+        position: relative
+        font-family: $f-medium
+        font-size: $size-18px
+        width: 90vw
+        height: 3.1rem
+        background: url("../img/sugar.png")
+        background-size: cover
+        margin: 30px auto 0
+        border-radius: 50px
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1)
+        transition: all 500ms ease
+        span
+          font-family: $f-medium
+          font-size: 3vw
+          line-height: 3.1rem
+          text-transform: uppercase
+          transition: all 500ms ease
+        .line1
+          position: absolute
+          height: 2.9rem
+          width: 0.1rem
+          background-color: $color-light-brown
+          top: 100%
+          left: 50%
+          transform: translateX(-50%)
+          .line2
+            position: absolute
+            height: 0.12rem
+            width: 50vw
+            background-color: inherit
+            top: 100%
+            transform: translateX(-50%)
+            transition: all 500ms ease
+            .line3-left
+              top: 100%
+              transform: translateY(-0.1rem)
+              position: absolute
+              height: 3rem
+              width: 0.1rem
+              background-color: inherit
+              .line3-left__container
+                position: absolute
+                top: 100%
+                transform: translateX(-50%)
+                width: 45vw
+                height: 50vw
+                background-color: $color-white
+                border-radius: 30px
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+                display: table
+                transition: all 500ms ease
+                &:after
+                  position: absolute
+                  top: 105%
+                  left: 50%
+                  transform: translateX(-50%)
+                  content: ''
+                  background-color: $color-light-brown
+                  height: 5px
+                  width: 5px
+                  border-radius: 50%
+                .line3-left__container_text
+                  //display: table-cell
+                  //vertical-align: middle
+                  h3
+                    font-family: $f-bold
+                    font-size: 4vw
+                    color: $color-black
+                    margin: 20px 0 20px
+                    transition: all 500ms ease
+                  p
+                    font-family: $f-regular
+                    font-size: 3vw
+                    color: $color-black
+                    padding: 0 15px
+                    margin: 0
+                    transition: all 500ms ease
+
+            .line3-right
+              top: 100%
+              left: 100%
+              transform: translate(-0.1rem, -0.1rem)
+              position: absolute
+              height: 3rem
+              width: 0.1rem
+              background-color: inherit
+              .line3-right__container
+                position: absolute
+                top: 100%
+                transform: translateX(-50%)
+                width: 45vw
+                height: 50vw
+                background-color: $color-white
+                border-radius: 30px
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+                display: table
+                transition: all 500ms ease
+                .line3-right__container_text
+                  //display: table-cell
+                  //vertical-align: middle
+                  h3
+                    font-family: $f-bold
+                    font-size: 4vw
+                    color: $color-black
+                    margin: 20px 0 20px
+                    transition: all 500ms ease
+                  p
+                    font-family: $f-regular
+                    font-size: 3vw
+                    color: $color-black
+                    padding: 0 15px
+                    margin: 0
+                    transition: all 500ms ease
+                .line4
+                  top: 100%
+                  left: 50%
+                  transform: translateX(-50%)
+                  position: absolute
+                  height: 25vw
+                  width: 0.1rem
+                  background-color: $color-light-brown
+                  .line5
+                    top: 100%
+                    transform: translate(-100%, -100%)
+                    position: absolute
+                    height: 0.1rem
+                    width: 9vw
+                    background-color: inherit
+                    .line5__circle
+                      position: absolute
+                      right: 99%
+                      transform: translateY(-50%)
+                      height: 30vw
+                      width: 30vw
+                      border-radius: 50%
+                      background: #fceed7
+                      background: radial-gradient($color-white, #ffe7bf)
+                      transition: all 500ms ease
+                      img
+                        transform: translate(-10%, 55%)
+                        width: 40vw
+                        height: auto
+                        transition: all 500ms ease
+                      .line6
+                        top: 100%
+                        left: 50%
+                        transform: translateX(-50%)
+                        position: absolute
+                        height: 25vw
+                        width: 0.1rem
+                        background-color: $color-light-brown
+                        .line6__biton1
+                          position: absolute
+                          top: 70%
+                          transform: translateX(-50%)
+                          width: 90vw
+                          height: 8.15rem
+                          background: url("../img/plashka_biton_1.png")
+                          background-size: cover
+                          border-radius: 15px
+                          z-index: 1
+                          text-align: left
+                          padding: 10px 0 0 30px
+                          box-shadow: 0 0 15px grey
+                          transition: all 500ms ease
+                          h5
+                            font-family: $f-bold
+                            font-size: 4vw
+                            color: $color-white
+                            margin-left: -15px
+                            transition: all 500ms ease
+                          ul
+                            //padding-left: 15px
+                            li
+                              list-style: disc
+                              color: $color-dark-brown
+                              q
+                                color: $color-white
+                                font-family: $f-light
+                                font-size: 3vw
+                                transition: all 500ms ease
+
+                        .line6__biton2
+                          position: absolute
+                          top: 220%
+                          transform: translateX(-50%)
+                          width: 90vw
+                          height: 7.45rem
+                          background: url("../img/plashka_biton_2.png")
+                          background-size: cover
+                          border-radius: 20px
+                          z-index: 1
+                          text-align: left
+                          padding: 12px 0 0 30px
+                          box-shadow: 0 0 15px grey
+                          transition: all 500ms ease
+                          h5
+                            font-family: $f-bold
+                            font-size: 4vw
+                            color: $color-white
+                            margin-left: -15px
+                            transition: all 500ms ease
+                          ul
+                            //padding-left: 15px
+                            li
+                              list-style: disc
+                              color: $color-dark-brown
+                              q
+                                color: $color-white
+                                font-family: $f-light
+                                font-size: 3vw
+                                transition: all 500ms ease
+                        .line-rectangle
+                          position: absolute
+                          width: 95vw
+                          height: 13.75rem
+                          border: 0.1rem solid $color-light-brown
+                          top: 100%
+                          transform: translateX(-50%)
+                          overflow: visible
+                          transition: all 500ms ease
+
+                    h4
+                      font-family: $f-medium
+                      font-size: 3vw
+                      max-width: 150px
+                      transform: translate(-90%, 10%)
+
+      .b2
+        display: block
+        color: transparent
+        &:before
+          clear: both
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	/**/
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+  /**/
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+  /**/
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+  /**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+

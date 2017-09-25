@@ -1,0 +1,435 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+.siofor-instruction
+    @import "resetcss"
+
+    background-image: url("../img/BG_1.png")
+    background-size: cover
+    //width: 90vw
+    //height: 100vh
+    margin: 0 auto
+    padding: 50px 0 0 0
+    max-width: 1000px
+    position: relative
+    font-family: $f-regular
+    font-size: $size-20px
+    color: $color-black
+    text-align: center
+    line-height: 0
+
+
+
+    h1
+        font-family: $f-bold
+        font-size: $size-28px
+    h3
+        font-family: $f-medium
+        font-size: $size-20px
+        color: $color-dark-brown
+    p
+        margin: 15px 0
+        font-size: $size-18px
+        font-family: $f-regular
+    .center-aligning
+        margin: 0 auto
+
+    .siofor-instruction__first-block
+        height: 1240px
+        p
+            font-size: $size-18px
+            font-family: $f-medium
+            margin-bottom: 25px
+        span
+            font-family: $f-light
+            font-size: $size-18px
+        h1
+            sup
+                font-size: $size-20px
+            span
+                font-size: $size-28px
+        h3
+            margin-bottom: 30px
+        .rounded-rect
+            position: relative
+            font-family: $f-medium
+            font-size: $size-18px
+            width: 26.5rem
+            height: 3.1rem
+            background: url("../img/sugar.png")
+            background-size: cover
+            margin: 30px auto 0
+            border-radius: 50px
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1)
+            span
+                font-family: $f-medium
+                font-size: $size-18px
+                line-height: 3.1rem
+                text-transform: uppercase
+            .line1
+                position: absolute
+                height: 2.9rem
+                width: 0.1rem
+                background-color: $color-light-brown
+                top: 100%
+                left: 50%
+                transform: translateX(-50%)
+                .line2
+                    position: absolute
+                    height: 0.12rem
+                    width: 21.75rem
+                    background-color: inherit
+                    top: 100%
+                    transform: translateX(-50%)
+                    .line3-left
+                        top: 100%
+                        transform: translateY(-0.1rem)
+                        position: absolute
+                        height: 3rem
+                        width: 0.1rem
+                        background-color: inherit
+                        .line3-left__container
+                            position: absolute
+                            top: 100%
+                            transform: translateX(-50%)
+                            width: 13.75rem
+                            height: 14.35rem
+                            background-color: $color-white
+                            border-radius: 30px
+                            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+                            display: table
+                            &:after
+                                position: absolute
+                                top: 105%
+                                left: 50%
+                                transform: translateX(-50%)
+                                content: ''
+                                background-color: $color-light-brown
+                                height: 5px
+                                width: 5px
+                                border-radius: 50%
+                            .line3-left__container_text
+                                display: table-cell
+                                //vertical-align: middle
+                                h3
+                                    font-family: $f-bold
+                                    font-size: $size-20px
+                                    color: $color-black
+                                    margin: 20px 0 20px
+                                p
+                                    font-family: $f-regular
+                                    font-size: $size-20px
+                                    color: $color-black
+                                    padding: 0 15px
+                                    margin: 0
+
+                    .line3-right
+                        top: 100%
+                        left: 100%
+                        transform: translate(-0.1rem, -0.1rem)
+                        position: absolute
+                        height: 3rem
+                        width: 0.1rem
+                        background-color: inherit
+                        .line3-right__container
+                            position: absolute
+                            top: 100%
+                            transform: translateX(-50%)
+                            width: 13.75rem
+                            height: 14.35rem
+                            background-color: $color-white
+                            border-radius: 30px
+                            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+                            display: table
+                            .line3-right__container_text
+                                display: table-cell
+                                //vertical-align: middle
+                                h3
+                                    font-family: $f-bold
+                                    font-size: $size-20px
+                                    color: $color-black
+                                    margin: 20px 0 20px
+                                p
+                                    font-family: $f-regular
+                                    font-size: $size-20px
+                                    color: $color-black
+                                    padding: 0 15px
+                                    margin: 0
+                            .line4
+                                top: 100%
+                                left: 50%
+                                transform: translateX(-50%)
+                                position: absolute
+                                height: 8.8rem
+                                width: 0.1rem
+                                background-color: $color-light-brown
+                                .line5
+                                    top: 100%
+                                    transform: translate(-100%, -100%)
+                                    position: absolute
+                                    height: 0.1rem
+                                    width: 5.85rem
+                                    background-color: inherit
+                                    .line5__circle
+                                        position: absolute
+                                        right: 99%
+                                        transform: translateY(-50%)
+                                        height: 10rem
+                                        width: 10rem
+                                        border-radius: 50%
+                                        background: #fceed7
+                                        background: radial-gradient($color-white, #ffe7bf)
+                                        img
+                                            transform: translate(-10%, 55%)
+                                            width: 13.9rem
+                                            height: 3.15rem
+                                        .line6
+                                            top: 100%
+                                            left: 50%
+                                            transform: translateX(-50%)
+                                            position: absolute
+                                            height: 8.8rem
+                                            width: 0.1rem
+                                            background-color: $color-light-brown
+                                            .line6__biton1
+                                                    position: absolute
+                                                    top: 80%
+                                                    transform: translateX(-70%)
+                                                    width: 28rem
+                                                    height: 8.15rem
+                                                    background: url("../img/plashka_biton_1.png")
+                                                    border-radius: 15px
+                                                    z-index: 1
+                                                    text-align: left
+                                                    padding: 10px 0 0 30px
+                                                    box-shadow: 0 0 15px grey
+                                                    h5
+                                                        font-family: $f-bold
+                                                        font-size: $size-20px
+                                                        color: $color-white
+                                                        margin-left: -15px
+                                                    ul
+                                                        //padding-left: 15px
+                                                        li
+                                                            list-style: disc
+                                                            color: $color-dark-brown
+                                                            q
+                                                                color: $color-white
+                                                                font-family: $f-light
+                                                                font-size: $size-18px
+
+                                            .line6__biton2
+                                                    position: absolute
+                                                    top: 190%
+                                                    transform: translateX(-20%)
+                                                    width: 24.05rem
+                                                    height: 7.45rem
+                                                    background: url("../img/plashka_biton_2.png")
+                                                    border-radius: 20px
+                                                    z-index: 1
+                                                    text-align: left
+                                                    padding: 12px 0 0 30px
+                                                    box-shadow: 0 0 15px grey
+                                                    h5
+                                                        font-family: $f-bold
+                                                        font-size: $size-20px
+                                                        color: $color-white
+                                                        margin-left: -15px
+                                                    ul
+                                                        //padding-left: 15px
+                                                        li
+                                                            list-style: disc
+                                                            color: $color-dark-brown
+                                                            q
+                                                                color: $color-white
+                                                                font-family: $f-light
+                                                                font-size: $size-18px
+                                            .line-rectangle
+                                                position: absolute
+                                                width: 35rem
+                                                height: 13.75rem
+                                                border: 0.1rem solid $color-light-brown
+                                                top: 100%
+                                                transform: translateX(-50%)
+                                                //overflow: visible
+
+                                    h4
+                                        font-family: $f-medium
+                                        font-size: $size-18px
+                                        width: 200px
+                                        transform: translate(-90%, 10%)
+
+
+    .siofor-instruction__second-block
+        position: relative
+        padding: 3rem 0.5rem 3rem
+        height: 36.5rem
+        width: 100%
+        border-radius: 30px
+        background: url("../img/plashka_sostav_forma.png")
+        background-size: cover
+        overflow: hidden
+        .siofor-instruction__second-block_rect
+            width: 57rem
+            height: 21rem
+            position: absolute
+            border: 0.1rem solid $color-light-brown
+            top: 30%
+            left: 10%
+        .siofor-instruction__second-block_biton
+            width: 27rem
+            height: 14rem
+            background: url("../img/plashka_biton_3.png")
+            background-size: cover
+            border-radius: 20px
+            z-index: 1
+            text-align: left
+            padding: 20px
+            box-shadow: 0 0 15px grey
+            position: absolute
+            top: 23%
+            left: 5%
+            overflow: hidden
+            h5
+                font-family: $f-bold
+                font-size: $size-20px
+                color: $color-white
+                padding-bottom: 5px
+                sup
+                    font-size: 14px
+                    padding-left: 3px
+                    color: $color-white
+                    font-family: $f-light
+            p
+                color: $color-white
+                font-family: $f-light
+                font-size: $size-18px
+                margin: 0
+                padding: 4px 0 4px
+            .siofor-instruction__second-block_biton_500
+                position: absolute
+                display: block
+            .siofor-instruction__second-block_biton_850
+                position: absolute
+                //top: 0
+                display: none
+            .siofor-instruction__second-block_biton_1000
+                position: absolute
+                //top: 0
+                display: none
+        .siofor-instruction__second-block__button
+            position: absolute
+            top: 75%
+            left: 20%
+            color: $color-black
+            .siofor-instruction__second-block__button_left
+                padding: 2px 0 0 2px
+                background-color: #bfbfbf
+                height: 1.2rem
+                width: 1.2rem
+                border-radius: 5px
+                line-height: 15px
+                font-size: 20px
+                margin: 5px
+                cursor: pointer
+            .siofor-instruction__second-block__button_right
+                padding: 2px 2px 0 4px
+                background-color: #bfbfbf
+                height: 1.2rem
+                width: 1.2rem
+                border-radius: 5px
+                line-height: 15px
+                font-size: 20px
+                margin: 5px
+                cursor: pointer
+        .siofor-instruction__second-block_packs
+            //position: absolute
+            //display: inline-block
+            //top: 50%
+            //left: 55%
+            .siofor-instruction__second-block_packs-500
+                position: absolute
+                top: 60%
+                left: 40%
+                height: 8rem
+                width: 8rem
+                background-color: #ededed
+                border-radius: 15px
+                box-shadow: 0 0 20px #a3a3a3
+                z-index: 1
+                transition: all 700ms ease
+                cursor: pointer
+                //&:hover
+                    top: 60%
+                    left: 35%
+                    height: 8.3rem
+                    width: 8.3rem
+                    background-color: white
+                    z-index: 2
+            .siofor-instruction__second-block_packs-850
+                position: absolute
+                top: 60%
+                left: 60%
+                height: 8rem
+                width: 8rem
+                background-color: #ededed
+                border-radius: 15px
+                box-shadow: 0 0 20px #a3a3a3
+                z-index: 1
+                transition: all 700ms ease
+                cursor: pointer
+                //&:hover
+                    top: 60%
+                    left: 56%
+                    height: 8.3rem
+                    width: 8.3rem
+                    background-color: white
+                    z-index: 2
+            .siofor-instruction__second-block_packs-1000
+                position: absolute
+                top: 60%
+                left: 80%
+                height: 8rem
+                width: 8rem
+                background-color: #ededed
+                border-radius: 15px
+                box-shadow: 0 0 20px #a3a3a3
+                z-index: 1
+                transition: all 700ms ease
+                cursor: pointer
+                //&:hover
+                    top: 60%
+                    left: 75%
+                    height: 8.3rem
+                    width: 8.3rem
+                    background-color: white
+                    z-index: 2
+            .hovered-item-1000
+                //top: 56%
+                //left: 77.5%
+                height: 12rem
+                width: 12rem
+                transform: translate(-2rem,-2rem)
+                background-color: white
+                z-index: 2
+            .hovered-item-850
+                //top: 56%
+                //left: 53%
+                height: 12rem
+                width: 12rem
+                transform: translate(-2rem,-2rem)
+                background-color: white
+                z-index: 2
+            .hovered-item-500
+                //top: 56%
+                //left: 31%
+                height: 12rem
+                width: 12rem
+                transform: translate(-2rem,-2rem)
+                background-color: white
+                z-index: 2
+
+
+@import "media"
+
