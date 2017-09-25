@@ -88,7 +88,3 @@ $(document).ready(function () {
                 $(".siofor-instruction__second-block_biton_850").show();
         });
 });
-
-
-// $(".siofor-instruction__second-block_packs-1000").css({"top": "59%", "left": "74%", "height": "9.3rem", "width": "9.3rem", "background-color": "white", "z-index": "2"});
-// })
