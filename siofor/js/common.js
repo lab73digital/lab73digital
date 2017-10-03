@@ -1,5 +1,3 @@
-var counter = 850;
-
 $(document).ready(function () {
     // $( "#button-left" ).on('click', function() {
     //     if (counter === 850) {
@@ -144,11 +142,21 @@ $(document).ready(function () {
         var toHide = $(this).data('slide-toggle-2');
         var toToggle = $(this).data('slide-toggle-3');
         $(".siofor-instruction__6-block_buttons-" + toToggle).removeClass('fullheighted');
+        $(".line-toggle-left-dot,.line-toggle-right-dot").css("opacity","0");
         $(this).toggleClass('fullheighted');
-        $(".siofor-instruction__6-block_text-container_" + toHide).slideUp();
+        $(".siofor-instruction__6-block_text-container_" + toHide).hide();
         $(".siofor-instruction__6-block_text-container_" + toShow).slideToggle();
+        TweenMax.fromTo('.line-toggle-left', 1.5, {height: 0},{height: 257, onComplete: function () {
+            TweenMax.to('.line-toggle-left-dot', 1, {opacity: 1});
+        }});
+        TweenMax.fromTo('.line-toggle-right', 2, {height: 0},{height: 557, onComplete: function () {
+            TweenMax.to('.line-toggle-right-dot', 1, {opacity: 1});
+        }});
 
     });
+    //TweenMax.to('.line-toggle-left', 1, {color: 'red'});
+
+
     // $(".siofor-instruction__6-block_buttons-right").on('click', function () {
     //     $(".siofor-instruction__6-block_text-container_left-text").hide();
     //     $(".siofor-instruction__6-block_text-container_right-text").slideToggle();
