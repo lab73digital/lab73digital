@@ -1,4 +1,157 @@
 $(document).ready(function () {
+    var controller = new ScrollMagic.Controller();
+    var tween1 = new TimelineMax().fromTo('.animation_1-1', .6, {
+        opacity: 0
+    }, {
+        opacity: 1,
+        delay: 1
+    }).fromTo('.animation_1-2', .6, {
+        opacity: 0
+    }, {
+        opacity: 1
+    }).fromTo('.animation_1-3', .6, {
+        opacity: 0
+    }, {
+        opacity: 1
+    }).fromTo('.animation_1-4', .6, {
+        opacity: 0
+    }, {
+        opacity: 1
+    }).to('.animation_1-5', 0, {
+        opacity: 1
+    }).from('.animation_1-5', .6, {
+        height: "0px"
+    }).to('.animation_1-6', 0, {
+        opacity: 1
+    }).from('.animation_1-6', .6, {
+        width: "0px"
+    }).to('.animation_1-7', 0, {
+        opacity: 1
+    }).from('.animation_1-7', .6, {
+        height: "0px"
+    }).fromTo('.animation_1-8', .6, {
+        opacity: 0
+    }, {
+        opacity: 1
+    }).to('.animation_1-9', 0, {
+        opacity: 1
+    }).from('.animation_1-9', .6, {
+        height: "0px"
+    }).to('.animation_1-10', 0, {
+        opacity: 1
+    }).from('.animation_1-10', .6, {
+        width: "0px"
+    }).fromTo('.animation_1-11', .6, {
+        opacity: 0
+    }, {
+        opacity: 1
+    }).to('.animation_1-12', 0, {
+        opacity: 1
+    }).from('.animation_1-12', .6, {
+        height: "0px"
+    }).fromTo('.animation_1-13', .6, {
+        opacity: 0
+    }, {
+        opacity: 1
+    }).fromTo('.animation_1-14', .6, {
+        opacity: 0
+    }, {
+        opacity: 1
+    }).fromTo('.animation_1-15', .6, {
+        opacity: 0
+    }, {
+        opacity: 1
+    });
+
+    var tween2 = new TimelineMax().fromTo('.animation_2-1', .6, {
+        opacity: 0
+    }, {
+        opacity: 1
+    }).fromTo('.animation_2-2', .6, {
+        opacity: 0
+    }, {
+        opacity: 1
+    }).fromTo('.animation_2-3', .6, {
+        opacity: 0
+    }, {
+        opacity: 1
+    }).fromTo('.animation_2-4', .6, {
+        opacity: 0
+    }, {
+        opacity: 1
+    }).fromTo('.animation_2-5', .8, {
+        opacity: 0
+    }, {
+        opacity: 1
+    }).staggerFromTo('.animation_2-6', .1, {
+        opacity: 0,
+        y: -50
+    }, {
+        opacity: 1,
+        y: 0
+    }, .6).fromTo('.animation_2-7', .6, {
+        opacity: 0
+    }, {
+        opacity: 1,
+        onComplete: function () {
+            $('.animation_2-6').attr('style', 'opacity:1')
+        }
+    });
+
+
+
+    var tween7 = new TimelineMax().fromTo('.animation_7-1', .6, {
+        opacity: 0
+    }, {
+        opacity: 1
+    }).fromTo('.animation_7-2', .6, {
+        opacity: 0
+    }, {
+        opacity: 1
+    }).to('.animation_7-3', 0, {
+        opacity: 1
+    }).from('.animation_7-3', .6, {
+        width: "0px"
+    }).to('.animation_7-4', 0, {
+        opacity: 1
+    }).from('.animation_7-4', .6, {
+        height: "0px"
+    }).fromTo('.animation_7-5', .8, {
+        opacity: 0
+    }, {
+        opacity: 1
+    }).to('.animation_7-6', 0, {
+        opacity: 1
+    }).from('.animation_7-6', .6, {
+        height: "0px"
+    }).to('.animation_7-7', 0, {
+        opacity: 1
+    }).from('.animation_7-7', .6, {
+        width: "0px"
+    }).fromTo('.animation_7-8', .8, {
+        opacity: 0
+    }, {
+        opacity: 1
+    }).to('.animation_7-9', 0, {
+        opacity: 1
+    }).from('.animation_7-9', .6, {
+        height: "0px"
+    });
+
+    new ScrollMagic.Scene({
+        triggerElement: ".animation_1-1",
+        reverse: false
+    }).setTween(tween1).addTo(controller);
+    new ScrollMagic.Scene({
+        triggerElement: ".animation_1-15",
+        reverse: false
+    }).setTween(tween2).addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: ".animation_7-1",
+        reverse: false
+    }).setTween(tween7).addTo(controller);
+
     // $( "#button-left" ).on('click', function() {
     //     if (counter === 850) {
     //         $("#biton-block_500_p").addClass("hovered-item-500");
