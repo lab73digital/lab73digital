@@ -1,0 +1,1258 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+.siofor-instruction
+    @import "resetcss"
+
+    background-image: url("../img/BG_2_bez_fona_1.jpg")
+    background-size: cover
+    //width: 90vw
+    //height: 100vh
+    margin: 0 auto
+    padding: 50px 0 0 0
+    max-width: 1000px
+    position: relative
+    font-family: $f-regular
+    font-size: $size-20px
+    color: $color-black
+    text-align: center
+    line-height: 0
+    table
+        margin-bottom: 1rem
+    [class *= 'animation']
+        opacity: 0
+    //[class *= 'line']
+    //    opacity: 1
+    //    height: 0
+
+
+
+    h1
+        font-family: $f-bold
+        font-size: $size-28px
+    h3
+        font-family: $f-medium
+        font-size: $size-20px
+        color: $color-dark-brown
+    p
+        margin: 15px 0
+        font-size: $size-18px
+        font-family: $f-regular
+    .center-aligning
+        margin: 0 auto
+    .second-background
+        position: absolute
+        height: 661px
+        width: 100%
+        background: url("../img/medyk_tovtyi.png")
+        background-size: cover
+        filter: grayscale(100%)
+        //background-repeat: no-repeat
+    .siofor-instruction__first-block
+        height: 1240px
+        p
+            font-size: $size-18px
+            font-family: $f-medium
+            margin-bottom: 25px
+        span
+            font-family: $f-light
+            font-size: $size-18px
+        h1
+            sup
+                font-size: $size-20px
+            span
+                font-size: $size-28px
+        h3
+            margin-bottom: 30px
+        .rounded-rect
+            position: relative
+            font-family: $f-medium
+            font-size: $size-18px
+            width: 26.5rem
+            height: 3.1rem
+            background: url("../img/sakhrok.jpg")
+            background-size: cover
+            margin: 30px auto 0
+            border-radius: 50px
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1)
+            span
+                font-family: $f-medium
+                font-size: $size-18px
+                line-height: 3.1rem
+                text-transform: uppercase
+            .line1
+                position: absolute
+                height: 2.9rem
+                width: 0.1rem
+                background-color: $color-light-brown
+                top: 100%
+                left: 50%
+                transform: translateX(-50%)
+                .line2
+                    position: absolute
+                    height: 0.12rem
+                    width: 21.75rem
+                    background-color: inherit
+                    top: 100%
+                    transform: translateX(-50%)
+                    .line3-left
+                        top: 100%
+                        transform: translateY(-0.1rem)
+                        position: absolute
+                        height: 3rem
+                        width: 0.1rem
+                        background-color: inherit
+                        .line3-left__container
+                            position: absolute
+                            top: 100%
+                            transform: translateX(-50%)
+                            width: 13.75rem
+                            height: 14.35rem
+                            background-color: $color-white
+                            border-radius: 30px
+                            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+                            display: table
+                            &:after
+                                position: absolute
+                                top: 105%
+                                left: 50%
+                                transform: translateX(-50%)
+                                content: ''
+                                background-color: $color-light-brown
+                                height: 5px
+                                width: 5px
+                                border-radius: 50%
+                            .line3-left__container_text
+                                display: table-cell
+                                //vertical-align: middle
+                                h3
+                                    font-family: $f-bold
+                                    font-size: $size-20px
+                                    color: $color-black
+                                    margin: 20px 0 20px
+                                p
+                                    font-family: $f-regular
+                                    font-size: $size-20px
+                                    color: $color-black
+                                    padding: 0 15px
+                                    margin: 0
+
+                    .line3-right
+                        top: 100%
+                        left: 100%
+                        transform: translate(-0.1rem, -0.1rem)
+                        position: absolute
+                        height: 3rem
+                        width: 0.1rem
+                        background-color: inherit
+                        .line3-right__container
+                            position: absolute
+                            top: 100%
+                            transform: translateX(-50%)
+                            width: 13.75rem
+                            height: 14.35rem
+                            background-color: $color-white
+                            border-radius: 30px
+                            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+                            display: table
+                            .line3-right__container_text
+                                display: table-cell
+                                //vertical-align: middle
+                                h3
+                                    font-family: $f-bold
+                                    font-size: $size-20px
+                                    color: $color-black
+                                    margin: 20px 0 20px
+                                p
+                                    font-family: $f-regular
+                                    font-size: $size-20px
+                                    color: $color-black
+                                    padding: 0 15px
+                                    margin: 0
+                            .line4
+                                top: 100%
+                                left: 50%
+                                transform: translateX(-50%)
+                                position: absolute
+                                height: 8.8rem
+                                width: 0.1rem
+                                background-color: $color-light-brown
+                                .line5
+                                    top: 100%
+                                    transform: translate(-100%, -100%)
+                                    position: absolute
+                                    height: 0.1rem
+                                    width: 5.85rem
+                                    background-color: inherit
+                                    .line5__circle
+                                        position: absolute
+                                        right: 99%
+                                        transform: translateY(-50%)
+                                        height: 10rem
+                                        width: 10rem
+                                        border-radius: 50%
+                                        background: #fceed7
+                                        background: radial-gradient($color-white, #ffe7bf)
+                                        img
+                                            transform: translate(-10%, 55%)
+                                            width: 13.9rem
+                                            height: 3.15rem
+                                        .line6
+                                            top: 100%
+                                            left: 50%
+                                            transform: translateX(-50%)
+                                            position: absolute
+                                            height: 8.8rem
+                                            width: 0.1rem
+                                            background-color: $color-light-brown
+                                            .line6__biton1
+                                                    position: absolute
+                                                    top: 80%
+                                                    transform: translateX(-70%)
+                                                    width: 28rem
+                                                    height: 8.45rem
+                                                    background: url("../img/plashka_biton_1.png")
+                                                    border-radius: 15px
+                                                    z-index: 1
+                                                    text-align: left
+                                                    padding: 10px 0 0 30px
+                                                    box-shadow: 0 0 15px grey
+                                                    h5
+                                                        font-family: $f-bold
+                                                        font-size: $size-20px
+                                                        color: $color-white
+                                                        margin-left: -15px
+                                                    ul
+                                                        //padding-left: 15px
+                                                        li
+                                                            list-style: disc
+                                                            color: $color-dark-brown
+                                                            q
+                                                                color: $color-white
+                                                                font-family: $f-light
+                                                                font-size: $size-18px
+
+                                            .line6__biton2
+                                                    position: absolute
+                                                    top: 190%
+                                                    transform: translateX(-20%)
+                                                    width: 24.05rem
+                                                    height: 7.45rem
+                                                    background: url("../img/plashka_biton_2.png")
+                                                    border-radius: 20px
+                                                    z-index: 1
+                                                    text-align: left
+                                                    padding: 12px 0 0 30px
+                                                    box-shadow: 0 0 15px grey
+                                                    h5
+                                                        font-family: $f-bold
+                                                        font-size: $size-20px
+                                                        color: $color-white
+                                                        margin-left: -15px
+                                                    ul
+                                                        //padding-left: 15px
+                                                        li
+                                                            list-style: disc
+                                                            color: $color-dark-brown
+                                                            q
+                                                                color: $color-white
+                                                                font-family: $f-light
+                                                                font-size: $size-18px
+                                            .line-rectangle
+                                                position: absolute
+                                                width: 35rem
+                                                height: 13.75rem
+                                                border: 0.1rem solid $color-light-brown
+                                                top: 100%
+                                                transform: translateX(-50%)
+                                                //overflow: visible
+
+                                    h4
+                                        font-family: $f-medium
+                                        font-size: $size-18px
+                                        width: 230px
+                                        transform: translate(-86%, 10%)
+
+
+    .siofor-instruction__second-block
+        position: relative
+        padding: 3rem 0.5rem 3rem
+        height: 36.5rem
+        width: 100%
+        border-radius: 30px
+        background: url("../img/plashka_sostav_forma.png")
+        background-size: cover
+        overflow: hidden
+        .siofor-instruction__second-block_rect
+            width: 57rem
+            height: 22rem
+            position: absolute
+            border: 0.15rem solid $color-light-brown
+            top: 30%
+            left: 10%
+        .siofor-instruction__second-block_biton
+            width: 35rem
+            height: 14.5rem
+            background: url("../img/plashka_biton_3.png")
+            background-size: cover
+            border-radius: 20px
+            z-index: 1
+            text-align: left
+            padding: 20px
+            box-shadow: 0 0 15px grey
+            position: absolute
+            top: 23%
+            left: 5%
+            overflow: hidden
+            h5
+                font-family: $f-bold
+                font-size: $size-20px
+                color: $color-white
+                padding-bottom: 5px
+                sup
+                    font-size: 14px
+                    padding-left: 3px
+                    color: $color-white
+                    font-family: $f-light
+            p
+                color: $color-white
+                font-family: $f-light
+                font-size: $size-20px
+                margin: 0
+                padding: 4px 10px 2px 0
+            .siofor-instruction__second-block_biton-text
+                position: absolute
+                display: none
+                &.active
+                    display: block
+        .siofor-instruction__second-block__button
+            position: absolute
+            top: 80%
+            left: 20%
+            //cursor: pointer
+            user-select: none
+            .siofor-instruction__second-block__button_left
+                width: 25px
+                height: 25px
+                cursor: pointer
+            .siofor-instruction__second-block__button_right
+                margin-left: 15px
+                width: 25px
+                height: 25px
+                cursor: pointer
+        .siofor-instruction__second-block_packs
+            //position: absolute
+            //display: inline-block
+            //top: 50%
+            //left: 55%
+            .siofor-instruction__second-block_packs-500
+                position: absolute
+                top: 57%
+                left: 40%
+                height: 10rem
+                width: 10rem
+                background-color: #ededed
+                border-radius: 15px
+                box-shadow: 0 0 20px #a3a3a3
+                z-index: 1
+                transition: all 500ms linear
+                cursor: pointer
+                &:hover
+                    //top: 57%
+                    //left: 35%
+                    //height: 8.3rem
+                    //width: 8.3rem
+                    background-color: white
+                    //z-index: 2
+            .siofor-instruction__second-block_packs-850
+                position: absolute
+                top: 57%
+                left: 60%
+                height: 10rem
+                width: 10rem
+                background-color: #ededed
+                border-radius: 15px
+                box-shadow: 0 0 20px #a3a3a3
+                z-index: 1
+                transition: all 500ms linear
+                cursor: pointer
+                &:hover
+                    //top: 57%
+                    //left: 56%
+                    //height: 8.3rem
+                    //width: 8.3rem
+                    background-color: white
+                    //z-index: 2
+            .siofor-instruction__second-block_packs-1000
+                position: absolute
+                top: 57%
+                left: 80%
+                height: 10rem
+                width: 10rem
+                background-color: #ededed
+                border-radius: 15px
+                box-shadow: 0 0 20px #a3a3a3
+                z-index: 1
+                transition: all 500ms linear
+                cursor: pointer
+                &:hover
+                    //top: 57%
+                    //left: 75%
+                    //height: 8.3rem
+                    //width: 8.3rem
+                    background-color: white
+                    //z-index: 2
+            .hovered-item
+                height: 12rem
+                width: 12rem
+                transform: translate(-1rem, 0)
+                background-color: white
+                z-index: 2
+                transition: all 500ms linear
+
+    .siofor-instruction__third-block
+        text-align: left
+        color: $color-black
+        .siofor-instruction__third-block__top
+            margin: 3rem 3rem 3rem
+        h3
+            display: inline-block
+            font-family: $f-bold
+            font-size: $size-24px
+            color: $color-black
+            text-transform: uppercase
+            border-bottom: 2px solid $color-light-brown
+            //width: 15rem
+            padding-bottom: 5px
+        h4
+            font-family: $f-medium
+            font-size: $size-18px
+            padding-top: 1rem
+            padding-bottom: 2rem
+        .siofor-instruction__third-block__row
+            //display: block
+            //margin-bottom: 2.5rem
+            width: 100%
+            .siofor-instruction__third-block__row_table
+                display: table
+                p
+                    display: table-cell
+                    border-right: 2px solid $color-light-brown
+                    padding: 0 20px 0 30px
+                    vertical-align: top
+                    width: 33%
+                #last-td
+                    border-right: none
+                    padding-right: 0
+                #first-td
+                    padding-left: 0
+            //margin-left: 5%
+            //margin-right: 5%
+            p
+                font-family: $f-regular
+                font-size: $size-16px
+                margin: 0
+                q
+                    font-family: $f-bold
+            .siofor-instruction__third-block__column
+                //display: inline-block
+                float: left
+                max-width: 28%
+
+            .siofor-instruction__third-block__column-line
+                float: left
+                height: 60px
+                //padding: 1rem 0
+                width: 2px
+                background-color: $color-light-brown
+                margin: 0 1.5rem 0
+            &:after
+                content: ""
+                clear: both
+                display: table
+        .text-center
+            text-align: center
+            padding: 1rem 3rem 0
+            font-family: $f-light
+        .siofor-instruction__third-block__plashka
+            width: 90%
+            background-color: #f6f6f6
+            border-radius: 25px
+            overflow: hidden
+            margin: 0 auto 0
+            padding: 38px 38px 18px 38px
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2)
+            h3
+                font-family: $f-medium
+                font-size: $size-24px
+                border-bottom: none
+                .underline
+                    width: 1000px
+                    border-bottom: 2px solid $color-light-brown
+                    margin-top: 5px
+                    //margin-left: 135px
+                    //transform: translateY(-255%)
+    .siofor-instruction__4-block
+        position: relative
+        height: 65rem
+        .siofor-instruction__4-block-left_hole
+            position: absolute
+            top: 6.2%
+            right: 8.8%
+            width: 22vw
+            height: 56px
+            //background-color: yellow
+            z-index: 2
+            border-radius: 20px 0 0 0
+            cursor: pointer
+            //&:hover
+                background-color: #00b3ee
+        .siofor-instruction__4-block-right_hole
+            position: absolute
+            top: 6.2%
+            left: 8.2%
+            width: 22vw
+            height: 56px
+            //background-color: yellow
+            z-index: 2
+            border-radius: 0 20px 0 0
+            cursor: pointer
+            //&:hover
+                background-color: #00b3ee
+        //opacity: 0
+        .siofor-instruction__4-block-heading
+            position: absolute
+            top: 0
+            left: 50%
+            transform: translateX(-50%)
+            margin-top: 4.5rem
+            h3
+                font-family: $f-bold
+                font-size: $size-24px
+                color: $color-black
+                border-bottom: 2px solid $color-light-brown
+        .siofor-instruction__4-block-left
+            top: 0
+            left: 3%
+            position: absolute
+            background-image: url(../img/plashka_biton_4.png)
+            background-size: contain
+            background-repeat: no-repeat
+            width: 883px
+            height: 964px
+            //padding: 3rem 2rem
+            margin-top: 4rem
+            transition: all 400ms linear
+            opacity: 0.5
+            filter: grayscale(100%)
+            cursor: pointer
+            z-index: 0
+            max-width: 90%
+            p,h4,li
+                color: $color-white
+                font-size: $size-22px
+                text-align: left
+                padding-left: 70px
+                padding-right: 140px
+            ul, li
+                padding-right: 80px
+            h4
+                font-family: $f-bold
+                font-size: $size-24px
+                margin-bottom: 1rem
+                margin-top: 4rem
+            #h4-top
+                padding: 20px 0 80px 50px
+                margin-top: 0
+                &:before
+                    display: inline-block
+                    transform: translateY(-55%)
+                    content: ""
+                    margin-right: 5px
+                    width: 7px
+                    height: 7px
+                    background-color: $color-dark-brown
+                    border-radius: 50%
+            p
+                font-family: $f-regular
+            ul
+                li
+                    margin-left: 20px
+                    &:before
+                        display: inline-block
+                        transform: translateY(-70%)
+                        content: ""
+                        margin-right: 10px
+                        width: 5px
+                        height: 5px
+                        background-color: $color-dark-brown
+                        border-radius: 50%
+                #li-shorter
+                    padding-right: 350px
+        .siofor-instruction__4-block-right
+            top: 0
+            right: 3%
+            position: absolute
+            background-image: url(../img/plashka_biton_51.png)
+            background-size: contain
+            background-repeat: no-repeat
+            width: 883px
+            height: 964px
+            //padding: 3rem 2rem
+            margin-top: 4rem
+            transition: all 400ms linear
+            opacity: 0.5
+            filter: grayscale(100%)
+            cursor: pointer
+            z-index: 0
+            max-width: 90%
+            p,h4,li
+                color: $color-white
+                font-size: $size-22px
+                text-align: left
+                padding-left: 70px
+                padding-right: 120px
+            ul, li
+                padding-right: 80px
+            h4
+                font-family: $f-bold
+                font-size: $size-24px
+                margin-bottom: 1rem
+                margin-top: 4rem
+            .h4-right
+                //width: 400px
+                float: right
+                #h4-top
+                    text-align: left
+                    padding: 0.6rem 4.6rem 0 0
+                    margin: 0
+                    line-height: 1
+                    span
+                        text-align: right
+                        font-family: $f-regular
+                        font-size: $size-18px
+                        color: $color-white
+                        padding: 0
+                    &:after
+                        display: inline-block
+                        transform: translate(220%,-165%)
+                        content: ""
+                        //margin-right: 5px
+                        width: 7px
+                        height: 7px
+                        background-color: $color-dark-brown
+                        border-radius: 50%
+            p
+                font-family: $f-regular
+                margin-top: 9rem
+            ul
+                li
+                    margin-left: 20px
+                    &:before
+                        display: inline-block
+                        transform: translateY(-70%)
+                        content: ""
+                        margin-right: 10px
+                        width: 5px
+                        height: 5px
+                        background-color: $color-dark-brown
+                        border-radius: 50%
+                #li-shorter
+                    padding-right: 250px
+        .siofor-instruction__4-block-left, .siofor-instruction__4-block-right
+            &.active
+                opacity: 1
+                filter: grayscale(0%)
+                cursor: default
+                z-index: 1
+    .siofor-instruction__5-block
+        height: 920px
+        .siofor-instruction__5-block_row-1
+            display: block
+            width: 100%
+            margin: 3rem 1rem 4rem 1rem
+            .siofor-instruction__5-block_row-1_left-column
+                display: block
+                width: 25%
+                float: left
+                img
+                    height: 148px
+                    width: 148px
+                    float: right
+            .siofor-instruction__5-block_row-1_right-column
+                display: block
+                width: 75%
+                float: left
+                text-align: left
+                padding: 0 190px 0 40px
+                transform: translateY(35%)
+                h4
+                    font-family: $f-medium
+                    font-size: $size-24px
+                    color: $color-black
+            &:after
+                content: ""
+                clear: both
+                display: table
+        .siofor-instruction__5-block_row-2
+            display: block
+            width: 90%
+            height: 400px
+            background: url("../img/plashka_nyrka.jpg")
+            background-size: cover
+            border-radius: 25px
+            //overflow: hidden
+            margin: 0 auto
+            //padding: 38px 38px 18px 38px
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2)
+            .siofor-instruction__5-block_row-2_left
+                display: list-item
+                opacity: 0
+                width: 23%
+                float: left
+            .siofor-instruction__5-block_row-2_right
+                display: block
+                width: 72%
+                float: left
+                text-align: left
+                padding: 15px
+                transform: translateY(10%)
+                .ugol-boder
+                    padding: 0 15px 20px 0
+                    border-bottom: solid 2px $color-light-brown
+                    border-right: solid 2px $color-light-brown
+                p
+                    margin-bottom: 3rem
+                h4
+                    font-family: $f-medium
+                    font-size: $size-24px
+                    color: $color-black
+                    margin-bottom: 3rem
+                p.list
+                        line-height: 1
+                        margin: 0.5rem 0
+                        padding: 0
+                        &:before
+                            display: inline-block
+                            transform: translateY(-70%)
+                            content: ""
+                            margin-right: 10px
+                            width: 5px
+                            height: 5px
+                            background-color: $color-dark-brown
+                            border-radius: 50%
+            &:after
+                content: ""
+                clear: both
+                display: table
+            .siofor-instruction__5-block_row-2_lines
+                position: relative
+                display: none
+                .siofor-instruction__5-block_row-2_lines-1
+                    position: absolute
+                    height: 250px
+                    width: 2px
+                    background-color: $color-light-brown
+                    top: 100%
+                    left: 96%
+                    transform: translateY(115px)
+                    .siofor-instruction__5-block_row-2_lines-2
+                        position: absolute
+                        height: 2px
+                        width: 660px
+                        background-color: $color-light-brown
+                        top: 100%
+                        right: 100%
+                        transform: translateX(2px)
+        .siofor-instruction__5-block_row-3
+            display: block
+            width: 100%
+            margin: 5rem 0 4rem 0
+            .siofor-instruction__5-block_row-3_left-column
+                display: block
+                width: 65%
+                float: left
+                text-align: right
+                //padding: 0 70px 0 120px
+                transform: translateY(16%)
+                .siofor-instruction__5-block_row-3_left-column_container
+                    max-width: 350px
+                    float: right
+                    margin-right: 4rem
+                    p
+                        //padding-left: 90px
+                    h4
+                        font-family: $f-medium
+                        font-size: $size-24px
+                        color: $color-black
+                    .siofor-instruction__5-block_row-3_left-column_line
+                        width: 100%
+                        height: 2px
+                        background-color: $color-light-brown
+                        //transform: translate(27%,200%)
+            .siofor-instruction__5-block_row-3_right-column
+                display: block
+                width: 35%
+                float: left
+                img
+                    height: 148px
+                    width: 148px
+                    float: left
+            &:after
+                content: ""
+                clear: both
+                display: table
+    .siofor-instruction__6-block
+        display: block
+        //height: 900px
+        .siofor-instruction__6-block_buttons
+            .siofor-instruction__6-block_buttons_container-left
+                display: block
+                float: left
+                width: 50%
+                //.siofor-instruction__6-block_buttons_container-left-line
+                .siofor-instruction__6-block_buttons-left
+                    margin: 0 auto
+                    left: 25%
+                    width: 360px
+                    height: 47px
+                    border-radius: 15px
+                    background-color: #f6f6f6
+                    cursor: pointer
+                    user-select: none
+                    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2)
+                    transition: all 400ms ease-in-out
+                    z-index: 1
+                    h2
+                        line-height: 47px
+                        color: #777777
+                        font-family: $f-light
+                        font-size: $size-24px
+                        &:before
+                            display: inline-block
+                            //position: absolute
+                            content: ""
+                            top: 50%
+                            left: 0
+                            transform: translate(-40px,-3px)
+                            filter: grayscale(100%)
+                            //margin-right: 5px
+                            width: 7px
+                            height: 7px
+                            background-color: $color-dark-brown
+                            border-radius: 50%
+                        //&:after
+                        //    position: absolute
+                        //    content: ""
+                        //    top: 92%
+                        //    left: 7.27%
+                        //    width: 2px
+                        //    height: 321px
+                        //    background-color: #c77f08
+                        //    z-index: 0
+                    &:hover
+                        background-color: $color-white
+                .fullheighted
+                    h2
+                        font-family: $f-bold
+                        &:before
+                            filter: grayscale(0%)
+            .siofor-instruction__6-block_buttons_container-right
+                display: block
+                float: left
+                width: 50%
+                .siofor-instruction__6-block_buttons-right
+                    margin: 0 auto
+                    width: 360px
+                    height: 47px
+                    border-radius: 15px
+                    background-color: #f6f6f6
+                    cursor: pointer
+                    user-select: none
+                    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2)
+                    transition: all 400ms ease-in-out
+                    h2
+                        line-height: 47px
+                        color: #777777
+                        font-family: $f-light
+                        font-size: $size-24px
+                        &:after
+                            display: inline-block
+                            //position: absolute
+                            content: ""
+                            top: 50%
+                            left: 0
+                            transform: translate(40px,-3px)
+                            filter: grayscale(100%)
+                            //margin-right: 5px
+                            width: 7px
+                            height: 7px
+                            background-color: $color-dark-brown
+                            border-radius: 50%
+                    &:hover
+                        background-color: $color-white
+                .fullheighted
+                    h2
+                        font-family: $f-bold
+                        &:after
+                            filter: grayscale(0%)
+            &:after
+                content: ""
+                clear: both
+                display: table
+        .siofor-instruction__6-block_text-container
+            display: block
+            margin: 4rem 8rem
+            position: relative
+            .siofor-instruction__6-block_text-container_left-text
+                .line-toggle-left
+                    display: block
+                    height: 0
+                    //opacity: 0
+                    width: 2px
+                    background-color: $color-dark-brown
+                    position: absolute
+                    top: -31%
+                    left: -4.6%
+                    //&:after
+                        position: absolute
+                        top: 103%
+                        content: ""
+                        height: 5px
+                        width: 5px
+                        border-radius: 50%
+                        transform: translateX(-1.2px)
+                        background-color: $color-dark-brown
+                .line-toggle-left-dot
+                    position: absolute
+                    top: 97%
+                    left: -4.59%
+                    content: ""
+                    height: 5px
+                    width: 5px
+                    border-radius: 50%
+                    transform: translateX(-1.2px)
+                    background-color: $color-dark-brown
+                    opacity: 0
+                position: relative
+                display: none
+                text-align: left
+                p
+                    font-family: $f-light
+                    font-size: $size-18px
+                    margin-top: 0
+                .siofor-instruction__6-block_text-container_left-text_line
+                    position: absolute
+                    top: -35%
+                    left: -10.2%
+                    height: 0
+                    width: 2px
+                    background-color: $color-light-brown
+                    z-index: 0
+            .siofor-instruction__6-block_text-container_right-text
+                display: none
+                text-align: right
+                position: relative
+                .line-toggle-right
+                    display: block
+                    height: 0
+                    //opacity: 0
+                    width: 2px
+                    background-color: $color-dark-brown
+                    position: absolute
+                    top: -12.5%
+                    left: 104.5%
+                .line-toggle-right-dot
+                    position: absolute
+                    top: 98.5%
+                    left: 104.5%
+                    content: ""
+                    height: 5px
+                    width: 5px
+                    border-radius: 50%
+                    transform: translateX(-1.2px)
+                    background-color: $color-dark-brown
+                    opacity: 0
+                p
+                    font-family: $f-light
+                    font-size: $size-18px
+                    margin-top: 0
+                span
+                    font-family: $f-bold
+        .siofor-instruction__6-block_text-container_left-text, .siofor-instruction__6-block_text-container_right-text
+            &.fullheight
+                display: block
+    .siofor-instruction__7-block
+        width: 100%
+        height: 857px
+        background: url("../img/fon.jpg")
+        background-size: cover
+        border-radius: 30px
+        .siofor-instruction__7-block_container
+            position: relative
+            .siofor-instruction__7-block_plashka-1
+                position: absolute
+                width: 405px
+                height: 160px
+                background: url("../img/plashka_biton_6.png")
+                background-size: cover
+                top: 71px
+                left: 512px
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.2)
+                border-radius: 15px
+                h3
+                    font-size: $size-24px
+                    font-family: $f-bold
+                    margin-top: 2rem
+                p
+                    color: $color-white
+                    font-family: $f-light
+                    font-size: $size-18px
+                    padding: 0 3rem
+                .siofor-instruction__7-block_line-5
+                    position: absolute
+                    width: 2px
+                    height: 279px
+                    background-color: $color-light-brown
+                    top: 100%
+                    right: 15%
+                .siofor-instruction__7-block_line-1
+                    position: absolute
+                    height: 2px
+                    width: 396px
+                    background-color: $color-light-brown
+                    top: 25%
+                    right: 100%
+                    .siofor-instruction__7-block_line-2
+                        position: absolute
+                        width: 2px
+                        height: 158px
+                        background-color: $color-light-brown
+                        top: 100%
+                        right: 100%
+                        transform: translateY(-2px)
+                        .siofor-instruction__7-block_plashka-2
+                            position: absolute
+                            width: 594px
+                            height: 210px
+                            border-radius: 15px
+                            background-color: $color-white
+                            top: 100%
+                            left: -52px
+                            text-align: left
+                            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2)
+                            h4
+                                //font-size: $size-16px
+                                font-family: $f-bold
+                                margin-top: 1.5rem
+                                padding-left: 3rem
+                            p.list
+                                margin: 0 0 0.3rem 3rem
+                                color: $color-black
+                                font-family: $f-regular
+                                line-height: 1
+                                padding: 0
+                                &:before
+                                    display: inline-block
+                                    transform: translateY(-70%)
+                                    content: ""
+                                    margin-right: 10px
+                                    width: 5px
+                                    height: 5px
+                                    background-color: $color-dark-brown
+                                    border-radius: 50%
+                            .siofor-instruction__7-block_line-3
+                                position: absolute
+                                width: 2px
+                                height: 108px
+                                background-color: $color-light-brown
+                                top: 100%
+                                right: 63%
+                                .siofor-instruction__7-block_line-4
+                                    position: absolute
+                                    height: 2px
+                                    width: 106px
+                                    background-color: $color-light-brown
+                                    top: 100%
+                                    left: 100%
+                                    transform: translateY(-2px)
+                                    .siofor-instruction__7-block_plashka-3
+                                        position: absolute
+                                        width: 574px
+                                        height: 239px
+                                        border-radius: 15px
+                                        background-color: $color-white
+                                        top: -75px
+                                        left: 100%
+                                        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2)
+                                        h4
+                                            //font-size: $size-16px
+                                            font-family: $f-bold
+                                            margin-top: 2.2rem
+                                            padding-left: 3rem
+                                        p.list
+                                            margin: 0 3.5rem 0.5rem 3rem
+                                            color: $color-black
+                                            font-family: $f-regular
+                                            line-height: 1
+                                            padding: 0
+                                            &:before
+                                                display: inline-block
+                                                transform: translateY(-70%)
+                                                content: ""
+                                                margin-right: 10px
+                                                width: 5px
+                                                height: 5px
+                                                background-color: $color-dark-brown
+                                                border-radius: 50%
+    .siofor-instruction__8-block
+        .siofor-instruction__8-block_row-1
+            display: block
+            margin: 0 auto
+            text-align: left
+            h4
+                display: inline-block
+                font-size: $size-18px
+                font-family: $f-bold
+                //width: auto
+                text-align: left
+                padding-bottom: 0.5rem
+                margin: 3rem 0 3rem 5.3rem
+                border-bottom: 2px solid $color-light-brown
+        &:after
+            content: ""
+            clear: both
+            display: table
+        .siofor-instruction__8-block_row-2
+            display: block
+            width: 90%
+            height: 197px
+            background: url("../img/vagitna.jpg")
+            background-size: cover
+            border-radius: 25px
+            //overflow: hidden
+            margin: 0 auto
+            //padding: 38px 38px 18px 38px
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2)
+            .siofor-instruction__8-block_row-2_left
+                display: block
+                width: 80%
+                float: left
+                text-align: left
+                padding: 0 90px 0 50px
+                transform: translateY(15%)
+                p
+                    margin: 0 0 2px 0
+                    &.first
+                        padding-bottom: 5px
+                h4
+                    font-family: $f-bold
+                    font-size: $size-18px
+                    color: $color-black
+                    margin-bottom: 1rem
+            &:after
+                content: ""
+                clear: both
+                display: table
+        .siofor-instruction__8-block_row-3
+            display: block
+            width: 90%
+            height: 313px
+            background: url("../img/plashka_grudne_goruvannya.jpg")
+            background-size: cover
+            border-radius: 25px
+            //overflow: hidden
+            margin: 3rem auto
+            //padding: 38px 38px 18px 38px
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2)
+            .siofor-instruction__8-block_row-3_right
+                display: block
+                width: 65%
+                float: right
+                text-align: right
+                padding: 0 50px 0 0
+                transform: translateY(15%)
+                p
+                    margin: 0 0 1rem 0
+                h4
+                    font-family: $f-bold
+                    font-size: $size-18px
+                    color: $color-black
+                    margin-bottom: 1rem
+            &:after
+                content: ""
+                clear: both
+                display: table
+        .siofor-instruction__8-block_row-4
+            margin: 3rem 0 3rem 10rem
+            text-align: left
+            padding: 0
+            transform: translateY(15%)
+            p
+                margin: 0 0 1rem 0
+                &.list
+                    line-height: 1
+                    margin: 0.5rem 0
+                    padding: 0
+                    &:before
+                        display: inline-block
+                        transform: translateY(-70%)
+                        content: ""
+                        margin-right: 10px
+                        width: 5px
+                        height: 5px
+                        background-color: $color-dark-brown
+                        border-radius: 50%
+
+            h4
+                font-family: $f-bold
+                font-size: $size-18px
+                color: $color-black
+                margin-bottom: 1rem
+    .siofor-instruction__8-block_row-5_line
+        margin: 4rem 0
+        width: 100%
+        height: 3px
+        background-color: $color-light-brown
+    .siofor-instruction__8-block_row-6
+        width: 100%
+        height: 100px
+        .siofor-instruction__8-block_row-6_container
+            margin: 1rem auto
+            background-color: #929292
+            border-radius: 50px
+            width: 390px
+            height: 50px
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2)
+            &:hover
+                background-color: #bbbbbb
+                transition: all 400ms ease-in-out
+            .siofor-instruction__8-block_row-6_container_button
+                width: 390px
+                cursor: pointer
+                .siofor-instruction__8-block_row-6_container_button_text
+                    width: 340px
+                    float: left
+                    font-family: $f-regular
+                    font-size: $size-20px
+                    line-height: 50px
+                    user-select: none
+                .siofor-instruction__8-block_row-6_container_button_pdf
+                    width: 50px
+                    height: 50px
+                    border-radius: 50%
+                    background-color: #555555
+                    color: $color-white
+                    float: right
+                    font-family: $f-light
+                    font-size: $size-18px
+                    line-height: 50px
+                    transition: all 400ms ease-in-out
+                    user-select: none
+                    &:hover
+                        background-color: #3d3d3d
+
+
+@import "media"
+
