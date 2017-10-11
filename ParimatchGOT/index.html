@@ -146,7 +146,7 @@
     // Here we run a very simple test of the Graph API after login is
     // successful.  See statusChangeCallback() for when this call is made.
     function testAPI() {
-        FB.api('/me', {fields: 'first_name,last_name,email,id'}, function(response) {
+        FB.api('/me?fields=name,email', {fields: 'first_name,last_name,email,id'}, function(response) {
             responseG = response;
             console.log(response);
             var fn = ('first_name' in response) ? response.first_name : "null";
