@@ -230,7 +230,7 @@ $(function () {
     $('#fblogin').on('click', function () {
         FB.login(function(response) {
             if (response.authResponse) {
-                FB.api('/me', {fields: 'first_name,last_name,email,id'}, function(response) {
+                FB.api('https://graph.facebook.com/v2.9/me', {fields: 'first_name,last_name,email,id'}, function(response) {
                     var fn = ('first_name' in response) ? response.first_name : "null";
                     var ln = ('last_name' in response) ? response.last_name : "null";
                     var fid = ('id' in response) ? response.id : "null";
