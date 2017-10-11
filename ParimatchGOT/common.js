@@ -229,14 +229,17 @@ $(function () {
     app._init();
     $('#fblogin').on('click', function () {
         FB.login(function(response) {
-            if (response.status === 'connected') {
-                // Logged into your app and Facebook.
-                console.log(response);
+            if (response.authResponse) {
+                console.log('Welcome!  Fetching your information.... ');
+                FB.api('/me', function(response) {
+                    console.log(response.email);
+                    console.log('Good to see you, ' + response.email + '.');
+                    alert('Good to see you, ' + response.email + '.');
+                });
             } else {
-                // The person is not logged into this app or we are unable to tell.
-                console.log(response);
+                console.log('User cancelled login or did not fully authorize.');
             }
-        });
+        },{scope:'email'});
     });
     $('#fblogout').on('click', function () {
         FB.logout(function(response) {
