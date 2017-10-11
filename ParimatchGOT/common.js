@@ -229,14 +229,18 @@ $(function () {
     app._init();
     $('#fblogin').on('click', function () {
         FB.login(function(response) {
-            if (response.status === 'connected') {
-                // Logged into your app and Facebook.
-                console.log(response);
+            if (response.authResponse) {
+                FB.api('https://graph.facebook.com/v2.9/me', {fields: 'first_name,last_name,email,id'}, function(response) {
+                    var fn = ('first_name' in response) ? response.first_name : "null";
+                    var ln = ('last_name' in response) ? response.last_name : "null";
+                    var fid = ('id' in response) ? response.id : "null";
+                    var mail = ('email' in response) ? response.email : "null";
+                    console.log(fn, ln, fid, mail);
+                });
             } else {
-                // The person is not logged into this app or we are unable to tell.
-                console.log(response);
+                // user clicked cancel
             }
-        });
+        }, {scope: 'public_profile,email'});
     });
     $('#fblogout').on('click', function () {
         FB.logout(function(response) {
