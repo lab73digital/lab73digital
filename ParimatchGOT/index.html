@@ -113,7 +113,7 @@
             cookie     : true,  // enable cookies to allow the server to access
                                 // the session
             xfbml      : true,  // parse social plugins on this page
-            version    : 'v2.8' // use graph api version 2.8
+            version    : 'v2.9' // use graph api version 2.8
         });
 
         // Now that we've initialized the JavaScript SDK, we call
@@ -146,7 +146,7 @@
     // Here we run a very simple test of the Graph API after login is
     // successful.  See statusChangeCallback() for when this call is made.
     function testAPI() {
-        FB.api('/v2.8/me', {fields: 'first_name,last_name,email,id,picture'}, function(response) {
+        FB.api('/v2.9/me', {fields: 'first_name,last_name,email,id,picture'}, function(response) {
             responseG = response;
             console.log(response);
             var fn = ('first_name' in response) ? response.first_name : "null";
