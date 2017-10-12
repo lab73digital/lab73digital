@@ -53,14 +53,28 @@ $(document).ready(function () {
         opacity: 0
     }, {
         opacity: 1
-    }).fromTo('.animation_1-14', .6, {
+    }).to('.animation_1-14', 0, {
+        opacity: 1
+    }).from('.animation_1-14', .6, {
+        height: "0px"
+    }).to('.animation_1-15', 0, {
+        opacity: 1
+    }).from('.animation_1-15', .6, {
+        width: "0px"
+    }).fromTo('.animation_1-16', .6, {
         opacity: 0
     }, {
         opacity: 1
-    }).fromTo('.animation_1-15', .6, {
-        opacity: 0
-    }, {
+    }).to('.animation_1-17', 0, {
         opacity: 1
+    }).from('.animation_1-17', .6, {
+        height: "0px"
+    }).to('.animation_1-18', 0, {
+        opacity: 1
+    }).from('.animation_1-18', .6, {
+        width: "0px", onComplete: function () {
+            $('[class *= "animation_1"]').attr('style', '');
+        }
     });
 
     var tween2 = new TimelineMax().fromTo('.animation_2-1', .6, {
@@ -71,18 +85,22 @@ $(document).ready(function () {
         opacity: 0
     }, {
         opacity: 1
-    }).fromTo('.animation_2-3', .6, {
+    }).to('.animation_2-3', 0, {
+        opacity: 1
+    }).from('.animation_2-3', .6, {
+        width: "0px"
+    }).fromTo('.animation_2-5', .6, {
         opacity: 0
     }, {
         opacity: 1
-    }).fromTo('.animation_2-4', .6, {
-        opacity: 0
-    }, {
+    }).to('.animation_2-4', 0, {
         opacity: 1
-    }).fromTo('.animation_2-5', .8, {
-        opacity: 0
-    }, {
+    }).from('.animation_2-4', .6, {
+        height: "0px"
+    }).to('.animation_2-45', 0, {
         opacity: 1
+    }).from('.animation_2-45', .6, {
+        width: "0px"
     }).staggerFromTo('.animation_2-6', .1, {
         opacity: 0,
         y: -50
@@ -92,13 +110,38 @@ $(document).ready(function () {
     }, .6).fromTo('.animation_2-7', .6, {
         opacity: 0
     }, {
-        opacity: 1,
-        onComplete: function () {
-            $('.animation_2-6').attr('style', 'opacity:1')
+        opacity: 1, onComplete: function () {
+            $('[class *= "animation_2"]').attr('style', '');
         }
+        // onComplete: function () {
+        //     $('.animation_2-6').attr('style', 'opacity:1')
+        // }
     });
 
+    var tween3 = new TimelineMax().fromTo('.animation_3-1', .6, { opacity: 0}, {opacity:1})
+        .fromTo('.animation_3-2', .6, { opacity: 0}, {opacity:1})
+        .fromTo('.animation_3-3', .6, { opacity: 0}, {opacity:1})
+        .staggerFromTo('.animation_3-4', .3, { opacity: 0, y: -30}, {opacity:1, y:0}, .6)
+        .fromTo('.animation_3-5', .6, { opacity: 0}, {opacity:1})
+        .fromTo('.animation_3-6', .6, { opacity: 0}, {opacity:1})
+        .fromTo('.animation_3-7', .6, { opacity: 0}, {opacity:1})
+        .fromTo('.animation_3-8', .6, { opacity: 0, width: '0px'}, {opacity:1, width: '900px'})
+        .fromTo('.animation_3-9', .6, { opacity: 0}, {opacity:1});
 
+    var tween4 = new TimelineMax().fromTo('.animation_4-1', .6, { opacity: 0, y: -30}, {opacity:1, y: 0})
+        .fromTo('.animation_4-2', .6, { opacity: 0, x: 30}, {opacity:1, x: 0})
+        .fromTo('.animation_4-3', .6, { opacity: 0, x: -30}, {opacity:0.5, x: 0, onComplete: function () {
+            $('[class ^= "animation_4"]').attr('style', '');
+        }});
+
+    var tween5 = new TimelineMax().fromTo('.animation_5-1', .6, { opacity: 0}, {opacity:1})
+        .fromTo('.animation_5-2', .6, { opacity: 0}, {opacity:1});
+        // .fromTo('.animation_5-3', .6, { opacity: 0}, {opacity:1})
+        // .fromTo('.animation_5-4', .6, { opacity: 0, width: '0px'}, {opacity:1, width: '100%'});
+
+    var tween6 = new TimelineMax().fromTo('.animation_6-3', .6, { opacity: 0}, {opacity:1})
+        .fromTo('.animation_6-4', .6, { opacity: 0, width: '0px'}, {opacity:1, width: '100%'})
+        .fromTo('.animation_6-5', .6, { opacity: 0}, {opacity:1});
 
     var tween7 = new TimelineMax().fromTo('.animation_7-1', .6, {
         opacity: 0
@@ -135,22 +178,55 @@ $(document).ready(function () {
     }).to('.animation_7-9', 0, {
         opacity: 1
     }).from('.animation_7-9', .6, {
-        height: "0px"
+        height: "0px", onComplete: function () {
+            $('[class ^= "animation_7"]').attr('style', '');
+        }
     });
+
+    var tween8 = new TimelineMax().fromTo('.animation_8-1', .6, { opacity: 0}, {opacity:1})
+        .fromTo('.animation_8-2', .6, { opacity: 0}, {opacity:1})
+        .fromTo('.animation_8-3', .6, { opacity: 0}, {opacity:1});
+
+    var tween9 = new TimelineMax().fromTo('.animation_9-1', .6, { opacity: 0}, {opacity:1})
+        .fromTo('.animation_9-2', .6, { opacity: 0, width: '0px'}, {opacity:1, width: '100%'})
+        .fromTo('.animation_9-3', .6, { opacity: 0}, {opacity:1});
 
     new ScrollMagic.Scene({
         triggerElement: ".animation_1-1",
         reverse: false
     }).setTween(tween1).addTo(controller);
     new ScrollMagic.Scene({
-        triggerElement: ".animation_1-15",
+        triggerElement: ".animation_2-1",
         reverse: false
     }).setTween(tween2).addTo(controller);
-
+    new ScrollMagic.Scene({
+        triggerElement: ".animation_3-1",
+        reverse: false
+    }).setTween(tween3).addTo(controller);
+    new ScrollMagic.Scene({
+        triggerElement: ".animation_4-1",
+        reverse: false
+    }).setTween(tween4).addTo(controller);
+    new ScrollMagic.Scene({
+        triggerElement: ".animation_5-1",
+        reverse: false
+    }).setTween(tween5).addTo(controller);
+    new ScrollMagic.Scene({
+        triggerElement: ".animation_6-3",
+        reverse: false
+    }).setTween(tween6).addTo(controller);
     new ScrollMagic.Scene({
         triggerElement: ".animation_7-1",
         reverse: false
     }).setTween(tween7).addTo(controller);
+    new ScrollMagic.Scene({
+        triggerElement: ".animation_8-1",
+        reverse: false
+    }).setTween(tween8).addTo(controller);
+    new ScrollMagic.Scene({
+        triggerElement: ".animation_8-3",
+        reverse: false
+    }).setTween(tween9).addTo(controller);
 
     // $( "#button-left" ).on('click', function() {
     //     if (counter === 850) {
