@@ -1,10 +1,14 @@
 $(document).ready(function () {
     var controller = new ScrollMagic.Controller();
-    var tween1 = new TimelineMax().fromTo('.animation_1-1', .6, {
+    var tween1 = new TimelineMax().fromTo('.siofor-instruction', .9, {
         opacity: 0
     }, {
         opacity: 1,
         delay: 1
+    }).fromTo('.animation_1-1', .6, {
+        opacity: 0
+    }, {
+        opacity: 1
     }).fromTo('.animation_1-2', .6, {
         opacity: 0
     }, {
@@ -30,6 +34,10 @@ $(document).ready(function () {
     }).from('.animation_1-7', .6, {
         height: "0px"
     }).fromTo('.animation_1-8', .6, {
+        opacity: 0
+    }, {
+        opacity: 1
+    }).fromTo('.second-background', .6, {
         opacity: 0
     }, {
         opacity: 1
@@ -141,7 +149,8 @@ $(document).ready(function () {
 
     var tween6 = new TimelineMax().fromTo('.animation_6-3', .6, { opacity: 0}, {opacity:1})
         .fromTo('.animation_6-4', .6, { opacity: 0, width: '0px'}, {opacity:1, width: '100%'})
-        .fromTo('.animation_6-5', .6, { opacity: 0}, {opacity:1});
+        .fromTo('.animation_6-51', .6, { opacity: 0, y: -30}, {opacity:1, y:0})
+        .fromTo('.animation_6-52', .6, { opacity: 0, y: -30}, {opacity:1, y:0});
 
     var tween7 = new TimelineMax().fromTo('.animation_7-1', .6, {
         opacity: 0
