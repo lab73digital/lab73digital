@@ -93,16 +93,15 @@ $(document).ready(function () {
         opacity: 0
     }, {
         opacity: 1
-    }).add(TweenMax.to('.animation_2-3', 0, {
+    }).to('.animation_2-3', 0, {
         opacity: 1
-    }), '.animation_2-2').add(TweenMax.from('.animation_2-3', 1, {
+    }).from('.animation_2-3', .6, {
         width: "0px"
-    }), '.animation_2-2').add(TweenMax.fromTo('.animation_2-5', .6, {
+    }).fromTo('.animation_2-5', .6, {
         opacity: 0
     }, {
-        opacity: 1,
-        delay: 0.2
-    }), '.animation_2-2').to('.animation_2-4', 0, {
+        opacity: 1
+    }).to('.animation_2-4', 0, {
         opacity: 1
     }).from('.animation_2-4', .6, {
         height: "0px"

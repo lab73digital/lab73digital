@@ -168,6 +168,7 @@ function sectionChanger(visibleScreen, element) {
     if (!element.length || changeSectionQ || (visibleScreen[0] == element[0])) {
         return
     }
+
     changeSectionQ = true;
     visibleScreen.css({
         'pointer-events': 'none'
@@ -247,6 +248,13 @@ function sectionAnimation(element) {
     }
 }
 
+$(".samolik7").on('click', function () {
+    $(this).toggleClass('samolik_passive');
+});
+$(".samolik").on('click', function () {
+    $(this).toggleClass('samolik_passive_hide');
+});
+
 var counter_s1 = true, counter_s2 = true, counter_s3 = true, counter_s4 = true, counter_s5 = true, counter_s6 = true, counter_s7 = true;
 function contentAnimation(element) {
     //$('.woman-svg').attr('class', 'woman-svg');
@@ -265,17 +273,17 @@ function contentAnimation(element) {
                 opacity: 0
             }, {
                 opacity: 1
-            }, .04).fromTo('.s-1_animation-1', 0.7, {
+            }, .04).fromTo('.s-1_animation-1', 0.5, {
                 opacity: 0,
                 y: 50
             }, {
                 opacity: 1,
                 y: 0
-            }).fromTo('.s-1_animation-2', 0.7, {
+            }).fromTo('.s-1_animation-2', 0.5, {
                 opacity: 0
             }, {
                 opacity: 1
-            }).fromTo('.s-1_animation-3', 0.7, {
+            }).fromTo('.s-1_animation-3', 0.5, {
                 opacity: 0
             }, {
                 opacity: 1
@@ -307,29 +315,29 @@ function contentAnimation(element) {
                 opacity: 1,
                 y: 0,
                 delay: 0
-            }).fromTo('.s-2_animation-2', 0.7, {
+            }).fromTo('.s-2_animation-2', 0.5, {
                 opacity: 0
             }, {
                 opacity: 1
-            }).fromTo('.s-2_animation-3', 0.7, {
+            }).fromTo('.s-2_animation-3', 0.5, {
                 opacity: 0
             }, {
                 opacity: 1
-            }).fromTo('.s-2_animation-4', 0.7, {
+            }).fromTo('.s-2_animation-4', 0.5, {
                 opacity: 0
             }, {
                 opacity: 1
-            }).fromTo('.s-2_animation-55', 0.7, {
+            }).fromTo('.s-2_animation-55', 0.5, {
                 opacity: 0
             }, {
                 opacity: 1
-            }).fromTo('.s-2_animation-5', 0.7, {
+            }).fromTo('.s-2_animation-5', 0.5, {
                 y: 50,
                 opacity: 0
             }, {
                 y: 0,
                 opacity: 1
-            }).fromTo('.s-2_animation-6', 0.7, {
+            }).fromTo('.s-2_animation-6', 0.5, {
                 opacity: 0
             }, {
                 opacity: 1
@@ -364,19 +372,19 @@ function contentAnimation(element) {
                 opacity: 1,
                 y: 0,
                 delay: 0
-            }).fromTo('.s-3_animation-2', 0.7, {
+            }).fromTo('.s-3_animation-2', 0.5, {
                 opacity: 0
             }, {
                 opacity: 1
-            }).fromTo('.s-3_animation-3', 0.7, {
+            }).fromTo('.s-3_animation-3', 0.5, {
                 opacity: 0
             }, {
                 opacity: 1
-            }).fromTo('.s-3_animation-4', 0.7, {
+            }).fromTo('.s-3_animation-4', 0.5, {
                 opacity: 0
             }, {
                 opacity: 1
-            }).fromTo('.s-3_animation-6', 0.7, {
+            }).fromTo('.s-3_animation-6', 0.5, {
                 opacity: 0
             }, {
                 opacity: 1
@@ -403,11 +411,11 @@ function contentAnimation(element) {
                 opacity: 1,
                 y: 0,
                 delay: 0
-            }).fromTo('.s-4_animation-2', 0.7, {
+            }).fromTo('.s-4_animation-2', 0.5, {
                 opacity: 0
             }, {
                 opacity: 1
-            }).fromTo('.s-4_animation-3', 0.7, {
+            }).fromTo('.s-4_animation-3', 0.5, {
                 opacity: 0
             }, {
                 opacity: 1
@@ -415,13 +423,13 @@ function contentAnimation(element) {
                 opacity: 0
             }, {
                 opacity: 1
-            }).fromTo('.s-4_animation-6', 0.7, {
+            }).fromTo('.s-4_animation-6', 0.5, {
                 y: 50,
                 opacity: 0
             }, {
                 y: 0,
                 opacity: 1
-            }).fromTo('.s-4_animation-7', 0.7, {
+            }).fromTo('.s-4_animation-7', 0.5, {
                 opacity: 0
             }, {
                 opacity: 1
@@ -454,29 +462,29 @@ function contentAnimation(element) {
             opacity: 1,
             y: 0,
             delay: 0
-        }).fromTo('.s-5_animation-2', 0.7, {
+        }).fromTo('.s-5_animation-2', 0.5, {
             opacity: 0
         }, {
             opacity: 1
-        }).fromTo('.s-5_animation-3', 0.7, {
+        }).fromTo('.s-5_animation-3', 0.5, {
             y: 50,
             opacity: 0
         }, {
             y: 0,
             opacity: 1
-        }).fromTo('.s-5_animation-4', 0.7, {
+        }).fromTo('.s-5_animation-4', 0.5, {
             y: 50,
             opacity: 0
         }, {
             y: 0,
             opacity: 1
-        }).fromTo('.s-5_animation-5', 0.7, {
+        }).fromTo('.s-5_animation-5', 0.5, {
             x: -50,
             opacity: 0
         }, {
             x: 0,
             opacity: 1
-        }).fromTo('.s-5_animation-6', 0.7, {
+        }).fromTo('.s-5_animation-6', 0.5, {
             opacity: 0
         }, {
             opacity: 1
@@ -503,7 +511,7 @@ function contentAnimation(element) {
                 opacity: 1,
                 y: 0,
                 delay: 0
-            }).fromTo('.s-6_animation-2', 0.7, {
+            }).fromTo('.s-6_animation-2', 0.5, {
                 opacity: 0
             }, {
                 opacity: 1
@@ -525,7 +533,7 @@ function contentAnimation(element) {
                 delay: 1,
                 x: 0,
                 opacity: 1
-            }).fromTo('.s-6_animation-5', 0.7, {
+            }).fromTo('.s-6_animation-5', 0.5, {
                 opacity: 0
             }, {
                 opacity: 1
@@ -549,24 +557,30 @@ function contentAnimation(element) {
             }, {
                 opacity: 1,
                 delay: 0
-            }).fromTo('.s-7_animation-2', 0.7, {
+            }).fromTo('.s-7_animation-2', 0.5, {
                 opacity: 0
             }, {
                 opacity: 1
-            }).fromTo('.s-7_animation-3', 0.7, {
+            }).fromTo('.s-7_animation-3', 0.5, {
                 opacity: 0
             }, {
                 opacity: 1
-            }).fromTo('.s-7_animation-4', 0.7, {
+            }).fromTo('.s-7_animation-4', 0.5, {
                 y: 50,
                 opacity: 0
             }, {
                 y: 0,
                 opacity: 1
-            }).fromTo('.s-7_animation-5', 0.7, {
+            }).fromTo('.s-7_animation-5', 0.5, {
                 opacity: 0
             }, {
                 opacity: 1
+            }).fromTo('.samolik7', 0.5, {
+                opacity: 0,
+                y: 100
+            }, {
+                opacity: 1,
+                y: 0
             });
             counter_s7 = false;
         } else {
