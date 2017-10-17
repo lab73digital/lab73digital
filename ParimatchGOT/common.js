@@ -230,17 +230,34 @@ $(function () {
     $('#fblogin').on('click', function () {
         FB.login(function(response) {
             if (response.authResponse) {
-                FB.api('https://graph.facebook.com/v2.9/me', {fields: 'first_name,last_name,email,id'}, function(response) {
-                    var fn = ('first_name' in response) ? response.first_name : "null";
-                    var ln = ('last_name' in response) ? response.last_name : "null";
-                    var fid = ('id' in response) ? response.id : "null";
-                    var mail = ('email' in response) ? response.email : "null";
-                    console.log(fn, ln, fid, mail);
-                });
+                // FB.api('https://graph.facebook.com/v2.9/me', {fields: 'first_name,last_name,email,id'}, function(response) {
+                //     var fn = ('first_name' in response) ? response.first_name : "null";
+                //     var ln = ('last_name' in response) ? response.last_name : "null";
+                //     var fid = ('id' in response) ? response.id : "null";
+                //     var mail = ('email' in response) ? response.email : "null";
+                //     console.log(fn, ln, fid, mail);
+                // });
+                FB.api("/" + response.authResponse.userID + '/?fields=first_name,last_name,email,id', function (response) {
+                        if (response && !response.error) {
+                            // var fn = ('first_name' in response) ? response.first_name : "null";
+                            // var ln = ('last_name' in response) ? response.last_name : "null";
+                            // var fid = ('id' in response) ? response.id : "null";
+                            // var mail = ('email' in response) ? response.email : "null";
+                            // console.log(fn, ln, fid, mail);
+                            // /* handle the result */
+                            console.log(response);
+                            document.getElementById('status').innerHTML =
+                                'Thanks for logging in, ' + response.first_name + ' ' +
+                                response.last_name + '           ' +
+                                'ID:' + response.id + '          ' +
+                                'Email:' + response.email + '   !';
+                        }
+                    }
+                );
             } else {
                 // user clicked cancel
             }
-        }, {scope: 'public_profile,email'});
+        });
     });
     $('#fblogout').on('click', function () {
         FB.logout(function(response) {

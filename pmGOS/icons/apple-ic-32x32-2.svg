@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 31 30.84">
+    <defs>
+        <style>
+            .cls-1{fill:none;stroke:#f7d523;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.1px;}.cls-2{fill:url(#radial-gradient);}
+        </style>
+        <radialGradient id="radial-gradient" cx="-2423.19" cy="285.35" r="50"
+                        gradientTransform="translate(766.79 -25.66) scale(0.31 0.12)" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#ffd900"/>
+            <stop offset="0.05" stop-color="#ffd900" stop-opacity="0.82"/>
+            <stop offset="0.1" stop-color="#ffd900" stop-opacity="0.65"/>
+            <stop offset="0.16" stop-color="#ffd900" stop-opacity="0.5"/>
+            <stop offset="0.22" stop-color="#ffd900" stop-opacity="0.36"/>
+            <stop offset="0.29" stop-color="#ffd900" stop-opacity="0.25"/>
+            <stop offset="0.36" stop-color="#ffd900" stop-opacity="0.16"/>
+            <stop offset="0.45" stop-color="#ffd900" stop-opacity="0.09"/>
+            <stop offset="0.55" stop-color="#ffd900" stop-opacity="0.04"/>
+            <stop offset="0.69" stop-color="#ffd900" stop-opacity="0.01"/>
+            <stop offset="1" stop-color="#ffd900" stop-opacity="0"/>
+        </radialGradient>
+    </defs>
+    <g id="svg-iphone" data-name="iphone">
+        <g id="apple-ic">
+            <path id="cc-m" class="cls-1"
+                  d="M27.57,22.25a1.85,1.85,0,0,0-.2.7,18.37,18.37,0,0,1-3.2,5.4l-.9.9a4,4,0,0,1-2.2.9,5.66,5.66,0,0,1-1.8-.3,5,5,0,0,0-1.3-.5,5.8,5.8,0,0,0-4.1.1l-1.5.6a3.72,3.72,0,0,1-1.8.2,2.67,2.67,0,0,1-1.4-.7,9.27,9.27,0,0,1-1.4-1.4,19.65,19.65,0,0,1-4-8.2,13.52,13.52,0,0,1-.3-4A10.43,10.43,0,0,1,5,11.25a7.55,7.55,0,0,1,4.6-3.4,5.26,5.26,0,0,1,3.5.3c.6.2,1.2.5,1.8.7a2.48,2.48,0,0,0,1.7,0c.6-.2,1.2-.5,1.9-.7a11.7,11.7,0,0,1,2-.5,6.25,6.25,0,0,1,3,.4,6.78,6.78,0,0,1,3.3,2.4h0a6.86,6.86,0,0,0-3.1,6.2,6.62,6.62,0,0,0,3.9,5.6ZM15.67,7.35a5.66,5.66,0,0,0,1.8-.3,6.75,6.75,0,0,0,4-6V.55c-.3,0-.5.1-.8.1A7,7,0,0,0,16.27,4a5.42,5.42,0,0,0-.8,3.3c.1,0,.1.1.2.1Z"/>
+            <ellipse id="anim-shit" class="cls-2" cx="15.5" cy="9" rx="15.5" ry="6.07"/>
+        </g>
+    </g>
+</svg>
