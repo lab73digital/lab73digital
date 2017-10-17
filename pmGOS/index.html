@@ -40,10 +40,11 @@
 <body>
 <script async>
     // Load the SDK asynchronously
-    (function(d, s, id) {
+    (function (d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
+        js = d.createElement(s);
+        js.id = id;
         js.src = "//connect.facebook.net/en_US/sdk.js";
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
@@ -84,7 +85,7 @@
         <div class="background-item s6"></div>
     </div>
     <main class="main">
-        <section id="s1" class="s-1 scroll-screen hidden" data-section-name="Выбор<br>персонажа" >
+        <section id="s1" class="s-1 scroll-screen hidden" data-section-name="Выбор<br>персонажа">
             <div data-href="" class="s__back section__changer-anchor" data-letter=""></div>
             <div class="s-1__logo">
                 <img src="img/GOS-logo.png" alt="logo">
@@ -97,7 +98,7 @@
                     <p class="s-1__kod-title__item basketball active">Баскетбол</p>
                     <p class="s-1__kod-title__item soccer">Футбол</p>
                     <p class="s-1__kod-title__item tennis">Теннис</p>
-                    <p class="s-1__kod-title__item hockey">Хокей</p>
+                    <p class="s-1__kod-title__item hockey">Хоккей</p>
                     <p class="s-1__kod-title__item box">Бокс</p>
                     <p class="s-1__kod-title__item cyber">Киберспорт</p>
                 </div>
@@ -166,8 +167,8 @@
                     </svg>
                 </div>
             </div>
-            <div data-href="#s4" class="s-1__button yellow-border-button section__changer-anchor" data-letter="В"><span
-                    class="before"></span>Галерея воинов<span class="after"></span></div>
+            <div data-href="#s2" class="s-1__button yellow-border-button section__changer-anchor" data-letter="В"><span
+                    class="before"></span>Выбрать персонажа<span class="after"></span></div>
         </section>
 
         <section id="s2" class="s-2 scroll-screen hidden" data-section-name="Редактор">
@@ -182,7 +183,7 @@
                 <p class="s-2__kod-title__item basketball">Баскетбол</p>
                 <p class="s-2__kod-title__item soccer">Футбол</p>
                 <p class="s-2__kod-title__item tennis">Теннис</p>
-                <p class="s-2__kod-title__item hockey">Хокей</p>
+                <p class="s-2__kod-title__item hockey">Хоккей</p>
                 <p class="s-2__kod-title__item box">Бокс</p>
                 <p class="s-2__kod-title__item cyber">Киберспорт</p>
             </div>
@@ -393,7 +394,8 @@
                           title="" placeholder="Ваше продолжение клича..."></textarea>
                 <span class="s-2__quote-text__max">Максимум 100 символов</span>
             </div>
-            <div data-href="#s3" class="s-2__button yellow-border-button section__changer-anchor inactive" data-letter="Б"><span
+            <div data-href="#s3" class="s-2__button yellow-border-button section__changer-anchor inactive"
+                 data-letter="Б"><span
                     class="before"></span>К бою готов!<span class="after"></span></div>
             <div class="s-2__accept-popup-container hidden">
                 <div class="s-2__accept-popup">
@@ -494,7 +496,7 @@
                         <div class="s-3__step-one_form__input-container">
                             <label class="s-3__step-one_form__input-label" for="s-3__last-name"
                                    data-number="2">Фамилия</label>
-                            <input id="s-3__last-name" type="text" name="secondname"class="s-3__step-one_form__input"
+                            <input id="s-3__last-name" type="text" name="secondname" class="s-3__step-one_form__input"
                                    placeholder="Рокфеллер" autocomplete="false" required>
                         </div>
                         <div class="s-3__step-one_form__input-container">
@@ -513,10 +515,12 @@
                     </div>
                     <div class="section-overlay s-3__overlay-first">
                         <div class="overlay-inner"></div>
-                        <div class="section-overlay__text arrow-left s-3__section-overlay__text_1">Авторизируйтесь с помощью соцсети
+                        <div class="section-overlay__text arrow-left s-3__section-overlay__text_1">Авторизируйтесь с
+                            помощью соцсети
                             остальных
                         </div>
-                        <div class="section-overlay__text arrow-left s-3__section-overlay__text_2">Или введите регистрационные данные вручную
+                        <div class="section-overlay__text arrow-left s-3__section-overlay__text_2">Или введите
+                            регистрационные данные вручную
                         </div>
                     </div>
                     <div class="section-overlay s-3__overlay-second">
@@ -524,7 +528,8 @@
                         <div class="section-overlay__text arrow-left s-3__section-overlay__text_3">Заполните все поля
                             <br>для регистрации
                         </div>
-                        <div class="section-overlay__text arrow-left s-3__section-overlay__text_4">Подтвердите правильность
+                        <div class="section-overlay__text arrow-left s-3__section-overlay__text_4">Подтвердите
+                            правильность
                             <br>введенных данных
                         </div>
                     </div>
@@ -588,7 +593,8 @@
                         <div class="s-3__form-iphone__input-container">
                             <label class="s-3__form-iphone__input-label" for="s-3__AN" data-number="4">Номер
                                 счета</label>
-                            <input id="s-3__AN" type="text" name="acc-number" class="s-3__form-iphone__input" placeholder="2135475" autocomplete="false">
+                            <input id="s-3__AN" type="text" name="acc-number" class="s-3__form-iphone__input"
+                                   placeholder="2135475" autocomplete="false">
                         </div>
                         <div class="s-3__form-iphone__input-text">
                             Номер счета Пари-Матч присваивается при регистрации,
@@ -601,7 +607,8 @@
                         <div class="s-3__form-iphone__input-container">
                             <label class="s-3__form-iphone__input-label" for="s-3__BN" data-number="5">Номер
                                 ставки</label>
-                            <input id="s-3__BN" type="text" name="bet-number" class="s-3__form-iphone__input" placeholder="7897956" autocomplete="false">
+                            <input id="s-3__BN" type="text" name="bet-number" class="s-3__form-iphone__input"
+                                   placeholder="7897956" autocomplete="false">
                         </div>
                         <div class="s-3__form-iphone__input-text">
                             Сделайте ставку с мобильного и введите ее номер выше.
@@ -618,15 +625,19 @@
                     </div>
                     <div class="section-overlay s-3__overlay-third">
                         <div class="overlay-inner"></div>
-                        <div class="section-overlay__text arrow-left s-3__section-overlay__text_5">Скачайте приложение или зайдите на
+                        <div class="section-overlay__text arrow-left s-3__section-overlay__text_5">Скачайте приложение
+                            или зайдите на
                             <br>мобильную версию сайта Пари-Матч
                         </div>
-                        <div class="section-overlay__text arrow-left s-3__section-overlay__text_6">Введите номер счета Пари-Матч
+                        <div class="section-overlay__text arrow-left s-3__section-overlay__text_6">Введите номер счета
+                            Пари-Матч
                         </div>
-                        <div class="section-overlay__text arrow-left s-3__section-overlay__text_7">Сделайте ставку от 50 грн
+                        <div class="section-overlay__text arrow-left s-3__section-overlay__text_7">Сделайте ставку от 50
+                            грн
                             <br>и введите номер ставки в поле
                         </div>
-                        <div class="section-overlay__text arrow-left s-3__section-overlay__text_8">Пропустите этот шаг, если
+                        <div class="section-overlay__text arrow-left s-3__section-overlay__text_8">Пропустите этот шаг,
+                            если
                             <br>Вам не нужен iPhone 8 Plus
                         </div>
                     </div>
@@ -651,15 +662,18 @@
                         <p class="s-3__kod-title__item basketball active">Баскетбол</p>
                         <p class="s-3__kod-title__item soccer">Футбол</p>
                         <p class="s-3__kod-title__item tennis">Теннис</p>
-                        <p class="s-3__kod-title__item hockey">Хокей</p>
+                        <p class="s-3__kod-title__item hockey">Хоккей</p>
                         <p class="s-3__kod-title__item box">Бокс</p>
                         <p class="s-3__kod-title__item cyber">Киберспорт</p>
                     </div>
-                    <div class="s-3__step-three__quote">Я самый зрелищный боец. <span class="s-3__step-three__quote--change"> Могу финтить, бить,
+                    <div class="s-3__step-three__quote">Я самый зрелищный боец. <span
+                            class="s-3__step-three__quote--change"> Могу финтить, бить,
                             отбирать и обмануть самого проницательного судью. А если я проиграю, то тебя уничтожат мои
                             фанаты.</span>
                     </div>
-                    <div data-href="#s2" class="yellow-border-button s-3__step-three__rules-button section__changer-anchor" data-letter="Р">Редактировать
+                    <div data-href="#s2"
+                         class="yellow-border-button s-3__step-three__rules-button section__changer-anchor"
+                         data-letter="Р">Редактировать
                     </div>
                     <div data-href="#s4" class="s-3__step-three__next-btn yellow-border-button section__changer-anchor"
                          data-letter="Б"><span
@@ -1155,12 +1169,253 @@
 
         <section id="s5" class="s-5 scroll-screen hidden" data-section-name="Правила и<br>призы">
             <div data-href="" class="s__back section__changer-anchor" data-letter=""></div>
-            <div class="s-4__logo">
-                <img src="img/GOS-logo.png" alt="logo">
+            <div class="s-5__logo">
+                <img src="img/title-img-section-6.png" alt="">
             </div>
-            <h4 class="s-4__title">
+            <h4 class="s-5__title">
                 200 крутейших призов и новый iPhone уже ждут Вас!
             </h4>
+            <div class="s-5__content s-5__content-first">
+                <div class="s-5__content__how-win">
+                    <div class="s-5__content__how-win-first">
+                        <div class="s-5__how-win__title">Чтобы выиграть один
+                            <br>из призов нужно:
+                        </div>
+                        <div class="s-5__how-win__images">
+                            <div class="s-5__how-win__img-container">
+                                <img class="s-5__how-win__img" src="img/sec-6-prize-1-img.png" alt="">
+                                <p class="s-5__how-win__text title">100 шт.</p>
+                                <p class="s-5__how-win__text">PowerBank</p>
+                            </div>
+                            <div class="s-5__how-win__img-container">
+                                <img class="s-5__how-win__img" src="img/sec-6-prize-2-img.png" alt="">
+                                <p class="s-5__how-win__text title">100 шт.</p>
+                                <p class="s-5__how-win__text">Бонус 500 грн
+                                    <br>на счет</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="s-5__content__how-win-second">
+                        <div class="s-5__how-win__title-big">Чтобы выиграть <span>iphone 8 plus</span></div>
+                        <div class="s-5__how-win__text-big">Выполните все описанные требования, но
+                            <br>на третьем шаге сделайте следующее:
+                        </div>
+                        <div class="s-5__how-win__images">
+                            <div class="s-5__how-win__img-container">
+                                <img class="s-5__how-win__img-big" src="img/sec-6-prize-3-img.png" alt="">
+                                <p class="s-5__how-win__text title">3 штуки</p>
+                                <p class="s-5__how-win__text white">iPhone 8 plus</p>
+                                <p class="s-5__how-win__text gray">Space gray (64gb)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="s-5__content__steps">
+                    <div class="s-5__content__steps-first">
+                        <div class="s-5__step s-5__step-one">
+                            <p class="s-5__step-letter">1</p>
+                            <p class="s-5__step-title">Выбор</p>
+                            <p class="s-5__step-text">Выбрать своего персонажа</p>
+                        </div>
+                        <div class="s-5__step s-5__step-two">
+                            <p class="s-5__step-letter">2</p>
+                            <p class="s-5__step-title">Фото</p>
+                            <p class="s-5__step-text">Загрузить в него
+                                <br>свое фото</p>
+                        </div>
+                        <div class="s-5__step s-5__step-three">
+                            <p class="s-5__step-letter">3</p>
+                            <p class="s-5__step-title">Регистрация</p>
+                            <p class="s-5__step-text">Ввести регистрационные
+                                данные в личном кабинете:
+                                имя, фамилию и e-mail</p>
+                        </div>
+                        <div class="s-5__step s-5__step-four">
+                            <p class="s-5__step-letter">4</p>
+                            <p class="s-5__step-title">Подтверждение</p>
+                            <p class="s-5__step-text">Перейти в почтовый ящик и
+                                подтвердить свой e-mail</p>
+                        </div>
+                        <div class="s-5__step s-5__step-five">
+                            <p class="s-5__step-letter">5</p>
+                            <p class="s-5__step-title">Ожидание</p>
+                            <p class="s-5__step-text">Ждать оглашения
+                                победителей на данной странице</p>
+                        </div>
+                    </div>
+                    <div class="s-5__content__steps-second">
+                        <div class="s-5__step s-5__step-one">
+                            <p class="s-5__step-letter">1</p>
+                            <p class="s-5__step-title">Мобильная версия</p>
+                            <p class="s-5__step-text">Зайдите на мобильную версию сайта Пари-Матч или скачайте
+                                приложение
+                                Пари-Матч</p>
+                        </div>
+                        <div class="s-5__step s-5__step-two">
+                            <p class="s-5__step-letter">2</p>
+                            <p class="s-5__step-title">Авторизация</p>
+                            <p class="s-5__step-text">Зарегистрируйтесь или войдите в свой профиль Пари-Матч</p>
+                        </div>
+                        <div class="s-5__step s-5__step-three">
+                            <p class="s-5__step-letter">3</p>
+                            <p class="s-5__step-title">Ставка</p>
+                            <p class="s-5__step-text">Сделайте любую ставку
+                                <br><span>от 50 грн с мобильного</span></p>
+                        </div>
+                        <div class="s-5__step s-5__step-four">
+                            <p class="s-5__step-letter">4</p>
+                            <p class="s-5__step-title">Данные</p>
+                            <p class="s-5__step-text">Введите номер мобильного счета и номер ставки в личном кабинете
+                                Game of Sports</p>
+                        </div>
+                        <div class="s-5__step s-5__step-five">
+                            <p class="s-5__step-letter">5</p>
+                            <p class="s-5__step-title">iPhone 8 Plus</p>
+                            <p class="s-5__step-text">Ждите оглашения результатов — совсем скоро новенький iPhone 8 Plus
+                                может стать Вашим!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="s-5__button yellow-border-button" data-letter="П"><span
+                    class="before"></span>Подробные условия<span class="after"></span></div>
+        </section>
+
+
+        <section id="s6" class="s-6 scroll-screen hidden" data-section-name="Выиграть<br>iPhone 8+">
+            <div data-href="" class="s__back section__changer-anchor" data-letter=""></div>
+            <div class="s-6__logo">
+                <img src="img/title-img-section-7.png" alt="">
+            </div>
+            <h4 class="s-6__title">
+                Оцените удобство мобильной версии сайта или приложения Пари-Матч и получите iPhone 8 plus
+            </h4>
+            <div class="s-6__mobile-container">
+                <div class="s-6__mobile s-6__mobile-left">
+                    <div class="s-6__mobile-title">Делать ставки Легко!</div>
+                    <ul class="s-6__info-list">
+                        <li class="s-6__info-list__item s-6__info-list__item--click active">
+                            <span class="number">1</span><span class="line"></span><span class="circle"></span>
+                            <div class="s-6__info-list__item-active">
+                                <div class="s-6__info-list__item-text">
+                                    <span>Зайдите</span> на свой игровой счет или <span>зарегистрируйтесь</span>
+                                </div>
+                                <div class="s-6__info-list__circle-number">
+                                    1
+                                </div>
+                            </div>
+                        </li>
+                        <li class="s-6__info-list__item s-6__info-list__item--click">
+                            <span class="number">2</span><span class="line"></span><span class="circle"></span>
+                            <div class="s-6__info-list__item-active">
+                                <div class="s-6__info-list__item-text">
+                                    Выберите желаемый <span>исход матча</span> и кликните на <span>коэффициент</span>
+                                </div>
+                                <div class="s-6__info-list__circle-number">
+                                    2
+                                </div>
+                            </div>
+                        </li>
+                        <li class="s-6__info-list__item s-6__info-list__item--click">
+                            <span class="number">3</span><span class="line"></span><span class="circle"></span>
+                            <div class="s-6__info-list__item-active">
+                                <div class="s-6__info-list__item-text">
+                                    В меню Купон выберите тип ставок,
+                                    введите сумму ставки и нажмите на
+                                    кнопку <span>“Сделать ставку”</span>
+                                </div>
+                                <div class="s-6__info-list__circle-number">
+                                    3
+                                </div>
+                            </div>
+                        </li>
+                        <li class="s-6__info-list__item s-6__info-list__item--click">
+                            <span class="number">4</span><span class="line"></span><span class="circle"></span>
+                            <div class="s-6__info-list__item-active">
+                                <div class="s-6__info-list__item-text">
+                                    Скопируйте <span>номер счета</span> (отправляется на почту при регистрации) и
+                                    <span>номер ставки</span> (можно узнать в «истории ставок»)
+                                </div>
+                                <div class="s-6__info-list__circle-number">
+                                    4
+                                </div>
+                            </div>
+                        </li>
+                        <li class="s-6__info-list__item s-6__info-list__item--click">
+                            <span class="number">5</span><span class="line"></span><span class="circle"></span>
+                            <div class="s-6__info-list__item-active">
+                                <div class="s-6__info-list__item-text">
+                                    Создайте своего персонажа в Game of Sports, вставьте номер ставки и счета в
+                                    соответствующие поля и выиграйте
+                                    <span>iPhone 8+</span>!
+                                </div>
+                                <div class="s-6__info-list__circle-number">
+                                    5
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="s-6__mobile s-6__mobile-middle">
+                    <div class="s-6__mobile-iphone__img">
+                        <div class="s-6__mobile-iphone__bg-changer" data-bg="1"></div>
+                    </div>
+                </div>
+                <div class="s-6__mobile s-6__mobile-right">
+                    <div class="s-6__mobile-title">преимущества
+                        <br><span>мобильной версии</span>
+                    </div>
+                    <ul class="s-6__list">
+                        <li class="s-6__list-item">Удобный интерфейс</li>
+                        <li class="s-6__list-item">Ставки Live и BetGames</li>
+                        <li class="s-6__list-item">Бонус+ на экспресс</li>
+                        <li class="s-6__list-item">Доступна услуга CashOut</li>
+                    </ul>
+                    <div class="s-6__mobile-title">приложения и mobile:</span></div>
+                    <div class="s-6__step-two__apps">
+                        <div class="s-6__step-two__app s-6__step-two__app-mobile"
+                             onclick="window.open('https://someapp.com/asdads.exe', '_blank');">
+                            <svg version="1.1" id="mobile-ic" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 38 38" style="enable-background:new 0 0 38 38;" xml:space="preserve">
+                            <path style="opacity:0.2;fill:#6C8CBA;" d="M26.5,1.3H11.5C10.1,1.3,9,2.4,9,3.8v30.3c0,1.4,1.2,2.6,2.6,2.6h14.9
+                                c1.4,0,2.6-1.2,2.6-2.6V3.8C29,2.4,27.9,1.3,26.5,1.3L26.5,1.3z M15.3,2.8h7.4c0.2,0,0.3,0.3,0.3,0.6c0,0.3-0.2,0.6-0.3,0.6h-7.4
+                                c-0.2,0-0.3-0.3-0.3-0.6C15,3.1,15.1,2.8,15.3,2.8L15.3,2.8z M19,34.2c-0.9,0-1.7-0.7-1.7-1.6c0-0.9,0.7-1.6,1.7-1.6
+                                c0.9,0,1.6,0.7,1.6,1.6C20.6,33.5,19.9,34.2,19,34.2L19,34.2z M27.1,28.5H10.9V5.6h16.2V28.5z M27.1,28.5"></path>
+                            </svg>
+                            <span>Mobile</span>
+                        </div>
+                        <div class="s-6__step-two__app s-6__step-two__app-ios"
+                             onclick="window.open('https://someapp.com/asdads.exe', '_blank');">
+                            <svg version="1.1" id="ios-ic" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 38 38" style="enable-background:new 0 0 38 38;" xml:space="preserve">
+                            <path style="opacity:0.1;fill:#6CADBC;" d="M30.7,14c-1.5-1.9-3.6-3.1-5.6-3.1c-2.7,0-3.7,1.3-5.6,1.3s-3.3-1.3-5.6-1.3
+                                s-4.7,1.4-6.1,3.9c-2.1,3.4-1.8,9.9,1.7,15.4c1.3,1.9,2.9,4.2,5.1,4.2c1.9,0,2.5-1.3,5.1-1.3s3.1,1.3,5,1.3c2.1,0,3.9-2.5,5.1-4.4
+                                c0.9-1.4,1.2-2.1,1.9-3.7C26.5,24.2,25.7,16.8,30.7,14z M23,8.6c0.9-1.3,1.7-3.1,1.4-4.9c-1.6,0.1-3.4,1.1-4.5,2.5
+                                c-1,1.3-1.8,3.1-1.5,4.9C20.2,11.1,22,10,23,8.6z"></path>
+                            </svg>
+                            <span>iOS</span>
+                        </div>
+                        <div class="s-6__step-two__app s-6__step-two__app-android"
+                             onclick="window.open('https://someapp.com/asdads.exe', '_blank');">
+                            <svg version="1.1" id="android-ic" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 38 38" style="enable-background:new 0 0 38 38;" xml:space="preserve">
+                            <path style="opacity:0.1;fill:#2DD671;" d="M14.3,8.4c0.2,0,0.4-0.1,0.6-0.3c0.2-0.2,0.3-0.4,0.3-0.6c0-0.2-0.1-0.4-0.3-0.6
+                                c-0.2-0.2-0.4-0.3-0.6-0.3S13.9,6.8,13.7,7s-0.2,0.4-0.2,0.6c0,0.2,0.1,0.4,0.2,0.6S14.1,8.4,14.3,8.4z M23.7,8.4
+                                c0.2,0,0.4-0.1,0.6-0.3s0.2-0.4,0.2-0.6c0-0.2-0.1-0.4-0.2-0.6s-0.4-0.3-0.6-0.3S23.2,6.8,23.1,7s-0.3,0.4-0.3,0.6
+                                c0,0.2,0.1,0.4,0.3,0.6S23.4,8.4,23.7,8.4z M5.7,12.5c0.6,0,1.2,0.2,1.6,0.7c0.4,0.4,0.7,1,0.7,1.6v9.5c0,0.6-0.2,1.2-0.7,1.6
+                                c-0.4,0.4-1,0.7-1.6,0.7s-1.2-0.2-1.6-0.7c-0.4-0.4-0.7-1-0.7-1.6v-9.5c0-0.6,0.2-1.2,0.7-1.6C4.5,12.7,5.1,12.5,5.7,12.5z
+                                 M29.2,12.9v14.7c0,0.7-0.2,1.3-0.7,1.7s-1,0.7-1.7,0.7h-1.7v5c0,0.6-0.2,1.2-0.7,1.6c-0.4,0.4-1,0.7-1.6,0.7s-1.2-0.2-1.6-0.7
+                                c-0.4-0.4-0.7-1-0.7-1.6v-5h-3.1v5c0,0.6-0.2,1.2-0.7,1.6c-0.4,0.4-1,0.7-1.6,0.7c-0.6,0-1.2-0.2-1.6-0.7c-0.4-0.4-0.7-1-0.7-1.6
+                                l0-5h-1.6c-0.7,0-1.3-0.2-1.7-0.7c-0.5-0.5-0.7-1-0.7-1.7V12.9H29.2z M24,4c1.6,0.8,2.8,1.9,3.8,3.4c0.9,1.5,1.4,3,1.4,4.8H8.8
+                                c0-1.7,0.5-3.3,1.4-4.8C11.1,5.9,12.4,4.8,14,4l-1.6-2.9c-0.1-0.2-0.1-0.3,0.1-0.4c0.2-0.1,0.3,0,0.4,0.1l1.6,2.9
+                                C16,3.1,17.4,2.8,19,2.8s3,0.3,4.4,0.9L25,0.8c0.1-0.2,0.3-0.2,0.4-0.1c0.2,0.1,0.2,0.3,0.1,0.4L24,4z M34.6,14.8v9.5
+                                c0,0.6-0.2,1.2-0.7,1.6c-0.4,0.4-1,0.7-1.6,0.7c-0.6,0-1.2-0.2-1.6-0.7c-0.4-0.4-0.7-1-0.7-1.6v-9.5c0-0.6,0.2-1.2,0.7-1.6
+                                s1-0.7,1.6-0.7c0.6,0,1.2,0.2,1.6,0.7C34.4,13.6,34.6,14.1,34.6,14.8z"></path>
+                            </svg>
+                            <span>ANDROID</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-href="#s1" class="s-6__button yellow-border-button section__changer-anchor" data-letter="Н"><span
+                    class="before"></span>Начать<span class="after"></span></div>
         </section>
         <div class="section-changer">
             <video class="section-changer__video" poster="img/smoke-anim-poster.jpg">
@@ -1261,9 +1516,8 @@
         </div>
     </a>
     <div class="default-block__text-container">
-        <div class="text1">СуперНокаут: Головкин — Альварес</div>
-        <div class="text2">Всё, что нужно знать про бой 16 сентября: сравнение Головкина и Альвареса, пояса на кону,
-            лучшие нокауты, где смотреть, суперсила GGG и призы от Пари-Матч
+        <div class="text1">PM GOS</div>
+        <div class="text2">PM GOS TEXT
         </div>
     </div>
     <a href="https://www.parimatch.kz/reg_bonus.html" target="_blank">
