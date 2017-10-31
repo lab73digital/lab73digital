@@ -470,44 +470,47 @@ $(document).ready(function () {
         //$('.drop-shadow_here').addClass('shadow-puzzles');
 
 
-        var puzzleTweenKilled = false;
+        var puzzleTweenKilledRed = false;
+        var puzzleTweenKilledBlue = false;
+        var puzzleTweenKilledViolet = false;
+        var puzzleTweenKilledYellow = false;
         $('#red-2').on('click', function () {
             puzzleTweenRed.kill();
-            puzzleTweenKilled = true;
+            puzzleTweenKilledRed = true;
         }).on('mouseenter', function () {
             puzzleTweenRed.paused(true);
         }).on('mouseleave', function () {
-            if (!puzzleTweenKilled) {
+            if (!puzzleTweenKilledRed) {
                 puzzleTweenRed.paused(false);
             }
         });
         $('#violet-1').on('click', function () {
             puzzleTweenViolet.kill();
-            puzzleTweenKilled = true;
+            puzzleTweenKilledViolet = true;
         }).on('mouseenter', function () {
             puzzleTweenViolet.paused(true);
         }).on('mouseleave', function () {
-            if (!puzzleTweenKilled) {
+            if (!puzzleTweenKilledViolet) {
                 puzzleTweenViolet.paused(false);
             }
         });
         $('#blue-4').on('click', function () {
             puzzleTweenBlue.kill();
-            puzzleTweenKilled = true;
+            puzzleTweenKilledBlue = true;
         }).on('mouseenter', function () {
             puzzleTweenBlue.paused(true);
         }).on('mouseleave', function () {
-            if (!puzzleTweenKilled) {
+            if (!puzzleTweenKilledBlue) {
                 puzzleTweenBlue.paused(false);
             }
         });
         $('#yelloow-3').on('click', function () {
             puzzleTweenYellow.kill();
-            puzzleTweenKilled = true;
+            puzzleTweenKilledYellow = true;
         }).on('mouseenter', function () {
             puzzleTweenYellow.paused(true);
         }).on('mouseleave', function () {
-            if (!puzzleTweenKilled) {
+            if (!puzzleTweenKilledYellow) {
                 puzzleTweenYellow.paused(false);
             }
         });
@@ -533,6 +536,7 @@ $(document).ready(function () {
 
     function scrollHead() {
         $('svg').css('pointer-events', 'none');
+        console.log('pointer-events nooooooone');
         $(window).on('scroll', function () {
             if (scrolledToBottom) {
                 //scrolledToBottom = false;
@@ -633,7 +637,7 @@ $(document).ready(function () {
         });
     }
 
-    scrollHead();
+    //scrollHead();
 
 
     function headPuzzleFistCheck() {
@@ -648,6 +652,7 @@ $(document).ready(function () {
                         opacity: 0,
                         display: 'none',
                         onComplete: function () {
+                            scrollHead();
                             new TimelineMax().set(goto,
                                 {display: 'block'}).fromTo(goto, 1,
                                 {ease: Power1.easeInOut, opacity: 0, y: $(window).height() + 'px'},
