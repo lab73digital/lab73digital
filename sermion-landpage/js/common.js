@@ -481,7 +481,9 @@ $(document).ready(function () {
             puzzleTweenRed.paused(true);
         }).on('mouseleave', function () {
             if (!puzzleTweenKilledRed) {
-                puzzleTweenRed.paused(false);
+                if (!$('.sermion-page:visible').length) {
+                    puzzleTweenRed.paused(false);
+                }
             }
         });
         $('#violet-1').on('click', function () {
@@ -491,7 +493,9 @@ $(document).ready(function () {
             puzzleTweenViolet.paused(true);
         }).on('mouseleave', function () {
             if (!puzzleTweenKilledViolet) {
-                puzzleTweenViolet.paused(false);
+                if (!$('.sermion-page:visible').length) {
+                    puzzleTweenViolet.paused(false);
+                }
             }
         });
         $('#blue-4').on('click', function () {
@@ -501,7 +505,9 @@ $(document).ready(function () {
             puzzleTweenBlue.paused(true);
         }).on('mouseleave', function () {
             if (!puzzleTweenKilledBlue) {
-                puzzleTweenBlue.paused(false);
+                if (!$('.sermion-page:visible').length) {
+                    puzzleTweenBlue.paused(false);
+                }
             }
         });
         $('#yelloow-3').on('click', function () {
@@ -511,7 +517,9 @@ $(document).ready(function () {
             puzzleTweenYellow.paused(true);
         }).on('mouseleave', function () {
             if (!puzzleTweenKilledYellow) {
-                puzzleTweenYellow.paused(false);
+                if (!$('.sermion-page:visible').length) {
+                    puzzleTweenYellow.paused(false);
+                }
             }
         });
     }
