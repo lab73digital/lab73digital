@@ -1501,9 +1501,7 @@ function sectionMount(element) {
         s2Tutorial3.hideOverlay();
         s2Tutorial1.init();
     } else {
-        $(function () {
-            Webcam.reset();
-        });
+        Webcam.reset();
     }
     if ($(element).hasClass('s-3')) {
         $('.static-block__mobile-iphone, .static-block__bonus').addClass('hidden');
@@ -1844,7 +1842,7 @@ function getProfile(callback) {
         ease: Power1.easeInOut,
         onComplete: function () {
             $.ajax({
-                url: 'http://mobile.timetowork.xyz/getcard.php',
+                url: 'getcard.php',
                 type: 'POST',
                 data: {q: data},
                 dataType: 'json',
@@ -1971,7 +1969,7 @@ function getCards(page) {
         ease: Power1.easeInOut,
         onComplete: function () {
             $.ajax({
-                url: 'http://mobile.timetowork.xyz/getcards.php',
+                url: 'getcards.php',
                 type: 'POST',
                 data: {q: data},
                 dataType: 'json',
@@ -2187,7 +2185,7 @@ function sendProfile() {
         ease: Power1.easeInOut,
         onComplete: function () {
             $.ajax({
-                url: 'http://mobile.timetowork.xyz/reg.php',
+                url: 'reg.php',
                 type: 'POST',
                 data: {q: data},
                 dataType: 'json',
@@ -2263,7 +2261,7 @@ function authProfile(email, socId, password) {
     }
     data = JSON.stringify(data);
     $.ajax({
-        url: 'http://mobile.timetowork.xyz/auth.php',
+        url: 'auth.php',
         type: 'POST',
         data: {q: data},
         dataType: 'json',
@@ -2299,7 +2297,7 @@ function editBetAccNumbers(accnum, betnum) {
     $('#s-3__BN-right-two').val(betnum);
     data = JSON.stringify(data);
     $.ajax({
-        url: 'http://mobile.timetowork.xyz/edit.php',
+        url: 'edit.php',
         type: 'POST',
         data: {q: data},
         dataType: 'json',
@@ -2327,7 +2325,7 @@ function pchange() {
     };
     data = JSON.stringify(data);
     $.ajax({
-        url: 'http://mobile.timetowork.xyz/pchange.php',
+        url: 'pchange.php',
         type: 'POST',
         data: {q: data},
         dataType: 'json',
@@ -2350,7 +2348,7 @@ function ptext() {
     };
     data = JSON.stringify(data);
     $.ajax({
-        url: 'http://mobile.timetowork.xyz/pchange.php',
+        url: 'pchange.php',
         type: 'POST',
         data: {q: data},
         dataType: 'json',

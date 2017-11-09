@@ -27,50 +27,6 @@ window.fbAsyncInit = function() {
     });
 
 };
-function _detectPhone(phone, desktop) {
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-        if (phone) {
-            phone();
-        }
-        return true
-    } else {
-        if (desktop) {
-            desktop();
-        }
-        return false
-    }
-}
-function _detectApple() {
-    if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-        document.querySelector('html').classList.add('ios-mobile');
-        return true
-    } else {
-        return false
-    }
-}
-function _detectiPad() {
-    if (/iPad/i.test(navigator.userAgent)) {
-        document.querySelector('body').classList.add('ipad');
-        return true
-    } else {
-        return false
-    }
-}
-function _detectiPhone() {
-    if (/iPhone/i.test(navigator.userAgent)) {
-        document.querySelector('body').classList.add('iphone');
-        return true
-    } else {
-        return false
-    }
-}
-function _detectSafari() {
-    if (/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
-        return true
-    } else {
-        return false
-    }
-}
 function orientationChanger(){
     screenHeight = screen.height;
     screenWidth = screen.width;

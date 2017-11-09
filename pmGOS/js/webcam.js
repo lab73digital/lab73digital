@@ -467,7 +467,7 @@ var Webcam = {
 		if (this.preview_active) this.unfreeze();
 		
 		// attempt to fix issue #64
-		// this.unflip();
+		this.unflip();
 		
 		if (this.userMedia) {
 			if (this.stream) {
