@@ -134,17 +134,17 @@ $(document).ready(function () {
         }
     }
 
-    $('#addTask').on('click', function () {
+    $('#addTask').on('click', function (e) {
+        e.preventDefault();
         addNewTask(); //to display new task at this session
-        //addNewTaskToLS(); //to display new task at the next sessions from localStorage
-
         var newTask = $('#newTask').val();
         pushTaskToArray(newTask);
+        $('#newTask').val('');
     });
 
     $('#deleteAll').on('click', function () {
         localStorage.clear();
-        $('.task-item').css('display','none');
+        $('[class *= "item"]').css('display','none');
     });
 
     $(document).on('click', '.task-item', function CheckTask() {
