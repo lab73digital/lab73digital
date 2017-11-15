@@ -41,8 +41,8 @@ $(document).ready(function () {
         if (getTasksJSON) {
             var tasksArr = JSON.parse(getTasksJSON);
             for (var i = 0; i <= tasksArr.length; i++) {
-                var formatedTask = $('<p class="done-task-item"></p>').text(tasksArr[i]);
-                $('.done-tasks').after(formatedTask);
+                var formatedTask = $('<p class="task-item_checked"></p>').text(tasksArr[i]);
+                $('.start-of_list').after(formatedTask);
             }
         }
     }
@@ -53,7 +53,7 @@ $(document).ready(function () {
             var tasksArr = JSON.parse(getTasksJSON);
             for (var i = 0; i <= tasksArr.length; i++) {
                 var formatedTask = $('<p class="deleted-task-item"></p>').text(tasksArr[i]);
-                $('.deleted-tasks').after(formatedTask);
+                $('.start-of_list').after(formatedTask);
             }
         }
     }
@@ -134,12 +134,41 @@ $(document).ready(function () {
         }
     }
 
+    function whatToDisplay() {
+        switch ($('#tasksToDisplay option:selected').val()) {
+            case 'showAll':
+                $('[class *= "item"]').css('display', 'block');
+                $('.start-of_list').text('All your tasks:');
+                break;
+            case 'showActive':
+                $('[class *= "item"]').css('display', 'none');
+                $('.task-item').css('display', 'block');
+                $('.start-of_list').text('Your active tasks:');
+                break;
+            case 'showDone':
+                $('[class *= "item"]').css('display', 'none');
+                $('.task-item_checked').css('display', 'block');
+                $('.start-of_list').text('Your done tasks:');
+                break;
+            case 'showDeleted':
+                $('[class *= "item"]').css('display', 'none');
+                $('.deleted-task-item').css('display', 'block');
+                $('.start-of_list').text('Your deleted tasks:');
+                break;
+            default:
+                $('[class *= "item"]').css('display', 'none');
+        }
+    }
+
     $('#addTask').on('click', function (e) {
         e.preventDefault();
         addNewTask(); //to display new task at this session
         var newTask = $('#newTask').val();
-        pushTaskToArray(newTask);
-        $('#newTask').val('');
+        if (newTask) {
+            pushTaskToArray(newTask);
+            $('#newTask').val('');
+            whatToDisplay();
+        }
     });
 
     $('#deleteAll').on('click', function () {
@@ -153,14 +182,32 @@ $(document).ready(function () {
         var newDoneTask = $(this).text();
         pushDoneTaskToArray(newDoneTask);
         deleteDoneTaskFromArray(newDoneTask);
-
+        whatToDisplay();
     });
 
     $(document).on('dblclick', '.task-item_checked', function RemoveTask() {
-        $(this).addClass('task-item_deleted');
+        $(this).addClass('deleted-task-item');
+        $(this).removeClass('task-item_checked');
         var newDeletedTask = $(this).text();
         pushDeletedTaskToArray(newDeletedTask);
         deleteDeletedTaskFromArray(newDeletedTask);
+        whatToDisplay();
     });
 
+    $(document).on('click', '.deleteSelected', function RemoveSelectedTasks() {
+        var eqCounter = $('.task-item_checked').length;
+        for (var i = 0; i <= eqCounter; i++) {
+            var newDeletedTask = $('.task-item_checked').eq(i).text();
+            pushDeletedTaskToArray(newDeletedTask);
+            deleteDeletedTaskFromArray(newDeletedTask);
+        }
+        $('.task-item_checked').css('display','none').removeClass('task-item_checked');
+        whatToDisplay();
+    });
+
+    $('[class *= "item"]').css('display', 'none');
+    $('.task-item').css('display', 'block');
+    $(document).on('click', '#tasksToDisplay', function () {
+        whatToDisplay();
+    });
 });

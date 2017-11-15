@@ -5,7 +5,7 @@
 
     <meta charset="utf-8">
 
-    <title>title</title>
+    <title>To Do List</title>
     <meta name="description"
           content="">
     <meta name="keywords"
@@ -27,10 +27,9 @@
 
     <meta property="og:site_name" content="">
 
-    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+
 
     <link rel="stylesheet" href="css/main.min.css">
-    <link rel="stylesheet" type="text/css" href="css/main.ie.min.css" />
     <!-- Chrome, Firefox OS and Opera -->
     <meta name="theme-color" content="#000000">
     <!-- Windows Phone -->
@@ -43,10 +42,18 @@
 
 <h1>ToDo List</h1>
 
+<form>
+    <select name="tasksToDisplay" id="tasksToDisplay">
+    <option value="showAll">Show all</option>
+    <option value="showActive" selected>Show active</option>
+    <option value="showDone">Show done</option>
+    <option value="showDeleted">Show deleted</option>
+    </select>
+</form>
 
     <div class="todo">
 
-        <p class="start-of_list">Your tasks:</p>
+        <p class="start-of_list">Your active tasks:</p>
 
     </div>
 
@@ -60,14 +67,18 @@
             <button id="addTask" style="width: 100%; font-size: 2vw">Add task</button>
             <br><br>
             <button id="deleteAll">Delete all tasks</button>
+            <button id="deleteSelected" class="deleteSelected">Delete selected</button>
         </form>
     </div>
 
 <br>
 
-<p class="done-tasks">Done tasks:</p>
+<p class="done-tasks" style="display: none">Done tasks:</p>
 
-<p class="deleted-tasks">Deleted tasks:</p>
+<p class="deleted-tasks" style="display: none">Deleted tasks:</p>
+
+<p style="font-size: 14px">* Click one time on a task to mark it as done</p>
+<p style="font-size: 14px">* Double click on a done-task to delete it</p>
 
 <script src="js/scripts.min.js"></script>
 <script src="js/common.js"></script>
