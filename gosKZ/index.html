@@ -38,7 +38,7 @@
     <!-- iOS Safari -->
     <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
     <meta name="apple-mobile-web-app-capable" content="yes">
-<!--    <script src="https://vk.com/js/api/openapi.js?150" type="text/javascript"></script>-->
+    <script src="https://vk.com/js/api/openapi.js?150" type="text/javascript"></script>
     <script>
         //Feature check browsers for support
         if (document.addEventListener && window.XMLHttpRequest && document.querySelector) {
@@ -62,16 +62,16 @@
                 };
                 //Send AJAX
                 httpRequestFB.send("scrape=true&id=" + encodeURIComponent(url));
-//                VK.Api.call('pages.clearCache', { url: encodeURIComponent(url) }, function (data) {
-//                    if (data.response) {
-//                        var url_string = window.location.href;
-//                        var urlHref = new URL(String(url_string));
-//                        var c = urlHref.searchParams.get("img");
-//                        if (c !== null) {
-//                            window.history.pushState("", "", location.pathname);
-//                        }
-//                    }
-//                });
+               VK.Api.call('pages.clearCache', { url: encodeURIComponent(url) }, function (data) {
+                   if (data.response) {
+                       var url_string = window.location.href;
+                       var urlHref = new URL(String(url_string));
+                       var c = urlHref.searchParams.get("img");
+                       if (c !== null) {
+                           window.history.pushState("", "", location.pathname);
+                       }
+                   }
+               });
             });
         }
     </script>
