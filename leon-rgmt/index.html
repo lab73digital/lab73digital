@@ -60,7 +60,7 @@
         <div class="main__line main__line-fourth"></div>
     </div>
     <section id="s1" class="main__section main__s1 s-1">
-        <div class="s-1__logo-svg">
+        <div class="s-1__logo-svg" onclick="window.open('https://www.leon.ru/registration?wm=3017361', '_blank')">
             <svg version="1.1" class="s-1__leon-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 354 120" style="enable-background:new 0 0 354 120;" xml:space="preserve">
             <g id="logo_6_">
@@ -1212,7 +1212,7 @@
 				</svg>
                 <h4 class="s-2__stages-title">Зарегистрируйся</h4>
                 <p class="s-2__stages-text">После выбора своего фаворита, ты должен зарегистрироваться или войти в
-                    аккаунт <span class="c-yellow">Leon.ru</span>, чтобы мы могли связаться
+                    аккаунт <span class="c-yellow curp" onclick="window.open('https://www.leon.ru/registration?wm=3017361', '_blank')">Leon.ru</span>, чтобы мы могли связаться
                     с тобой в случае победы.</p>
             </div>
             <div class="s-2__stages-item s-2__stages-item-third">
@@ -1415,7 +1415,7 @@
     </section>
 </main>
 <footer class="footer">
-    <svg xmlns="http://www.w3.org/2000/svg" class="footer__svg" viewBox="0 0 566.93 109.79">
+    <svg xmlns="http://www.w3.org/2000/svg" class="footer__svg" viewBox="0 0 566.93 109.79" onclick="window.open('https://www.leon.ru/registration?wm=3017361', '_blank')">
         <path fill="rgb(255,255,255)"
               d="M252 .5a61.8 61.8 0 0 1 16.5 0c4.6 8.4 8.8 17 13.5 25 8.7 2 17.6 3.2 26.3 5h.3a55.7 55.7 0 0 1 5 16.4l-18 19.6c.8 9 2.4 17.7 3 26.6a50 50 0 0 1-14 10.4c-8.3-4-16.6-7.8-25-11.7-8.2 4-16.6 7.8-25 12a59.7 59.7 0 0 1-13.2-9.4c1-9.4 2.2-18.7 3.3-28-6.5-7-13-13.8-19.5-20.5A53 53 0 0 1 210 31c9.5-1.7 19-3.5 28.5-5.6L252 .5z"/>
         <path fill="rgb(226,6,19)"
@@ -1707,7 +1707,7 @@
                             <label class="registration__sign-up__label" for="registration__sign-up__phone">Номер
                                 телефона</label>
                             <input id="registration__sign-up__phone" class="registration__sign-up__input" type="tel"
-                                   placeholder="+7 (XX) XX XX XXX" autocomplete="off" required>
+                                   placeholder="+7 (XXX) XX XX XXX" title="Формат ввода +7 (XXX) XX XX XXX" autocomplete="off" required>
                         </div>
                         <div class="registration__sign-up__input-container">
                             <label class="registration__sign-up__label" for="registration__sign-up__mail">E-mail</label>
@@ -1717,7 +1717,7 @@
                     </div>
                     <div class="registration__sign-up__checkbox"><input id="registration__sign-up__checkbox"
                                                                         class="registration__sign-up__checkbox-input"
-                                                                        type="checkbox"><span><label
+                                                                        type="checkbox" required><span><label
                             for="registration__sign-up__checkbox">Мне есть 18 лет
 											и я согласен с</label>&nbsp;<span
                             class="registration__sign-up__checkbox-rules">правилами конкурса</span></span></div>
@@ -2190,6 +2190,7 @@
 	<span class="menu-line menu-line__bottom"></span>
 </div>
 <script src="js/jquery.min.js"></script>
+<script src="js/jquery.mask.min.js"></script>
 <script src="js/TweenMax.min.js"></script>
 <script src="js/DrawSVGPlugin.min.js"></script>
 <script src="js/ScrollToPlugin.min.js"></script>
