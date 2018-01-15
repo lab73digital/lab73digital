@@ -1,0 +1,1508 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>Game of Sports - выиграйте iPhone X с Пари-Матч</title>
+    <meta name="description"
+          content="Выиграйте iPhone X и другие ценные призы от «Пари-Матч»: выбирайте своего персонажа и участвуйте в противостоянии века Game of Sports!">
+    <meta name="keywords"
+          content="пари-матч, game of sports, iphone x">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta property="og:title"
+          content="Game of Sports – все спортивные баталии теперь в вашем смартфоне. Выбирайте свой спорт и побеждайте!"/>
+    <meta id="meta-description" property="og:description"
+          content="Выиграйте iPhone X и другие ценные призы от «Пари-Матч»: выбирайте персонажа и участвуйте в противостоянии века!">
+    <meta property="og:url" content="https://start.parimatch.kz/mobile">
+    <meta property="og:image" content="https://start.parimatch.kz/mobile/img/GOS-share-all.png"/>
+
+    <!--SHARE-->
+    <meta property="fb:app_id" content="383196115435388" />
+    <meta property="vk:app_id" content="6268070" />
+    <meta property="og:locale" content="kz_KZ">
+    <meta property="og:type" content="website">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <meta property="og:site_name" content="Game of Sports с Пари-Матч - выиграйте iPhone 8 Plus на  iplay.pm">
+    <link rel="stylesheet" href="css/loader.min.css">
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" href="css/main.ie.min.css">
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#000000">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#000000">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!--<script src="https://vk.com/js/api/openapi.js?150" type="text/javascript"></script>-->
+    <script>
+        //Feature check browsers for support
+        if (document.addEventListener && window.XMLHttpRequest && document.querySelector) {
+            //DOM is ready
+            document.addEventListener("DOMContentLoaded", function () {
+                //Default URL to send to Facebook
+                var url = window.location.href;
+                var httpRequestFB = new XMLHttpRequest();
+                httpRequestFB.open("POST", "https://graph.facebook.com", true);
+
+
+                httpRequestFB.onreadystatechange = function (e) {
+                    if (httpRequestFB.readyState === 4) {
+                        var url_string = window.location.href;
+                        var urlHref = new URL(String(url_string));
+                        var c = urlHref.searchParams.get("img");
+                        if (c !== null) {
+                            window.history.pushState("", "", location.pathname);
+                        }
+                    }
+                };
+                //Send AJAX
+                httpRequestFB.send("scrape=true&id=" + encodeURIComponent(url));
+//                VK.Api.call('pages.clearCache', { url: encodeURIComponent(url) }, function (data) {
+//                    if (data.response) {
+//                        var url_string = window.location.href;
+//                        var urlHref = new URL(String(url_string));
+//                        var c = urlHref.searchParams.get("img");
+//                        if (c !== null) {
+//                            window.history.pushState("", "", location.pathname);
+//                        }
+//                    }
+//                });
+            });
+        }
+    </script>
+</head>
+<body class="">
+<div id="fb-root"></div>
+<script async>
+    // Load the SDK asynchronously
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+<div class="preloader">
+    <img class="preloader__bg" src="img/bg-loader.jpg" alt="bg">
+    <img class="preloader__bg-vertical" src="img/bg-big-rotate.jpg" alt="bg">
+    <img class="preloader__logo" src="icons/pm-logo-kz-194x63.svg" alt="logo">
+    <img class="preloader__logo-gos" src="img/GOS-logo.png" alt="logo">
+    <p class="preloader__text">Все виды спорта по своему прекрасны! Каждый из них заставляет переживать невероятные
+        эмоции – кричать от
+        радости победы и плакать от горечи поражения.
+        <br>А что, если все ваши любимые спорстмены сойдутся на одном поле боя? <span>Прямо у Вас на ладони.</span></p>
+    <h5 class="preloader__title">Теперь это возможно! «Пари-Матч» – место всех спортивных баталий!</h5>
+    <h5 class="preloader__title2">Подготовка к бою</h5>
+    <span class="preloader__progress-percent">0%</span>
+    <div class="preloader__progress">
+        <i class="preloader__progress-bar-overlay"></i>
+        <i class="preloader__progress-bar">
+            <span class="preloader__progress-bar__rad-grad"></span>
+        </i>
+    </div>
+</div>
+<div class="landing-container">
+    <div class="background background--changer">
+        <div class="background-item s1">
+            <video class="s1__video" autoplay loop>
+                <source src="video/bg-1-section-f.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="background-item s2"></div>
+        <div class="background-item s3"></div>
+        <div class="background-item s4"></div>
+        <div class="background-item s5"></div>
+        <div class="background-item s6"></div>
+    </div>
+    <main class="main">
+        <section id="s1" class="s-1 scroll-screen hidden" data-section-name="Выбор<br>персонажа">
+            <div data-href="" class="s__back section__changer-anchor" data-letter=""></div>
+            <div class="s-1__logo">
+                <img src="img/GOS-logo.png" alt="logo">
+            </div>
+            <h4 class="s-1__title">
+                Выберите персонажа, который поможет сразиться за iPhone X
+            </h4>
+            <div class="s-1__kod-slider">
+                <div class="s-1__kod-title">
+                    <p class="s-1__kod-title__item basketball active">Баскетбол</p>
+                    <p class="s-1__kod-title__item football">Футбол</p>
+                    <p class="s-1__kod-title__item tennis">Теннис</p>
+                    <p class="s-1__kod-title__item hockey">Хоккей</p>
+                    <p class="s-1__kod-title__item boxing">Бокс</p>
+                    <p class="s-1__kod-title__item cybersport">Киберспорт</p>
+                </div>
+                <div class="s-1__slider-container">
+                    <img class="s-1__slider-container__player basketball position-center"
+                         src="img/players/gg-bask-2.png" alt="">
+                    <img class="s-1__slider-container__player boxing position-right_1" src="img/players/gg-boxing-4.png"
+                         alt="">
+                    <img class="s-1__slider-container__player hockey position-right_2" src="img/players/gg-hockey-3.png"
+                         alt="">
+                    <img class="s-1__slider-container__player cybersport position-none"
+                         src="img/players/gg-cybersport-1.png"
+                         alt="">
+                    <img class="s-1__slider-container__player football position-left_2"
+                         src="img/players/gg-football-5.png"
+                         alt="">
+                    <img class="s-1__slider-container__player tennis position-left_1" src="img/players/gg-tennis-6.png"
+                         alt="">
+                </div>
+                <div class="s-1__player-on-throne">
+                    <div class="s-1__player-on-throne__gradient"></div>
+                    <div class="s-1__player-on-throne__throne"></div>
+                    <img class="s-1__player-on-throne__player basketball active"
+                         data-player="basketball" src="img/players/gg-bask-2-sit.png" alt="" usemap="#player-on-throne">
+                    <img class="s-1__player-on-throne__player boxing"
+                         data-player="boxing" src="img/players/gg-boxing-4-sit.png" alt="" usemap="#player-on-throne">
+                    <img class="s-1__player-on-throne__player hockey"
+                         data-player="hockey" src="img/players/gg-hockey-3-sit.png" alt="" usemap="#player-on-throne">
+                    <img class="s-1__player-on-throne__player cybersport"
+                         data-player="cybersport" src="img/players/gg-cybersport-1-sit.png" alt=""
+                         usemap="#player-on-throne">
+                    <img class="s-1__player-on-throne__player football"
+                         data-player="football" src="img/players/gg-football-5-sit.png" alt=""
+                         usemap="#player-on-throne">
+                    <img class="s-1__player-on-throne__player tennis"
+                         data-player="tennis" src="img/players/gg-tennis-6-sit.png" alt="" usemap="#player-on-throne">
+                    <img class="s-1__player-on-throne__player-hidden basketball"
+                         src="img/basketball/body-block-basketball.png" alt="" data-player="basketball">
+                    <img class="s-1__player-on-throne__player-hidden boxing" src="img/boxing/body-block-boxing.png"
+                         alt="" data-player="boxing">
+                    <img class="s-1__player-on-throne__player-hidden hockey" src="img/hockey/body-block-hockey.png"
+                         alt="" data-player="hockey">
+                    <img class="s-1__player-on-throne__player-hidden cybersport"
+                         src="img/cybersport/body-block-cybersport.png" alt="" data-player="cybersport">
+                    <img class="s-1__player-on-throne__player-hidden football"
+                         src="img/football/body-block-football.png" alt="" data-player="football">
+                    <img class="s-1__player-on-throne__player-hidden tennis" src="img/tennis/body-block-tennis.png"
+                         alt="" data-player="tennis">
+                    <img class="s-1__player-on-throne__player-small"
+                         src="img/basketball/face-block-small-basketball.png" alt="">
+                    <map name="player-on-throne" class="s-1__player-on-throne__map s-1__player-on-throne__player--click"
+                         id="player-on-throne">
+                        <area shape="poly"
+                              coords="195,620,169,619,151,610,134,603,124,595,116,588,106,571,101,563,99,554,99,544,102,534,104,521,115,513,126,492,136,481,142,466,142,455,142,442,149,420,146,413,146,399,145,394,144,388,146,379,144,369,144,360,144,349,143,342,142,336,132,324,116,313,105,304,96,288,94,274,92,267,88,260,94,232,80,228,84,212,100,214,107,204,94,177,107,144,126,120,135,120,139,127,142,130,147,128,159,132,137,106,144,100,157,101,166,115,176,121,174,113,178,104,162,84,169,77,180,80,191,106,204,113,200,90,185,69,191,62,199,64,208,68,208,113,227,99,226,82,214,60,220,55,233,59,237,73,237,90,241,93,247,90,252,87,249,78,245,68,255,56,270,58,276,68,292,62,299,67,301,81,318,77,323,83,324,104,333,99,344,103,343,125,354,119,364,124,374,142,390,170,378,207,384,215,394,211,399,214,402,226,392,255,394,280,369,324,360,354,370,373"/>
+                        <area shape="poly"
+                              coords="110,524,105,515,112,510,121,510,144,459,143,439,147,420,143,405,147,397,144,383,146,371,142,338,131,322,111,312,94,285,95,267,89,259,96,231,87,231,83,225,85,213,93,212,101,214,107,205,94,178,125,119,141,125,149,121,139,109,141,99,165,96,163,83,168,76,186,74,187,65,195,61,214,65,217,56,225,53,242,64,263,53,269,56,277,67,290,62,298,65,307,78,319,77,322,82,326,101,338,99,347,105,348,121,357,119,379,149,388,175,378,204,382,215,391,212,398,212,402,223,389,239,394,259,392,285,383,303,371,315,369,324,362,352,364,360,366,367,370,372,362,412,364,429,361,435,357,441,357,461,361,463,365,468,361,478,367,497,381,518,396,534,399,557,396,590,384,606,358,622,329,637,309,643,247,640,202,637,159,631,130,617,104,591,94,554,100,533"/>
+                    </map>
+                    <div class="section-overlay s-1__overlay">
+                        <div class="overlay-inner"></div>
+                        <div class="section-overlay__text arrow-down s-1__section-overlay__text_1">Листайте вправо для
+                            <br>смены персонажа
+                        </div>
+                        <div class="section-overlay__text arrow-down s-1__section-overlay__text_2">Кликните на героя для
+                            <br>перехода
+                            дальше
+                        </div>
+                        <div class="section-overlay__text arrow-down s-1__section-overlay__text_3">Листайте влево для
+                            <br>смены персонажа
+                        </div>
+                    </div>
+                </div>
+                <div class="s-1__kod-navigation__arrow s-1__kod-navigation__arrow-left s-1__kod-navigation__arrow-left--click">
+                    <svg version="1.1" id="arrow-left" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 68 68" style="enable-background:new 0 0 68 68;" xml:space="preserve">
+                    <polyline style="fill:none;stroke:#FFFFFF;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" points="37,28 31,34
+                        37,40 "/>
+                    </svg>
+                </div>
+                <div class="s-1__kod-navigation__arrow s-1__kod-navigation__arrow-right s-1__kod-navigation__arrow-right--click">
+                    <svg version="1.1" id="arrow-right" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                         y="0px" viewBox="0 0 68 68" style="enable-background:new 0 0 68 68;" xml:space="preserve">
+                    <polyline style="fill:none;stroke:#FFFFFF;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" points="31,28 37,34
+                        31,40 "/>
+                    </svg>
+                </div>
+            </div>
+            <div data-href="#s3" class="s-1__button yellow-border-button section__changer-anchor" data-letter="В"><span
+                    class="before"></span>Выбрать персонажа<span class="after"></span></div>
+        </section>
+
+        <section id="s2" class="s-2 scroll-screen hidden" data-section-name="Редактор">
+            <div data-href="" class="s__back section__changer-anchor" data-letter=""></div>
+            <div class="s-2__logo">
+                <img src="img/text-section-2.png" alt="logo">
+            </div>
+            <h4 class="s-2__title">
+                Объединитесь с персонажем и докажите, что круче всех!
+            </h4>
+            <div class="s-2__kod-title">
+                <p class="s-2__kod-title__item basketball">Баскетбол</p>
+                <p class="s-2__kod-title__item football">Футбол</p>
+                <p class="s-2__kod-title__item tennis">Теннис</p>
+                <p class="s-2__kod-title__item hockey">Хоккей</p>
+                <p class="s-2__kod-title__item boxing">Бокс</p>
+                <p class="s-2__kod-title__item cybersport">Киберспорт</p>
+            </div>
+            <div class="s-2__upload-webcam__container">
+                <div class="s-2__upload-container">
+                    <p class="s-2__text text-right">
+                        <span class="medium">Загрузить</span>
+                        <span class="light">новое фото</span>
+                    </p>
+                    <svg version="1.1" class="s-2__upload" id="Layer_12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+                    <g id="download">
+                        <g id="icon-upload_1_">
+                            <g id="icon-upload">
+                                <g>
+                                    <path class="s-2__svg-path" d="M50.5,69.5c-0.3,0-0.5-0.2-0.5-0.5V20c0-0.3,0.2-0.5,0.5-0.5S51,19.7,51,20v49
+                                        C51,69.3,50.8,69.5,50.5,69.5z"/>
+                                </g>
+                                <g>
+                                    <path class="s-2__svg-path" d="M67,35.6c-0.1,0-0.3,0-0.4-0.1L51.4,20.2c-0.5-0.5-1.3-0.5-1.8,0L34.4,35.5
+                                        c-0.2,0.2-0.5,0.2-0.7,0s-0.2-0.5,0-0.7l15.3-15.3c0.9-0.9,2.3-0.9,3.2,0l15.3,15.3c0.2,0.2,0.2,0.5,0,0.7
+                                        C67.3,35.6,67.1,35.6,67,35.6z"/>
+                                </g>
+                                <g>
+                                    <path class="s-2__svg-path" d="M71.3,81.1H28.7c-0.9,0-1.7-0.8-1.7-1.7V66.1c0-0.3,0.2-0.5,0.5-0.5s0.5,0.2,0.5,0.5v13.3
+                                        c0,0.4,0.3,0.7,0.7,0.7h42.6c0.4,0,0.7-0.3,0.7-0.7V66.1c0-0.3,0.2-0.5,0.5-0.5s0.5,0.2,0.5,0.5v13.3
+                                        C73,80.4,72.2,81.1,71.3,81.1z"/>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                    </svg>
+                </div>
+                <div class="s-2__webcam-container">
+                    <p class="s-2__text s-2__turn-on__webcam text-right">
+                        <span class="medium">Использовать</span>
+                        <span class="light">WEB-КАМЕРУ</span>
+                    </p>
+                    <p class="s-2__text s-2__get-photo-text text-right">
+                        <span class="medium">Сделать снимок</span>
+                    </p>
+                    <svg version="1.1" class="s-2__webcam" id="Layer_13" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+                    <g id="photo">
+                        <g id="icon-camera">
+                            <g>
+                                <path style="fill:#F7D523;" d="M50,78.5c-15.7,0-28.5-12.8-28.5-28.5S34.3,21.5,50,21.5S78.5,34.3,78.5,50S65.7,78.5,50,78.5z
+                                     M50,22.5c-15.2,0-27.5,12.3-27.5,27.5c0,15.2,12.3,27.5,27.5,27.5c15.2,0,27.5-12.3,27.5-27.5C77.5,34.8,65.2,22.5,50,22.5z"/>
+                            </g>
+                            <g>
+                                <path style="fill:#F7D523;" d="M50,62.5c-6.9,0-12.5-5.6-12.5-12.5S43.1,37.5,50,37.5S62.5,43.1,62.5,50S56.9,62.5,50,62.5z
+                                     M50,38.5c-6.3,0-11.5,5.2-11.5,11.5c0,6.3,5.2,11.5,11.5,11.5c6.3,0,11.5-5.2,11.5-11.5C61.5,43.7,56.3,38.5,50,38.5z"/>
+                            </g>
+                            <g>
+                                <path style="fill:#F7D523;" d="M58,50.5c-0.3,0-0.5-0.2-0.5-0.5c0-4.1-3.4-7.5-7.5-7.5c-0.3,0-0.5-0.2-0.5-0.5s0.2-0.5,0.5-0.5
+                                    c4.7,0,8.5,3.8,8.5,8.5C58.5,50.3,58.3,50.5,58,50.5z"/>
+                            </g>
+                        </g>
+                    </g>
+                    </svg>
+                </div>
+            </div>
+            <div class="s-2__editor-items__container inactive">
+                <div class="s-2__rotate-container">
+                    <svg version="1.1" class="s-2__rotate" id="Layer_14" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+                    <g>
+                        <path style="fill:#F7D523;" d="M75.3,55.5c-0.3-0.1-0.5,0.1-0.6,0.4c-2.7,11.5-12.9,19.6-24.8,19.6c-13.9,0-25.3-11.2-25.5-25.1
+                            l3.6,3.6c0.1,0.1,0.2,0.1,0.4,0.1s0.3,0,0.4-0.1c0.2-0.2,0.2-0.5,0-0.7l-4.1-4.1c-0.4-0.4-1-0.4-1.4,0l-4.1,4.1
+                            c-0.2,0.2-0.2,0.5,0,0.7s0.5,0.2,0.7,0l3.5-3.6c0.2,14.4,12,26.1,26.5,26.1c12.3,0,23-8.4,25.8-20.4C75.7,55.8,75.5,55.6,75.3,55.5
+                            z"/>
+                        <path style="fill:#F7D523;" d="M80.8,44.6c-0.2-0.2-0.5-0.1-0.7,0.1l-3.8,4.5C75.9,35,64.2,23.5,49.9,23.5
+                            c-12.3,0-23,8.4-25.8,20.4c-0.1,0.3,0.1,0.5,0.4,0.6c0.3,0.1,0.5-0.1,0.6-0.4C27.8,32.6,38,24.5,49.9,24.5
+                            c13.8,0,25.1,11,25.5,24.8l-4.5-3.7c-0.2-0.2-0.5-0.1-0.7,0.1c-0.2,0.2-0.1,0.5,0.1,0.7l5,4.2c0.2,0.2,0.4,0.2,0.7,0.2
+                            c0,0,0.1,0,0.1,0c0.3,0,0.5-0.2,0.7-0.4l4.2-5C81.1,45.1,81,44.8,80.8,44.6z"/>
+                    </g>
+                    </svg>
+                    <div class="s-2__rotate__left-right">
+                        <div class="s-2__rotate-left">L</div>
+                        <div class="s-2__rotate-right">R</div>
+                    </div>
+                    <p class="s-2__text text-left">
+                        <span class="medium">Повернуть</span>
+                    </p>
+                </div>
+                <div class="s-2__zoom-container">
+                    <svg version="1.1" class="s-2__zoom" id="Layer_15" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+<g>
+    <path style="fill:#F7D523;" d="M74.6,24H60.7c-0.3,0-0.6,0.2-0.6,0.5c0,0.3,0.3,0.5,0.6,0.5h13.5L63.3,35.8c-0.2,0.2-0.2,0.6,0,0.8
+		c0.1,0.1,0.3,0.2,0.4,0.2c0.2,0,0.2-0.1,0.4-0.2L75,25.7v13.7c0,0.3,0.2,0.6,0.5,0.6c0.3,0,0.5-0.3,0.5-0.6V25.5
+		C76,24.5,75.6,24,74.6,24z"/>
+    <path style="fill:#F7D523;" d="M39.4,75H26l12-12c0.2-0.2,0.2-0.6,0-0.8c-0.2-0.2-0.6-0.2-0.8,0L25,74.4V60.6
+		c0-0.3-0.2-0.6-0.5-0.6c-0.3,0-0.5,0.3-0.5,0.6v13.9c0,1,0.5,1.4,1.5,1.4h13.9c0.3,0,0.6-0.2,0.6-0.5C40,75.2,39.8,75,39.4,75z"/>
+    <path style="fill:#F7D523;" d="M75.5,60c-0.3,0-0.5,0.3-0.5,0.6v13.5L64.4,63.5c-0.2-0.2-0.6-0.2-0.8,0c-0.2,0.2-0.2,0.6,0,0.8
+		L74.4,75H60.7c-0.3,0-0.6,0.2-0.6,0.5c0,0.3,0.3,0.5,0.6,0.5h13.9c1,0,1.4-0.5,1.4-1.4V60.6C76,60.3,75.8,60,75.5,60z"/>
+    <path style="fill:#F7D523;" d="M39.4,24H25.5c-1,0-1.5,0.5-1.5,1.5v13.9c0,0.3,0.2,0.6,0.5,0.6c0.3,0,0.5-0.3,0.5-0.6V25.8
+		l12.4,12.4c0.1,0.1,0.3,0.2,0.4,0.2s0.3-0.1,0.4-0.2c0.2-0.2,0.2-0.6,0-0.8L25.8,25h13.6c0.3,0,0.6-0.2,0.6-0.5
+		C40,24.2,39.8,24,39.4,24z"/>
+</g>
+</svg>
+                    <div class="s-2__zoom__plus-minus">
+                        <div class="s-2__zoom-plus">+</div>
+                        <div class="s-2__zoom-minus">-</div>
+                    </div>
+                    <p class="s-2__text text-left">
+                        <span class="medium">МАСШТАБИРОВАТЬ</span>
+                    </p>
+                </div>
+                <div class="s-2__flip-container">
+                    <svg version="1.1" class="s-2__flip" id="Layer_16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+<g id="mirror">
+    <g>
+        <g>
+            <g>
+                <path style="fill:#F7D523;" d="M50.3,30.5c-0.3,0-0.5-0.2-0.5-0.5v-1.5c0-0.3,0.2-0.5,0.5-0.5s0.5,0.2,0.5,0.5V30
+					C50.8,30.3,50.6,30.5,50.3,30.5z"/>
+            </g>
+            <g>
+                <path style="fill:#F7D523;" d="M50.3,67.4c-0.3,0-0.5-0.2-0.5-0.5v-3.1c0-0.3,0.2-0.5,0.5-0.5s0.5,0.2,0.5,0.5v3.1
+					C50.8,67.2,50.6,67.4,50.3,67.4z M50.3,61.3c-0.3,0-0.5-0.2-0.5-0.5v-3.1c0-0.3,0.2-0.5,0.5-0.5s0.5,0.2,0.5,0.5v3.1
+					C50.8,61,50.6,61.3,50.3,61.3z M50.3,55.1c-0.3,0-0.5-0.2-0.5-0.5v-3.1c0-0.3,0.2-0.5,0.5-0.5s0.5,0.2,0.5,0.5v3.1
+					C50.8,54.9,50.6,55.1,50.3,55.1z M50.3,49c-0.3,0-0.5-0.2-0.5-0.5v-3.1c0-0.3,0.2-0.5,0.5-0.5s0.5,0.2,0.5,0.5v3.1
+					C50.8,48.7,50.6,49,50.3,49z M50.3,42.8c-0.3,0-0.5-0.2-0.5-0.5v-3.1c0-0.3,0.2-0.5,0.5-0.5s0.5,0.2,0.5,0.5v3.1
+					C50.8,42.6,50.6,42.8,50.3,42.8z M50.3,36.7c-0.3,0-0.5-0.2-0.5-0.5v-3.1c0-0.3,0.2-0.5,0.5-0.5s0.5,0.2,0.5,0.5v3.1
+					C50.8,36.4,50.6,36.7,50.3,36.7z"/>
+            </g>
+            <g>
+                <path style="fill:#F7D523;" d="M50.3,72c-0.3,0-0.5-0.2-0.5-0.5V70c0-0.3,0.2-0.5,0.5-0.5s0.5,0.2,0.5,0.5v1.5
+					C50.8,71.8,50.6,72,50.3,72z"/>
+            </g>
+        </g>
+    </g>
+    <g>
+        <path style="fill:#F7D523;" d="M69.9,63.6c-0.1,0-0.2,0-0.3-0.1l0.4-0.4l-0.4,0.4l-2.1-2.1c-0.2-0.2-0.2-0.5,0-0.7s0.5-0.2,0.7,0
+			l2.1,2.1c0.2,0.2,0.2,0.5,0,0.7C70.1,63.6,70,63.6,69.9,63.6z M70.2,61c-0.3,0-0.5-0.2-0.5-0.5v-2.9c0-0.3,0.2-0.5,0.5-0.5
+			s0.5,0.2,0.5,0.5v2.9C70.7,60.8,70.5,61,70.2,61z M65.8,59.5c-0.1,0-0.3,0-0.4-0.1l-2.1-2.1c-0.2-0.2-0.2-0.5,0-0.7s0.5-0.2,0.7,0
+			l2.1,2.1c0.2,0.2,0.2,0.5,0,0.7C66,59.5,65.9,59.5,65.8,59.5z M61.7,55.4c-0.1,0-0.3,0-0.4-0.1l-2.1-2.1c-0.2-0.2-0.2-0.5,0-0.7
+			s0.5-0.2,0.7,0l2.1,2.1c0.2,0.2,0.2,0.5,0,0.7C61.9,55.4,61.8,55.4,61.7,55.4z M70.2,55.2c-0.3,0-0.5-0.2-0.5-0.5v-2.9
+			c0-0.3,0.2-0.5,0.5-0.5s0.5,0.2,0.5,0.5v2.9C70.7,55,70.5,55.2,70.2,55.2z M57.6,51.3c-0.1,0-0.3,0-0.4-0.1l-0.7-0.7
+			c-0.1-0.1-0.2-0.3-0.2-0.5c0-0.2,0.1-0.4,0.2-0.5l1.2-1.2c0.2-0.2,0.5-0.2,0.7,0s0.2,0.5,0,0.7l-1,1l0.4,0.4
+			c0.2,0.2,0.2,0.5,0,0.7C57.8,51.3,57.7,51.3,57.6,51.3z M70.2,49.4c-0.3,0-0.5-0.2-0.5-0.5V46c0-0.3,0.2-0.5,0.5-0.5
+			s0.5,0.2,0.5,0.5v2.9C70.7,49.2,70.5,49.4,70.2,49.4z M60.1,47.2c-0.1,0-0.3,0-0.4-0.1c-0.2-0.2-0.2-0.5,0-0.7l2.1-2.1
+			c0.2-0.2,0.5-0.2,0.7,0s0.2,0.5,0,0.7L60.5,47C60.4,47.1,60.3,47.2,60.1,47.2z M70.2,43.6c-0.3,0-0.5-0.2-0.5-0.5v-2.9
+			c0-0.3,0.2-0.5,0.5-0.5s0.5,0.2,0.5,0.5v2.9C70.7,43.4,70.5,43.6,70.2,43.6z M64.2,43.1c-0.1,0-0.3,0-0.4-0.1
+			c-0.2-0.2-0.2-0.5,0-0.7l2.1-2.1c0.2-0.2,0.5-0.2,0.7,0s0.2,0.5,0,0.7l-2.1,2.1C64.5,43,64.4,43.1,64.2,43.1z M68.4,39
+			c-0.1,0-0.3,0-0.4-0.1c-0.2-0.2-0.2-0.5,0-0.7l1.5-1.5c0.1-0.1,0.3-0.2,0.5-0.2c0.4,0,0.7,0.3,0.7,0.7v0.3c0,0.3-0.2,0.5-0.5,0.5
+			c-0.1,0-0.3-0.1-0.4-0.2l-1.1,1.1C68.6,38.9,68.5,39,68.4,39z"/>
+    </g>
+    <g>
+        <path style="fill:#F7D523;" d="M30,63.7c-0.1,0-0.2,0-0.3-0.1c-0.3-0.1-0.4-0.4-0.4-0.6V37.1c0-0.3,0.2-0.5,0.4-0.6
+			c0.3-0.1,0.6,0,0.8,0.2l13,13c0.3,0.3,0.3,0.7,0,1l-13,13C30.3,63.6,30.2,63.7,30,63.7z M29.8,62.8C29.8,62.8,29.8,62.8,29.8,62.8
+			L29.8,62.8z M30.3,37.8v24.5L42.5,50L30.3,37.8z M29.8,37.3C29.8,37.3,29.8,37.3,29.8,37.3L29.8,37.3z"/>
+    </g>
+</g>
+</svg>
+                    <p class="s-2__text text-left">
+                        <span class="medium">Отзеркалить</span>
+                    </p>
+                </div>
+            </div>
+            <div class="s-2__img-container">
+                <div class="s-2__stub">
+                    <img class="s-2__stub-img s-2__stub__football" src="img/football/face-block-big-football-gs.jpg"
+                         alt="">
+                    <img class="s-2__stub-img s-2__stub__cybersport"
+                         src="img/cybersport/face-block-big-cybersport-gs.jpg" alt="">
+                    <img class="s-2__stub-img s-2__stub__tennis" src="img/tennis/face-block-big-tennis-gs.jpg" alt="">
+                    <img class="s-2__stub-img s-2__stub__basketball"
+                         src="img/basketball/face-block-big-basketball-gs.jpg" alt="">
+                    <img class="s-2__stub-img s-2__stub__boxing" src="img/boxing/face-block-big-boxing-gs.jpg" alt="">
+                    <img class="s-2__stub-img s-2__stub__hockey" src="img/hockey/face-block-big-hockey-gs.jpg" alt="">
+                </div>
+                <div class="s-2__camera-container"></div>
+                <canvas class="s-2__canvas" width="380" height="380"></canvas>
+                <div class="s-2__canvas-overlay">
+                    <img class="s-2__canvas-overlay__img s-2__canvas-overlay__football"
+                         src="img/football/face-block-big-football.png" alt="">
+                    <img class="s-2__canvas-overlay__img s-2__canvas-overlay__cybersport"
+                         src="img/cybersport/face-block-big-cybersport.png" alt="">
+                    <img class="s-2__canvas-overlay__img s-2__canvas-overlay__tennis"
+                         src="img/tennis/face-block-big-tennis.png" alt="">
+                    <img class="s-2__canvas-overlay__img s-2__canvas-overlay__basketball"
+                         src="img/basketball/face-block-big-basketball.png" alt="">
+                    <img class="s-2__canvas-overlay__img s-2__canvas-overlay__boxing"
+                         src="img/boxing/face-block-big-boxing.png"
+                         alt="">
+                    <img class="s-2__canvas-overlay__img s-2__canvas-overlay__hockey"
+                         src="img/hockey/face-block-big-hockey.png" alt="">
+                    <div class="s-2__canvas-overlay--position"></div>
+                </div>
+                <div class="s-2__uploader">
+                    <input type="file" name="userprofile_picture" accept="image/jpeg,image/png"
+                           class="s-2__file-photo"/>
+                </div>
+                <img class="s-2__ava-football" src="img/football/face-block-big-football.png" style="display: none;"
+                     alt="">
+                <img class="s-2__ava-cybersport" src="img/cybersport/face-block-big-cybersport.png"
+                     style="display: none;" alt="">
+                <img class="s-2__ava-tennis" src="img/tennis/face-block-big-tennis.png" style="display: none;" alt="">
+                <img class="s-2__ava-basketball" src="img/basketball/face-block-big-basketball.png"
+                     style="display: none;" alt="">
+                <img class="s-2__ava-boxing" src="img/boxing/face-block-big-boxing.png" style="display: none;" alt="">
+                <img class="s-2__ava-hockey" src="img/hockey/face-block-big-hockey.png" style="display: none;" alt="">
+            </div>
+            <h4 class="s-2__title2 inactive">
+                Придумайте свой боевой клич:
+            </h4>
+            <div class="s-2__quote-text__container inactive">
+                <div class="s-2__quote-text-container">
+                    <span class="s-2__quote-text_title boxing">Мой кулак быстр как молния, силен как молот и беспощаден как бог войны. </span>
+                    <span class="s-2__quote-text_title football">Я – самый зрелищный боец. Могу финтить, бить, отбирать и обмануть даже самого проницательного судью.</span>
+                    <span class="s-2__quote-text_title tennis">Мощь моей ракетки способна пробить любые укрепления, а мой воинственный клич оглушит всех в радиусе километра. </span>
+                    <span class="s-2__quote-text_title basketball">Я предугадаю любое твое действие, заблокирую любой удар и перепрыгну любое препятствие. </span>
+                    <span class="s-2__quote-text_title hockey">Моя улыбка повергнет тебя в ужас, а если ты меня толкнешь, я закатаю тебя в землю. </span>
+                    <span class="s-2__quote-text_title cybersport">Моя клавиатура, мышка и чит-коды заставят тебя молить о пощаде. </span>
+                </div>
+                <textarea id="s-2__quote-text" class="s-2__quote-text" rows="10" cols="45" minlength="20"
+                          maxlength="100" name="text"
+                          title="" placeholder="Ваше продолжение клича..."></textarea>
+                <span class="s-2__quote-text__max">Максимум 100 символов</span>
+            </div>
+            <div class="s-2__button yellow-border-button inactive"
+                 data-letter="Б"><span
+                    class="before"></span>К бою готов!<span class="after"></span></div>
+            <div class="s-2__accept-popup-container hidden">
+                <div class="s-2__accept-popup">
+                    <div class="s-2__accept-popup__title">использование фотографии</div>
+                    <ul class="s-2__accept-popup__list">
+                        <li class="s-2__accept-popup__list-item"><span>1. </span>Для участия в розыгрыше, загрузите фото
+                            своего лица.
+                        </li>
+                        <li class="s-2__accept-popup__list-item"><span>2. </span>Размер файла не должен превышать 5 Мб.
+                        </li>
+                        <li class="s-2__accept-popup__list-item"><span>3. </span>Не допускаются изображения, не
+                            являющиеся фотографиями (скриншоты, оттиски, картинки, компьютерная графика, фотомонтаж,
+                            коллажи), а так же фотографии
+                            несовершеннолетних физ. лиц.
+                        </li>
+                        <li class="s-2__accept-popup__list-item"><span>4. </span>Фотографии должны быть без
+                            дополнительных элементов, добавленных поверх фото (надписей, рамок и прочего).
+                        </li>
+                        <li class="s-2__accept-popup__list-item"><span>5. </span>Запрещено размещение фотографий,
+                            содержащих изображения несовершеннолетних, обнаженную натуру, сцены насилия или элементы
+                            пропаганды.
+                        </li>
+                    </ul>
+                    <div class="s-2__accept-popup__buttons">
+                        <div class="s-2__accept-popup__buttons-button s-2__accept-popup__buttons-button--accept"
+                             data-letter="П">Принимаю
+                        </div>
+                        <div class="s-2__accept-popup__buttons-button s-2__accept-popup__buttons-button--decline">
+                            Против
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-overlay s-2__overlay-first">
+                <div class="overlay-inner"></div>
+                <div class="section-overlay__text arrow-down s-2__section-overlay__text_1">Найдите свое фото на
+                    <br>жестком диске
+                </div>
+                <div class="section-overlay__text arrow-up s-2__section-overlay__text_2">Или сделайте селфи
+                </div>
+            </div>
+            <div class="section-overlay s-2__overlay-second">
+                <div class="overlay-inner"></div>
+                <div class="section-overlay__text arrow-down s-2__section-overlay__text_3">Редактируйте фото, чтобы оно
+                    <br>вписалось в голову персонажа
+                </div>
+            </div>
+            <div class="section-overlay s-2__overlay-third">
+                <div class="overlay-inner"></div>
+                <div class="section-overlay__text arrow-left s-2__section-overlay__text_4">Напишите, чем Ваш воин круче
+                    остальных
+                </div>
+                <div class="section-overlay__text arrow-left s-2__section-overlay__text_5">Зарегистрируйте своего воина
+                </div>
+            </div>
+        </section>
+
+        <section id="s3" class="s-3 scroll-screen hidden" data-section-name="Регистрация">
+            <div data-href="" class="s__back section__changer-anchor" data-letter=""></div>
+            <div class="s-3__registration-form">
+                <div class="s-3__logo">
+                    <img src="img/title-section-3.png" alt="">
+                </div>
+                <h4 class="s-3__title">
+                    За какой приз будем сражаться?
+                </h4>
+                <form id="s-3__steps-form" class="s-3__steps-container s-3__steps-form" action="">
+                    <div class="s-3__steps-lines">
+                        <div class="s-3__steps-line s-3__steps-line--one"></div>
+                        <div class="s-3__steps-line s-3__steps-line--two"></div>
+                        <div class="s-3__steps-line s-3__steps-line--three"></div>
+                    </div>
+                    <div class="s-3__step s-3__step-one s-3__step-one__form-active show">
+                        <div class="s-3__step-one__title">
+                            <div class="s-3__step-one__title-big">Чтобы выиграть приз</div>
+                            <div class="s-3__step-one__title-small">Выберите способ регистрации:</div>
+                        </div>
+                        <div class="s-3__step-one__img-container">
+                            <div class="s-3__step-one__img">
+                                <div class="s-3__step-one__img-text">PowerBank</div>
+                                <img src="img/kz/prize/kz-prize-1.png" alt="">
+                            </div>
+                            <div class="s-3__step-one__img-middle">
+                                <img class="s-3__step-one__img-pl" src="img/kz/prize/kz-prize-2.png" alt="">
+                                <div class="s-3__step-one__img-text">iPhone X
+                                </div>
+                            </div>
+                            <div class="s-3__step-one__img">
+                                <img src="img/kz/prize/kz-prize-3.png" alt="">
+                                <div class="s-3__step-one__img-text">Бонус <br>25000 тенге
+                                    <br>на счет
+                                </div>
+                            </div>
+                        </div>
+                        <div class="s-3__step-one__login-buttons">
+                            <div class="s-3__step-one__login-btn s-3__step-one__login-fb s-3__step-one__login-fb--click">
+                                Facebook
+                            </div>
+                            <div class="s-3__step-one__login-btn s-3__step-one__login-vk s-3__step-one__login-vk--click">
+                                VK
+                            </div>
+                            <div class="s-3__step-one__login-btn s-3__step-one__login-email s-3__step-one__login-email--click">
+                                E-mail
+                            </div>
+                        </div>
+                        <div class="s-3__step-one__form-container">
+                            <div class="s-3__step-one_form__input-container">
+                                <label class="s-3__step-one_form__input-label" for="s-3__first-name"
+                                       data-number="1">Имя</label>
+                                <input id="s-3__first-name" type="text" name="name" class="s-3__step-one_form__input"
+                                       placeholder="Джон" autocomplete="off" required>
+                            </div>
+                            <div class="s-3__step-one_form__input-container">
+                                <label class="s-3__step-one_form__input-label" for="s-3__last-name"
+                                       data-number="2">Фамилия</label>
+                                <input id="s-3__last-name" type="text" name="sname" class="s-3__step-one_form__input"
+                                       placeholder="Рокфеллер" autocomplete="off" required>
+                            </div>
+                            <div class="s-3__step-one_form__input-container">
+                                <label class="s-3__step-one_form__input-label" for="s-3__email"
+                                       data-number="3">E-mail</label>
+                                <input id="s-3__email" type="email" name="mail" class="s-3__step-one_form__input"
+                                       placeholder="wintersports@gmail.com" autocomplete="off" required>
+                            </div>
+                            <div class="s-3__step-one_form__input-text"><span>*</span> Обязательные поля</div>
+                        </div>
+                        <div class="yellow-border-button s-3__step-one__rules-button" data-letter="К"
+                             onclick="window.open('http://info.parimatch.kz/ru/info/page/204-about', '_blank');">
+                            Правила конкурса
+                        </div>
+                        <div class="yellow-border-button s-3__step-one__next-button" data-letter="П">
+                            <span class="before"></span>
+                            Продолжить
+                            <span class="after"></span>
+                        </div>
+                        <div class="section-overlay s-3__overlay-first">
+                            <div class="overlay-inner"></div>
+                            <div class="section-overlay__text arrow-left s-3__section-overlay__text_1">Авторизируйтесь с
+                                помощью соцсети
+                            </div>
+                            <div class="section-overlay__text arrow-left s-3__section-overlay__text_2">Также вы можете
+                                ввести данные вручную
+                            </div>
+                        </div>
+                        <div class="section-overlay s-3__overlay-second">
+                            <div class="overlay-inner"></div>
+                            <div class="section-overlay__text arrow-left s-3__section-overlay__text_3">Заполните все
+                                поля
+                                <br>для регистрации
+                            </div>
+                            <div class="section-overlay__text arrow-left s-3__section-overlay__text_4">Подтвердите
+                                правильность
+                                <br>введенных данных
+                            </div>
+                        </div>
+                    </div>
+                    <div class="s-3__step s-3__step-two">
+                        <div class="s-3__step-two__iphone">
+                            <img class="s-3__step-two__iphone-img" src="img/kz/iphone-x-reg.png" alt="">
+                            <div class="s-3__step-two__text-block">
+                                <div class="s-3__step-two__iphone-title">Сделайте ставку в
+                                    <br>мобильной версии сайта
+                                </div>
+                                <div class="s-3__step-two__iphone-text">
+                                    или в приложении «Пари-Матч»:
+                                </div>
+                                <div class="s-3__step-two__apps">
+                                    <div class="s-3__step-two__app s-3__step-two__app-mobile"
+                                         onclick="window.open('https://m.parimatchabc8.com/', '_blank');">
+                                        <svg version="1.1" id="mobile-ic" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                             viewBox="0 0 38 38" style="enable-background:new 0 0 38 38;" xml:space="preserve">
+                                        <path style="opacity:0.2;fill:#6C8CBA;" d="M26.5,1.3H11.5C10.1,1.3,9,2.4,9,3.8v30.3c0,1.4,1.2,2.6,2.6,2.6h14.9
+                                            c1.4,0,2.6-1.2,2.6-2.6V3.8C29,2.4,27.9,1.3,26.5,1.3L26.5,1.3z M15.3,2.8h7.4c0.2,0,0.3,0.3,0.3,0.6c0,0.3-0.2,0.6-0.3,0.6h-7.4
+                                            c-0.2,0-0.3-0.3-0.3-0.6C15,3.1,15.1,2.8,15.3,2.8L15.3,2.8z M19,34.2c-0.9,0-1.7-0.7-1.7-1.6c0-0.9,0.7-1.6,1.7-1.6
+                                            c0.9,0,1.6,0.7,1.6,1.6C20.6,33.5,19.9,34.2,19,34.2L19,34.2z M27.1,28.5H10.9V5.6h16.2V28.5z M27.1,28.5"/>
+                                        </svg>
+                                        <span>Мобильная версия</span>
+                                    </div>
+                                    <div class="s-3__step-two__app s-3__step-two__app-android"
+                                         onclick="window.open('apps/parimatch-kz-latest.apk', '_blank');">
+                                        <svg version="1.1" id="android-ic" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                             viewBox="0 0 38 38" style="enable-background:new 0 0 38 38;" xml:space="preserve">
+                                        <path style="opacity:0.1;fill:#2DD671;" d="M14.3,8.4c0.2,0,0.4-0.1,0.6-0.3c0.2-0.2,0.3-0.4,0.3-0.6c0-0.2-0.1-0.4-0.3-0.6
+                                            c-0.2-0.2-0.4-0.3-0.6-0.3S13.9,6.8,13.7,7s-0.2,0.4-0.2,0.6c0,0.2,0.1,0.4,0.2,0.6S14.1,8.4,14.3,8.4z M23.7,8.4
+                                            c0.2,0,0.4-0.1,0.6-0.3s0.2-0.4,0.2-0.6c0-0.2-0.1-0.4-0.2-0.6s-0.4-0.3-0.6-0.3S23.2,6.8,23.1,7s-0.3,0.4-0.3,0.6
+                                            c0,0.2,0.1,0.4,0.3,0.6S23.4,8.4,23.7,8.4z M5.7,12.5c0.6,0,1.2,0.2,1.6,0.7c0.4,0.4,0.7,1,0.7,1.6v9.5c0,0.6-0.2,1.2-0.7,1.6
+                                            c-0.4,0.4-1,0.7-1.6,0.7s-1.2-0.2-1.6-0.7c-0.4-0.4-0.7-1-0.7-1.6v-9.5c0-0.6,0.2-1.2,0.7-1.6C4.5,12.7,5.1,12.5,5.7,12.5z
+                                             M29.2,12.9v14.7c0,0.7-0.2,1.3-0.7,1.7s-1,0.7-1.7,0.7h-1.7v5c0,0.6-0.2,1.2-0.7,1.6c-0.4,0.4-1,0.7-1.6,0.7s-1.2-0.2-1.6-0.7
+                                            c-0.4-0.4-0.7-1-0.7-1.6v-5h-3.1v5c0,0.6-0.2,1.2-0.7,1.6c-0.4,0.4-1,0.7-1.6,0.7c-0.6,0-1.2-0.2-1.6-0.7c-0.4-0.4-0.7-1-0.7-1.6
+                                            l0-5h-1.6c-0.7,0-1.3-0.2-1.7-0.7c-0.5-0.5-0.7-1-0.7-1.7V12.9H29.2z M24,4c1.6,0.8,2.8,1.9,3.8,3.4c0.9,1.5,1.4,3,1.4,4.8H8.8
+                                            c0-1.7,0.5-3.3,1.4-4.8C11.1,5.9,12.4,4.8,14,4l-1.6-2.9c-0.1-0.2-0.1-0.3,0.1-0.4c0.2-0.1,0.3,0,0.4,0.1l1.6,2.9
+                                            C16,3.1,17.4,2.8,19,2.8s3,0.3,4.4,0.9L25,0.8c0.1-0.2,0.3-0.2,0.4-0.1c0.2,0.1,0.2,0.3,0.1,0.4L24,4z M34.6,14.8v9.5
+                                            c0,0.6-0.2,1.2-0.7,1.6c-0.4,0.4-1,0.7-1.6,0.7c-0.6,0-1.2-0.2-1.6-0.7c-0.4-0.4-0.7-1-0.7-1.6v-9.5c0-0.6,0.2-1.2,0.7-1.6
+                                            s1-0.7,1.6-0.7c0.6,0,1.2,0.2,1.6,0.7C34.4,13.6,34.6,14.1,34.6,14.8z"/>
+                                        </svg>
+                                        <span>Приложение для Android</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="s-3__step-two__form-iphone">
+                            <div class="s-3__form-iphone__input-container">
+                                <label class="s-3__form-iphone__input-label" for="s-3__AN" data-number="4">Номер
+                                    счета</label>
+                                <input id="s-3__AN" type="tel" name="accnum" class="s-3__form-iphone__input"
+                                       placeholder="2135475" autocomplete="off" minlength="7" required>
+                            </div>
+                            <div class="s-3__form-iphone__input-text">
+                                При регистрации вы получите на e-mail номер счета,
+                                который будет использоваться как логин.
+                                <br>
+                                <div class="s-3__form-iphone__input-link"
+                                     onclick="window.open('https://www.parimatch.kz/reg_bonus.html', '_blank');">
+                                    Зарегистрироваться
+                                </div>
+                            </div>
+                            <div class="s-3__form-iphone__input-container">
+                                <label class="s-3__form-iphone__input-label" for="s-3__BN" data-number="5">Номер
+                                    ставки</label>
+                                <input id="s-3__BN" type="tel" name="betnum" class="s-3__form-iphone__input"
+                                       placeholder="7897956" autocomplete="off" required>
+                            </div>
+                            <div class="s-3__form-iphone__input-text">
+                                Сделайте ставку с мобильного и укажите ее номер,
+                                который можно узнать в истории ставок.
+                                <br><span>Минимальная ставка — 2500 тенге</span>
+                            </div>
+                        </div>
+                        <div class="s-3__step-two__next-btn yellow-border-button"
+                             data-letter="П"><span
+                                class="before"></span>Выиграть приз<span class="after"></span></div>
+                        <!--<div class="s-3__step-two__next-button yellow-border-button"-->
+                             <!--data-letter="П"><span-->
+                                <!--class="before"></span>Выбрать персонажа<span class="after"></span></div>-->
+                        <div class="section-overlay s-3__overlay-third">
+                            <div class="overlay-inner"></div>
+                            <div class="section-overlay__text arrow-left s-3__section-overlay__text_5">Скачайте
+                                приложение
+                                или зайдите на
+                                <br>мобильную версию сайта «Пари-Матч»
+                            </div>
+                            <div class="section-overlay__text arrow-left s-3__section-overlay__text_6">Введите номер
+                                счета
+                                «Пари-Матч»
+                            </div>
+                            <div class="section-overlay__text arrow-left s-3__section-overlay__text_7">Сделайте ставку
+                                от 2500
+                                тенге
+                                <br>и введите номер ставки в поле
+                            </div>
+                            <div class="section-overlay__text arrow-left s-3__section-overlay__text_8">Пропустите этот
+                                шаг,
+                                если
+                                <br>Вам не нужен iPhone X
+                            </div>
+                        </div>
+                    </div>
+                    <div class="s-3__step s-3__step-three">
+                        <div class="s-3__step-three__title">Выберите персонажа</div>
+                        <div class="s-3__step-three__text">Вставьте свое лицо и докажите, что Ваш спорт самый крутой!
+                        </div>
+                        <div class="s-3__step-three__img-container">
+                            <img class="s-3__step-three__img" src="img/kz/men-reg.png" alt="">
+                        </div>
+                        <div data-href="#s1" class="s-3__step-two__double-change section__changer-anchor">
+                            <div class="s-3__step-two__double-change__title">Удвойте шанс выиграть iPhone X!</div>
+                            <div class="s-3__step-two__double-change__text">
+                                Для этого не забудьте поделиться своим героем
+                                <br><span>ВКонтакте</span> после его создания.
+                            </div>
+                        </div>
+                        <div class="section-overlay s-3__overlay-fourth">
+                            <div class="overlay-inner"></div>
+                            <div class="section-overlay__text arrow-right s-3__section-overlay__text_9">Вы отлично
+                                выглядите!
+                            </div>
+                            <div class="section-overlay__text arrow-right s-3__section-overlay__text_10">При
+                                необходимости
+                                <br>отредактируйте фото или цитату
+                            </div>
+                            <div class="section-overlay__text arrow-down s-3__section-overlay__text_11">
+                                Для завершения регистрации
+                                <br>загрузите свое фото
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="s-3__personal-area">
+                <div class="s-3__logo">
+                    <img src="img/title-img-section-5.png" alt="">
+                </div>
+                <div class="s-3__personal-area-container">
+                    <div class="s-3__personal-area__left">
+                        <div class="s-3__personal-area__name">Татьяна Шмайлюк</div>
+                        <div class="s-3__personal-area__mail">wintersports@gmail.com</div>
+                        <div class="s-3__personal-area__substitution">
+                            <img class="s-3__personal-area__substitution-throne football"
+                                 src="img/football/body-block-football.png"
+                                 alt="">
+                            <img class="s-3__personal-area__substitution-throne cybersport"
+                                 src="img/cybersport/body-block-cybersport.png"
+                                 alt="">
+                            <img class="s-3__personal-area__substitution-throne tennis"
+                                 src="img/tennis/body-block-tennis.png"
+                                 alt="">
+                            <img class="s-3__personal-area__substitution-throne basketball active"
+                                 src="img/basketball/body-block-basketball.png" alt="">
+                            <img class="s-3__personal-area__substitution-throne boxing"
+                                 src="img/boxing/body-block-boxing.png"
+                                 alt="">
+                            <img class="s-3__personal-area__substitution-throne hockey"
+                                 src="img/hockey/body-block-hockey.png"
+                                 alt="">
+                            <img class="s-3__personal-area__substitution-img"
+                                 src="" alt="">
+                        </div>
+                        <div class="s-3__personal-area__kod-title">
+                            <p class="s-3__kod-title__item basketball active">Баскетбол</p>
+                            <p class="s-3__kod-title__item football">Футбол</p>
+                            <p class="s-3__kod-title__item tennis">Теннис</p>
+                            <p class="s-3__kod-title__item hockey">Хоккей</p>
+                            <p class="s-3__kod-title__item boxing">Бокс</p>
+                            <p class="s-3__kod-title__item cybersport">Киберспорт</p>
+                        </div>
+                        <div class="s-3__personal-area__quote">
+                            <span class="s-3__quote-text_title boxing">Мой кулак быстр как молния, силен как молот и беспощаден как бог войны. </span>
+                            <span class="s-3__quote-text_title football">Я – самый зрелищный боец. Могу финтить, бить, отбирать и обмануть даже самого проницательного судью.</span>
+                            <span class="s-3__quote-text_title tennis">Мощь моей ракетки способна пробить любые укрепления, а мой воинственный клич оглушит всех в радиусе километра. </span>
+                            <span class="s-3__quote-text_title basketball">Я предугадаю любое твое действие, заблокирую любой удар и перепрыгну любое препятствие. </span>
+                            <span class="s-3__quote-text_title hockey">Моя улыбка повергнет тебя в ужас, а если ты меня толкнешь, я закатаю тебя в землю. </span>
+                            <span class="s-3__quote-text_title cybersport">Моя клавиатура, мышка и чит-коды заставят тебя молить о пощаде. </span>
+                            <span class="s-3__personal-area__quote--change"></span>
+                        </div>
+                        <div class="s-3__personal-area__options">
+                            <div class="s-3__personal-area__option s-3__personal-area__option-download">
+                                <img src="icons/ic-38x38/ic-donwload.svg" alt="">
+                            </div>
+                            <div class="s-3__personal-area__option s-3__personal-area__option-share s-3__personal-area__option-share--fb">
+                                <img src="icons/ic-38x38/ic-facebook.svg" alt="">
+                            </div>
+                            <div class="s-3__personal-area__option s-3__personal-area__option-share s-3__personal-area__option-share--vk">
+                                <img src="icons/ic-38x38/ic-vk.svg" alt="">
+                            </div>
+                            <div data-href="#s2"
+                                 class="s-3__personal-area__option s-3__personal-area__option-edit section__changer-anchor">
+                                <img src="icons/ic-38x38/ic-edit.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="s-3__personal-area__mobile">
+                            <div class="s-3__personal-area__img-container">
+                                <img src="img/iphone-block-mob.png" alt="">
+                                <div class="s-3__personal-area__img-title">
+                                    Ваш iphone X
+                                    <br><span>может достаться врагу!</span>
+                                </div>
+                            </div>
+                            <div class="s-3__personal-area__btn yellow-border-button" data-letter="I">Хочу iphone X
+                            </div>
+                        </div>
+                    </div>
+                    <div class="s-3__personal-area__right s-3__personal-area__right-one active">
+                        <div class="s-3__personal-area__iphone">
+                            <img class="s-3__personal-area__iphone-img" src="img/kz/prize/kz-prize-4.png" alt="">
+                            <div class="s-3__personal-area__text-block">
+                                <div class="s-3__personal-area__iphone-title">Ваш iPhone X
+                                    <br><span>может достаться врагу!</span></div>
+                                <div class="s-3__personal-area__iphone-text">
+                                    Выиграйте <span>IPhone X</span>,
+                                    <br>сделав ставку в мобильной версии
+                                    <br>сайта или приложения <span>«Пари-Матч»</span>:
+                                </div>
+                            </div>
+                        </div>
+                        <div class="s-3__step-two__apps">
+                            <div class="s-3__step-two__app s-3__step-two__app-mobile"
+                                 onclick="window.open('https://m.parimatchabc8.com/', '_blank');">
+                                <svg version="1.1" id="mobile-ic" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                     viewBox="0 0 38 38" style="enable-background:new 0 0 38 38;" xml:space="preserve">
+                                        <path style="opacity:0.2;fill:#6C8CBA;" d="M26.5,1.3H11.5C10.1,1.3,9,2.4,9,3.8v30.3c0,1.4,1.2,2.6,2.6,2.6h14.9
+                                            c1.4,0,2.6-1.2,2.6-2.6V3.8C29,2.4,27.9,1.3,26.5,1.3L26.5,1.3z M15.3,2.8h7.4c0.2,0,0.3,0.3,0.3,0.6c0,0.3-0.2,0.6-0.3,0.6h-7.4
+                                            c-0.2,0-0.3-0.3-0.3-0.6C15,3.1,15.1,2.8,15.3,2.8L15.3,2.8z M19,34.2c-0.9,0-1.7-0.7-1.7-1.6c0-0.9,0.7-1.6,1.7-1.6
+                                            c0.9,0,1.6,0.7,1.6,1.6C20.6,33.5,19.9,34.2,19,34.2L19,34.2z M27.1,28.5H10.9V5.6h16.2V28.5z M27.1,28.5"/>
+                                        </svg>
+                                <span>Мобильная версия</span>
+                            </div>
+                            <div class="s-3__step-two__app s-3__step-two__app-android"
+                                 onclick="window.open('apps/parimatch-kz-latest.apk', '_blank');">
+                                <svg version="1.1" id="android-ic" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                     viewBox="0 0 38 38" style="enable-background:new 0 0 38 38;" xml:space="preserve">
+                                        <path style="opacity:0.1;fill:#2DD671;" d="M14.3,8.4c0.2,0,0.4-0.1,0.6-0.3c0.2-0.2,0.3-0.4,0.3-0.6c0-0.2-0.1-0.4-0.3-0.6
+                                            c-0.2-0.2-0.4-0.3-0.6-0.3S13.9,6.8,13.7,7s-0.2,0.4-0.2,0.6c0,0.2,0.1,0.4,0.2,0.6S14.1,8.4,14.3,8.4z M23.7,8.4
+                                            c0.2,0,0.4-0.1,0.6-0.3s0.2-0.4,0.2-0.6c0-0.2-0.1-0.4-0.2-0.6s-0.4-0.3-0.6-0.3S23.2,6.8,23.1,7s-0.3,0.4-0.3,0.6
+                                            c0,0.2,0.1,0.4,0.3,0.6S23.4,8.4,23.7,8.4z M5.7,12.5c0.6,0,1.2,0.2,1.6,0.7c0.4,0.4,0.7,1,0.7,1.6v9.5c0,0.6-0.2,1.2-0.7,1.6
+                                            c-0.4,0.4-1,0.7-1.6,0.7s-1.2-0.2-1.6-0.7c-0.4-0.4-0.7-1-0.7-1.6v-9.5c0-0.6,0.2-1.2,0.7-1.6C4.5,12.7,5.1,12.5,5.7,12.5z
+                                             M29.2,12.9v14.7c0,0.7-0.2,1.3-0.7,1.7s-1,0.7-1.7,0.7h-1.7v5c0,0.6-0.2,1.2-0.7,1.6c-0.4,0.4-1,0.7-1.6,0.7s-1.2-0.2-1.6-0.7
+                                            c-0.4-0.4-0.7-1-0.7-1.6v-5h-3.1v5c0,0.6-0.2,1.2-0.7,1.6c-0.4,0.4-1,0.7-1.6,0.7c-0.6,0-1.2-0.2-1.6-0.7c-0.4-0.4-0.7-1-0.7-1.6
+                                            l0-5h-1.6c-0.7,0-1.3-0.2-1.7-0.7c-0.5-0.5-0.7-1-0.7-1.7V12.9H29.2z M24,4c1.6,0.8,2.8,1.9,3.8,3.4c0.9,1.5,1.4,3,1.4,4.8H8.8
+                                            c0-1.7,0.5-3.3,1.4-4.8C11.1,5.9,12.4,4.8,14,4l-1.6-2.9c-0.1-0.2-0.1-0.3,0.1-0.4c0.2-0.1,0.3,0,0.4,0.1l1.6,2.9
+                                            C16,3.1,17.4,2.8,19,2.8s3,0.3,4.4,0.9L25,0.8c0.1-0.2,0.3-0.2,0.4-0.1c0.2,0.1,0.2,0.3,0.1,0.4L24,4z M34.6,14.8v9.5
+                                            c0,0.6-0.2,1.2-0.7,1.6c-0.4,0.4-1,0.7-1.6,0.7c-0.6,0-1.2-0.2-1.6-0.7c-0.4-0.4-0.7-1-0.7-1.6v-9.5c0-0.6,0.2-1.2,0.7-1.6
+                                            s1-0.7,1.6-0.7c0.6,0,1.2,0.2,1.6,0.7C34.4,13.6,34.6,14.1,34.6,14.8z"/>
+                                        </svg>
+                                <span>Приложение для Android</span>
+                            </div>
+                        </div>
+                        <form class="s-3__personal-area__form" action="">
+                            <div class="s-3__personal-area__form-iphone">
+                                <div class="s-3__form-iphone__input-container">
+                                    <label class="s-3__form-iphone__input-label" for="s-3__AN-profile" data-number="1">Номер
+                                        счета</label>
+                                    <input id="s-3__AN-profile" type="tel" name="accnum"
+                                           class="s-3__form-iphone__input"
+                                           placeholder="2135475" autocomplete="off" minlength="7" required>
+                                </div>
+                                <div class="s-3__form-iphone__input-text">
+                                    При регистрации вы получите на e-mail номер счета,
+                                    который будет использоваться как логин.
+                                    <br>
+                                    <div class="s-3__form-iphone__input-link"
+                                         onclick="window.open('https://www.parimatch.kz/reg_bonus.html', '_blank');">
+                                        Зарегистрироваться
+                                    </div>
+                                </div>
+                                <div class="s-3__form-iphone__input-container">
+                                    <label class="s-3__form-iphone__input-label" for="s-3__BN-profile" data-number="2">Номер
+                                        ставки</label>
+                                    <input id="s-3__BN-profile" type="tel" name="betnum"
+                                           class="s-3__form-iphone__input"
+                                           placeholder="7897956" autocomplete="off" required>
+                                </div>
+                                <div class="s-3__form-iphone__input-text">
+                                    Сделайте ставку с мобильного и укажите ее номер,
+                                    который можно узнать в истории ставок.
+                                    <br><span>Минимальная ставка — 2500 тенге</span>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="yellow-border-button s-3__personal-area__rules-button" data-letter="К"
+                             onclick="window.open('http://info.parimatch.kz/ru/info/page/204-about', '_blank');">
+                            Правила
+                            конкурса
+                        </div>
+                        <div class="yellow-border-button s-3__personal-area__next-button" data-letter="I">
+                            <span class="before"></span>
+                            Хочу iphone X!
+                            <span class="after"></span>
+                        </div>
+                    </div>
+                    <div class="s-3__personal-area__right s-3__personal-area__right-two">
+                        <div class="s-3__right-two__img-container">
+                            <img src="img/kz/prize/kz-prize-2.png" alt="" class="s-3__right-two__img">
+                            <div class="s-3__right-two__title">
+                                <span>Поздравляем, Вы участвуете</span>
+                                <br><span>в розыгрыше </span>iPhone X!
+                            </div>
+                        </div>
+                        <form class="s-3__right-two__form" action="">
+                            <div class="s-3__personal-area__form-iphone">
+                                <div class="s-3__form-iphone__input-container">
+                                    <label class="s-3__form-iphone__input-label" for="s-3__AN-profile" data-number="1">Номер
+                                        счета</label>
+                                    <input id="s-3__AN-right-two" type="text" name="accnum"
+                                           class="s-3__form-iphone__input"
+                                           placeholder="2135475" autocomplete="off" minlength="7" disabled>
+                                </div>
+                                <div class="s-3__form-iphone__input-container">
+                                    <label class="s-3__form-iphone__input-label" for="s-3__BN-profile" data-number="2">Номер
+                                        ставки</label>
+                                    <input id="s-3__BN-right-two" type="text" name="betnum"
+                                           class="s-3__form-iphone__input"
+                                           placeholder="7897956" autocomplete="off" disabled>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="s-3__right-two__big-share">
+                            <div class="s-3__right-two__big-share__title">Удвойте шанс на победу!</div>
+                            <div class="s-3__right-two__big-share__text">Поделитесь своим фото ВКонтакте и
+                                удвойте шанс выиграть iPhone X</div>
+                            <div class="s-3__right-two__big-share__button">Поделиться</div>
+                        </div>
+                        <div class="yellow-border-button s-3__right-two__rules-button" data-letter="Д">Очистить данные
+                        </div>
+                        <div class="yellow-border-button s-3__right-two__next-button" data-letter="В">
+                            <span class="before"></span>
+                            галерея воинов
+                            <span class="after"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="s4" class="s-4 scroll-screen hidden" data-section-name="Галерея<br>воинов">
+            <div data-href="" class="s__back section__changer-anchor" data-letter=""></div>
+            <div class="s-4__logo">
+                <img src="img/GOS-logo.png" alt="logo">
+            </div>
+            <h4 class="s-4__title">
+                Галерея воинов
+            </h4>
+            <div class="s-4__gallery">
+
+            </div>
+            <svg class="s-4__gallery__loader" height="38" viewBox="0 0 38 38" width="38"
+                 xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="a" x1="8.042%" x2="65.682%" y1="0%" y2="23.865%">
+                        <stop offset="0%" stop-color="#f7d523" stop-opacity="0"/>
+                        <stop offset="63.146%" stop-color="#f7d523" stop-opacity=".631"/>
+                        <stop offset="100%" stop-color="#f7d523"/>
+                    </linearGradient>
+                </defs>
+                <g fill-rule="evenodd" fill="none">
+                    <g transform="translate(1 1)">
+                        <path d="M36 18c0-9.94-8.06-18-18-18" id="Oval-2" stroke-width="2" stroke="url(#a)"></path>
+                        <circle cx="36" cy="18" fill="#f7d523" r="1"></circle>
+                    </g>
+                </g>
+            </svg>
+            <div class="s-4__pagination">
+                <div class="s-4__pagination__arrow s-4__pagination__arrow-left">
+                    <svg version="1.1" id="arrow-left" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 68 68" style="enable-background:new 0 0 68 68;" xml:space="preserve">
+                    <polyline style="fill:none;stroke:#FFFFFF;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" points="37,28 31,34
+                        37,40 "/>
+                    </svg>
+                </div>
+                <div class="s-4__pagination__numbers">
+                </div>
+                <div class="s-4__pagination__arrow s-4__pagination__arrow-right">
+                    <svg version="1.1" id="arrow-right" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                         y="0px" viewBox="0 0 68 68" style="enable-background:new 0 0 68 68;" xml:space="preserve">
+                    <polyline style="fill:none;stroke:#FFFFFF;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" points="31,28 37,34
+                        31,40 "/>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <section id="s5" class="s-5 scroll-screen hidden" data-section-name="Правила и<br>призы">
+            <div data-href="" class="s__back section__changer-anchor" data-letter=""></div>
+            <div class="s-5__logo">
+                <img src="img/title-img-section-6.png" alt="">
+            </div>
+            <h4 class="s-5__title">
+                не упустите шанс выиграть 200 крутейших призов и два iPhone X
+            </h4>
+            <div class="s-5__content s-5__content-first">
+                <div class="s-5__content__how-win">
+                    <div class="s-5__content__how-win-first">
+                        <div class="s-5__how-win__images">
+                            <div class="s-5__how-win__img-container">
+                                <img class="s-5__how-win__img" src="img/kz/prize/kz-prize-1.png" alt="">
+                                <p class="s-5__how-win__text white">PowerBank</p>
+                                <p class="s-5__how-win__text title">100 шт.</p>
+                            </div>
+                            <div class="s-5__how-win__img-container">
+                                <img class="s-5__how-win__img-big" src="img/kz/prize/kz-prize-4.png" alt="">
+                                <p class="s-5__how-win__text white">iPhone X</p>
+                                <p class="s-5__how-win__text gray">Space gray (64gb)</p>
+                                <p class="s-5__how-win__text title">2 шт.</p>
+                            </div>
+                            <div class="s-5__how-win__img-container">
+                                <img class="s-5__how-win__img" src="img/kz/prize/kz-prize-3.png" alt="">
+                                <p class="s-5__how-win__text white">Бонус 25000 тенге
+                                    <br>на счет</p>
+                                <p class="s-5__how-win__text title">100 шт.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="s-5__content__steps">
+                    <div class="s-5__how-win__title">ВЫИГРАТЬ ОДИН ИЗ ПРИЗОВ ЛЕГКО:
+                    </div>
+                    <div class="s-5__content__steps-first">
+                        <div class="s-5__step s-5__step-one">
+                            <p class="s-5__step-letter">1</p>
+                            <p class="s-5__step-title">Вход</p>
+                            <p class="s-5__step-text">Авторизируйтесь на странице Game of Sports с помощью ВКонтакте</p>
+                        </div>
+                        <div class="s-5__step s-5__step-two">
+                            <p class="s-5__step-letter">2</p>
+                            <p class="s-5__step-title">Mobile</p>
+                            <p class="s-5__step-text">Откройте мобильную версию сайта или приложение «Пари-Матч»</p>
+                        </div>
+                        <div class="s-5__step s-5__step-three">
+                            <p class="s-5__step-letter">3</p>
+                            <p class="s-5__step-title">Ставка</p>
+                            <p class="s-5__step-text">Сделайте ставку на любое событие от 25000 тенге в мобильной версии или в мобильном приложении</p>
+                        </div>
+                        <div class="s-5__step s-5__step-four">
+                            <p class="s-5__step-letter">4</p>
+                            <p class="s-5__step-title">Регистрация</p>
+                            <p class="s-5__step-text">Укажите номер игрового счета
+                                и номер ставки, которая соответствует условиям акцииt</p>
+                        </div>
+                        <div class="s-5__step s-5__step-five">
+                            <p class="s-5__step-letter">5</p>
+                            <p class="s-5__step-title">Персонаж</p>
+                            <p class="s-5__step-text">Выберите подходящего персонажа и загрузите свое фото
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-href="#s3" class="s-5__button yellow-border-button section__changer-anchor" data-letter=Н><span
+                    class="before"></span>НАЧАТЬ<span class="after"></span></div>
+        </section>
+
+
+        <section id="s6" class="s-6 scroll-screen hidden" data-section-name="Выиграть<br>iPhone X">
+            <div data-href="" class="s__back section__changer-anchor" data-letter=""></div>
+            <div class="s-6__logo">
+                <img src="img/title-img-section-7.png" alt="">
+            </div>
+            <h4 class="s-6__title">
+                Оцените удобство мобильной версии сайта или приложения «Пари-Матч» и выиграйте iPhone X
+            </h4>
+            <div class="s-6__mobile-container">
+                <div class="s-6__mobile s-6__mobile-left">
+                    <div class="s-6__mobile-title">Делать ставки Легко!</div>
+                    <ul class="s-6__info-list">
+                        <li class="s-6__info-list__item s-6__info-list__item--click active">
+                            <span class="number">1</span><span class="line"></span><span class="circle"></span>
+                            <div class="s-6__info-list__item-active">
+                                <div class="s-6__list-item-mob">Удобный интерфейс</div>
+                                <div class="s-6__info-list__item-text">
+                                    <span>Зайдите</span> на свой игровой счет или <span>зарегистрируйтесь</span>
+                                </div>
+                                <div class="s-6__info-list__circle-number">
+                                    1
+                                </div>
+                            </div>
+                        </li>
+                        <li class="s-6__info-list__item s-6__info-list__item--click">
+                            <span class="number">2</span><span class="line"></span><span class="circle"></span>
+                            <div class="s-6__info-list__item-active">
+                                <div class="s-6__list-item-mob">Ставки Live и BetGames</div>
+                                <div class="s-6__info-list__item-text">
+                                    Выберите желаемый <span>исход матча</span> и кликните на <span>коэффициент</span>
+                                </div>
+                                <div class="s-6__info-list__circle-number">
+                                    2
+                                </div>
+                            </div>
+                        </li>
+                        <li class="s-6__info-list__item s-6__info-list__item--click">
+                            <span class="number">3</span><span class="line"></span><span class="circle"></span>
+                            <div class="s-6__info-list__item-active">
+                                <div class="s-6__list-item-mob">Бонус+ на экспресс</div>
+                                <div class="s-6__info-list__item-text">
+                                    В меню «Купон» выберите тип ставок,
+                                    введите сумму ставки и нажмите на
+                                    кнопку <span>«Сделать ставку»</span>
+                                </div>
+                                <div class="s-6__info-list__circle-number">
+                                    3
+                                </div>
+                            </div>
+                        </li>
+                        <li class="s-6__info-list__item s-6__info-list__item--click">
+                            <span class="number">4</span><span class="line"></span><span class="circle"></span>
+                            <div class="s-6__info-list__item-active">
+                                <div class="s-6__list-item-mob">Доступна услуга CashOut</div>
+                                <div class="s-6__info-list__item-text">
+                                    Скопируйте <span>номер счета</span> (отправляется на почту при регистрации) и
+                                    <span>номер ставки</span> (можно узнать в «истории ставок»)
+                                </div>
+                                <div class="s-6__info-list__circle-number">
+                                    4
+                                </div>
+                            </div>
+                        </li>
+                        <li class="s-6__info-list__item s-6__info-list__item--click">
+                            <span class="number">5</span><span class="line"></span><span class="circle"></span>
+                            <div class="s-6__info-list__item-active">
+                                <div class="s-6__info-list__item-text">
+                                    Создайте своего персонажа в Game of Sports, вставьте номер ставки и счета в
+                                    соответствующие поля и выиграйте
+                                    <span>iPhone X</span>!
+                                </div>
+                                <div class="s-6__info-list__circle-number">
+                                    5
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="s-6__mobile s-6__mobile-middle">
+                    <div class="s-6__mobile-iphone__img">
+                        <div class="s-6__mobile-iphone__bg-changer" data-bg="1">
+                            <div class="s-6__mobile-iphone__bg-img-ch"></div>
+                            <div class="s-6__mobile-iphone__bg-img"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="s-6__mobile s-6__mobile-right">
+                    <div class="s-6__mobile-title">преимущества
+                        <br><span>мобильной версии</span>
+                    </div>
+                    <ul class="s-6__list">
+                        <li class="s-6__list-item">Удобный интерфейс</li>
+                        <li class="s-6__list-item">Ставки Live и BetGames</li>
+                        <li class="s-6__list-item">Бонус+ на ставки типа «экспресс»</li>
+                        <li class="s-6__list-item">Доступна услуга CashOut</li>
+                    </ul>
+                    <div class="s-6__mobile-title">приложения и mobile:</span></div>
+                    <div class="s-6__step-two__apps">
+                        <div class="s-6__step-two__app s-6__step-two__app-mobile"
+                             onclick="window.open('https://m.parimatchabc8.com/', '_blank');">
+                            <svg version="1.1" id="mobile-ic" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 38 38" style="enable-background:new 0 0 38 38;" xml:space="preserve">
+                            <path style="opacity:0.2;fill:#6C8CBA;" d="M26.5,1.3H11.5C10.1,1.3,9,2.4,9,3.8v30.3c0,1.4,1.2,2.6,2.6,2.6h14.9
+                                c1.4,0,2.6-1.2,2.6-2.6V3.8C29,2.4,27.9,1.3,26.5,1.3L26.5,1.3z M15.3,2.8h7.4c0.2,0,0.3,0.3,0.3,0.6c0,0.3-0.2,0.6-0.3,0.6h-7.4
+                                c-0.2,0-0.3-0.3-0.3-0.6C15,3.1,15.1,2.8,15.3,2.8L15.3,2.8z M19,34.2c-0.9,0-1.7-0.7-1.7-1.6c0-0.9,0.7-1.6,1.7-1.6
+                                c0.9,0,1.6,0.7,1.6,1.6C20.6,33.5,19.9,34.2,19,34.2L19,34.2z M27.1,28.5H10.9V5.6h16.2V28.5z M27.1,28.5"></path>
+                            </svg>
+                            <span>Мобильная версия</span>
+                        </div>
+                        <div class="s-6__step-two__app s-6__step-two__app-android"
+                             onclick="window.open('apps/parimatch-kz-latest.apk', '_blank');">
+                            <svg version="1.1" id="android-ic" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 38 38" style="enable-background:new 0 0 38 38;" xml:space="preserve">
+                        <path style="opacity:0.1;fill:#2DD671;" d="M14.3,8.4c0.2,0,0.4-0.1,0.6-0.3c0.2-0.2,0.3-0.4,0.3-0.6c0-0.2-0.1-0.4-0.3-0.6
+                            c-0.2-0.2-0.4-0.3-0.6-0.3S13.9,6.8,13.7,7s-0.2,0.4-0.2,0.6c0,0.2,0.1,0.4,0.2,0.6S14.1,8.4,14.3,8.4z M23.7,8.4
+                            c0.2,0,0.4-0.1,0.6-0.3s0.2-0.4,0.2-0.6c0-0.2-0.1-0.4-0.2-0.6s-0.4-0.3-0.6-0.3S23.2,6.8,23.1,7s-0.3,0.4-0.3,0.6
+                            c0,0.2,0.1,0.4,0.3,0.6S23.4,8.4,23.7,8.4z M5.7,12.5c0.6,0,1.2,0.2,1.6,0.7c0.4,0.4,0.7,1,0.7,1.6v9.5c0,0.6-0.2,1.2-0.7,1.6
+                            c-0.4,0.4-1,0.7-1.6,0.7s-1.2-0.2-1.6-0.7c-0.4-0.4-0.7-1-0.7-1.6v-9.5c0-0.6,0.2-1.2,0.7-1.6C4.5,12.7,5.1,12.5,5.7,12.5z
+                             M29.2,12.9v14.7c0,0.7-0.2,1.3-0.7,1.7s-1,0.7-1.7,0.7h-1.7v5c0,0.6-0.2,1.2-0.7,1.6c-0.4,0.4-1,0.7-1.6,0.7s-1.2-0.2-1.6-0.7
+                            c-0.4-0.4-0.7-1-0.7-1.6v-5h-3.1v5c0,0.6-0.2,1.2-0.7,1.6c-0.4,0.4-1,0.7-1.6,0.7c-0.6,0-1.2-0.2-1.6-0.7c-0.4-0.4-0.7-1-0.7-1.6
+                            l0-5h-1.6c-0.7,0-1.3-0.2-1.7-0.7c-0.5-0.5-0.7-1-0.7-1.7V12.9H29.2z M24,4c1.6,0.8,2.8,1.9,3.8,3.4c0.9,1.5,1.4,3,1.4,4.8H8.8
+                            c0-1.7,0.5-3.3,1.4-4.8C11.1,5.9,12.4,4.8,14,4l-1.6-2.9c-0.1-0.2-0.1-0.3,0.1-0.4c0.2-0.1,0.3,0,0.4,0.1l1.6,2.9
+                            C16,3.1,17.4,2.8,19,2.8s3,0.3,4.4,0.9L25,0.8c0.1-0.2,0.3-0.2,0.4-0.1c0.2,0.1,0.2,0.3,0.1,0.4L24,4z M34.6,14.8v9.5
+                            c0,0.6-0.2,1.2-0.7,1.6c-0.4,0.4-1,0.7-1.6,0.7c-0.6,0-1.2-0.2-1.6-0.7c-0.4-0.4-0.7-1-0.7-1.6v-9.5c0-0.6,0.2-1.2,0.7-1.6
+                            s1-0.7,1.6-0.7c0.6,0,1.2,0.2,1.6,0.7C34.4,13.6,34.6,14.1,34.6,14.8z"></path>
+                        </svg>
+                            <span>Приложение для Android</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-href="#s1" class="s-6__button yellow-border-button section__changer-anchor" data-letter="Н"><span
+                    class="before"></span>Начать<span class="after"></span></div>
+        </section>
+        <div class="section-changer">
+            <video class="section-changer__video" poster="img/smoke-anim-poster.jpg">
+                <source src="video/smoke-anim.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="winter-coming__container">
+            <div class="winter-coming__popup"><img src="img/bg-pop-up-gallery.png" alt=""></div>
+            <div class="s-3__right-two__big-share">
+                <div class="s-3__right-two__big-share__title">Удвойте шанс на победу!</div>
+                <div class="s-3__right-two__big-share__text">Поделитесь своим фото ВКонтакте и
+                    удвойте шанс выиграть iPhone X</div>
+                <div class="s-3__right-two__big-share__button-third">Поделиться</div>
+            </div>
+        </div>
+        <div class="reg__popup">
+            <img class="reg__popup__img" src="icons/icon-mail-72x72.svg" alt="">
+            <div class="reg__popup__title">Почти готово!</div>
+            <div class="reg__popup__text">Подтвердите свой e-mail в течение 24 часов</div>
+            <div class="reg__popup__text2">Без подтверждения вы не сможете выиграть iPhone X и другие ценные призы
+            </div>
+            <div class="s-3__right-two__big-share">
+                <div class="s-3__right-two__big-share__title">Удвойте шанс на победу!</div>
+                <div class="s-3__right-two__big-share__text">Поделитесь своим фото ВКонтакте и
+                    удвойте шанс выиграть iPhone X</div>
+                <div class="s-3__right-two__big-share__button-sec">Поделиться</div>
+            </div>
+        </div>
+        <div class="login__menu-container">
+            <div class="login__menu__log-in login__menu__log-in--click">
+                <div class="login__menu__text">Войти</div>
+                <div class="login__menu__icon"><img src="icons/menu-ic-24x24/profile-ic-12x12.svg" alt=""></div>
+            </div>
+            <div data-href="#s3" class="login__menu__logged-on section__changer-anchor">
+                <div class="login__menu__name">Джон
+                    <br><span>Рокфеллер</span></div>
+                <div class="login__menu__logged-on-icon"><img src="" alt=""></div>
+            </div>
+            <div class="login__menu__logged" style="display: none;"></div>
+            <div class="login__menu-navigation login__menu-navigation--click">
+                <span class="login__menu__yellow-line login__menu__yellow-line-before"></span>
+                <span class="login__menu__yellow-line login__menu__yellow-line-middle-hidden"></span>
+                <span class="login__menu__yellow-line login__menu__yellow-line-middle"></span>
+                <span class="login__menu__yellow-line login__menu__yellow-line-after"></span>
+            </div>
+            <div class="login__popup-container">
+                <div class="login__popup-title">Вход</div>
+                <form id="login__popup-form" class="login__popup-form" action="">
+                    <div class="login__popup_form__input-container login__popup_form__input-container--email">
+                        <label class="login__popup_form__input-label" for="login__popup__email"
+                               data-number="1">Email</label>
+                        <input id="login__popup__email" type="email" name="mail" class="login__popup_form__input"
+                               placeholder="Ваш email..." autocomplete="off" required="">
+                    </div>
+                    <div class="login__popup_form__input-container login__popup_form__input-container--password">
+                        <label class="login__popup_form__input-label" for="login__popup__password" data-number="2">Пароль</label>
+                        <input id="login__popup__password" type="password" name="password"
+                               class="login__popup_form__input" placeholder="Ваш пароль..." autocomplete="off"
+                               required="">
+                    </div>
+                </form>
+                <div class="login__popup__login-btn login__popup__login-fb login__popup__login-fb--click">
+                </div>
+                <div class="login__popup__login-btn login__popup__login-vk login__popup__login-vk--click">
+                </div>
+                <div class="login__popup__button yellow-border-button" data-letter="В"><span class="before"></span>ВОЙТИ<span
+                        class="after"></span></div>
+                <div class="login__popup__close">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <nav class="navigation__nav-menu hidden">
+            <div class="navigation__nav-menu__text">
+                <span>авигация</span>
+            </div>
+            <ul class="navigation__nav">
+                <li class="active">
+                    <div data-href="#s5" class="section__changer-anchor"><span class="oh"><span
+                            class="tm">Правила и призы</span></span>
+                        <svg version="1.1" id="menu-ic-3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                             viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+                    <path style="fill:none;stroke:#f7d523;stroke-miterlimit:10;" d="M17.6,5.9c0.4-0.4,0.6-1,0.6-1.6C18.2,3,17.2,2,16,2
+                        c-0.9,0-3.1,1.4-4,2.7C11.1,3.4,8.9,2,8,2c-1.2,0-2.3,1-2.3,2.3c0,0.6,0.2,1.1,0.6,1.5H2v5.5h1.2V22h17.6V11.4H22V5.9H17.6z
+                         M21.1,10.6"/>
+                    </svg>
+                    </div>
+                </li>
+                <li>
+                    <div data-href="#s3" class="section__changer-anchor">
+                        <span class="oh"><span class="tm">Конкурс</span></span>
+                        <svg version="1.1" id="menu-ic-5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                             viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+                        <g>
+                            <path style="fill:#f7d523;" d="M11,4.3c0.2,0,0.4,0.1,0.5,0.2l6.7,6.7c0.3,0.3,0.3,0.8,0,1.1c-0.1,0.1-0.3,0.2-0.5,0.2
+                                c-0.2,0-0.3,0-0.4-0.1c-0.2-0.1-0.4-0.2-0.6-0.2c-0.1,0-0.1,0-0.2,0c-1.8,0.4-3.5,1.1-5.1,2.2c-0.2,0.2-0.4,0.4-0.4,0.7
+                                c0,0.3,0.1,0.6,0.3,0.8l0.3,0.3c0.1,0.1,0.2,0.3,0.2,0.5c0,0.2-0.1,0.4-0.2,0.5l-0.4,0.4c-0.4,0.4-0.4,1,0,1.4l1.3,1.3
+                                c0.1,0.1,0.2,0.3,0.2,0.5c0,0.2-0.1,0.4-0.2,0.5c-0.1,0.1-0.3,0.2-0.5,0.2s-0.4-0.1-0.5-0.2l-2.9-2.9c-0.2-0.2-0.5-0.3-0.7-0.3
+                                c-0.3,0-0.5,0.1-0.7,0.3L6.5,19c-0.1,0.1-0.3,0.2-0.5,0.2S5.6,19.1,5.4,19l-1.7-1.7c-0.1-0.1-0.2-0.3-0.2-0.5
+                                c0-0.2,0.1-0.4,0.2-0.5l3.1-3.1c1.9-1.9,3.1-4.2,3.7-6.9c0.1-0.3,0-0.5-0.2-0.8c-0.2-0.3-0.2-0.7,0.1-1C10.6,4.4,10.8,4.3,11,4.3
+                                 M11,3.3c-0.5,0-0.9,0.2-1.3,0.5C9.1,4.4,9.1,5.4,9.5,6.1l0,0C9,8.5,7.9,10.7,6.1,12.4l-3.1,3.1c-0.7,0.7-0.7,1.8,0,2.5l1.7,1.7
+                                C5.1,20,5.5,20.2,6,20.2c0.5,0,0.9-0.2,1.3-0.5l0.4-0.4l2.9,2.9c0.3,0.3,0.8,0.5,1.3,0.5c0.5,0,0.9-0.2,1.3-0.5
+                                c0.7-0.7,0.7-1.8,0-2.5l-1.3-1.3l0.4-0.4c0.7-0.7,0.7-1.8,0-2.5L12,15.2c1.4-1,3-1.7,4.7-2l0,0c0.3,0.2,0.6,0.3,1,0.3
+                                c0.5,0,0.9-0.2,1.3-0.5h0c0.7-0.7,0.7-1.8,0-2.5l-6.7-6.7C11.9,3.5,11.5,3.3,11,3.3L11,3.3z"/>
+                        </g>
+                        <line style="fill:none;stroke:#f7d523;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="17" y1="5.8" x2="18.6" y2="4.2"/>
+                        <line style="fill:none;stroke:#f7d523;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="14.5" y1="3.2" x2="15.1" y2="1.1"/>
+                        <line style="fill:none;stroke:#f7d523;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="19.6" y1="8.3" x2="21.5" y2="7.2"/>
+                        </svg>
+                    </div>
+                </li>
+                <li>
+                    <div data-href="#s1" class="section__changer-anchor">
+                        <span class="oh"><span class="tm">Выбор персонажа</span></span>
+                        <svg version="1.1" id="menu-ic-5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                             viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+                        <g>
+                            <path style="stroke:#f7d523;stroke-miterlimit:10;" d="M11,12.3"/>
+                            <path style="stroke:#f7d523;stroke-miterlimit:10;" d="M16.6,6.7"/>
+                            <path style="stroke:#f7d523;stroke-miterlimit:10;" d="M19,4.4"/>
+                            <path style="stroke:#f7d523;stroke-miterlimit:10;" d="M5,4.4"/>
+                            <path style="fill:none;stroke:#f7d523;stroke-miterlimit:10;" d="M21.5,19.6c-0.1-0.1-0.3-0.2-0.5-0.3c-0.1-0.2-0.2-0.3-0.3-0.5
+                                c-0.1-0.1-0.3-0.2-0.5-0.3c-0.1-0.2-0.2-0.3-0.3-0.5c-0.1-0.1-0.3-0.2-0.5-0.3c-0.1-0.2-0.2-0.3-0.3-0.5c-0.1-0.1-0.3-0.2-0.5-0.3
+                                c-0.1-0.2-0.2-0.3-0.3-0.5c0,0,0,0,0,0c0.6-0.4,1.3-0.8,2-1c0.1,0,0.1-0.1,0.2-0.1c0-0.1,0-0.2,0-0.2l-0.4-1.4
+                                c0-0.2-0.2-0.2-0.4-0.2c-0.7,0.2-1.4,0.5-2,0.9l-2.4-2.6l5.6-5.2c0.1-0.1,0.1-0.1,0.1-0.2l0.2-3.8c0-0.1,0-0.2-0.1-0.2
+                                c-0.1-0.1-0.1-0.1-0.2-0.1l-3.8,0.2c-0.1,0-0.1,0-0.2,0.1L12,8.2L7.3,3.1C7.2,3,7.2,3,7.1,3L3,2.4c-0.1,0-0.2,0-0.3,0.1
+                                C2.6,2.5,2.6,2.6,2.6,2.7l0.6,4.1c0,0.1,0,0.1,0.1,0.2l5.2,4.8l-2.4,2.6c-0.6-0.4-1.3-0.7-2-0.9c-0.2,0-0.3,0-0.4,0.2l-0.4,1.4
+                                c0,0.1,0,0.2,0,0.2c0,0.1,0.1,0.1,0.2,0.1c0.7,0.2,1.4,0.6,2,1c0,0,0,0,0,0c-0.1,0.1-0.2,0.3-0.3,0.5c-0.2,0.1-0.3,0.2-0.5,0.3
+                                c-0.1,0.1-0.2,0.3-0.3,0.5C4.3,17.9,4.1,18,4,18.1c-0.1,0.1-0.2,0.3-0.3,0.5c-0.2,0.1-0.3,0.2-0.5,0.3C3.1,19,3,19.2,3,19.3
+                                c-0.2,0.1-0.3,0.2-0.5,0.3c-0.2,0.2-0.3,0.5-0.3,0.8c0,0.3,0.1,0.6,0.3,0.8c0.2,0.2,0.5,0.3,0.8,0.3c0.3,0,0.6-0.1,0.8-0.3
+                                c0.1-0.1,0.2-0.3,0.3-0.5c0.2-0.1,0.3-0.2,0.5-0.3c0.1-0.1,0.2-0.3,0.3-0.5c0.2-0.1,0.3-0.2,0.5-0.3c0.1-0.1,0.2-0.3,0.3-0.5
+                                c0.2-0.1,0.3-0.2,0.5-0.3c0.1-0.1,0.2-0.3,0.3-0.5c0.2-0.1,0.3-0.2,0.5-0.3c0,0,0,0,0,0c0.4,0.6,0.8,1.3,1,2c0,0.1,0.2,0.2,0.3,0.2
+                                c0,0,0.1,0,0.1,0l1.4-0.4c0.1,0,0.1-0.1,0.2-0.1c0-0.1,0-0.2,0-0.2c-0.2-0.7-0.5-1.4-0.9-2l2.7-2.5l2.7,2.5c-0.4,0.6-0.7,1.3-0.9,2
+                                c0,0.1,0,0.2,0,0.2c0,0.1,0.1,0.1,0.2,0.1l1.4,0.4c0,0,0.1,0,0.1,0c0.1,0,0.2-0.1,0.3-0.2c0.2-0.7,0.6-1.4,1-2c0,0,0,0,0,0
+                                c0.1,0.1,0.3,0.2,0.5,0.3c0.1,0.2,0.2,0.3,0.3,0.5c0.1,0.1,0.3,0.2,0.5,0.3c0.1,0.2,0.2,0.3,0.3,0.5c0.1,0.1,0.3,0.2,0.5,0.3
+                                c0.1,0.2,0.2,0.3,0.3,0.5c0.1,0.1,0.3,0.2,0.5,0.3c0.1,0.2,0.2,0.3,0.3,0.5c0.2,0.2,0.5,0.3,0.8,0.3c0.3,0,0.6-0.1,0.8-0.3
+                                c0.2-0.2,0.3-0.5,0.3-0.8C21.8,20.1,21.7,19.8,21.5,19.6L21.5,19.6z M21.1,20.8"/>
+                        </g>
+                        </svg>
+                    </div>
+                </li>
+                <li>
+                    <div data-href="#s4" class="section__changer-anchor"><span class="oh"><span
+                            class="tm">Галерея воинов</span></span>
+                        <svg version="1.1" id="menu-ic-2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                             viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+                    <path style="fill:none;stroke:#f7d523;stroke-miterlimit:10;" d="M9.2,10.4h-4C4.5,10.4,4,9.9,4,9.2v-4C4,4.5,4.5,4,5.2,4h4
+                        c0.7,0,1.2,0.5,1.2,1.2v4C10.4,9.9,9.9,10.4,9.2,10.4z M18.8,10.4h-4c-0.7,0-1.2-0.5-1.2-1.2v-4c0-0.7,0.5-1.2,1.2-1.2h4
+                        C19.5,4,20,4.5,20,5.2v4C20,9.9,19.5,10.4,18.8,10.4z M9.2,20h-4C4.5,20,4,19.5,4,18.8v-4c0-0.7,0.5-1.2,1.2-1.2h4
+                        c0.7,0,1.2,0.5,1.2,1.2v4C10.4,19.5,9.9,20,9.2,20z M18.8,20h-4c-0.7,0-1.2-0.5-1.2-1.2v-4c0-0.7,0.5-1.2,1.2-1.2h4
+                        c0.7,0,1.2,0.5,1.2,1.2v4C20,19.5,19.5,20,18.8,20z"/>
+                    </svg>
+                    </div>
+                </li>
+                <li>
+                    <div data-href="#s6" class="section__changer-anchor"><span class="oh"><span
+                            class="tm">Выиграть iPhone X</span></span>
+                        <svg version="1.1" id="menu-ic-4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                             viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+                    <path style="fill:none;stroke:#f7d523;stroke-miterlimit:10;" d="M4.6,9.3C2.9,12.3,4,16.8,5.9,19.5C6.8,20.8,7.8,22,9.1,22
+                        c0,0,0,0,0.1,0c0.6,0,1.1-0.2,1.5-0.4c0.5-0.2,1-0.4,1.8-0.4c0.7,0,1.2,0.2,1.7,0.4c0.4,0.2,0.9,0.4,1.6,0.4c1.5,0,2.4-1.3,3.2-2.5
+                        c0.8-1.2,1.2-2.4,1.4-2.8l0,0c0-0.1,0-0.2-0.1-0.2c0,0,0,0,0,0c-0.3-0.1-2.5-1.1-2.5-3.8c0-2.2,1.7-3.4,2-3.6l0,0
+                        c0,0,0.1-0.1,0.1-0.1c0,0,0-0.1,0-0.1c-1.2-1.7-3-2-3.7-2c-0.1,0-0.2,0-0.3,0c-0.9,0-1.7,0.3-2.3,0.6c-0.5,0.2-0.9,0.3-1.1,0.3
+                        c-0.3,0-0.7-0.2-1.2-0.3c-0.6-0.2-1.3-0.5-2-0.5c0,0,0,0-0.1,0C7.2,6.8,5.5,7.8,4.6,9.3L4.6,9.3z M4.6,9.3 M15.9,2
+                        c-1,0-2.3,0.7-3,1.6c-0.6,0.7-1.2,2-1.1,3.2c0,0.1,0.1,0.1,0.2,0.1c0.1,0,0.1,0,0.2,0c1,0,2.1-0.6,2.9-1.5c0.8-1,1.2-2.2,1.1-3.3
+                        C16.1,2,16,2,15.9,2L15.9,2z M15.9,2"/>
+                    </svg>
+                    </div>
+                </li>
+                <li>
+                    <div onclick="window.open('http://info.parimatch.kz/ru/support', '_blank');"><span
+                            class="oh"><span
+                            class="tm">Служба поддержки</span></span>
+                        <svg version="1.1" id="menu-ic-5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                             viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
+                        <path style="fill:none;stroke:#F7D523;stroke-miterlimit:10;" d="M22.2,17.9c0,0.3-0.1,0.6-0.3,0.9L19,21.7
+                            c-0.1,0.1-0.3,0.3-0.5,0.4c-0.2,0.1-0.4,0.2-0.6,0.2c0,0-0.1,0-0.1,0c-0.1,0-0.2,0-0.3,0c-0.3,0-0.7,0-1.3-0.1
+                            c-0.6-0.1-1.4-0.3-2.3-0.7c-0.9-0.4-1.9-0.9-3-1.7c-1.1-0.7-2.3-1.7-3.6-3c-1-1-1.9-2-2.5-2.9c-0.7-0.9-1.2-1.8-1.6-2.5
+                            c-0.4-0.8-0.7-1.5-0.9-2.1C2.1,8.6,1.9,8,1.8,7.6C1.8,7.1,1.7,6.8,1.8,6.5c0-0.3,0-0.4,0-0.4c0-0.2,0.1-0.4,0.2-0.6
+                            C2.1,5.3,2.2,5.1,2.3,5l2.9-2.9c0.2-0.2,0.4-0.3,0.7-0.3c0.2,0,0.4,0.1,0.5,0.2C6.6,2,6.7,2.2,6.8,2.3l2.3,4.4
+                            C9.2,7,9.3,7.2,9.2,7.5C9.2,7.8,9,8,8.9,8.2L7.8,9.2c0,0-0.1,0.1-0.1,0.1c0,0.1,0,0.1,0,0.2c0.1,0.3,0.2,0.7,0.4,1
+                            c0.2,0.3,0.4,0.8,0.8,1.3c0.4,0.5,0.9,1.1,1.5,1.7c0.7,0.7,1.2,1.2,1.7,1.6c0.5,0.4,0.9,0.6,1.3,0.8c0.3,0.2,0.6,0.3,0.8,0.3
+                            l0.3,0.1c0,0,0.1,0,0.1,0c0.1,0,0.1,0,0.1-0.1l1.2-1.3c0.3-0.2,0.6-0.3,0.9-0.3c0.2,0,0.4,0,0.6,0.1h0l4.2,2.5
+                            C22,17.4,22.2,17.6,22.2,17.9L22.2,17.9z"/>
+                        </svg>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <div class="navigation-line">
+            <div class="navigation-line--move"></div>
+        </div>
+        <div class="loggin-popup__container">
+            <div class="loggin-popup"><img src="img/bg-pop-up-gallery.png" alt=""></div>
+            <svg class="loggin-popup__loader" height="38" viewBox="0 0 38 38" width="38"
+                 xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="ab" x1="8.042%" x2="65.682%" y1="0%" y2="23.865%">
+                        <stop offset="0%" stop-color="#f7d523" stop-opacity="0"/>
+                        <stop offset="63.146%" stop-color="#f7d523" stop-opacity=".631"/>
+                        <stop offset="100%" stop-color="#f7d523"/>
+                    </linearGradient>
+                </defs>
+                <g fill-rule="evenodd" fill="none">
+                    <g transform="translate(1 1)">
+                        <path d="M36 18c0-9.94-8.06-18-18-18" id="Oval-2" stroke-width="2" stroke="url(#ab)"></path>
+                        <circle cx="36" cy="18" fill="#f7d523" r="1"></circle>
+                    </g>
+                </g>
+            </svg>
+        </div>
+        <div class="static-block__logo" onclick="window.open('https://www.parimatch.kz/reg_bonus.html', '_blank');">
+            <img src="icons/pm-logo-kz-194x63.svg" alt="">
+        </div>
+        <div class="static-block__bonus" onclick="window.open('https://www.parimatch.kz/reg_bonus.html', '_blank');">
+            <img src="img/bonus-block.png" alt="">
+        </div>
+        <div class="static-block__mobile-iphone active">
+            <img src="img/kz/iphone-x-mobile-kz.png" alt="" class="static-block__mobile">
+            <img class="horisontal" src="img/kz/iphone-x-block.png" alt="">
+            <img class="vertical" src="img/kz/iphone-x-block-small.png" alt="">
+        </div>
+    </main>
+</div>
+<div class="default-block">
+    <a href="https://www.parimatch.kz/reg_bonus.html" target="_blank">
+        <div class="default-block__logo">
+            <img src="icons/pm-logo-kz-194x63.svg" alt="">
+        </div>
+    </a>
+    <div class="default-block__text-container">
+        <div class="text1">К сожалению, ваш смартфон оказался
+            <br>не готов к битве
+        </div>
+    </div>
+</div>
+<div class="rotate-block">
+    <div class="rotate-block__svg-container">
+        <img src="icons/pm-logo-kz-194x63.svg" alt="">
+        <svg version="1.1" id="ic-rotate" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+             viewBox="0 0 200 200" style="enable-background:new 0 0 200 200;" xml:space="preserve">
+        <g id="ic">
+            <path style="fill:#F7D523;" d="M164.2,155.8c-2.1,0-3.8-1.7-3.8-3.8v-6.1c0-2.1,1.7-3.8,3.8-3.8s3.8,1.7,3.8,3.8v6.1
+                C168,154.1,166.3,155.8,164.2,155.8z M164.2,143.9c-1.1,0-1.9,0.9-1.9,1.9v6.1c0,1.1,0.9,1.9,1.9,1.9s1.9-0.9,1.9-1.9v-6.1
+                C166.1,144.8,165.3,143.9,164.2,143.9z"/>
+            <path style="fill:#F7D523;" d="M164.2,198.6H17.4c-8.8,0-16-7.2-16-16v-67.3c0-8.8,7.2-16,16-16h81.8V17.4c0-8.8,7.2-16,16-16h67.3
+                c4.3,0,8.3,1.7,11.3,4.7c3,3,4.7,7.1,4.7,11.3v146.8c0,8.8-7.2,16-16,16h-2.3v2.3C180.2,191.4,173,198.6,164.2,198.6z M17.4,101.1
+                c-7.8,0-14.2,6.3-14.2,14.2v67.3c0,7.8,6.3,14.2,14.2,14.2h146.8c7.8,0,14.2-6.3,14.2-14.2v-4.2h4.2c7.8,0,14.2-6.3,14.2-14.2V17.4
+                c0-3.8-1.5-7.3-4.1-10c-2.7-2.7-6.2-4.1-10-4.1h-67.3c-7.8,0-14.2,6.3-14.2,14.2v83.7H17.4z M164.2,192.9h-10.3v-65.3
+                c0-1.1-0.9-1.9-1.9-1.9s-1.9,0.9-1.9,1.9v65.3H31.6V105h118.5v10.3c0,1.1,0.9,1.9,1.9,1.9s1.9-0.9,1.9-1.9V105h10.3
+                c5.7,0,10.3,4.6,10.3,10.3v67.3C174.5,188.2,169.9,192.9,164.2,192.9z M155.8,191h8.4c4.6,0,8.4-3.8,8.4-8.4v-67.3
+                c0-4.6-3.8-8.4-8.4-8.4h-8.4v8.4c0,2.1-1.7,3.8-3.8,3.8s-3.8-1.7-3.8-3.8v-8.4H33.5V191h114.7v-63.5c0-2.1,1.7-3.8,3.8-3.8
+                s3.8,1.7,3.8,3.8V191z M27.8,192.9H17.4c-5.7,0-10.3-4.6-10.3-10.3v-67.3c0-5.7,4.6-10.3,10.3-10.3h10.3V192.9z M17.4,106.9
+                c-4.6,0-8.4,3.8-8.4,8.4v67.3c0,4.6,3.8,8.4,8.4,8.4h8.4v-84.1H17.4z M182.6,174.5h-4.2v-20.6h14.5v10.3
+                C192.9,169.9,188.2,174.5,182.6,174.5z M180.2,172.6h2.3c4.6,0,8.4-3.8,8.4-8.4v-8.4h-10.7V172.6z M192.9,150.1h-14.5v-34.8
+                c0-7.8-6.3-14.2-14.2-14.2H105V31.6h65.3c1.1,0,1.9-0.9,1.9-1.9c0-1.1-0.9-1.9-1.9-1.9H105V17.4c0-5.7,4.6-10.3,10.3-10.3h67.3
+                c5.7,0,10.3,4.6,10.3,10.3v10.3h-10.3c-1.1,0-1.9,0.9-1.9,1.9c0,1.1,0.9,1.9,1.9,1.9h10.3V150.1z M180.2,148.2H191V33.5h-8.4
+                c-2.1,0-3.8-1.7-3.8-3.8s1.7-3.8,3.8-3.8h8.4v-8.4c0-4.6-3.8-8.4-8.4-8.4h-67.3c-4.6,0-8.4,3.8-8.4,8.4v8.4h63.5
+                c2.1,0,3.8,1.7,3.8,3.8s-1.7,3.8-3.8,3.8h-63.5v65.8h57.3c8.8,0,16,7.2,16,16V148.2z"/>
+            <path style="fill:#F7D523;" d="M34.7,90.8c-1.3,0-2.6-0.7-3.2-1.8l-9.2-15.3c-1.1-1.8-0.5-4.1,1.3-5.2c0.6-0.4,1.3-0.5,1.9-0.5
+                c1.3,0,2.5,0.7,3.2,1.8l2,3.4V50.3C30.7,27.8,49,9.5,71.4,9.5H86c2,0,3.7,1.7,3.7,3.7S88,16.9,86,16.9H71.4
+                c-18.4,0-33.3,15-33.3,33.3v23.1l2.4-3.7c0.7-1.1,2-1.8,3.3-1.8c0.7,0,1.4,0.2,2,0.5c1.8,1.1,2.4,3.4,1.4,5.2L38,88.9
+                C37.3,90.1,36.1,90.8,34.7,90.8z M25.5,69.8c-0.3,0-0.6,0.1-0.9,0.3c-0.9,0.5-1.2,1.7-0.7,2.6L33.1,88c0.3,0.6,1,0.9,1.6,0.9
+                c0.7,0,1.3-0.4,1.6-0.9l9.1-15.3c0.5-0.9,0.2-2.1-0.7-2.6c-0.3-0.2-0.6-0.3-1-0.3c-0.7,0-1.4,0.4-1.7,0.9l-5.8,9.2V50.3
+                c0-19.4,15.8-35.2,35.2-35.2H86c1,0,1.8-0.8,1.8-1.8S87,11.4,86,11.4H71.4c-21.4,0-38.9,17.4-38.9,38.9v29.9l-5.5-9.4
+                C26.7,70.1,26.2,69.8,25.5,69.8z"/>
+        </g>
+        </svg>
+    </div>
+    <div class="rotate-block__text-container">
+        <div class="text1">Переверните устройство</div>
+        <div class="text2">Так будет легче выбрать героя и
+            <br>выиграть <span>iPhone X</span></div>
+    </div>
+</div>
+<div class="share-generation">
+    <canvas class="share-canvas-generation" width="1200" height="630"></canvas>
+    <img class="share-img" data-player="boxing" src="img/boxing/GOS-share-boxing.png" alt="">
+    <img class="share-img active" data-player="basketball" src="img/basketball/GOS-basketball.png" alt="">
+    <img class="share-img" data-player="football" src="img/football/GOS-share-football.png" alt="">
+    <img class="share-img" data-player="hockey" src="img/hockey/GOS-share-hockey.png" alt="">
+    <img class="share-img" data-player="tennis" src="img/tennis/GOS-share-tennis.png" alt="">
+    <img class="share-img" data-player="cybersport" src="img/cybersport/GOS-share-cybersport.png" alt="">
+    <img class="share-img-mid" data-player="boxing" src="img/boxing/face-block-mid-boxing.png" alt="">
+    <img class="share-img-mid share-img--get" data-player="basketball"
+         src="img/basketball/face-block-mid-basketball.png" alt="">
+    <img class="share-img-mid" data-player="football" src="img/football/face-block-mid-football.png" alt="">
+    <img class="share-img-mid" data-player="hockey" src="img/hockey/face-block-mid-hockey.png" alt="">
+    <img class="share-img-mid" data-player="tennis" src="img/tennis/face-block-mid-tennis.png" alt="">
+    <img class="share-img-mid" data-player="cybersport" src="img/cybersport/face-block-mid-cybersport.png" alt="">
+    <img src="" alt="" class="share-img-mid-generation">
+</div>
+<img class="share-img-generation" src="" alt="" width="1200" height="630">
+<script src="js/scripts.min.js"></script>
+</body>
+</html>
