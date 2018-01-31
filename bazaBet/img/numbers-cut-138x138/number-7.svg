@@ -1,1 +1,7 @@
-<svg id="content" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 138"><defs><style>.cls-1{fill:none;stroke:#00b140;stroke-miterlimit:10;stroke-width:1.4px}</style></defs><title>number-7</title><path id="_7" data-name="7" class="cls-1" d="M62.44 125h-24l45-88v-4H30.76V13h76.48v24z"/></svg>
+<svg id="content" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 138">
+    <defs>
+        <style>.cls-1{fill:none;stroke:#00b140;stroke-miterlimit:10;stroke-width:1.4px;}</style>
+    </defs>
+    <title>number-7</title>
+    <path id="_7" data-name="7" class="cls-1" d="M62.44,125h-24l45-88V33H30.76V13h76.48V37Z"/>
+</svg>

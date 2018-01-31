@@ -1,1 +1,31 @@
-<svg id="aim" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 314 314"><style>.st0{fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10}.st1{fill:url(#SVGID_1_)}</style><g id="cont"><g id="lines-a"><circle class="st0" cx="157.4" cy="156.2" r="26.4"/><circle class="st0" cx="157.4" cy="156.2" r="19.7"/><path class="st0" d="M157.5 140.5v-27.2m15.7 42.8h27.3m-43.1 15.8v27.5m-15.9-43.2h-27.1"/></g><g id="wheel"><linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="157" y1=".623" x2="157" y2="313.377"><stop offset="0" stop-color="#00b140"/><stop offset=".795" stop-color="#00b140"/><stop offset=".862" stop-color="#00a83c"/><stop offset=".968" stop-color="#009132"/><stop offset="1" stop-color="#00892e"/></linearGradient><path class="st1" d="M157 1.6c85.8 0 155.4 69.6 155.4 155.4S242.8 312.4 157 312.4 1.6 242.8 1.6 157 71.2 1.6 157 1.6m0-1C115.2.6 76 16.9 46.4 46.4 16.9 76 .6 115.2.6 157s16.3 81 45.8 110.6c29.5 29.5 68.8 45.8 110.6 45.8s81-16.3 110.6-45.8 45.8-68.8 45.8-110.6-16.3-81-45.8-110.6C238 16.9 198.8.6 157 .6z"/></g></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 20.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="aim" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 314 314" style="enable-background:new 0 0 314 314;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st1{fill:url(#SVGID_1_);}
+</style>
+<g id="cont">
+	<g id="lines-a">
+		<circle class="st0" cx="157.4" cy="156.2" r="26.4"/>
+		<circle class="st0" cx="157.4" cy="156.2" r="19.7"/>
+		<line class="st0" x1="157.5" y1="140.5" x2="157.5" y2="113.3"/>
+		<line class="st0" x1="173.2" y1="156.1" x2="200.5" y2="156.1"/>
+		<line class="st0" x1="157.4" y1="171.9" x2="157.4" y2="199.4"/>
+		<line class="st0" x1="141.5" y1="156.2" x2="114.4" y2="156.2"/>
+	</g>
+	<g id="wheel">
+		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="157" y1="0.6225" x2="157" y2="313.3774">
+			<stop  offset="0" style="stop-color:#00B140"/>
+			<stop  offset="0.7952" style="stop-color:#00B140"/>
+			<stop  offset="0.8619" style="stop-color:#00A83C"/>
+			<stop  offset="0.9681" style="stop-color:#009132"/>
+			<stop  offset="1" style="stop-color:#00892E"/>
+		</linearGradient>
+		<path class="st1" d="M157,1.6c85.8,0,155.4,69.6,155.4,155.4S242.8,312.4,157,312.4S1.6,242.8,1.6,157S71.2,1.6,157,1.6 M157,0.6
+			c-41.8,0-81,16.3-110.6,45.8C16.9,76,0.6,115.2,0.6,157s16.3,81,45.8,110.6c29.5,29.5,68.8,45.8,110.6,45.8s81-16.3,110.6-45.8
+			s45.8-68.8,45.8-110.6s-16.3-81-45.8-110.6C238,16.9,198.8,0.6,157,0.6L157,0.6z"/>
+	</g>
+</g>
+</svg>
