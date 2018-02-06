@@ -24,9 +24,9 @@ window.onload = function () {
         }).to('.header-container h3', .5, {
             ease: Power2.easeInOut,
             opacity: 1
-        }).fromTo('.btn-blue--1', .5, {
+        }).fromTo('.btn-blue--1', 1, {
             ease: Power2.easeInOut,
-            y: 300,
+            y: 200,
             opacity: 0
         },{
             ease: Power2.easeInOut,

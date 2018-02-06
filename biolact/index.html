@@ -30,6 +30,7 @@
 
     <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
 
+    <link rel="stylesheet" href="css/loader.min.css">
     <link rel="stylesheet" href="css/main.min.css">
     <!-- Chrome, Firefox OS and Opera -->
     <meta name="theme-color" content="#000000">
@@ -40,6 +41,14 @@
 </head>
 
 <body>
+
+<div id="hellopreloader">
+    <div id="hellopreloader_preload">
+        <img src="img/svg/loader-ball.svg" alt="">
+    </div>
+</div>
+<script src="js/loader.js"></script>
+
 <section class="s-1">
     <div class="jal-container">
         <div class="jal-item jal-item--1">
@@ -276,7 +285,7 @@
                     </div>
                 </div>
             </div>
-            <span>Наведите на один из слоев капсулы Биолакта, чтобы узнать о нем больше</span>
+            <span><span class="desktop-text">Наведите </span><span class="mobile-text">Нажмите </span>на один из слоев капсулы Биолакта, чтобы узнать о нем больше</span>
         </div>
     </div>
     <h2 class="m-b-60">3 главных отличия Биолакта от аналогов</h2>
@@ -369,14 +378,12 @@
         </svg>
         НАЗАД
     </a>
-
+<div class="about">
+    <span class="about-left">2018</span>
+    <a href="http://lab73.digital/" target="_blank"><span class="about-right">Developed by Lab73</span></a>
+</div>
 </section>
 
-<div id="hellopreloader">
-    <div id="hellopreloader_preload"></div>
-</div>
-
-<script src="js/loader.js"></script>
-<script src="js/scripts.min.js"></script>
+<script src="js/scripts.min.js" ></script>
 </body>
 </html>
