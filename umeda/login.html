@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>Edumed Sign in</title>
+    <meta name="description"
+          content="">
+    <meta name="keywords"
+          content="">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--SHARE-->
+    <meta property="og:title" content=""/>
+    <meta id="meta-description" property="og:description"
+          content="">
+    <meta property="og:locale" content="uk_UA">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content=""/>
+    <meta property="og:image:width" content="858">
+    <meta property="og:image:height" content="450">
+
+    <meta property="og:site_name" content="">
+
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="css/fonts.min.css">
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/main.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.ie.min.css" />
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#000000">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#000000">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <div class="row middle-xs">
+            <div class="col-xs-2">
+                <div class="box">
+                    <a href="/"><img class="img header__Logo" src="images/firstImg/EduMed.png" alt=""></a>
+                </div>
+            </div>
+            <!--if registration page || login page-->
+            <!--<div class="col-xs-1 col-xs-offset-9">-->
+                <!--<div class="box">-->
+            <!--if registration-->
+                    <!--<a href="/login.html" class="link">Войти</a>-->
+            <!--if login-->
+                    <!--<a href="" class="link">Регистрация</a>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--else-->
+            <div class="col-xs-7 h100percent">
+                <nav class="nav">
+                    <a href="" class="nav__Item active">Презентации</a>
+                    <a href="" class="nav__Item">Бонусы</a>
+                </nav>
+            </div>
+            <div class="col-xs-3 h100percent">
+                <div class="header__NotUserContainer">
+                    <div class="header__Notification">
+                        <div class="header__NotificationSvgContainer header__NotificationSvgContainer--click">
+                            <svg version="1.1" class="header__NotificationSvg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                	 viewBox="0 0 200 200" style="enable-background:new 0 0 200 200;" xml:space="preserve">
+                                        <g id="notification">
+                                            <path class="st2" d="M80.4,31.8c-7.5,2.7-17.8,7.8-25.1,17.9C52.5,53.7,45,57,45,84.4c0,36-8.2,47-13.2,50.2c-4.2,2.8-6.6,7.6-6.6,12.4
+                                                c0,8.4,6.8,15,15,15h33.4c2.4,11.6,12.6,20,24.4,20s22-8.4,24.4-19.8h33.4c8.2,0,15-6.8,15-15c0-5-2.4-9.8-6.6-12.6
+                                                c-5-3.4-13.2-14.4-13.2-50.2c0-33.6-20.4-47-35.4-52.6c-2-0.7-4.6-1.6-7.8-2.2C98.5,27.8,91,29,88,29.6
+                                                C84.8,30.3,82.2,31.1,80.4,31.8z M53,84.4C53,54,71.8,42.4,87.4,38h0.2c0,0,4.4-1.4,10.6-1.4c3.2,0,6.6,0.4,10.4,1.6h0.2
+                                                c15.6,4.4,34.4,16,34.4,46.4c0,23.2,3.2,39.8,9.8,49.6H43.2C49.6,124,53,107.4,53,84.4z M98,174c-7.4,0-14-5-16.2-11.8h32.4
+                                                C112,169,105.4,174,98,174z M155.8,154.2H40.2c-3.8,0-7-3.2-7-7c0-2,0.8-3.8,2.4-5.2h125.2c1.4,1.4,2.4,3.2,2.4,5.2
+                                                C162.8,151,159.6,154.2,155.8,154.2z"/>
+                                        </g>
+                                        <g class="alert">
+                                            <g id="icon-alert">
+                                                <circle class="st0" cx="130" cy="44.2" r="26.5"/>
+                                                <path class="st1" d="M130,21.2c12.7,0,23,10.3,23,23c0,12.7-10.3,23-23,23s-23-10.3-23-23C107,31.5,117.3,21.2,130,21.2 M130,14.2
+                                                    c-16.5,0-30,13.5-30,30s13.5,30,30,30s30-13.5,30-30S146.5,14.2,130,14.2L130,14.2z"/>
+                                            </g>
+                                        </g>
+                                        </svg>
+                        </div>
+                        <div class="header__NotificationList">
+                            <!--Empty-->
+                            <!--<div class="header__NotificationEmpty">-->
+                                <!--<svg version="1.1" class="header__NotificationEmptySvg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"-->
+                                    <!--viewBox="0 0 200 200" style="enable-background:new 0 0 200 200;" xml:space="preserve">-->
+                                    <!--<g id="notification">-->
+                                        <!--<path class="st2" d="M80.4,31.8c-7.5,2.7-17.8,7.8-25.1,17.9C52.5,53.7,45,57,45,84.4c0,36-8.2,47-13.2,50.2c-4.2,2.8-6.6,7.6-6.6,12.4-->
+                                        <!--c0,8.4,6.8,15,15,15h33.4c2.4,11.6,12.6,20,24.4,20s22-8.4,24.4-19.8h33.4c8.2,0,15-6.8,15-15c0-5-2.4-9.8-6.6-12.6-->
+                                        <!--c-5-3.4-13.2-14.4-13.2-50.2c0-33.6-20.4-47-35.4-52.6c-2-0.7-4.6-1.6-7.8-2.2C98.5,27.8,91,29,88,29.6-->
+                                        <!--C84.8,30.3,82.2,31.1,80.4,31.8z M53,84.4C53,54,71.8,42.4,87.4,38h0.2c0,0,4.4-1.4,10.6-1.4c3.2,0,6.6,0.4,10.4,1.6h0.2-->
+                                        <!--c15.6,4.4,34.4,16,34.4,46.4c0,23.2,3.2,39.8,9.8,49.6H43.2C49.6,124,53,107.4,53,84.4z M98,174c-7.4,0-14-5-16.2-11.8h32.4-->
+                                        <!--C112,169,105.4,174,98,174z M155.8,154.2H40.2c-3.8,0-7-3.2-7-7c0-2,0.8-3.8,2.4-5.2h125.2c1.4,1.4,2.4,3.2,2.4,5.2-->
+                                        <!--C162.8,151,159.6,154.2,155.8,154.2z"/>-->
+                                    <!--</g>-->
+                                    <!--<g class="alert">-->
+                                        <!--<g id="icon-alert">-->
+                                            <!--<circle class="st0" cx="130" cy="44.2" r="26.5"/>-->
+                                            <!--<path class="st1" d="M130,21.2c12.7,0,23,10.3,23,23c0,12.7-10.3,23-23,23s-23-10.3-23-23C107,31.5,117.3,21.2,130,21.2 M130,14.2-->
+                                            <!--c-16.5,0-30,13.5-30,30s13.5,30,30,30s30-13.5,30-30S146.5,14.2,130,14.2L130,14.2z"/>-->
+                                        <!--</g>-->
+                                    <!--</g>-->
+                                <!--</svg>-->
+                                <!--<p class="textGray text-center">В настоящий момент-->
+                                    <!--<br>нет новых уведомлений</p>-->
+                            <!--</div>-->
+                            <a href="">
+                                <div class="header__NotificationItem">
+                                    <div class="header__NotificationItemITW">
+                                        <div class="header__NotificationItemImgContainer">
+                                            <img src="images/firstImg/32x32.png " alt="" class="header__NotificationItemImg">
+                                        </div>
+                                        <div class="header__NotificationItemTW">
+                                            <h6 class="header__NotificationItemTitle">
+                                                Title notification
+                                            </h6>
+                                            <p class="header__NotificationItemWhen">Сегодня</p></div>
+                                    </div>
+                                    <div class="header__NotificationItemText">
+                                        <p class="header__NotificationItemInfo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                            incididunt ut labore et dolore magna aliqua. Ut enim ad </p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="header__NotificationItem">
+                                    <div class="header__NotificationItemITW">
+                                        <div class="header__NotificationItemImgContainer">
+                                            <img src="images/firstImg/32x32.png " alt="" class="header__NotificationItemImg">
+                                        </div>
+                                        <div class="header__NotificationItemTW">
+                                            <h6 class="header__NotificationItemTitle">
+                                                Title notification
+                                            </h6>
+                                            <p class="header__NotificationItemWhen">Сегодня</p></div>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="header__NotificationItem">
+                                    <div class="header__NotificationItemITW">
+                                        <div class="header__NotificationItemImgContainer">
+                                            <img src="images/firstImg/32x32.png " alt="" class="header__NotificationItemImg">
+                                        </div>
+                                        <div class="header__NotificationItemTW">
+                                            <h6 class="header__NotificationItemTitle">
+                                                Title notification
+                                            </h6>
+                                            <p class="header__NotificationItemWhen">Сегодня</p></div>
+                                    </div>
+                                    <div class="header__NotificationItemText">
+                                        <p class="header__NotificationItemInfo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                            incididunt ut labore et dolore magna aliqua. Ut enim ad </p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="header__NotificationItem">
+                                    <div class="header__NotificationItemITW">
+                                        <div class="header__NotificationItemImgContainer">
+                                            <img src="images/firstImg/32x32.png " alt="" class="header__NotificationItemImg">
+                                        </div>
+                                        <div class="header__NotificationItemTW">
+                                            <h6 class="header__NotificationItemTitle">
+                                                Title notification
+                                            </h6>
+                                            <p class="header__NotificationItemWhen">Сегодня</p></div>
+                                    </div>
+                                    <div class="header__NotificationItemText">
+                                        <p class="header__NotificationItemInfo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                            incididunt ut labore et dolore magna aliqua. Ut enim ad </p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="header__NotificationItem">
+                                    <div class="header__NotificationItemITW">
+                                        <div class="header__NotificationItemImgContainer">
+                                            <img src="images/firstImg/32x32.png " alt="" class="header__NotificationItemImg">
+                                        </div>
+                                        <div class="header__NotificationItemTW">
+                                            <h6 class="header__NotificationItemTitle">
+                                                Title notification
+                                            </h6>
+                                            <p class="header__NotificationItemWhen">Сегодня</p></div>
+                                    </div>
+                                    <div class="header__NotificationItemText">
+                                        <p class="header__NotificationItemInfo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                            incididunt ut labore et dolore magna aliqua. Ut enim ad </p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="header__NotificationItem">
+                                    <div class="header__NotificationItemITW">
+                                        <div class="header__NotificationItemImgContainer">
+                                            <img src="images/firstImg/32x32.png " alt="" class="header__NotificationItemImg">
+                                        </div>
+                                        <div class="header__NotificationItemTW">
+                                            <h6 class="header__NotificationItemTitle">
+                                                Title notification
+                                            </h6>
+                                            <p class="header__NotificationItemWhen">Сегодня</p></div>
+                                    </div>
+                                    <div class="header__NotificationItemText">
+                                        <p class="header__NotificationItemInfo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                            incididunt ut labore et dolore magna aliqua. Ut enim ad </p>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="header__NotificationItem">
+                                    <div class="header__NotificationItemITW">
+                                        <div class="header__NotificationItemImgContainer">
+                                            <img src="images/firstImg/32x32.png " alt="" class="header__NotificationItemImg">
+                                        </div>
+                                        <div class="header__NotificationItemTW">
+                                            <h6 class="header__NotificationItemTitle">
+                                                Title notification
+                                            </h6>
+                                            <p class="header__NotificationItemWhen">Сегодня</p></div>
+                                    </div>
+                                    <div class="header__NotificationItemText">
+                                        <p class="header__NotificationItemInfo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                            incididunt ut labore et dolore magna aliqua. Ut enim ad </p>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="header__NotificationShowMore">Показать больше</div>
+                        </div>
+                    </div>
+                    <div class="header__UserContainer">
+                        <div class="header__User header__User--click">
+                            <div class="header__UserLogoContainer">
+                                <img class="header__UserLogo" src="images/avatar-user.jpg" alt="">
+                            </div>
+                            <div class="header__UserInfo">
+                                <p class="header__UserName">Константин К.</p>
+                                <p class="header__UserRole">Администратор</p>
+                            </div>
+                            <img class="header__UserArrow" src="images/firstImg/arrow.png" alt="">
+                        </div>
+                        <div class="header__UserMenu">
+                            <a href="" class="header__UserMenuItem header__UserMenuItemProfile">Профиль</a>
+                            <form action=""><button class="header__UserMenuItem header__UserMenuItemQuit">Выйти</button></form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="wrapperContent">
+
+<section class="login">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-4 col-xs-offset-4 text-center">
+                <div class="login__Box login__BoxOne">
+                    <h1>Вход</h1>
+                    <hr class="hr hrGray">
+                    <form action="" class="login__Form">
+                        <input type="text" class="input inputLarge" placeholder="Введите свой e-mail">
+                        <input type="password" class="input inputLarge" placeholder="Введите свой пароль">
+                        <a href="" class="login__Link link linkGray">Забыли пароль?</a>
+                        <button type="submit" class="btn btnBlue btnLarge">Войти</button>
+                    </form>
+                    <p class="textGray login__AlreadyReg">Еще не зарегистрированы? <a href="/" class="link">Регистрация</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container infoBlock__">
+        <div class="row">
+            <div class="col-xs-3">
+                <div class="infoBlock__Box purple">
+                    <svg version="1.1" class="infoBlock__Img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+    	 viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                        <polygon style="fill:#D0ACEA;" points="1.1,7.6 7.3,7.6 7.3,42.4 32.6,42.4 32,49.3 1.1,48.9 "/>
+                        <polygon style="fill:#D0ACEA;" points="43,7.6 48.7,7.6 49.3,42.2 43,42.2 "/>
+                        <path style="fill:#921AD8;" d="M45.8,0c-2.3,0-4.2,1.8-4.2,4.1v40.3c0,0.3,0.1,0.6,0.3,0.8l2.6,4c0.3,0.5,0.8,0.8,1.3,0.8
+                            s1.1-0.3,1.3-0.8l2.6-4c0.2-0.3,0.3-0.5,0.3-0.9V4.1C50,1.8,48.1,0,45.8,0z M43.6,8.2h4.5v33.5h-4.5V8.2z M45.8,1.9
+                            c1.3,0,2.2,1,2.2,2.2v2.2h-4.5V4.1C43.6,2.9,44.6,1.9,45.8,1.9z M45.8,47.8l-2.2-3.5v-0.7h4.5v0.7L45.8,47.8z"/>
+                        <path style="fill:#921AD8;" d="M18.3,9.5h-5.8c-0.5,0-1-0.4-1-0.9s0.4-0.9,1-0.9h5.8c0.5,0,1,0.4,1,0.9C19.2,9.1,18.8,9.5,18.3,9.5z
+                            "/>
+                        <path style="fill:#921AD8;" d="M33.7,9.5H22.8c-0.5,0-1-0.4-1-0.9s0.4-0.9,1-0.9h10.9c0.5,0,1,0.4,1,0.9C34.6,9.1,34.2,9.5,33.7,9.5
+                            z"/>
+                        <path style="fill:#921AD8;" d="M18.3,14.5h-5.8c-0.5,0-1-0.4-1-0.9s0.4-0.9,1-0.9h5.8c0.5,0,1,0.4,1,0.9
+                            C19.2,14.1,18.8,14.5,18.3,14.5z"/>
+                        <path style="fill:#921AD8;" d="M33.7,14.5H22.8c-0.5,0-1-0.4-1-0.9s0.4-0.9,1-0.9h10.9c0.5,0,1,0.4,1,0.9
+                            C34.6,14.1,34.2,14.5,33.7,14.5z"/>
+                        <path style="fill:#921AD8;" d="M18.3,24.7h-5.8c-0.5,0-1-0.4-1-0.9s0.4-0.9,1-0.9h5.8c0.5,0,1,0.4,1,0.9S18.8,24.7,18.3,24.7z"/>
+                        <path style="fill:#921AD8;" d="M33.7,24.7H22.8c-0.5,0-1-0.4-1-0.9s0.4-0.9,1-0.9h10.9c0.5,0,1,0.4,1,0.9S34.2,24.7,33.7,24.7z"/>
+                        <path style="fill:#921AD8;" d="M18.3,29.7h-5.8c-0.5,0-1-0.4-1-0.9s0.4-0.9,1-0.9h5.8c0.5,0,1,0.4,1,0.9
+                            C19.2,29.3,18.8,29.7,18.3,29.7z"/>
+                        <path style="fill:#921AD8;" d="M33.7,29.7H22.8c-0.5,0-1-0.4-1-0.9s0.4-0.9,1-0.9h10.9c0.5,0,1,0.4,1,0.9
+                            C34.6,29.3,34.2,29.7,33.7,29.7z"/>
+                        <path style="fill:#921AD8;" d="M38.8,0H7.4c-0.5,0-1,0.4-1,0.9v5.4H1c-0.5,0-1,0.4-1,0.9V49c0,0.5,0.4,0.9,1,0.9h31.4
+                            c0.5,0,1-0.4,1-0.9v-5.4h5.4c0.5,0,1-0.4,1-0.9V1C39.7,0.4,39.3,0,38.8,0z M31.4,48H1.9V8.2h4.5v34.5c0,0.5,0.4,0.9,1,0.9h24V48z
+                             M37.8,41.7c-6.6,0-23.8,0-29.5,0c0-5,0-36,0-39.8h29.5V41.7z"/>
+                    </svg>
+                    <h4>Регистрируйся</h4>
+                    <p class="textGray">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim</p>
+                </div>
+            </div>
+            <div class="col-xs-3">
+                <div class="infoBlock__Box orange">
+                    <svg version="1.1" class="infoBlock__Img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50 50"
+    	 style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                        <polygon style="fill:#ECBDB6;" points="1.5,5.8 49.1,5.8 48.4,0.6 29,0.4 1.5,0.4 "/>
+                        <g transform="translate(0,-952.36218)">
+                            <path style="fill:#E34C2F;" d="M1.1,952.4c-0.6,0-1.1,0.6-1.1,1.1v4.5c0,0.6,0.5,1.1,1.1,1.1h1.1v29.5c0,0.6,0.5,1.1,1.1,1.1H15
+                                c0,0-5.9,10.8-5.9,10.9S9,1000.9,9,1001c0,0.6,0.5,1.1,1.1,1.1c0.4,0,0.7-0.2,0.9-0.5c0-0.1,6.6-12,6.6-12h6.1v11.4
+                                c0,0.6,0.6,1.1,1.1,1.1s1.1-0.5,1.1-1.1v-11.4h6.2c0,0,6.5,12,6.6,12c0.2,0.3,0.5,0.5,0.9,0.5c0.6,0,1.1-0.5,1.1-1.1
+                                c0-0.1,0-0.3-0.1-0.4c-0.1-0.1-5.9-10.9-5.9-10.9h11.7c0.6,0,1.1-0.5,1.1-1.1v-29.5h1.1c0.6,0,1.1-0.5,1.1-1.1v-4.5
+                                c0-0.6-0.5-1.1-1.1-1.1H1.1z M2.3,954.6h45.5v2.3H2.3V954.6z M4.5,959.2h40.9v28.4H4.5V959.2z M27.8,967.1c0,0.5,0.5,1.1,1.1,1.1
+                                c1.8,0,5.3,0,5.3,0L25,978l-4.9-4.9c-0.4-0.4-1.1-0.4-1.6,0l-6.3,5.7c-0.5,0.4-0.5,1.2-0.1,1.6s1.2,0.5,1.6,0.1l5.5-4.9l4.9,4.9
+                                c0.4,0.4,1.2,0.4,1.6,0l10-10.5v5.1c0,0.6,0.5,1.2,1.1,1.2s1.1-0.5,1.1-1.2v-8c0-0.6-0.5-1.1-1.1-1.1h-8
+                                C28.3,966,27.8,966.6,27.8,967.1z"/>
+                        </g>
+                    </svg>
+                    <h4>Смотри презентации</h4>
+                    <p class="textGray">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim</p>
+                </div>
+            </div>
+            <div class="col-xs-3">
+                <div class="infoBlock__Box green">
+                    <svg version="1.1" class="infoBlock__Img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+    	 viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                    <polygon style="fill:#D0E096;" points="34.2,2.7 34.5,10.3 38.1,11.5 42.3,11.5 43.2,10.3 34.8,1.6 "/>
+                    <path style="fill:#D0E096;" d="M14.8,17c0,0.2,0,3.9,0,3.9l3.4,0.5l0.5-4.1L14.8,17z"/>
+                    <polygon style="fill:#D0E096;" points="15.5,27.3 14.8,31.5 18.2,31.8 18.7,29.3 17.9,27.3 "/>
+                    <path style="fill:#D0E096;" d="M14.8,38.1l0.5,3.9c0,0,3.2,0,3.5,0s0-4.5,0-4.5L14.8,38.1z"/>
+                    <g>
+                        <g>
+                            <path style="fill:#76C92F;" d="M23.9,27.3c0,0.7,0.5,1.1,1.1,1.1h13.7c0.7,0,1.1-0.5,1.1-1.1s-0.5-1.1-1.1-1.1H25.1
+                                C24.4,26.1,23.9,26.6,23.9,27.3z"/>
+                            <path style="fill:#76C92F;" d="M25.1,33h6.8c0.7,0,1.1-0.5,1.1-1.1c0-0.7-0.5-1.1-1.1-1.1h-6.8c-0.7,0-1.1,0.5-1.1,1.1
+                                C23.9,32.5,24.4,33,25.1,33z"/>
+                            <path style="fill:#76C92F;" d="M25.1,15.9c-0.7,0-1.1,0.5-1.1,1.1s0.5,1.1,1.1,1.1h11.4c0.7,0,1.1-0.5,1.1-1.1s-0.5-1.1-1.1-1.1
+                                H25.1z"/>
+                            <path style="fill:#76C92F;" d="M25.1,22.7h3.4c0.7,0,1.1-0.5,1.1-1.1s-0.5-1.1-1.1-1.1h-3.4c-0.7,0-1.1,0.5-1.1,1.1
+                                C23.9,22.3,24.4,22.7,25.1,22.7z"/>
+                            <path style="fill:#76C92F;" d="M35.3,36.4H25.1c-0.7,0-1.1,0.5-1.1,1.1c0,0.7,0.5,1.1,1.1,1.1h10.2c0.7,0,1.1-0.5,1.1-1.1
+                                C36.4,36.8,36,36.4,35.3,36.4z"/>
+                            <path style="fill:#76C92F;" d="M30.7,40.9H25c-0.7,0-1.1,0.5-1.1,1.1c0,0.7,0.5,1.1,1.1,1.1h5.7c0.7,0,1.1-0.5,1.1-1.1
+                                C31.9,41.4,31.4,40.9,30.7,40.9z"/>
+                            <path style="fill:#76C92F;" d="M19.3,26.1h-4.6c-0.7,0-1.1,0.5-1.1,1.1v4.6c0,0.7,0.5,1.1,1.1,1.1h4.6c0.7,0,1.1-0.5,1.1-1.1v-4.6
+                                C20.5,26.6,20,26.1,19.3,26.1z M18.2,30.7h-2.3v-2.3h2.3V30.7z"/>
+                            <path style="fill:#76C92F;" d="M19.3,15.9h-4.6c-0.7,0-1.1,0.5-1.1,1.1v4.6c0,0.7,0.5,1.1,1.1,1.1h4.6c0.7,0,1.1-0.5,1.1-1.1v-4.5
+                                C20.5,16.4,20,15.9,19.3,15.9z M18.2,20.5h-2.3v-2.3h2.3V20.5z"/>
+                            <path style="fill:#76C92F;" d="M19.3,36.4h-4.6c-0.7,0-1.1,0.5-1.1,1.1v4.6c0,0.7,0.5,1.1,1.1,1.1h4.6c0.7,0,1.1-0.5,1.1-1.1v-4.6
+                                C20.5,36.8,20,36.4,19.3,36.4z M18.2,40.9h-2.3v-2.3h2.3V40.9z"/>
+                            <path style="fill:#76C92F;" d="M34.9,0.4C34.7,0.1,34.5,0,34.1,0H10.3c-2,0-3.4,1.5-3.4,3.4v43.2c0,1.9,1.5,3.4,3.4,3.4h31.8
+                                c1.9,0,3.4-1.5,3.4-3.4V11.4c0-0.4-0.1-0.6-0.4-0.8L34.9,0.4z M35.3,3.9l6.4,6.4h-5.2c-0.7,0-1.1-0.5-1.1-1.1L35.3,3.9L35.3,3.9z
+                                 M43.2,14.8v31.8c0,0.7-0.5,1.1-1.1,1.1H10.3c-0.7,0-1.1-0.5-1.1-1.1V3.4c0-0.7,0.5-1.1,1.1-1.1H33v6.8c0,1.9,1.5,3.4,3.4,3.4h6.8
+                                V14.8L43.2,14.8z"/>
+                        </g>
+                    </g>
+                    </svg>
+                    <h4>Проходи тесты</h4>
+                    <p class="textGray">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim</p>
+                </div>
+            </div>
+            <div class="col-xs-3">
+                <div class="infoBlock__Box blue">
+                    <svg version="1.1" class="infoBlock__Img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+    	 viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                        <polygon style="fill:#9CB9E8;" points="18.1,32.8 22.3,31.5 24.9,28.1 27.6,31.6 31.9,32.8 30.8,34.7 29.1,36.8 29.3,39.2
+                            29.4,40.6 27.6,40.6 26,39.9 23.8,39.9 21.1,41.1 20.1,40.3 21,36.8 18.5,35 "/>
+                        <polygon style="fill:#9CB9E8;" points="10.5,1.2 17.6,17.8 32.4,18.1 39.5,1.2 29.3,1.2 25.1,8 20.9,1.2 "/>
+                        <path style="fill:#1859DD;" d="M31.8,17.1h-2.6l-3.2-7L29.7,2h8.9L31.8,17.1z M26.1,20.1c0,0.6-0.5,1.1-1.1,1.1s-1-0.5-1-1.1
+                            s0.5-1.1,1.1-1.1C25.6,19,26.1,19.5,26.1,20.1L26.1,20.1z M32.5,28c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3l0.6-0.6
+                            c1.7,2,2.8,4.4,3,7.1h-0.8c-0.6,0-1,0.5-1,1c0,0.6,0.5,1,1,1h0.8c-0.2,2.7-1.3,5.2-3,7.2L33.8,43c-0.4-0.4-1-0.4-1.4,0
+                            c-0.4,0.4-0.4,1,0,1.4L33,45c-2,1.7-4.4,2.8-7.1,3v-0.9c0-0.6-0.5-1-1-1c-0.6,0-1,0.5-1,1V48c-2.7-0.2-5.2-1.3-7.1-3l0.6-0.6
+                            c0.4-0.4,0.4-1,0-1.4s-1-0.4-1.4,0l-0.6,0.6c-1.7-2-2.8-4.4-3-7.2h0.8c0.6,0,1-0.5,1-1c0-0.6-0.5-1-1-1h-0.8c0.2-2.7,1.3-5.2,3-7.1
+                            l0.6,0.6c0.2,0.2,0.5,0.3,0.7,0.3c0.3,0,0.5-0.1,0.7-0.3c0.4-0.4,0.4-1,0-1.4L16.8,26c2-1.7,4.4-2.8,7.1-3v0.8c0,0.6,0.5,1,1,1
+                            c0.6,0,1-0.5,1-1V23c2.7,0.2,5.2,1.3,7.1,3l-0.6,0.6C32.1,27,32.1,27.6,32.5,28L32.5,28z M11.4,2h8.9l3.8,8.5l0,0l3,6.6h-8.9L11.4,2
+                            z M40.9,0.5C40.7,0.2,40.4,0,40.1,0H29c-0.4,0-0.8,0.2-0.9,0.6l-3.1,7l-3.2-7.1C21.7,0.2,21.3,0,20.9,0h-11C9.6,0,9.3,0.2,9.1,0.5
+                            S8.9,1.2,9,1.5l7,15.7h-0.6c-0.6-0.1-1,0.4-1,1s0.5,1,1,1h2.1h4.6c-0.1,0.4-0.2,0.7-0.2,1.1c0,0.5,0.1,0.9,0.3,1.3
+                            c-6.7,1.3-11.7,7.2-11.7,14.2c0,8,6.5,14.4,14.4,14.4s14.4-6.5,14.4-14.4c0-7-5.1-12.9-11.7-14.2c0.2-0.4,0.3-0.9,0.3-1.3
+                            s-0.1-0.8-0.2-1.1h0.8h3.8h2.1c0.6,0,1-0.5,1-1c0-0.6-0.5-1-1-1h-0.6l7-15.7C41.1,1.1,41.1,0.7,40.9,0.5L40.9,0.5z"/>
+                        <path style="fill:#1859DD;" d="M32.2,34.9c0.6-0.6,0.8-1.4,0.6-2.2c-0.3-0.8-0.9-1.3-1.7-1.4l-2.8-0.4c-0.1,0-0.1-0.1-0.1-0.1
+                            l-1.3-2.5c-0.4-0.7-1.1-1.2-1.9-1.2s-1.5,0.5-1.9,1.2l-1.3,2.5c0,0.1-0.1,0.1-0.1,0.1L19,31.3c-0.8,0.1-1.5,0.7-1.7,1.4
+                            c-0.3,0.8-0.1,1.6,0.6,2.2l2,2C20,37,20,37,20,37.1l-0.5,2.8c-0.2,0.8,0.2,1.6,0.9,2.1c0.7,0.5,1.5,0.6,2.2,0.2l2.5-1.3
+                            c0.1,0,0.1,0,0.2,0l2.5,1.3c0.3,0.2,0.7,0.3,1,0.3c0.5,0,0.9-0.2,1.2-0.4c0.7-0.5,1-1.3,0.9-2.1l-0.8-3c0-0.1,0-0.1,0.1-0.2
+                            L32.2,34.9z M28.8,35.5c-0.5,0.5-0.7,1.2-0.6,1.9l0.5,2.8c0,0,0,0.1-0.1,0.2c-0.1,0.1-0.2,0-0.2,0L26,39c-0.3-0.2-0.7-0.3-1-0.3
+                            c-0.4,0-0.7,0.1-1,0.3l-2.5,1.3c-0.1,0-0.1,0.1-0.2,0s-0.1-0.1-0.1-0.2l0.5-2.8c0.1-0.7-0.1-1.4-0.6-1.9l-2-2c0,0-0.1-0.1-0.1-0.2
+                            c0.1-0.1,0.1-0.1,0.1-0.1l2.8-0.4c0.7-0.1,1.3-0.5,1.6-1.2l1.3-2.6c0,0,0.1-0.1,0.2-0.1s0.1,0.1,0.2,0.1l1.3,2.6
+                            c0.3,0.6,0.9,1.1,1.6,1.2l2.8,0.4c0,0,0.1,0,0.1,0.1c0.1,0.1,0,0.2-0.1,0.2L28.8,35.5z"/>
+                    </svg>
+                    <h4>Получай награды</h4>
+                    <p class="textGray">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</div> 
+<footer class="footer">
+    <div class="container">
+        <div class="row middle-xs">
+            <div class="col-xs-2"><a href="mailto:EduMed@mail.com" class="link linkGray"><svg version="1.1" class="footer__LinkSvg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 16 12" style="enable-background:new 0 0 16 12;" xml:space="preserve">
+<path class="st0" d="M15.7,4C15.8,3.9,16,4,16,4.1l0,6.9c0,0.6-0.4,1-1,1H1c-0.6,0-1-0.4-1-1l0-6.9C0,4,0.2,3.9,0.3,4
+	C1,4.5,1.9,5.2,5.1,7.5C5.8,8,6.9,9,8,9c1.1,0,2.3-1,2.9-1.5C14.1,5.2,15,4.5,15.7,4z M8,8c0.7,0,1.8-0.9,2.3-1.3
+	c4.1-3,4.5-3.3,5.4-4C15.9,2.5,16,2.3,16,2.1V1c0-0.6-0.4-1-1-1H1C0.4,0,0,0.4,0,1v1.1c0,0.2,0.1,0.4,0.3,0.6c1,0.7,1.3,1,5.4,4
+	C6.2,7.1,7.3,8,8,8L8,8z"/>
+</svg><span>EduMed@mail.com</span></a></div>
+            <div class="col-xs-2"><a href="tel:380448888888" class="link linkGray"><svg version="1.1" class="footer__LinkSvg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 12 12" style="enable-background:new 0 0 12 12;" xml:space="preserve">
+<path class="st0" d="M11.6,0.6L9.1,0C8.9,0,8.6,0.1,8.5,0.3L7.4,3c-0.1,0.2,0,0.5,0.2,0.7l1.4,1.2C8.1,6.6,6.6,8.1,4.8,8.9L3.6,7.5
+	C3.5,7.3,3.2,7.3,3,7.4L0.3,8.5C0.1,8.6,0,8.9,0,9.1l0.6,2.4C0.6,11.8,0.9,12,1.1,12C7.1,12,12,7.1,12,1.1C12,0.9,11.8,0.6,11.6,0.6
+	z"/>
+</svg><span>+38 (044) 8 888 888</span></a></div>
+            <div class="col-xs-2"><a href="https://goo.gl/maps/kDKdMCBTkpu" target="_blank" class="link linkGray"><svg version="1.1" class="footer__LinkSvg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 12 12" style="enable-background:new 0 0 12 12;" xml:space="preserve">
+<path class="st0" d="M5.5,11.8c-3.4-4.9-4-5.4-4-7.3C1.5,2,3.5,0,6,0s4.5,2,4.5,4.5c0,1.8-0.6,2.3-4,7.3C6.2,12.1,5.8,12.1,5.5,11.8
+	L5.5,11.8z M6,6.4c1,0,1.9-0.8,1.9-1.9S7,2.6,6,2.6S4.1,3.5,4.1,4.5S5,6.4,6,6.4z"/>
+</svg><span>Kyiv, Yaroslavka st. 39</span></a></div>
+            <div class="col-xs-2 col-xs-offset-4">
+                <div class="row middle-xs">
+                    <div class="col-xs-6 col-xs-offset-6">
+                        <div class="footer__BoxSoc">
+                            <a href="" target="_blank"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 15 15" style="enable-background:new 0 0 15 15;" xml:space="preserve">
+<path class="st0" d="M13.5,4.4c0,0.1,0,0.3,0,0.4c0,4.1-3.1,8.7-8.7,8.7c-1.7,0-3.4-0.5-4.7-1.4c0.2,0,0.5,0,0.7,0
+	c1.4,0,2.8-0.5,3.8-1.3c-1.4,0-2.5-0.9-2.9-2.1c0.2,0,0.4,0,0.6,0c0.3,0,0.6,0,0.8-0.1c-1.4-0.3-2.5-1.5-2.5-3v0
+	C1,5.9,1.5,6.1,2,6.1C1.2,5.5,0.6,4.6,0.6,3.5C0.6,3,0.8,2.4,1,2c1.5,1.9,3.8,3.1,6.3,3.2c0-0.2-0.1-0.5-0.1-0.7
+	c0-1.7,1.4-3.1,3.1-3.1c0.9,0,1.7,0.4,2.2,1c0.7-0.1,1.4-0.4,2-0.7c-0.2,0.7-0.7,1.3-1.4,1.7c0.6-0.1,1.2-0.2,1.8-0.5
+	C14.6,3.5,14.1,4,13.5,4.4L13.5,4.4z"/>
+</svg></a>
+                            <a href="" target="_blank"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 15 15" style="enable-background:new 0 0 15 15;" xml:space="preserve">
+<path class="st0" d="M14.2,9c0.1-0.5,0.2-1,0.2-1.5c0-3.8-3.1-6.9-6.9-6.9C7,0.6,6.5,0.7,6,0.8C5.4,0.3,4.6,0,3.8,0
+	C1.7,0,0,1.7,0,3.8C0,4.6,0.3,5.4,0.8,6C0.7,6.5,0.6,7,0.6,7.5c0,3.8,3.1,6.9,6.9,6.9c0.5,0,1-0.1,1.5-0.2c0.6,0.5,1.4,0.8,2.3,0.8
+	c2.1,0,3.8-1.7,3.8-3.8C15,10.4,14.7,9.6,14.2,9L14.2,9z M7.7,12c-2.2,0-4-1-4-2.2c0-0.5,0.3-1,1-1c1,0,1.1,1.5,3,1.5
+	C8.5,10.3,9,10,9,9.5c0-0.6-0.5-0.7-1.4-0.9C5.5,8,3.7,7.8,3.7,5.6c0-2,2-2.7,3.7-2.7c1.8,0,3.7,0.7,3.7,1.9c0,0.6-0.4,1.1-1,1.1
+	c-0.9,0-1-1.1-2.5-1.1c-0.9,0-1.4,0.2-1.4,0.8c0,0.7,0.7,0.7,2.3,1.1c1.4,0.3,3,0.9,3,2.6C11.5,11.1,9.5,12,7.7,12L7.7,12z"/>
+</svg></a>
+                            <a href="skype:profile_name?userinfo"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 15 15" style="enable-background:new 0 0 15 15;" xml:space="preserve">
+<path class="st0" d="M15,0.8v13.3c0,0.5-0.4,0.8-0.8,0.8h-3.8V9.2h1.9l0.3-2.3h-2.2V5.5c0-0.7,0.2-1.1,1.1-1.1h1.2v-2
+	c-0.2,0-0.9-0.1-1.7-0.1C9.2,2.3,8,3.3,8,5.3v1.7h-2v2.3h2V15H0.8C0.4,15,0,14.6,0,14.2V0.8C0,0.4,0.4,0,0.8,0h13.3
+	C14.6,0,15,0.4,15,0.8z"/>
+</svg></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row middle-xs footer__MT">
+            <div class="col-xs-3">
+                <p class="textGray">© 2018 EduMed. All rights reserved.</p>
+            </div>
+            <div class="col-xs-2 col-xs-offset-7 text-right">
+                <a href="http://lab73.digital/" target="_blank" class="link linkGray developedBy">Developed by&nbsp;<span class="lab73">Lab73</span></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="js/jquery.min.js"></script>
+
+<!-- /presentation_view.html -->
+<script src="js/TweenMax.min.js"></script>
+
+<!-- /presentation_view.html -->
+<script src="js/DrawSVGPlugin.min.js"></script>
+
+<!-- /profile.html /customer_registration.html -->
+<script src="js/jquery.sticky.js"></script>
+
+<!-- choosen for select -->
+<script src="js/chosen.jquery.min.js"></script>
+
+<!-- tooltips -->
+<!-- /customer_presentation_list.html /edit-customer-registration.html /edit_account_manager.html /presentation_list.html -->
+<script src="js/tooltipster.bundle.min.js"></script>
+
+<!-- scroll for Notifications -->
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+<!-- https://github.com/kartik-v/php-date-formatter -->
+<!-- for DateTimePicker -->
+<script src="js/php-date-formatter.min.js"></script>
+
+<!-- for DateTimePicker -->
+<script src="js/jquery.mousewheel.min.js"></script>
+
+<!-- https://xdsoft.net/jqplugins/datetimepicker/ -->
+<!-- DateTimePicker -->
+<!-- /customer_present_steps.html /customer_presentation_list.html -->
+<script src="js/jquery.datetimepicker.js"></script>
+
+<!-- https://www.highcharts.com/ -->
+<!-- /statistics.html -->
+<script src="js/highcharts.src.js"></script>
+
+<script src="js/common.js"></script>
+</body>
+</html>
