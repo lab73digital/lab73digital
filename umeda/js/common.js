@@ -1,5 +1,11 @@
 var timeout;
 $(function () {
+
+    var navNotif = $('.nav__Notification');
+    if (navNotif.text() >= 10) {
+            $(navNotif).addClass('nav__NotificationBig');
+    }
+
     $('.header__NotificationSvgContainer--click').on('click', function () {
         $(this).toggleClass('active');
         $('.header__NotificationList').toggleClass('active');
