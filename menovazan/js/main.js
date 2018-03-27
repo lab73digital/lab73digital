@@ -128,6 +128,9 @@ $(document).ready(function() {
             autoAlpha: 1,
             y: 0
     })
+    .to('.storage__logo',  0.3, {
+        autoAlpha: 1
+    })
     .to('.btn--instr',  0.3, {
             y: "0%",
             autoAlpha: 1
