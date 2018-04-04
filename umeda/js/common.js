@@ -1,9 +1,24 @@
 var timeout;
 $(function () {
 
+
+    //show/hide password
+    $('.svgPassword--show').on('click', passwordShow);
+
+    function passwordShow(e) {
+        var thisInput = $(e.currentTarget).parent().find('.password--type');
+        if (thisInput.attr('type') === 'password') {
+            //Change the attribute to text
+            thisInput.attr('type', 'text');
+        } else {
+            //Change the attribute back to password
+            thisInput.attr('type', 'password');
+        }
+    }
+
     var navNotif = $('.nav__Notification');
     if (navNotif.text() >= 10) {
-            $(navNotif).addClass('nav__NotificationBig');
+        $(navNotif).addClass('nav__NotificationBig');
     }
 
     $('.header__NotificationSvgContainer--click').on('click', function () {
@@ -62,10 +77,10 @@ $(function () {
     });
 
 
-    $('.profile__FormsAddPlace--click').on('click', function () {
-        $(".profile__FormsInputWorkContainer:last").clone().insertAfter(".profile__FormsInputWorkContainer:last");
-        $(".profile__FormsInputWorkContainer:last .chosen-container").remove();
-        $(".profile__FormsInputWorkContainer:last .chosen-select-search-280").chosen({
+    $('.customerRegistration__FormsAddPlace--click').on('click', function () {
+        $(".customerRegistration__FormsInputWorkContainer:last").clone().insertAfter(".customerRegistration__FormsInputWorkContainer:last");
+        $(".customerRegistration__FormsInputWorkContainer:last .chosen-container").remove();
+        $(".customerRegistration__FormsInputWorkContainer:last .chosen-select-search-280").chosen({
             width: '280px'
         })
     });
@@ -99,11 +114,11 @@ $(function () {
         }
     });
 
-    $(document).delegate('.profile__FormsWorkClose--click', 'click', function () {
-        if ($('.profile__FormsInputWorkContainer').length > 1) {
-            $(this).closest('.profile__FormsInputWorkContainer').remove();
+    $(document).delegate('.customerRegistration__FormsWorkClose--click', 'click', function () {
+        if ($('.customerRegistration__FormsInputWorkContainer').length > 1) {
+            $(this).closest('.customerRegistration__FormsInputWorkContainer').remove();
         } else {
-            $(this).closest('.profile__FormsInputWorkContainer').find('select').val('').trigger("chosen:updated");
+            $(this).closest('.customerRegistration__FormsInputWorkContainer').find('select').val('').trigger("chosen:updated");
         }
     });
 
@@ -277,7 +292,7 @@ function fullScreenHideControlsAndDescription(e) {
 }
 
 function highcharts() {
-    if($('#highchartsOne').length){
+    if ($('#highchartsOne').length) {
         Highcharts.chart('highchartsOne', {
             chart: {
                 type: 'areaspline'
@@ -331,125 +346,125 @@ function highcharts() {
             }]
         });
     }
-    if($('#highchartsTwo').length){
+    if ($('#highchartsTwo').length) {
         Highcharts.chart('highchartsTwo', {
-        chart: {
-            type: 'column'
-        },
-        title: {
-            text: ''
-        },
-        subtitle: {
-            text: ''
-        },
-        credits: {
-            enabled: false
-        },
-        xAxis: {
-            categories: [
-                'Jan',
-                'Feb',
-                'Mar',
-                'Apr',
-                'May',
-                'Jun',
-                'Jul',
-                'Aug',
-                'Sep',
-                'Oct',
-                'Nov',
-                'Dec'
-            ],
-            crosshair: true
-        },
-        yAxis: {
-            min: 0,
-            title: {
-                text: ''
-            }
-        },
-        tooltip: {
-            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-            '<td style="padding:0"><b>{point.y:.1f}</b></td></tr>',
-            footerFormat: '</table>',
-            shared: true,
-            useHTML: true
-        },
-        plotOptions: {
-            column: {
-                pointPadding: 0.2,
-                borderWidth: 0
-            }
-        },
-        series: [{
-            name: 'Всего пользователей',
-            data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
-
-        }, {
-            name: 'Просмотрело презентацию',
-            data: [83.6, 78.8, 98.5, 93.4, 106.0, 84.5, 105.0, 104.3, 91.2, 83.5, 106.6, 92.3]
-
-        }, {
-            name: 'Прошло тестирование',
-            data: [48.9, 38.8, 39.3, 41.4, 47.0, 48.3, 59.0, 59.6, 52.4, 65.2, 59.3, 51.2]
-
-        }]
-    });
-    }
-    if($('#highchartsThree').length){
-        Highcharts.chart('highchartsThree', {
-        chart: {
-            type: 'bar'
-        },
-        title: {
-            text: ''
-        },
-        xAxis: {
-            categories: ['Region 1', 'Region 2', 'Region 3', 'Region 4', 'Region 5']
-        },
-        credits: {
-            enabled: false
-        },
-        yAxis: {
-            min: 0,
-            max: 100,
+            chart: {
+                type: 'column'
+            },
             title: {
                 text: ''
             },
-            labels: {
-                step: 2,
-                formatter: function () {
-                    return this.value + '%';
+            subtitle: {
+                text: ''
+            },
+            credits: {
+                enabled: false
+            },
+            xAxis: {
+                categories: [
+                    'Jan',
+                    'Feb',
+                    'Mar',
+                    'Apr',
+                    'May',
+                    'Jun',
+                    'Jul',
+                    'Aug',
+                    'Sep',
+                    'Oct',
+                    'Nov',
+                    'Dec'
+                ],
+                crosshair: true
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: ''
                 }
-            }
-        },
-        tooltip: {
-            valueSuffix: '%',
-            padding: 8,
-            backgroundColor: 'rgba(247,247,247,1)'
-        },
-        legend: {
-            reversed: true
-        },
-        plotOptions: {
-            series: {
-                stacking: 'normal'
-            }
-        },
-        series: [{
-            name: 'Specialization 1',
-            data: [20, 40, 20, 50, 10]
-        }, {
-            name: 'Specialization 2',
-            data: [60, 40, 40, 40, 10]
-        }, {
-            name: 'Specialization 3',
-            data: [20, 20, 40, 10, 80]
-        }]
-    });
+            },
+            tooltip: {
+                headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                '<td style="padding:0"><b>{point.y:.1f}</b></td></tr>',
+                footerFormat: '</table>',
+                shared: true,
+                useHTML: true
+            },
+            plotOptions: {
+                column: {
+                    pointPadding: 0.2,
+                    borderWidth: 0
+                }
+            },
+            series: [{
+                name: 'Всего пользователей',
+                data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
+
+            }, {
+                name: 'Просмотрело презентацию',
+                data: [83.6, 78.8, 98.5, 93.4, 106.0, 84.5, 105.0, 104.3, 91.2, 83.5, 106.6, 92.3]
+
+            }, {
+                name: 'Прошло тестирование',
+                data: [48.9, 38.8, 39.3, 41.4, 47.0, 48.3, 59.0, 59.6, 52.4, 65.2, 59.3, 51.2]
+
+            }]
+        });
     }
-    if($('#highchartsFour').length){
+    if ($('#highchartsThree').length) {
+        Highcharts.chart('highchartsThree', {
+            chart: {
+                type: 'bar'
+            },
+            title: {
+                text: ''
+            },
+            xAxis: {
+                categories: ['Region 1', 'Region 2', 'Region 3', 'Region 4', 'Region 5']
+            },
+            credits: {
+                enabled: false
+            },
+            yAxis: {
+                min: 0,
+                max: 100,
+                title: {
+                    text: ''
+                },
+                labels: {
+                    step: 2,
+                    formatter: function () {
+                        return this.value + '%';
+                    }
+                }
+            },
+            tooltip: {
+                valueSuffix: '%',
+                padding: 8,
+                backgroundColor: 'rgba(247,247,247,1)'
+            },
+            legend: {
+                reversed: true
+            },
+            plotOptions: {
+                series: {
+                    stacking: 'normal'
+                }
+            },
+            series: [{
+                name: 'Specialization 1',
+                data: [20, 40, 20, 50, 10]
+            }, {
+                name: 'Specialization 2',
+                data: [60, 40, 40, 40, 10]
+            }, {
+                name: 'Specialization 3',
+                data: [20, 20, 40, 10, 80]
+            }]
+        });
+    }
+    if ($('#highchartsFour').length) {
         Highcharts.chart('highchartsFour', {
             chart: {
                 type: 'column'
