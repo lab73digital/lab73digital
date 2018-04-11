@@ -1,17 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1"
-	 id="Layer_1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg"
-	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100"
-	 style="enable-background:new 0 0 100 100;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#E34C2F;}
-</style>
-<g transform="translate(0,-952.36218)">
-	<path class="st0" d="M50,952.4c-27.6,0-50,22.4-50,50c0,27.6,22.4,50,50,50s50-22.4,50-50C100,974.8,77.6,952.4,50,952.4z
-		 M50,957.9c24.6,0,44.4,19.9,44.4,44.4c0,24.6-19.9,44.4-44.4,44.4s-44.4-19.9-44.4-44.4C5.6,977.8,25.4,957.9,50,957.9z
-		 M49.7,974.5c-1.4,0.2-2.5,1.4-2.5,2.8v38.9c0,1.5,1.2,2.8,2.7,2.8c1.5,0,2.8-1.2,2.8-2.7c0,0,0-0.1,0-0.1v-38.9
-		c0-1.5-1.2-2.8-2.7-2.8C49.9,974.5,49.8,974.5,49.7,974.5z M50,1023.2c-2.3,0-4.2,1.9-4.2,4.2c0,2.3,1.9,4.2,4.2,4.2
-		s4.2-1.9,4.2-4.2C54.2,1025.1,52.3,1023.2,50,1023.2z"/>
-</g>
-</svg>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><style>.st0{fill:#e34c2f}</style><path class="st0" d="M50 952.4c-27.6 0-50 22.4-50 50s22.4 50 50 50 50-22.4 50-50-22.4-50-50-50zm0 5.5c24.6 0 44.4 19.9 44.4 44.4 0 24.6-19.9 44.4-44.4 44.4s-44.4-19.9-44.4-44.4 19.8-44.4 44.4-44.4zm-.3 16.6c-1.4.2-2.5 1.4-2.5 2.8v38.9c0 1.5 1.2 2.8 2.7 2.8 1.5 0 2.8-1.2 2.8-2.7v-39c0-1.5-1.2-2.8-2.7-2.8h-.3zm.3 48.7c-2.3 0-4.2 1.9-4.2 4.2 0 2.3 1.9 4.2 4.2 4.2s4.2-1.9 4.2-4.2c0-2.3-1.9-4.2-4.2-4.2z" transform="translate(0 -952.362)"/></svg>
