@@ -6,6 +6,7 @@ $(function () {
     $('.svgPassword--show').on('click', passwordShow);
 
     function passwordShow(e) {
+        console.log($(e.currentTarget).parent());
         var thisInput = $(e.currentTarget).parent().find('.password--type');
         if (thisInput.attr('type') === 'password') {
             //Change the attribute to text
