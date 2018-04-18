@@ -61,19 +61,22 @@ $(function () {
 
 
     $('.profile__ViewAvatarFile').on('change', function () {
-        readURL(this, '.profile__ViewAvatarImg');
+        readURL(this, '.profile__ViewAvatarImg', 'height100');
     });
 
     $('.customerRegistration__ViewAvatarFile').on('change', function () {
-        readURL(this, '.customerRegistration__ViewAvatarImg');
+        readURL(this, '.customerRegistration__ViewAvatarImg', 'height100');
     });
 
     $('.customerRegistration__BrandAvatarFile').on('change', function () {
-        readURL(this, '.customerRegistration__BrandAvatarImg');
+        readURL(this, '.customerRegistration__BrandAvatarImg', 'height100');
     });
 
     $('.presentationCreate__AddSlideLoadAreaFile').on('change', function () {
-        readURL(this, '.presentationCreate__AddSlideLoadAreaImg');
+        readURL(this, '.presentationCreate__AddSlideLoadAreaImg', 'width100');
+        $('.presentationCreate__AddSlideLoadArea').removeClass('presentationCreate__AddSlideLoadArea--lg');
+        $('.presentationCreate__AddSlideLoadArea').addClass('presentationCreate__AddSlideLoadArea--height');
+
     });
 
     $('.presentationCreate__AddQuestionWrapper').mCustomScrollbar({
@@ -256,15 +259,15 @@ function showMoreNotifications() {
     })
 }
 
-function readURL(input, img) {
+function readURL(input, img, clss) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();
         reader.onload = function (e) {
             $(img).on('load', function () {
                 if ($(this).height() < $(this).width()) {
-                    $(this).addClass('height100');
+                    $(this).addClass(clss);
                 } else {
-                    $(this).removeClass('height100');
+                    $(this).removeClass(clss);
                 }
             }).attr('src', e.target.result);
         };
