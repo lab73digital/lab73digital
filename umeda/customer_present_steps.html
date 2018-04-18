@@ -589,57 +589,121 @@
             </div>
         </div>
     </div>
-    <div class="popUpContainer">
+    <div class="popUpContainer active">
         <div class="popUpBox popUpBox--lg">
             <div class="presentationCreate__AddQuestionTitle">
                 <h5>Добавление слайда</h5>
             </div>
             <hr class="hrGray">
-            <label class="presentationCreate__Label presentationCreate__Label--step3" for="">Изображение</label>
-            <div class="presentationCreate__AddSlideLoadArea presentationCreate__AddSlideLoadArea--lg">
-                    <input type="file" id="presentationCreate__AddSlideLoadAreaFile" class="presentationCreate__AddSlideLoadAreaFile">
-                    <img class="presentationCreate__AddSlideLoadAreaImg" src="" alt="">
-                    <label class="presentationCreate__AddSlideLoadAreaLabel" for="presentationCreate__AddSlideLoadAreaFile">
-                        <div class="presentationCreate__AddSlideLoadAreaLabelContent">
-                            <a href="#">Выберете файл</a> для загрузки <br> <span class="small">или</span> <br> Перетащите файл сюда
-                        </div>
-            </div>
-            <div class="presentationCreate__Area">
-                <label class="presentationCreate__Label presentationCreate__Label--step3" for="">Вопрос</label>
-                <textarea type="text" class="textarea" placeholder="Текст вопроса" maxlength="1300"></textarea>
-            </div>
-            <label class="presentationCreate__Label presentationCreate__Label--step3" for="">Ответы</label>
-            <p class="presentationCreate__Notation"><span class="uppercase">Примечание:</span> Возможно выбрать
-                несколько правильных ответов</p>
-            <div class="presentationCreate__AddQuestionInput">
-                <label class="inputCustomMarkLabel">
-                    <input type="checkbox" name="">
-                    <span class="inputCustomMark"></span>
-                </label>
-                <input type="text" class="input" placeholder="placeholder">
-                <div class="presentationCreate__AddQuestionClose">
-                    <svg version="1.1" class="presentationCreate__AddQuestionCloseSvg" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
-    	 viewBox="0 0 8 8" style="enable-background:new 0 0 8 8;" xml:space="preserve">
-                        <g>
-                        <polygon points="7.4,0 4,3.3 0.7,0 0,0.6 3.3,4 0,7.3 0.7,8 4,4.7 7.4,8 8,7.3 4.7,4 8,0.6 	"/>
-                        </g>
-                        </svg>
+            <div class="presentationCreate__AddQuestionWrapper">
+                <label class="presentationCreate__Label presentationCreate__Label--step3" for="">Изображение</label>
+                <div class="presentationCreate__AddSlideLoadArea presentationCreate__AddSlideLoadArea--lg">
+                        <input type="file" id="presentationCreate__AddSlideLoadAreaFile" class="presentationCreate__AddSlideLoadAreaFile">
+                        <img class="presentationCreate__AddSlideLoadAreaImg" src="" alt="">
+                        <label class="presentationCreate__AddSlideLoadAreaLabel" for="presentationCreate__AddSlideLoadAreaFile">
+                            <div class="presentationCreate__AddSlideLoadAreaLabelContent">
+                                <a href="#">Выберете файл</a> для загрузки <br> <span class="small">или</span> <br> Перетащите файл сюда
+                            </div>
                 </div>
-            </div>
-            <div class="presentationCreate__AddQuestionInput">
-                <label class="inputCustomMarkLabel">
-                    <input type="checkbox" name="">
-                    <span class="inputCustomMark"></span>
-                </label>
-                <input type="text" class="input" placeholder="placeholder">
-                <div class="presentationCreate__AddQuestionClose">
-                    <svg version="1.1" class="presentationCreate__AddQuestionCloseSvg" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
-    	 viewBox="0 0 8 8" style="enable-background:new 0 0 8 8;" xml:space="preserve">
-                        <g>
-                        <polygon points="7.4,0 4,3.3 0.7,0 0,0.6 3.3,4 0,7.3 0.7,8 4,4.7 7.4,8 8,7.3 4.7,4 8,0.6 	"/>
-                        </g>
-                        </svg>
+                <div class="presentationCreate__Area">
+                    <label class="presentationCreate__Label presentationCreate__Label--step3" for="">Вопрос</label>
+                    <textarea type="text" class="textarea" placeholder="Текст вопроса" maxlength="1300"></textarea>
                 </div>
+                <label class="presentationCreate__Label presentationCreate__Label--step3" for="">Ответы</label>
+                <p class="presentationCreate__Notation"><span class="uppercase">Примечание:</span> Возможно выбрать
+                    несколько правильных ответов</p>
+
+                <div class="presentationCreate__AddQuestionInput">
+                    <label class="inputCustomMarkLabel">
+                        <input type="checkbox" name="">
+                        <span class="inputCustomMark"></span>
+                    </label>
+                    <input type="text" class="input" placeholder="placeholder">
+                    <div class="presentationCreate__AddQuestionClose">
+                        <svg version="1.1" class="presentationCreate__AddQuestionCloseSvg" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
+             viewBox="0 0 8 8" style="enable-background:new 0 0 8 8;" xml:space="preserve">
+                            <g>
+                            <polygon points="7.4,0 4,3.3 0.7,0 0,0.6 3.3,4 0,7.3 0.7,8 4,4.7 7.4,8 8,7.3 4.7,4 8,0.6 	"/>
+                            </g>
+                            </svg>
+                    </div>
+                </div>
+                <div class="presentationCreate__AddQuestionInput">
+                    <label class="inputCustomMarkLabel">
+                        <input type="checkbox" name="">
+                        <span class="inputCustomMark"></span>
+                    </label>
+                    <input type="text" class="input" placeholder="placeholder">
+                    <div class="presentationCreate__AddQuestionClose">
+                        <svg version="1.1" class="presentationCreate__AddQuestionCloseSvg" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
+             viewBox="0 0 8 8" style="enable-background:new 0 0 8 8;" xml:space="preserve">
+                            <g>
+                            <polygon points="7.4,0 4,3.3 0.7,0 0,0.6 3.3,4 0,7.3 0.7,8 4,4.7 7.4,8 8,7.3 4.7,4 8,0.6 	"/>
+                            </g>
+                            </svg>
+                    </div>
+                </div>
+                <div class="presentationCreate__AddQuestionInput">
+                    <label class="inputCustomMarkLabel">
+                        <input type="checkbox" name="">
+                        <span class="inputCustomMark"></span>
+                    </label>
+                    <input type="text" class="input" placeholder="placeholder">
+                    <div class="presentationCreate__AddQuestionClose">
+                        <svg version="1.1" class="presentationCreate__AddQuestionCloseSvg" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
+             viewBox="0 0 8 8" style="enable-background:new 0 0 8 8;" xml:space="preserve">
+                            <g>
+                            <polygon points="7.4,0 4,3.3 0.7,0 0,0.6 3.3,4 0,7.3 0.7,8 4,4.7 7.4,8 8,7.3 4.7,4 8,0.6 	"/>
+                            </g>
+                            </svg>
+                    </div>
+                </div>
+                <div class="presentationCreate__AddQuestionInput">
+                    <label class="inputCustomMarkLabel">
+                        <input type="checkbox" name="">
+                        <span class="inputCustomMark"></span>
+                    </label>
+                    <input type="text" class="input" placeholder="placeholder">
+                    <div class="presentationCreate__AddQuestionClose">
+                        <svg version="1.1" class="presentationCreate__AddQuestionCloseSvg" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
+             viewBox="0 0 8 8" style="enable-background:new 0 0 8 8;" xml:space="preserve">
+                            <g>
+                            <polygon points="7.4,0 4,3.3 0.7,0 0,0.6 3.3,4 0,7.3 0.7,8 4,4.7 7.4,8 8,7.3 4.7,4 8,0.6 	"/>
+                            </g>
+                            </svg>
+                    </div>
+                </div>
+                <div class="presentationCreate__AddQuestionInput">
+                    <label class="inputCustomMarkLabel">
+                        <input type="checkbox" name="">
+                        <span class="inputCustomMark"></span>
+                    </label>
+                    <input type="text" class="input" placeholder="placeholder">
+                    <div class="presentationCreate__AddQuestionClose">
+                        <svg version="1.1" class="presentationCreate__AddQuestionCloseSvg" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
+             viewBox="0 0 8 8" style="enable-background:new 0 0 8 8;" xml:space="preserve">
+                            <g>
+                            <polygon points="7.4,0 4,3.3 0.7,0 0,0.6 3.3,4 0,7.3 0.7,8 4,4.7 7.4,8 8,7.3 4.7,4 8,0.6 	"/>
+                            </g>
+                            </svg>
+                    </div>
+                </div>
+                <div class="presentationCreate__AddQuestionInput">
+                    <label class="inputCustomMarkLabel">
+                        <input type="checkbox" name="">
+                        <span class="inputCustomMark"></span>
+                    </label>
+                    <input type="text" class="input" placeholder="placeholder">
+                    <div class="presentationCreate__AddQuestionClose">
+                        <svg version="1.1" class="presentationCreate__AddQuestionCloseSvg" xmlns="http://www.w3.org/2000/svg"  x="0px" y="0px"
+             viewBox="0 0 8 8" style="enable-background:new 0 0 8 8;" xml:space="preserve">
+                            <g>
+                            <polygon points="7.4,0 4,3.3 0.7,0 0,0.6 3.3,4 0,7.3 0.7,8 4,4.7 7.4,8 8,7.3 4.7,4 8,0.6 	"/>
+                            </g>
+                            </svg>
+                    </div>
+                </div>
+
             </div>
             <hr class="hrGray">
             <div class="presentationCreate__AddQuestionBtns">
