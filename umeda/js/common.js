@@ -49,7 +49,6 @@ $(function () {
         });
     });
 
-
     $('.presentationView__ControlsDescription--click').on('click', function () {
         $('.presentationView__Description').toggleClass('active showed');
     });
@@ -75,6 +74,10 @@ $(function () {
 
     $('.presentationCreate__AddSlideLoadAreaFile').on('change', function () {
         readURL(this, '.presentationCreate__AddSlideLoadAreaImg');
+    });
+
+    $('.presentationCreate__AddQuestionWrapper').mCustomScrollbar({
+        axis: "y"
     });
 
 
