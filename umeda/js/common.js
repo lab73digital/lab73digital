@@ -1,6 +1,8 @@
 var timeout;
 $(function () {
-
+    $('.presentationView__ControlsPlayPause').on('click', function() {
+        $(this).toggleClass('active')
+    });
 
     //show/hide password
     $('.svgPassword--show').on('click', passwordShow);
